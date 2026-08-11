@@ -1,0 +1,156 @@
+import type {
+  EndingContent,
+  FuzzyFeedbackContent,
+  RelationshipEvaluationContent,
+} from "./schema.ts";
+
+export const endings = [
+  {
+    id: "blocked_immediately",
+    kind: "scripted",
+    title: "到这里吧",
+    coreCopy: "玩笑可以回击，信任不能拿来公开处刑。TA 没有继续争，只是不再打算把任何私事交给你。",
+    reasonCopy: "你为了扳回一局，公开了 TA 明确不愿让别人知道的事。这不是“没接住玩笑”，而是一次具体的隐私越界。",
+    stateSummary: "吸引可能还残留着，但已经没有继续发展的意义；信任和舒适遭到决定性破坏，冲突也失去修复空间。",
+  },
+  {
+    id: "conflict_break",
+    kind: "global",
+    title: "当场决裂",
+    coreCopy: "你们都还有话想说，但已经没人打算听了。TA 结束了这场对话，也结束了下一场的可能。",
+    reasonCopy: "本局多次选择把分歧推向讽刺、压制或公开难堪，累积的冲突超过了继续沟通的空间。",
+    stateSummary: "无论吸引多高，过高的冲突已经压过其他三项关系基础。",
+  },
+  {
+    id: "strong_discomfort",
+    kind: "global",
+    title: "强烈不适",
+    coreCopy: "TA 和你相处时开始反复斟酌每句话。对 TA 来说，这段关系已经不像约会，更像一次不能提前离场的社交任务。",
+    reasonCopy: "本局的回应多次忽略了当场感受、表达节奏或清楚边界，使 TA 几乎无法自然放松。",
+    stateSummary: "其他数值可能尚可，但极低的舒适意味着继续接触本身已经成为负担。",
+  },
+  {
+    id: "trust_broken",
+    kind: "global",
+    title: "彻底失信",
+    coreCopy: "TA 不再确定你的话是不是会兑现，也不确定交给你的边界会不会被尊重。关系停在了“最好别再试一次”。",
+    reasonCopy: "本局反复出现失约、利用信任、模糊承诺或把后果留给对方承担的选择。",
+    stateSummary: "即使吸引仍在，没有最低限度的可信度也无法支撑下一阶段。",
+  },
+  {
+    id: "no_second_meeting",
+    kind: "stage_gate",
+    title: "没有下次见面",
+    coreCopy: "第一次见面没有变成灾难，也没有留下值得冒第二次险的理由。TA 礼貌地说了“下次再约”，然后再也没提日期。",
+    reasonCopy: "初识阶段没能建立足够的可靠感或舒适感，或者摩擦已经高到让继续了解显得麻烦。",
+    stateSummary: "吸引不会单独挽救初识；这里更看重是否愿意放心地再见一次。",
+  },
+  {
+    id: "fade_out",
+    kind: "stage_gate",
+    title: "渐渐失联",
+    coreCopy: "你们不是突然不联系的。只是回复从一句变成表情，从当天变成隔天，最后谁都没有再抛出新话题。",
+    reasonCopy: "接触阶段的观点、玩笑和暧昧没有转化为足够的信任与舒适，继续主动的动力慢慢消失了。",
+    stateSummary: "可能有过聊天火花，但中段关系基础不足，无法进入真正熟悉的相处。",
+  },
+  {
+    id: "stay_acquaintances",
+    kind: "stage_gate",
+    title: "止于熟人",
+    coreCopy: "TA 仍然会回你的消息，也愿意在见面时聊两句。只是你们都知道，那句“改天单独见”不会真的被安排进日历。",
+    reasonCopy: "熟悉阶段已经看见彼此的支持方式、责任感和关心表达，但这些互动没有形成进入暧昧所需的综合基础。",
+    stateSummary: "这里同时要求一定吸引、信任和舒适；只满足其中一两项，会停在认识但不再靠近的位置。",
+  },
+  {
+    id: "strangers_after_all",
+    kind: "final",
+    title: "形同陌路",
+    coreCopy: "你们勉强走完了十题，却把“继续认识”消耗成了“以后见面点个头就好”。TA 没有删除你，只是再也没有主动打开对话框。",
+    reasonCopy: "关系虽然走到了最后，但信任、舒适或冲突至少有一项已经低到无法支撑后续联系。",
+    stateSummary: "完成全部相处不等于建立了关系；严重恶化的基础状态优先于高吸引。",
+  },
+  {
+    id: "confirmed_relationship",
+    kind: "final",
+    title: "确认恋爱",
+    coreCopy: "TA 看完你们刚定下的下一次安排，忽然说：“所以我们现在算是在一起了吧？别让我再写一份定义。”",
+    reasonCopy: "你们不只保留了吸引，也在分歧、边界和日常安排中积累了足够的信任与舒适。",
+    stateSummary: "高吸引负责把关系推过线；信任、舒适和可控冲突决定它能不能站稳。",
+  },
+  {
+    id: "dangerous_lovers",
+    kind: "final",
+    title: "危险恋人",
+    coreCopy: "你们还是决定试试。至于这是爱情，还是两个人对高风险互动的共同兴趣，目前没有人愿意先承认。",
+    reasonCopy: "吸引已经高到足以推动关系，但信任、舒适或冲突没有同时达到稳定恋爱的标准。",
+    stateSummary: "这不是更高级的恋爱结局，而是“很想靠近”和“能否好好相处”之间出现了明显裂缝。",
+  },
+  {
+    id: "friends",
+    kind: "final",
+    title: "成为朋友",
+    coreCopy: "TA 还是会主动给你发新发现，也愿意约你出来。只不过下一次见面，大概不会被任何一方误会成约会。",
+    reasonCopy: "你们建立了可靠、轻松的相处基础，但恋爱吸引没有累积到足以改变关系性质。",
+    stateSummary: "低恋爱吸引不代表失败；信任与舒适让这段关系以朋友形式继续。",
+  },
+  {
+    id: "unresolved_ambiguity",
+    kind: "final",
+    title: "暧昧未决",
+    coreCopy: "你们之间明显发生了点什么，又没有谁肯负责把它说完整。TA 发来一句“下次见”，后面没有日期，倒是跟了三个新话题。",
+    reasonCopy: "当前数值既没有差到结束关系，也没有组合成明确的恋爱或朋友条件。",
+    stateSummary: "吸引、信任、舒适和冲突仍互相拉扯；关系保留可能，也保留继续误读的空间。",
+  },
+] as const satisfies readonly EndingContent[];
+
+export const relationshipEvaluations = [
+  {
+    id: "romance_stable",
+    title: "稳定发展",
+    copy: "你们已经找到一种不必牺牲真实需求、也不会把每次分歧变成输赢的相处方式。新鲜感还在，但不再需要靠失控证明。",
+    badge: "关系评价：稳定发展",
+  },
+  {
+    id: "romance_hidden_risk",
+    title: "已经埋下隐患",
+    copy: "你们确实走到了一起，只是某些边界、节奏或旧摩擦还没有谈完。火花能让关系开始，不能替你们完成后续沟通。",
+    badge: "关系评价：已经埋下隐患",
+  },
+] as const satisfies readonly RelationshipEvaluationContent[];
+
+export const fuzzyFeedback = [
+  feedback("attraction_up_slight", "attraction", "up", "slight", "TA看你的眼神多停了一会儿。"),
+  feedback("attraction_up_medium", "attraction", "up", "medium", "你明显勾起了TA继续靠近的兴趣。"),
+  feedback("attraction_up_strong", "attraction", "up", "strong", "TA几乎没打算掩饰这一下的心动。"),
+  feedback("attraction_down_slight", "attraction", "down", "slight", "TA对这次互动少了一点期待。"),
+  feedback("attraction_down_medium", "attraction", "down", "medium", "TA看起来没刚才那么想靠近了。"),
+  feedback("attraction_down_strong", "attraction", "down", "strong", "TA似乎已经不想再把这种感觉理解成心动。"),
+  feedback("trust_up_slight", "trust", "up", "slight", "TA愿意多相信你一点。"),
+  feedback("trust_up_medium", "trust", "up", "medium", "TA开始认真把你的话算进之后的安排。"),
+  feedback("trust_up_strong", "trust", "up", "strong", "TA把一部分主动权放心地交给了你。"),
+  feedback("trust_down_slight", "trust", "down", "slight", "TA对你的说法留下了一个问号。"),
+  feedback("trust_down_medium", "trust", "down", "medium", "TA开始怀疑你会不会真的兑现。"),
+  feedback("trust_down_strong", "trust", "down", "strong", "TA不再愿意把重要的事交到你手里。"),
+  feedback("comfort_up_slight", "comfort", "up", "slight", "TA在你面前放松了一点。"),
+  feedback("comfort_up_medium", "comfort", "up", "medium", "TA明显不再需要斟酌每一句话。"),
+  feedback("comfort_up_strong", "comfort", "up", "strong", "这一刻，和你相处几乎不需要防备。"),
+  feedback("comfort_down_slight", "comfort", "down", "slight", "气氛里多了一点不自然。"),
+  feedback("comfort_down_medium", "comfort", "down", "medium", "TA开始下意识地和你保持距离。"),
+  feedback("comfort_down_strong", "comfort", "down", "strong", "TA已经很难在这段互动里放松下来。"),
+  feedback("conflict_up_slight", "conflict", "up", "slight", "空气里多了一点火药味。"),
+  feedback("conflict_up_medium", "conflict", "up", "medium", "你们的分歧已经不只是观点不同。"),
+  feedback("conflict_up_strong", "conflict", "up", "strong", "这场互动正在迅速失控。"),
+  feedback("conflict_down_slight", "conflict", "down", "slight", "刚才的摩擦缓和了一些。"),
+  feedback("conflict_down_medium", "conflict", "down", "medium", "你们找到了让分歧停下来的方式。"),
+  feedback("conflict_down_strong", "conflict", "down", "strong", "积着的火药味终于散了下去。"),
+] as const satisfies readonly FuzzyFeedbackContent[];
+
+function feedback(
+  id: FuzzyFeedbackContent["id"],
+  dimension: FuzzyFeedbackContent["dimension"],
+  direction: FuzzyFeedbackContent["direction"],
+  strength: FuzzyFeedbackContent["strength"],
+  text: string,
+): FuzzyFeedbackContent {
+  return { id, dimension, direction, strength, text };
+}

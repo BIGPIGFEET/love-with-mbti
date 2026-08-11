@@ -1,0 +1,32 @@
+# Dependencies and build output
+node_modules/
+dist/
+.vite/
+coverage/
+
+# Local deployment state and secrets
+.vercel/
+.wrangler/
+.dev.vars
+.env
+.env.*
+!.env.example
+
+# Test and browser artifacts
+.playwright-cli/
+playwright-report/
+test-results/
+
+# Local agent runtime copied from installed tooling
+.agents/
+
+# TypeScript and logs
+*.tsbuildinfo
+*.log
+npm-debug.log*
+
+# Editor and operating-system files
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db

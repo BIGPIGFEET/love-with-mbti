@@ -1,0 +1,4 @@
+interface:
+  display_name: "刻板印象调研建模"
+  short_description: "多轮网络调研、证据分级与事件行为表构建"
+  default_prompt: "Use $research-stereotype-event-model to research an online stereotype and construct evidence-aware behavior and event tables."

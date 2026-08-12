@@ -1,11 +1,13 @@
 import { useState } from "react";
 import type { EndingContent, RelationshipEvaluationContent, RelationState } from "../content/schema.ts";
+import type { AvailableMbtiType } from "../content/content-pack.ts";
 import { AppHeader } from "./AppHeader.tsx";
 import { Icon } from "./Icons.tsx";
 import { RelationMeters } from "./RelationMeters.tsx";
 
 interface EndingScreenProps {
   ending: EndingContent;
+  mbtiType: AvailableMbtiType;
   evaluation?: RelationshipEvaluationContent;
   state: RelationState;
   completedQuestion: number;
@@ -35,6 +37,7 @@ export async function copyCurrentLink(): Promise<void> {
 
 export function EndingScreen({
   ending,
+  mbtiType,
   evaluation,
   state,
   completedQuestion,
@@ -57,7 +60,7 @@ export function EndingScreen({
       <AppHeader backLabel="返回类型选择" onBack={onBack} />
 
       <article className="ending-sheet">
-        <p className="ending-progress">ENTP · {completedQuestion === 10 ? "完成十题" : `第 ${completedQuestion} 题后结束`}</p>
+        <p className="ending-progress">{mbtiType} · {completedQuestion === 10 ? "完成十题" : `第 ${completedQuestion} 题后结束`}</p>
         <h1>{ending.title}</h1>
         {evaluation ? <span className="evaluation-stamp">{evaluation.title}</span> : null}
 
@@ -88,7 +91,7 @@ export function EndingScreen({
         </button>
       </div>
 
-      <p className="disclaimer">角色是娱乐化的网络刻板印象集合体，不代表现实中的所有 ENTP。</p>
+      <p className="disclaimer">角色是娱乐化的网络刻板印象集合体，不代表现实中的所有 {mbtiType}。</p>
     </main>
   );
 }

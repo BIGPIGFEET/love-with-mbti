@@ -174,7 +174,9 @@ export function validateContent(input: {
 
   const terminalOptions = questions.flatMap((question) => question.options).filter((option) => option.terminalEndingId);
   assert(
-    terminalOptions.length === 1 && terminalOptions[0]?.id === "q04_expose_in_return",
-    "第一版只能由 q04_expose_in_return 触发剧情指定结束",
+    terminalOptions.length <= 1,
+    `每套十题最多只能配置 1 个剧情指定结束选项，当前为 ${terminalOptions.length} 个：${terminalOptions
+      .map((option) => option.id)
+      .join(", ")}`,
   );
 }

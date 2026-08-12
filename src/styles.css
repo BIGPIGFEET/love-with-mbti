@@ -257,6 +257,11 @@ button:disabled {
 .event-sheet,
 .feedback-sheet,
 .ending-sheet,
+.available-types {
+  display: grid;
+  gap: 18px;
+}
+
 .featured-type {
   animation: sheet-arrive 500ms cubic-bezier(0.16, 1, 0.3, 1) both;
 }

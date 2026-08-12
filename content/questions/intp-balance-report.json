@@ -1,0 +1,545 @@
+{
+  "questionCount": 10,
+  "optionCounts": [
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4
+  ],
+  "completeChoiceSpace": 1048576,
+  "terminalTrajectories": 24460,
+  "weightedTotal": 1048576,
+  "endings": {
+    "blocked_immediately": {
+      "trajectories": 2942,
+      "weightedPaths": 188288,
+      "examplePath": [
+        "q01_edit_together",
+        "q02_ask_intent",
+        "q03_set_context",
+        "q04_wave_off",
+        "q05_narrow_and_deadline",
+        "q06_take_solution",
+        "q07_expose_in_return"
+      ],
+      "exampleState": {
+        "attraction": 35,
+        "trust": 40,
+        "comfort": 40,
+        "conflict": 20
+      }
+    },
+    "confirmed_relationship:romance_hidden_risk": {
+      "trajectories": 1259,
+      "weightedPaths": 1259,
+      "examplePath": [
+        "q01_edit_together",
+        "q02_ask_intent",
+        "q03_set_context",
+        "q04_wave_off",
+        "q05_book_for_them",
+        "q06_take_solution",
+        "q07_stop_in_room",
+        "q08_accept_pause",
+        "q09_let_ta_define",
+        "q10_build_rhythm"
+      ],
+      "exampleState": {
+        "attraction": 85,
+        "trust": 65,
+        "comfort": 65,
+        "conflict": 0
+      }
+    },
+    "confirmed_relationship:romance_stable": {
+      "trajectories": 1393,
+      "weightedPaths": 1393,
+      "examplePath": [
+        "q01_edit_together",
+        "q02_ask_intent",
+        "q03_set_context",
+        "q04_wave_off",
+        "q05_narrow_and_deadline",
+        "q06_take_solution",
+        "q07_stop_in_room",
+        "q08_accept_pause",
+        "q09_define_terms",
+        "q10_accept_independence"
+      ],
+      "exampleState": {
+        "attraction": 85,
+        "trust": 90,
+        "comfort": 90,
+        "conflict": 0
+      }
+    },
+    "conflict_break": {
+      "trajectories": 24,
+      "weightedPaths": 24,
+      "examplePath": [
+        "q01_edit_together",
+        "q02_ask_intent",
+        "q03_truth_always",
+        "q04_wave_off",
+        "q05_cancel_if_undecided",
+        "q06_attack_empathy",
+        "q07_stop_in_room",
+        "q08_force_now",
+        "q09_announce_unilaterally",
+        "q10_demand_all_weekends"
+      ],
+      "exampleState": {
+        "attraction": 30,
+        "trust": 15,
+        "comfort": 0,
+        "conflict": 85
+      }
+    },
+    "dangerous_lovers": {
+      "trajectories": 195,
+      "weightedPaths": 195,
+      "examplePath": [
+        "q01_edit_together",
+        "q02_ask_intent",
+        "q03_truth_always",
+        "q04_wave_off",
+        "q05_book_for_them",
+        "q06_take_solution",
+        "q07_stop_in_room",
+        "q08_pause_with_anchor",
+        "q09_let_ta_define",
+        "q10_accept_independence"
+      ],
+      "exampleState": {
+        "attraction": 95,
+        "trust": 45,
+        "comfort": 50,
+        "conflict": 5
+      }
+    },
+    "fade_out": {
+      "trajectories": 144,
+      "weightedPaths": 147456,
+      "examplePath": [
+        "q01_edit_together",
+        "q02_ask_intent",
+        "q03_truth_always",
+        "q04_wave_off",
+        "q05_hold_evening"
+      ],
+      "exampleState": {
+        "attraction": 65,
+        "trust": 20,
+        "comfort": 35,
+        "conflict": 15
+      }
+    },
+    "friends": {
+      "trajectories": 112815,
+      "weightedPaths": 112815,
+      "examplePath": [
+        "q01_edit_together",
+        "q02_ask_intent",
+        "q03_set_context",
+        "q04_wave_off",
+        "q05_narrow_and_deadline",
+        "q06_take_solution",
+        "q07_stop_in_room",
+        "q08_pause_with_anchor",
+        "q09_need_answer",
+        "q10_accept_independence"
+      ],
+      "exampleState": {
+        "attraction": 60,
+        "trust": 95,
+        "comfort": 90,
+        "conflict": 0
+      }
+    },
+    "no_second_meeting": {
+      "trajectories": 1,
+      "weightedPaths": 65536,
+      "examplePath": [
+        "q01_call_it_interview",
+        "q02_call_it_confession"
+      ],
+      "exampleState": {
+        "attraction": 30,
+        "trust": 15,
+        "comfort": 10,
+        "conflict": 25
+      }
+    },
+    "stay_acquaintances": {
+      "trajectories": 20302,
+      "weightedPaths": 324832,
+      "examplePath": [
+        "q01_edit_together",
+        "q02_ask_intent",
+        "q03_set_context",
+        "q04_wave_off",
+        "q05_narrow_and_deadline",
+        "q06_attack_empathy",
+        "q07_stop_in_room",
+        "q08_pause_with_anchor"
+      ],
+      "exampleState": {
+        "attraction": 30,
+        "trust": 65,
+        "comfort": 65,
+        "conflict": 10
+      }
+    },
+    "strangers_after_all": {
+      "trajectories": 13879,
+      "weightedPaths": 13879,
+      "examplePath": [
+        "q01_edit_together",
+        "q02_ask_intent",
+        "q03_set_context",
+        "q04_wave_off",
+        "q05_narrow_and_deadline",
+        "q06_take_solution",
+        "q07_laugh_off",
+        "q08_force_now",
+        "q09_let_ta_define",
+        "q10_demand_all_weekends"
+      ],
+      "exampleState": {
+        "attraction": 35,
+        "trust": 20,
+        "comfort": 15,
+        "conflict": 25
+      }
+    },
+    "strong_discomfort": {
+      "trajectories": 3808,
+      "weightedPaths": 67183,
+      "examplePath": [
+        "q01_edit_together",
+        "q02_ask_intent",
+        "q03_set_context",
+        "q04_wave_off",
+        "q05_book_for_them",
+        "q06_take_solution",
+        "q07_laugh_off",
+        "q08_force_now",
+        "q09_let_ta_define",
+        "q10_demand_all_weekends"
+      ],
+      "exampleState": {
+        "attraction": 45,
+        "trust": 5,
+        "comfort": 0,
+        "conflict": 25
+      }
+    },
+    "trust_broken": {
+      "trajectories": 339,
+      "weightedPaths": 42549,
+      "examplePath": [
+        "q01_edit_together",
+        "q02_ask_intent",
+        "q03_set_context",
+        "q04_wave_off",
+        "q05_book_for_them",
+        "q06_attack_empathy",
+        "q07_laugh_off",
+        "q08_pause_with_anchor",
+        "q09_let_ta_define",
+        "q10_demand_all_weekends"
+      ],
+      "exampleState": {
+        "attraction": 30,
+        "trust": 5,
+        "comfort": 15,
+        "conflict": 20
+      }
+    },
+    "unresolved_ambiguity": {
+      "trajectories": 83167,
+      "weightedPaths": 83167,
+      "examplePath": [
+        "q01_edit_together",
+        "q02_ask_intent",
+        "q03_set_context",
+        "q04_wave_off",
+        "q05_narrow_and_deadline",
+        "q06_take_solution",
+        "q07_stop_in_room",
+        "q08_pause_with_anchor",
+        "q09_let_ta_define",
+        "q10_accept_independence"
+      ],
+      "exampleState": {
+        "attraction": 70,
+        "trust": 70,
+        "comfort": 80,
+        "conflict": 0
+      }
+    }
+  },
+  "fixedPositions": [
+    {
+      "position": 1,
+      "applicable": true,
+      "ending": "blocked_immediately",
+      "path": [
+        "q01_edit_together",
+        "q02_ask_intent",
+        "q03_set_context",
+        "q04_wave_off",
+        "q05_narrow_and_deadline",
+        "q06_take_solution",
+        "q07_expose_in_return"
+      ],
+      "state": {
+        "attraction": 35,
+        "trust": 40,
+        "comfort": 40,
+        "conflict": 20
+      }
+    },
+    {
+      "position": 2,
+      "applicable": true,
+      "ending": "strangers_after_all",
+      "path": [
+        "q01_keep_it_light",
+        "q02_call_it_confession",
+        "q03_truth_always",
+        "q04_state_incompatibility",
+        "q05_book_for_them",
+        "q06_attack_empathy",
+        "q07_stop_in_room",
+        "q08_accept_pause",
+        "q09_let_ta_define",
+        "q10_state_minimum"
+      ],
+      "state": {
+        "attraction": 35,
+        "trust": 50,
+        "comfort": 20,
+        "conflict": 25
+      }
+    },
+    {
+      "position": 3,
+      "applicable": true,
+      "ending": "stay_acquaintances",
+      "path": [
+        "q01_answer_and_return",
+        "q02_dive_into_link",
+        "q03_name_private",
+        "q04_disappear_back",
+        "q05_cancel_if_undecided",
+        "q06_ask_listen",
+        "q07_laugh_off",
+        "q08_adjust_time"
+      ],
+      "state": {
+        "attraction": 25,
+        "trust": 70,
+        "comfort": 40,
+        "conflict": 15
+      }
+    },
+    {
+      "position": 4,
+      "applicable": true,
+      "ending": "fade_out",
+      "path": [
+        "q01_call_it_interview",
+        "q02_trade_interests",
+        "q03_accuse_winning",
+        "q04_minimum_signal",
+        "q05_hold_evening"
+      ],
+      "state": {
+        "attraction": 15,
+        "trust": 15,
+        "comfort": 20,
+        "conflict": 20
+      }
+    }
+  ],
+  "fixedStrategies": [
+    {
+      "strategy": "accommodate",
+      "applicable": true,
+      "ending": "fade_out",
+      "path": [
+        "q01_answer_and_return",
+        "q02_dive_into_link",
+        "q03_truth_always",
+        "q04_wave_off",
+        "q05_hold_evening"
+      ],
+      "state": {
+        "attraction": 65,
+        "trust": 15,
+        "comfort": 35,
+        "conflict": 15
+      }
+    },
+    {
+      "strategy": "confront",
+      "applicable": false,
+      "missingAt": "Q02"
+    },
+    {
+      "strategy": "honest",
+      "applicable": true,
+      "ending": "stay_acquaintances",
+      "path": [
+        "q01_keep_it_light",
+        "q02_ask_intent",
+        "q03_name_private",
+        "q04_state_incompatibility",
+        "q05_cancel_if_undecided",
+        "q06_ask_listen",
+        "q07_stop_in_room",
+        "q08_adjust_time"
+      ],
+      "state": {
+        "attraction": 15,
+        "trust": 100,
+        "comfort": 75,
+        "conflict": 10
+      }
+    },
+    {
+      "strategy": "negotiate",
+      "applicable": false,
+      "missingAt": "Q01"
+    },
+    {
+      "strategy": "risky",
+      "applicable": false,
+      "missingAt": "Q03"
+    }
+  ],
+  "localDominance": [
+    {
+      "questionId": "Q01",
+      "dominantOption": "q01_edit_together",
+      "dominatedOption": "q01_call_it_interview"
+    },
+    {
+      "questionId": "Q01",
+      "dominantOption": "q01_keep_it_light",
+      "dominatedOption": "q01_call_it_interview"
+    },
+    {
+      "questionId": "Q01",
+      "dominantOption": "q01_answer_and_return",
+      "dominatedOption": "q01_call_it_interview"
+    },
+    {
+      "questionId": "Q03",
+      "dominantOption": "q03_set_context",
+      "dominatedOption": "q03_accuse_winning"
+    },
+    {
+      "questionId": "Q03",
+      "dominantOption": "q03_truth_always",
+      "dominatedOption": "q03_accuse_winning"
+    },
+    {
+      "questionId": "Q03",
+      "dominantOption": "q03_name_private",
+      "dominatedOption": "q03_accuse_winning"
+    },
+    {
+      "questionId": "Q04",
+      "dominantOption": "q04_wave_off",
+      "dominatedOption": "q04_disappear_back"
+    },
+    {
+      "questionId": "Q04",
+      "dominantOption": "q04_state_incompatibility",
+      "dominatedOption": "q04_disappear_back"
+    },
+    {
+      "questionId": "Q04",
+      "dominantOption": "q04_minimum_signal",
+      "dominatedOption": "q04_disappear_back"
+    },
+    {
+      "questionId": "Q06",
+      "dominantOption": "q06_take_solution",
+      "dominatedOption": "q06_attack_empathy"
+    },
+    {
+      "questionId": "Q06",
+      "dominantOption": "q06_ask_listen",
+      "dominatedOption": "q06_attack_empathy"
+    },
+    {
+      "questionId": "Q06",
+      "dominantOption": "q06_sequence_support",
+      "dominatedOption": "q06_attack_empathy"
+    },
+    {
+      "questionId": "Q07",
+      "dominantOption": "q07_stop_in_room",
+      "dominatedOption": "q07_expose_in_return"
+    },
+    {
+      "questionId": "Q07",
+      "dominantOption": "q07_laugh_off",
+      "dominatedOption": "q07_expose_in_return"
+    },
+    {
+      "questionId": "Q07",
+      "dominantOption": "q07_private_repair",
+      "dominatedOption": "q07_expose_in_return"
+    },
+    {
+      "questionId": "Q08",
+      "dominantOption": "q08_pause_with_anchor",
+      "dominatedOption": "q08_force_now"
+    },
+    {
+      "questionId": "Q08",
+      "dominantOption": "q08_accept_pause",
+      "dominatedOption": "q08_force_now"
+    },
+    {
+      "questionId": "Q08",
+      "dominantOption": "q08_adjust_time",
+      "dominatedOption": "q08_force_now"
+    },
+    {
+      "questionId": "Q09",
+      "dominantOption": "q09_let_ta_define",
+      "dominatedOption": "q09_announce_unilaterally"
+    },
+    {
+      "questionId": "Q09",
+      "dominantOption": "q09_define_terms",
+      "dominatedOption": "q09_announce_unilaterally"
+    },
+    {
+      "questionId": "Q10",
+      "dominantOption": "q10_accept_independence",
+      "dominatedOption": "q10_demand_all_weekends"
+    },
+    {
+      "questionId": "Q10",
+      "dominantOption": "q10_state_minimum",
+      "dominatedOption": "q10_demand_all_weekends"
+    },
+    {
+      "questionId": "Q10",
+      "dominantOption": "q10_build_rhythm",
+      "dominatedOption": "q10_demand_all_weekends"
+    }
+  ]
+}

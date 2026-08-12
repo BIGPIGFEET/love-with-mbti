@@ -18,11 +18,35 @@ describe("Love with MBTI primary flow", () => {
     expect(screen.getByText(/你负责兜底/)).toBeInTheDocument();
   });
 
+  it("starts the migrated INTP game with its own formal content", () => {
+    render(<App />);
+
+    fireEvent.click(screen.getByRole("button", { name: "开始认识 INTP" }));
+    expect(screen.getByLabelText("当前阶段：初识，第 1 题，共 10 题")).toBeInTheDocument();
+    expect(screen.getByText(/如果今天的记忆可以剪掉十分钟/)).toBeInTheDocument();
+    expect(screen.getByText(/不代表现实中的所有 INTP/)).toBeInTheDocument();
+
+    fireEvent.click(screen.getByRole("button", { name: /盐当糖/ }));
+    expect(screen.getByText(/保留证据/)).toBeInTheDocument();
+  });
+
   it("returns to the type selector from the question screen", () => {
     render(<App />);
     fireEvent.click(screen.getByRole("button", { name: "开始认识 ENTP" }));
     fireEvent.click(screen.getByRole("button", { name: "返回类型选择" }));
     expect(screen.getByRole("heading", { name: "你想先认识哪一种人？" })).toBeInTheDocument();
+  });
+
+  it("resets the run when switching from ENTP to INTP", () => {
+    render(<App />);
+    fireEvent.click(screen.getByRole("button", { name: "开始认识 ENTP" }));
+    fireEvent.click(screen.getByRole("button", { name: /先打个电话问问/ }));
+    fireEvent.click(screen.getByRole("button", { name: "返回类型选择" }));
+    fireEvent.click(screen.getByRole("button", { name: "开始认识 INTP" }));
+
+    expect(screen.getByLabelText("当前阶段：初识，第 1 题，共 10 题")).toBeInTheDocument();
+    expect(screen.getByText(/如果今天的记忆可以剪掉十分钟/)).toBeInTheDocument();
+    expect(screen.queryByText(/附近有家刚开的小店/)).not.toBeInTheDocument();
   });
 
   it("disables smooth scrolling when reduced motion is requested", () => {

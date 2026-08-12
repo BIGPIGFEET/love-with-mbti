@@ -1,16 +1,18 @@
 import type { Question, QuestionOption, RelationState } from "../content/schema.ts";
+import type { AvailableMbtiType } from "../content/content-pack.ts";
 import { AppHeader } from "./AppHeader.tsx";
 import { RelationMeters } from "./RelationMeters.tsx";
 import { StageProgress } from "./StageProgress.tsx";
 
 interface QuestionScreenProps {
   question: Question;
+  mbtiType: AvailableMbtiType;
   state: RelationState;
   onChoose: (option: QuestionOption) => void;
   onBack: () => void;
 }
 
-export function QuestionScreen({ question, state, onChoose, onBack }: QuestionScreenProps) {
+export function QuestionScreen({ question, mbtiType, state, onChoose, onBack }: QuestionScreenProps) {
   return (
     <main className="page-shell game-page">
       <AppHeader backLabel="返回类型选择" onBack={onBack} />
@@ -38,7 +40,7 @@ export function QuestionScreen({ question, state, onChoose, onBack }: QuestionSc
         </fieldset>
       </section>
 
-      <p className="disclaimer">角色是娱乐化的网络刻板印象集合体，不代表现实中的所有 ENTP。</p>
+      <p className="disclaimer">角色是娱乐化的网络刻板印象集合体，不代表现实中的所有 {mbtiType}。</p>
     </main>
   );
 }

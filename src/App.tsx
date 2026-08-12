@@ -3,36 +3,38 @@ import { FeedbackScreen } from "./components/FeedbackScreen.tsx";
 import { EndingScreen } from "./components/EndingScreen.tsx";
 import { QuestionScreen } from "./components/QuestionScreen.tsx";
 import { TypeSelectScreen } from "./components/TypeSelectScreen.tsx";
-import { endings, fuzzyFeedback, relationshipEvaluations } from "./content/endings.ts";
-import { questions } from "./content/questions.ts";
-import { validateContent } from "./content/schema.ts";
+import { getContentPack } from "./content/packs.ts";
+import type { AvailableMbtiType } from "./content/content-pack.ts";
 import type { EndingContent, QuestionOption, RelationshipEvaluationContent, RelationState } from "./content/schema.ts";
 import { applyEffects, INITIAL_STATE, resolveEnding } from "./game/rules.ts";
 import type { EndingResult } from "./game/rules.ts";
 
-validateContent({ questions, endings, relationshipEvaluations, fuzzyFeedback });
-
 type Screen = "select" | "question" | "feedback" | "ending";
 
-function findEnding(id: EndingResult["endingId"]): EndingContent {
+function findEnding(endings: readonly EndingContent[], id: EndingResult["endingId"]): EndingContent {
   const ending = endings.find((item) => item.id === id);
   if (!ending) throw new Error(`Missing ending content: ${id}`);
   return ending;
 }
 
-function findEvaluation(id: EndingResult["evaluationId"]): RelationshipEvaluationContent | undefined {
+function findEvaluation(
+  evaluations: readonly RelationshipEvaluationContent[],
+  id: EndingResult["evaluationId"],
+): RelationshipEvaluationContent | undefined {
   if (!id) return undefined;
-  return relationshipEvaluations.find((item) => item.id === id);
+  return evaluations.find((item) => item.id === id);
 }
 
 export default function App() {
   const [screen, setScreen] = useState<Screen>("select");
+  const [selectedType, setSelectedType] = useState<AvailableMbtiType>("ENTP");
   const [questionIndex, setQuestionIndex] = useState(0);
   const [relationState, setRelationState] = useState<RelationState>(() => ({ ...INITIAL_STATE }));
   const [selectedOption, setSelectedOption] = useState<QuestionOption | null>(null);
   const [pendingEnding, setPendingEnding] = useState<EndingResult | null>(null);
 
-  const question = questions[questionIndex];
+  const content = getContentPack(selectedType);
+  const question = content.questions[questionIndex];
 
   useEffect(() => {
     const prefersReducedMotion = window.matchMedia?.("(prefers-reduced-motion: reduce)").matches ?? false;
@@ -45,6 +47,11 @@ export default function App() {
     setSelectedOption(null);
     setPendingEnding(null);
     setScreen(nextScreen);
+  };
+
+  const startGame = (type: AvailableMbtiType) => {
+    setSelectedType(type);
+    resetGame("question");
   };
 
   const handleChoose = (option: QuestionOption) => {
@@ -68,13 +75,14 @@ export default function App() {
   };
 
   if (screen === "select") {
-    return <TypeSelectScreen onStart={() => resetGame("question")} />;
+    return <TypeSelectScreen onStart={startGame} />;
   }
 
   if (screen === "question") {
     return (
       <QuestionScreen
         question={question}
+        mbtiType={selectedType}
         state={relationState}
         onChoose={handleChoose}
         onBack={() => resetGame("select")}
@@ -98,8 +106,9 @@ export default function App() {
   if (screen === "ending" && pendingEnding) {
     return (
       <EndingScreen
-        ending={findEnding(pendingEnding.endingId)}
-        evaluation={findEvaluation(pendingEnding.evaluationId)}
+        ending={findEnding(content.endings, pendingEnding.endingId)}
+        mbtiType={selectedType}
+        evaluation={findEvaluation(content.relationshipEvaluations, pendingEnding.evaluationId)}
         state={relationState}
         completedQuestion={question.order}
         onRestart={() => resetGame("question")}

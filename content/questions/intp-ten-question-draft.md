@@ -26,7 +26,7 @@
 
 | option_id | strategy | 玩家行动 | effects（吸/信/舒/冲） | immediate_response | fuzzy_hints | rationale |
 |---|---|---|---|---|---|---|
-| q01_edit_together | `risky` 冒险玩笑 | “删掉刚才我把盐当糖的五秒，剩下五分钟留给你决定。” | `+15 / 0 / +5 / 0` | TA 看了眼糖罐，终于笑出声：“那我保留证据，防止你以后改口。” | `attraction_up_strong`；`comfort_up_slight` | 用玩笑接住假设，火花很强但还没有建立可靠信息。 |
+| q01_edit_together | `risky` 冒险玩笑 | “删掉刚才我把盐当糖的五秒，剩下九分五十五秒留给你决定。” | `+15 / 0 / +5 / 0` | TA 看了眼糖罐，终于笑出声：“那我保留证据，防止你以后改口。” | `attraction_up_strong`；`comfort_up_slight` | 用玩笑接住假设，火花很强但还没有建立可靠信息。 |
 | q01_keep_it_light | `honest` 坦诚表达 | “我今天脑子有点下班，不太想做思想实验。你愿意讲讲刚才最开心的十分钟吗？” | `-5 / +5 / +10 / -5` | TA 停了一下，点头：“可以。至少你没有假装很想答。”然后认真想起了刚才的片段。 | `comfort_up_medium`；`conflict_down_slight` | 清楚降压并给出替代话题，牺牲少量即时刺激，换取舒适。 |
 | q01_answer_and_return | `accommodate` 顺应交流 | “我会删掉刚见面时不知道说什么的那段。你呢？” | `+10 / +5 / +5 / 0` | TA 把问题接了回去：“我不删。尴尬至少能证明不是背好的台词。” | `attraction_up_medium`；`trust_up_slight` | 真诚回答并保持双向交流，增加吸引和一点信任。 |
 | q01_call_it_interview | `confront` 对抗 | “你见个人都要出这种题吗？听着像面试。” | `-10 / -5 / -10 / +10` | TA 把吸管放回杯里：“那这题作废。”之后的话明显少了。 | `comfort_down_medium`；`conflict_up_medium` | 玩家可以拒绝，但把表达方式连同表达者一起贬低会制造人际伤害。 |

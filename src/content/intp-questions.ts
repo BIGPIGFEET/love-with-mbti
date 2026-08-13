@@ -28,7 +28,7 @@ export const intpQuestions = [
         id: "q01_edit_together",
         strategy: "risky",
         strategyLabel: "冒险玩笑",
-        text: "删掉刚才我把盐当糖的五秒，剩下五分钟留给你决定。",
+        text: "删掉刚才我把盐当糖的五秒，剩下九分五十五秒留给你决定。",
         effects: { attraction: 15, trust: 0, comfort: 5, conflict: 0 },
         npcResponse: "TA 看了眼糖罐，终于笑出声：“那我保留证据，防止你以后改口。”",
         feedbackIds: ["attraction_up_strong", "comfort_up_slight"],

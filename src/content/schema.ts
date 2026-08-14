@@ -12,6 +12,29 @@ export type FuzzyFeedbackId = `${RelationKey}_${"up" | "down"}_${"slight" | "med
 export type RelationState = Record<RelationKey, number>;
 export type RelationEffects = Record<RelationKey, EffectValue>;
 
+export type EffectBudgetWarning =
+  | {
+      readonly type: "total_absolute_change";
+      readonly questionId: string;
+      readonly optionId: string;
+      readonly actual: number;
+      readonly recommendedMaximum: 40;
+    }
+  | {
+      readonly type: "high_magnitude_dimensions";
+      readonly questionId: string;
+      readonly optionId: string;
+      readonly actual: number;
+      readonly recommendedMaximum: 2;
+    };
+
+export const EFFECT_BUDGET_CONSTRAINTS = {
+  hardTotalAbsoluteChange: 60,
+  recommendedTotalAbsoluteChange: 40,
+  highMagnitudeAtOrAbove: 15,
+  recommendedMaxHighMagnitudeDimensions: 2,
+} as const;
+
 export interface QuestionOption {
   readonly id: string;
   readonly strategy: StrategyId;
@@ -21,7 +44,6 @@ export interface QuestionOption {
   readonly npcResponse: string;
   readonly feedbackIds: readonly FuzzyFeedbackId[];
   readonly feedbackText: readonly string[];
-  readonly terminalEndingId?: "blocked_immediately";
 }
 
 export interface Question {
@@ -40,7 +62,6 @@ export interface Question {
 }
 
 export const ENDING_IDS = [
-  "blocked_immediately",
   "conflict_break",
   "strong_discomfort",
   "trust_broken",
@@ -58,7 +79,21 @@ export const RELATIONSHIP_EVALUATION_IDS = ["romance_stable", "romance_hidden_ri
 
 export type EndingId = (typeof ENDING_IDS)[number];
 export type RelationshipEvaluationId = (typeof RELATIONSHIP_EVALUATION_IDS)[number];
-export type EndingKind = "scripted" | "global" | "stage_gate" | "final";
+export type EndingKind = "global" | "stage_gate" | "final";
+
+const ENDING_KIND_BY_ID: Readonly<Record<EndingId, EndingKind>> = {
+  conflict_break: "global",
+  strong_discomfort: "global",
+  trust_broken: "global",
+  no_second_meeting: "stage_gate",
+  fade_out: "stage_gate",
+  stay_acquaintances: "stage_gate",
+  strangers_after_all: "final",
+  confirmed_relationship: "final",
+  dangerous_lovers: "final",
+  friends: "final",
+  unresolved_ambiguity: "final",
+};
 
 export interface EndingContent {
   id: EndingId;
@@ -100,18 +135,65 @@ function expectedStage(order: number): StageId {
   return "ambiguity";
 }
 
+/**
+ * Returns non-blocking review findings for effect vectors that are valid but
+ * unusually strong. `validateContent` enforces the corresponding hard cap.
+ */
+export function analyzeEffectBudget(questions: readonly Question[]): EffectBudgetWarning[] {
+  return questions.flatMap((question) =>
+    question.options.flatMap((option) => {
+      const deltas = RELATION_KEYS.map((key) => option.effects[key]);
+      const totalAbsoluteChange = deltas.reduce<number>((total, delta) => total + Math.abs(delta), 0);
+      const highMagnitudeDimensions = deltas.filter(
+        (delta) => Math.abs(delta) >= EFFECT_BUDGET_CONSTRAINTS.highMagnitudeAtOrAbove,
+      ).length;
+      const warnings: EffectBudgetWarning[] = [];
+
+      if (totalAbsoluteChange > EFFECT_BUDGET_CONSTRAINTS.recommendedTotalAbsoluteChange) {
+        warnings.push({
+          type: "total_absolute_change",
+          questionId: question.id,
+          optionId: option.id,
+          actual: totalAbsoluteChange,
+          recommendedMaximum: EFFECT_BUDGET_CONSTRAINTS.recommendedTotalAbsoluteChange,
+        });
+      }
+      if (highMagnitudeDimensions > EFFECT_BUDGET_CONSTRAINTS.recommendedMaxHighMagnitudeDimensions) {
+        warnings.push({
+          type: "high_magnitude_dimensions",
+          questionId: question.id,
+          optionId: option.id,
+          actual: highMagnitudeDimensions,
+          recommendedMaximum: EFFECT_BUDGET_CONSTRAINTS.recommendedMaxHighMagnitudeDimensions,
+        });
+      }
+      return warnings;
+    }),
+  );
+}
+
 export function validateContent(input: {
   questions: readonly Question[];
   endings: readonly EndingContent[];
   relationshipEvaluations: readonly RelationshipEvaluationContent[];
   fuzzyFeedback: readonly FuzzyFeedbackContent[];
-}): void {
+}): EffectBudgetWarning[] {
   const { questions, endings, relationshipEvaluations, fuzzyFeedback } = input;
   const allowedEffects = new Set<number>(ALLOWED_EFFECT_VALUES);
   const endingIds = new Set<string>(ENDING_IDS);
   const strategyIds = new Set<string>(STRATEGY_IDS);
   const evaluationIds = new Set<string>(RELATIONSHIP_EVALUATION_IDS);
   const feedbackIds = new Set<string>(fuzzyFeedback.map((item) => item.id));
+  const optionKeys = new Set([
+    "id",
+    "strategy",
+    "strategyLabel",
+    "text",
+    "effects",
+    "npcResponse",
+    "feedbackIds",
+    "feedbackText",
+  ]);
 
   assert(questions.length === 10, `正式题目必须恰好为 10 道，当前为 ${questions.length} 道`);
   assertUnique(questions.map((question) => question.id), "题目");
@@ -124,6 +206,12 @@ export function validateContent(input: {
     endings.length === ENDING_IDS.length && endings.every((ending) => endingIds.has(ending.id)),
     "结局数据必须完整覆盖全部稳定结局 ID",
   );
+  endings.forEach((ending) => {
+    assert(
+      ending.kind === ENDING_KIND_BY_ID[ending.id],
+      `${ending.id} 的结局类型应为 ${ENDING_KIND_BY_ID[ending.id]}，当前为 ${ending.kind}`,
+    );
+  });
   assert(
     relationshipEvaluations.length === RELATIONSHIP_EVALUATION_IDS.length &&
       relationshipEvaluations.every((evaluation) => evaluationIds.has(evaluation.id)),
@@ -143,12 +231,25 @@ export function validateContent(input: {
     assert(question.tags.length > 0, `${question.id} 缺少内容标签`);
 
     question.options.forEach((option) => {
+      const unknownOptionKeys = Object.keys(option).filter((key) => !optionKeys.has(key));
+      assert(
+        unknownOptionKeys.length === 0,
+        `${option.id} 包含未知选项字段：${unknownOptionKeys.join(", ")}`,
+      );
       assert(option.id.startsWith(`q${String(question.order).padStart(2, "0")}_`), `${option.id} 未使用所属题目的 ID 前缀`);
       assert(strategyIds.has(option.strategy), `${option.id} 使用了不存在的策略 ID：${option.strategy}`);
       RELATION_KEYS.forEach((key) => {
         assert(key in option.effects, `${option.id} 缺少 ${key} 数值`);
         assert(allowedEffects.has(option.effects[key]), `${option.id}.${key} 使用了非法变化值 ${option.effects[key]}`);
       });
+      const totalAbsoluteChange = RELATION_KEYS.reduce(
+        (total, key) => total + Math.abs(option.effects[key]),
+        0,
+      );
+      assert(
+        totalAbsoluteChange <= EFFECT_BUDGET_CONSTRAINTS.hardTotalAbsoluteChange,
+        `${option.id} 的四维绝对变化总和 ${totalAbsoluteChange} 超过硬上限 ${EFFECT_BUDGET_CONSTRAINTS.hardTotalAbsoluteChange}`,
+      );
       assert(option.feedbackIds.length > 0 && option.feedbackIds.length <= 2, `${option.id} 应引用 1～2 个模糊提示 ID`);
       assert(option.feedbackText.length > 0 && option.feedbackText.length <= 2, `${option.id} 应包含 1～2 条模糊提示文案`);
       assertUnique([...option.feedbackIds], `${option.id} 的模糊提示`);
@@ -166,17 +267,8 @@ export function validateContent(input: {
         assert(direction === expectedDirection, `${option.id} 的 ${feedbackId} 方向与数值变化不一致`);
         assert(strength === expectedStrength, `${option.id} 的 ${feedbackId} 强度与数值变化不一致`);
       });
-      if (option.terminalEndingId) {
-        assert(option.terminalEndingId === "blocked_immediately", `${option.id} 使用了不允许的剧情指定结局`);
-      }
     });
   });
 
-  const terminalOptions = questions.flatMap((question) => question.options).filter((option) => option.terminalEndingId);
-  assert(
-    terminalOptions.length <= 1,
-    `每套十题最多只能配置 1 个剧情指定结束选项，当前为 ${terminalOptions.length} 个：${terminalOptions
-      .map((option) => option.id)
-      .join(", ")}`,
-  );
+  return analyzeEffectBudget(questions);
 }

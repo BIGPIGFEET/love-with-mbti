@@ -1,0 +1,4 @@
+interface:
+  display_name: "05 互动游戏结局与提示设计"
+  short_description: "设计仅由全局危险、阶段门槛和最终分类器产生的完整结局契约。"
+  default_prompt: "Use $05-design-choice-game-endings to inventory canonical global, stage-gate, and final rules, forbid option-authored endings, preserve complete secondary outcomes, and complete ending and feedback content."

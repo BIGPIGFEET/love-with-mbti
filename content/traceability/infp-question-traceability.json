@@ -1,0 +1,182 @@
+[
+  {
+    "question_id": "Q01",
+    "order": 1,
+    "stage": "first_meeting",
+    "scene_id": "INFP-S01",
+    "candidate_id": "I01",
+    "behavior_ids": ["B02", "B03"],
+    "feature_ids": ["F02", "F10", "F15"],
+    "source_ids": ["S01", "S02", "S08", "S10"],
+    "conflict_ids": ["C02", "C11"],
+    "state_ids": ["attraction", "comfort"],
+    "options": [
+      {"option_id": "q01_admit_and_ask", "strategy": "honest", "rationale": "承认不了解并具体好奇，提升可信度与轻度舒适。"},
+      {"option_id": "q01_vague_agreement", "strategy": "accommodate", "rationale": "附和维持短期气氛，但被事实识破后损害信任。"},
+      {"option_id": "q01_trade_references", "strategy": "negotiate", "rationale": "以交换建立互惠入口，同时保留不同意见。"},
+      {"option_id": "q01_thirty_second_pitch", "strategy": "risky", "rationale": "玩笑带来火花，也把珍视对象临时变成表演任务。"}
+    ]
+  },
+  {
+    "question_id": "Q02",
+    "order": 2,
+    "stage": "first_meeting",
+    "scene_id": "INFP-S02",
+    "candidate_id": "I02",
+    "behavior_ids": ["B01", "B03"],
+    "feature_ids": ["F01", "F10", "F11"],
+    "source_ids": ["S01", "S02", "S03", "S08", "S09"],
+    "conflict_ids": ["C01", "C09", "C12"],
+    "state_ids": ["comfort", "trust", "conflict"],
+    "options": [
+      {"option_id": "q02_end_gently", "strategy": "accommodate", "rationale": "顺应结束节奏且保留最低安全确认，降低压力。"},
+      {"option_id": "q02_check_without_pressure", "strategy": "honest", "rationale": "表达担心但允许延迟回答，增加沟通可信度。"},
+      {"option_id": "q02_message_until_answer", "strategy": "risky", "rationale": "把不确定转为持续追问，侵犯披露节奏并升级冲突。"},
+      {"option_id": "q02_offer_two_exits", "strategy": "negotiate", "rationale": "提供同行或结束两种真实出口，显著提高舒适。"}
+    ]
+  },
+  {
+    "question_id": "Q03",
+    "order": 3,
+    "stage": "contact",
+    "scene_id": "INFP-S03",
+    "candidate_id": "I04",
+    "behavior_ids": ["B04", "B06"],
+    "feature_ids": ["F03", "F08"],
+    "source_ids": ["S03", "S04", "S08", "S09"],
+    "conflict_ids": ["C08", "C12"],
+    "state_ids": ["attraction", "trust", "comfort"],
+    "options": [
+      {"option_id": "q03_tease_in_public", "strategy": "risky", "rationale": "公开起哄把私人表达变成群体讨论，损害信任和舒适。"},
+      {"option_id": "q03_ask_lightly", "strategy": "honest", "rationale": "轻量确认意图，不把礼物直接等同承诺。"},
+      {"option_id": "q03_receive_without_label", "strategy": "accommodate", "rationale": "具体接住心意且不催定义，增加吸引和舒适。"},
+      {"option_id": "q03_set_gift_tone", "strategy": "negotiate", "rationale": "建立不以价格回压、重要含义直接说明的双向规则。"}
+    ]
+  },
+  {
+    "question_id": "Q04",
+    "order": 4,
+    "stage": "contact",
+    "scene_id": "INFP-S04",
+    "candidate_id": "I06",
+    "behavior_ids": ["B03"],
+    "feature_ids": ["F10", "F11"],
+    "source_ids": ["S02", "S08", "S09"],
+    "conflict_ids": ["C09"],
+    "state_ids": ["comfort", "attraction", "trust"],
+    "options": [
+      {"option_id": "q04_build_exit_point", "strategy": "negotiate", "rationale": "拆短行程并设置退出点，兼顾共同体验与精力边界。"},
+      {"option_id": "q04_push_through", "strategy": "confront", "rationale": "否定已表达的精力边界，造成强烈不适和冲突。"},
+      {"option_id": "q04_cancel_everything", "strategy": "accommodate", "rationale": "避免当下摩擦，却抹去玩家自身需求并降低长期可信度。"},
+      {"option_id": "q04_keep_own_plan", "strategy": "honest", "rationale": "共同参加核心活动后各自安排，保留双方选择。"}
+    ]
+  },
+  {
+    "question_id": "Q05",
+    "order": 5,
+    "stage": "contact",
+    "scene_id": "INFP-S05",
+    "candidate_id": "I08",
+    "behavior_ids": ["B04", "B05"],
+    "feature_ids": ["F05", "F14"],
+    "source_ids": ["S03", "S08", "S09", "S11", "S12"],
+    "conflict_ids": ["C03", "C14"],
+    "state_ids": ["attraction", "trust", "comfort"],
+    "options": [
+      {"option_id": "q05_promise_the_month", "strategy": "accommodate", "rationale": "确定式浪漫承诺提高吸引，但缺少现实依据而损害可信度。"},
+      {"option_id": "q05_mock_the_fantasy", "strategy": "risky", "rationale": "用玩笑羞辱想象力，压低吸引和表达舒适。"},
+      {"option_id": "q05_make_small_version", "strategy": "negotiate", "rationale": "把愿景缩为可验证的周末版本，显著提高信任。"},
+      {"option_id": "q05_name_uncertainty", "strategy": "honest", "rationale": "拒绝尚不能兑现的承诺，短期扫兴但长期更可信。"}
+    ]
+  },
+  {
+    "question_id": "Q06",
+    "order": 6,
+    "stage": "familiarity",
+    "scene_id": "INFP-S06",
+    "candidate_id": "I09",
+    "behavior_ids": ["B07", "B11"],
+    "feature_ids": ["F04", "F15"],
+    "source_ids": ["S01", "S02", "S07", "S08"],
+    "conflict_ids": ["C04", "C13"],
+    "state_ids": ["comfort", "trust", "conflict"],
+    "options": [
+      {"option_id": "q06_sequence_support", "strategy": "negotiate", "rationale": "明确倾听时长与行动顺序，并保留玩家执行责任。"},
+      {"option_id": "q06_keep_venting", "strategy": "accommodate", "rationale": "延续情绪陪伴带来舒适，却回避迫近的个人责任。"},
+      {"option_id": "q06_request_structure", "strategy": "honest", "rationale": "直接请求有限帮助且不交出任务所有权。"},
+      {"option_id": "q06_blame_for_not_fixing", "strategy": "confront", "rationale": "把自己的截止日期转成伴侣失职，严重破坏舒适和冲突状态。"}
+    ]
+  },
+  {
+    "question_id": "Q07",
+    "order": 7,
+    "stage": "familiarity",
+    "scene_id": "INFP-S07",
+    "candidate_id": "I10",
+    "behavior_ids": ["B06", "B08"],
+    "feature_ids": ["F06", "F08"],
+    "source_ids": ["S01", "S03", "S04", "S07", "S08", "S10"],
+    "conflict_ids": ["C05", "C12"],
+    "state_ids": ["trust", "comfort", "conflict"],
+    "options": [
+      {"option_id": "q07_name_limit", "strategy": "honest", "rationale": "接受暂停但要求最晚返回时间，保护沟通可预测性。"},
+      {"option_id": "q07_force_resolution", "strategy": "risky", "rationale": "取消对方暂停和离开的权利，显著升级冲突。"},
+      {"option_id": "q07_pause_with_anchor", "strategy": "negotiate", "rationale": "约定时间、改期责任和重谈入口，并由 TA 实际兑现返回。"},
+      {"option_id": "q07_wait_without_anchor", "strategy": "accommodate", "rationale": "当下减少摩擦，但无限期等待让修复责任继续模糊。"}
+    ]
+  },
+  {
+    "question_id": "Q08",
+    "order": 8,
+    "stage": "familiarity",
+    "scene_id": "INFP-S08",
+    "candidate_id": "I12",
+    "behavior_ids": ["B02", "B09"],
+    "feature_ids": ["F02", "F07"],
+    "source_ids": ["S01", "S02", "S07", "S08", "S10"],
+    "conflict_ids": ["C02", "C11"],
+    "state_ids": ["attraction", "trust", "conflict"],
+    "options": [
+      {"option_id": "q08_negotiate_claims", "strategy": "negotiate", "rationale": "把价值冲突转成可核验的宣传边界，并保留客户拒绝时退出的责任。"},
+      {"option_id": "q08_refuse_immediately", "strategy": "accommodate", "rationale": "立即拒绝快速降低冲突，却把决定和现实代价交给 TA。"},
+      {"option_id": "q08_take_and_dismiss", "strategy": "confront", "rationale": "把价值分歧贬为不懂现实，严重破坏信任和舒适。"},
+      {"option_id": "q08_keep_decision_right", "strategy": "honest", "rationale": "说明收入需要、诚实底线与最终决定权，允许分歧继续存在。"}
+    ]
+  },
+  {
+    "question_id": "Q09",
+    "order": 9,
+    "stage": "ambiguity",
+    "scene_id": "INFP-S09",
+    "candidate_id": "I14",
+    "behavior_ids": ["B04", "B11", "B13"],
+    "feature_ids": ["F03", "F12", "F15"],
+    "source_ids": ["S01", "S02", "S03", "S04", "S08", "S09"],
+    "conflict_ids": ["C08", "C10"],
+    "state_ids": ["attraction", "trust", "conflict"],
+    "options": [
+      {"option_id": "q09_treat_as_yes", "strategy": "risky", "rationale": "把强烈表达擅自解释为排他同意，伤害信任和舒适。"},
+      {"option_id": "q09_define_three_terms", "strategy": "negotiate", "rationale": "把抽象称呼拆成排他、公开和复盘三个可执行协议。"},
+      {"option_id": "q09_wait_without_need", "strategy": "accommodate", "rationale": "接住浪漫但隐藏自己的关系需求，吸引上升而长期可信度下降。"},
+      {"option_id": "q09_set_answer_window", "strategy": "honest", "rationale": "说明期限和投入边界，短期有压力但保障退出权和信息可信度。"}
+    ]
+  },
+  {
+    "question_id": "Q10",
+    "order": 10,
+    "stage": "ambiguity",
+    "scene_id": "INFP-S10",
+    "candidate_id": "I17",
+    "behavior_ids": ["B08", "B10", "B13"],
+    "feature_ids": ["F06", "F09", "F13"],
+    "source_ids": ["S01", "S02", "S03", "S06", "S07", "S10", "S12"],
+    "conflict_ids": ["C05", "C07"],
+    "state_ids": ["trust", "comfort", "conflict"],
+    "options": [
+      {"option_id": "q10_follow_their_impulse", "strategy": "accommodate", "rationale": "高度尊重 TA 的随性带来吸引，却删除玩家稳定需求。"},
+      {"option_id": "q10_state_minimum", "strategy": "honest", "rationale": "清楚提出兼容底线，让承诺建立在可兑现信息上。"},
+      {"option_id": "q10_disappear_to_test", "strategy": "risky", "rationale": "用不知情测试替代协议，严重破坏信任、舒适和修复空间。"},
+      {"option_id": "q10_build_flexible_rhythm", "strategy": "negotiate", "rationale": "同时规定最低见面、改期责任和低能量报备，形成双向维护。"}
+    ]
+  }
+]

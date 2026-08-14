@@ -1,6 +1,5 @@
 import type {
   EndingId,
-  QuestionOption,
   RelationEffects,
   RelationshipEvaluationId,
   RelationState,
@@ -39,10 +38,8 @@ export function applyEffects(state: RelationState, effects: RelationEffects): Re
 
 export function resolveEnding(
   questionOrder: number,
-  option: QuestionOption,
   state: RelationState,
 ): EndingResult | null {
-  if (option.terminalEndingId) return { endingId: option.terminalEndingId };
   if (state.conflict >= 80) return { endingId: "conflict_break" };
   if (state.comfort <= 5) return { endingId: "strong_discomfort" };
   if (state.trust <= 5) return { endingId: "trust_broken" };
@@ -87,17 +84,17 @@ export function resolveEnding(
     return { endingId: "strangers_after_all" };
   }
 
-  if (state.attraction >= 85 && state.trust >= 55 && state.comfort >= 50 && state.conflict <= 40) {
+  if (state.attraction >= 70 && state.trust >= 50 && state.comfort >= 45 && state.conflict <= 45) {
     const evaluationId =
-      state.trust >= 70 && state.comfort >= 65 && state.conflict <= 25
+      state.trust >= 65 && state.comfort >= 60 && state.conflict <= 25
         ? "romance_stable"
         : "romance_hidden_risk";
     return { endingId: "confirmed_relationship", evaluationId };
   }
 
-  if (state.attraction >= 95) return { endingId: "dangerous_lovers" };
+  if (state.attraction >= 70) return { endingId: "dangerous_lovers" };
 
-  if (state.trust >= 45 && state.comfort >= 45 && state.conflict <= 45 && state.attraction < 65) {
+  if (state.trust >= 45 && state.comfort >= 45 && state.conflict <= 45 && state.attraction < 60) {
     return { endingId: "friends" };
   }
 

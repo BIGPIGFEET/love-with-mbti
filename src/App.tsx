@@ -56,7 +56,7 @@ export default function App() {
 
   const handleChoose = (option: QuestionOption) => {
     const nextState = applyEffects(relationState, option.effects);
-    const ending = resolveEnding(question.order, option, nextState);
+    const ending = resolveEnding(question.order, nextState);
     setRelationState(nextState);
     setSelectedOption(option);
     setPendingEnding(ending);

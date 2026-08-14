@@ -1,0 +1,4 @@
+interface:
+  display_name: "04 互动选择题与反馈写作"
+  short_description: "将正式场景写成无选项直达结局、效果受预算约束且叙事可延续的互动题目。"
+  default_prompt: "Use $04-write-choice-game-questions to write complete choice-game questions whose options change state without selecting endings directly, with effect-budget checks, immediate responses, and fuzzy feedback."

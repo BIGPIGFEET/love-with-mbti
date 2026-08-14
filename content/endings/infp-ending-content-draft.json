@@ -1,0 +1,132 @@
+{
+  "endings": [
+    {
+      "id": "conflict_break",
+      "kind": "global",
+      "title": "话只剩下防御",
+      "coreCopy": "你们都还记得最初为什么愿意靠近，但最近的每次解释都像下一次反击的开场。TA 不再继续这段关系，因为冲突已经挤掉了理解和修复的位置。",
+      "reasonCopy": "互动中持续累积施压、否定边界、迁怒或擅自替对方定义的行为，使未解决冲突达到全局终止条件。",
+      "stateSummary": "冲突已经高到无法由当下这次互动继续承载。"
+    },
+    {
+      "id": "strong_discomfort",
+      "kind": "global",
+      "title": "相处开始需要防备",
+      "coreCopy": "TA 原本愿意把安静、犹豫和不确定都留在你面前。现在每句话出口前都要先计算会不会被追问、嘲笑或替自己决定。继续靠近已经不再安全。",
+      "reasonCopy": "边界和表达节奏多次没有得到尊重，使相处舒适度降到全局终止条件。善意意图不能抵消持续造成的压力。",
+      "stateSummary": "舒适已经低到无法自然交流或保留真实拒绝。"
+    },
+    {
+      "id": "trust_broken",
+      "kind": "global",
+      "title": "重要的话不再交给你",
+      "coreCopy": "你们仍然可以说几句客气话，但那封信、那个未来计划和下一次真实需要，都不会再被交到你手里。TA 不再相信表达会被按原意接住。",
+      "reasonCopy": "附和后反悔、擅自定义关系、让对方参加不知情的测试，或反复让承诺失去可信度，使信任降到全局终止条件。",
+      "stateSummary": "信任已经低到无法继续托付边界、计划或脆弱。"
+    },
+    {
+      "id": "no_second_meeting",
+      "kind": "stage_gate",
+      "title": "雨停以后，没有下次",
+      "coreCopy": "你们礼貌地在地铁口分开。TA 没有把这次见面解释成灾难，只是没有足够理由再把一个周末交给彼此。",
+      "reasonCopy": "前两次互动没有建立最低限度的信任与舒适，或已经积累过多冲突，因此关系没有进入接触阶段。",
+      "stateSummary": "初识门槛未通过；这是一段没有继续展开的相遇。"
+    },
+    {
+      "id": "fade_out",
+      "kind": "stage_gate",
+      "title": "愿景没有落到下一次",
+      "coreCopy": "你们谈过喜欢的作品、约会方式和一个很远的海边，却一直没找到双方都愿意兑现的下一步。消息没有突然消失，只是间隔越来越长。",
+      "reasonCopy": "到第五题为止，互动仍缺少足够信任、舒适或可控冲突，心动和想象没有形成可持续的接触方式。",
+      "stateSummary": "接触门槛未通过；关系以逐渐淡出结束。"
+    },
+    {
+      "id": "stay_acquaintances",
+      "kind": "stage_gate",
+      "title": "停在熟悉的边缘",
+      "coreCopy": "你们已经知道彼此会怎样谈理想、怎样需要空间，也看见过真正的分歧。TA 仍愿意和你打招呼，却不再把关系推向更私密的位置。",
+      "reasonCopy": "到第八题时，吸引、信任、舒适或冲突管理没有同时达到进入暧昧阶段的最低条件。",
+      "stateSummary": "熟悉阶段门槛未通过；关系保留为有距离的相识。"
+    },
+    {
+      "id": "strangers_after_all",
+      "kind": "final",
+      "title": "说过很多，还是走散",
+      "coreCopy": "你们曾经记得彼此说过的小事，也认真讨论过关系应该是什么样。最后，那些讨论没有变成足以继续靠近的安全和可信。你们把彼此留在了过去。",
+      "reasonCopy": "走到最终题时，信任或舒适过低，或冲突仍过高，关系基础不足以承载继续往来。",
+      "stateSummary": "最终状态显示关系已经无法以亲密、友谊或稳定暧昧继续。"
+    },
+    {
+      "id": "confirmed_relationship",
+      "kind": "final",
+      "title": "把下次写进日历",
+      "coreCopy": "你们没有把一封信当作全部答案，也没有要求每次靠近都靠临时灵感。TA 和你一起确认了关系，并把下一次见面、改期方式和各自需要的空间写成双方都能兑现的安排。",
+      "reasonCopy": "吸引、信任和舒适都达到确认关系的条件，同时冲突保持在可修复范围；具体稳定程度由关系评价进一步说明。",
+      "stateSummary": "关系已确认；结局同时附带稳定或隐藏风险评价。"
+    },
+    {
+      "id": "dangerous_lovers",
+      "kind": "final",
+      "title": "很想靠近，还没有站稳",
+      "coreCopy": "你们仍然强烈地被彼此吸引，下一次见面甚至已经不用谁来提。只是关于信任、舒适或冲突修复的几个关键问题，还没有可靠答案。",
+      "reasonCopy": "吸引极强，但关系没有先满足确认恋爱的稳定条件；靠近主要由心动推动，而不是由完整协议和修复能力承托。",
+      "stateSummary": "高吸引伴随明显结构风险；这不是高于稳定恋爱的隐藏真结局。"
+    },
+    {
+      "id": "friends",
+      "kind": "final",
+      "title": "还会记得你说过的小事",
+      "coreCopy": "TA 仍会在看到那款停产游戏时想起你，也愿意听你讲工作受挫或新的计划。你们不再把每次用心都解释成暧昧，却都愿意让这段关系继续。",
+      "reasonCopy": "信任、舒适和冲突管理足以支撑稳定往来，但恋爱吸引没有达到改变关系性质的条件。",
+      "stateSummary": "这是一段有价值的友谊，不是恋爱失败后的候补位置。"
+    },
+    {
+      "id": "unresolved_ambiguity",
+      "kind": "final",
+      "title": "答案还留在信封里",
+      "coreCopy": "你们谈过排他、联系频率和如何在冲突后回来，却仍有一部分关系没有被共同命名。下一封信也许还会来，但它究竟通向哪里，暂时没有人替双方决定。",
+      "reasonCopy": "最终状态没有差到终止关系，也没有组合成确认恋爱、危险恋人或稳定朋友的条件；靠近与保留仍同时存在。",
+      "stateSummary": "关系保持开放但未完成；不保证之后必然升级或结束。"
+    }
+  ],
+  "relationshipEvaluations": [
+    {
+      "id": "romance_stable",
+      "title": "会回来把话说完",
+      "copy": "你们的稳定不来自从不扫兴、从不分歧，而来自可以说“不”、可以暂停，也会按约回来。愿景有现实版本，浪漫也有双方确认的边界。",
+      "badge": "关系评价：稳定而有呼吸"
+    },
+    {
+      "id": "romance_hidden_risk",
+      "title": "协议之外，还有空白",
+      "copy": "你们已经决定继续靠近，但有些安排仍依赖默契，有些不舒服还会先被收起来。确认关系给了下一步，不会替你们完成下一次修复。",
+      "badge": "关系评价：靠近已确认，维护待验证"
+    }
+  ],
+  "fuzzyFeedback": [
+    {"id": "attraction_up_slight", "dimension": "attraction", "direction": "up", "strength": "slight", "text": "TA把原本收住的靠近又往前放了一点。"},
+    {"id": "attraction_up_medium", "dimension": "attraction", "direction": "up", "strength": "medium", "text": "TA明显更期待下一次只属于你们的时间。"},
+    {"id": "attraction_up_strong", "dimension": "attraction", "direction": "up", "strength": "strong", "text": "TA已经开始主动把“下次”说成具体安排。"},
+    {"id": "attraction_down_slight", "dimension": "attraction", "direction": "down", "strength": "slight", "text": "TA对下一步少了一点期待。"},
+    {"id": "attraction_down_medium", "dimension": "attraction", "direction": "down", "strength": "medium", "text": "TA不再像刚才那样想继续靠近。"},
+    {"id": "attraction_down_strong", "dimension": "attraction", "direction": "down", "strength": "strong", "text": "TA已经很难把这种拉扯继续理解成心动。"},
+    {"id": "trust_up_slight", "dimension": "trust", "direction": "up", "strength": "slight", "text": "TA愿意把你的话多当真一点。"},
+    {"id": "trust_up_medium", "dimension": "trust", "direction": "up", "strength": "medium", "text": "TA开始认真把你的话算进之后的安排。"},
+    {"id": "trust_up_strong", "dimension": "trust", "direction": "up", "strength": "strong", "text": "TA相信重要的事可以交给你共同决定。"},
+    {"id": "trust_down_slight", "dimension": "trust", "direction": "down", "strength": "slight", "text": "TA对你刚才的说法留下了一个问号。"},
+    {"id": "trust_down_medium", "dimension": "trust", "direction": "down", "strength": "medium", "text": "TA开始怀疑这句话之后会不会算数。"},
+    {"id": "trust_down_strong", "dimension": "trust", "direction": "down", "strength": "strong", "text": "TA不再愿意把重要的事放进这段关系。"},
+    {"id": "comfort_up_slight", "dimension": "comfort", "direction": "up", "strength": "slight", "text": "TA在你面前少斟酌了一句话。"},
+    {"id": "comfort_up_medium", "dimension": "comfort", "direction": "up", "strength": "medium", "text": "TA明显更敢直接说出自己的需要。"},
+    {"id": "comfort_up_strong", "dimension": "comfort", "direction": "up", "strength": "strong", "text": "这一刻，你们都不必预演下一句话。"},
+    {"id": "comfort_down_slight", "dimension": "comfort", "direction": "down", "strength": "slight", "text": "对话里多了一点需要小心绕开的地方。"},
+    {"id": "comfort_down_medium", "dimension": "comfort", "direction": "down", "strength": "medium", "text": "TA开始把原本会说出口的话收回去。"},
+    {"id": "comfort_down_strong", "dimension": "comfort", "direction": "down", "strength": "strong", "text": "TA已经很难在这段互动里放松下来。"},
+    {"id": "conflict_up_slight", "dimension": "conflict", "direction": "up", "strength": "slight", "text": "这件事留下了一点尚未处理的摩擦。"},
+    {"id": "conflict_up_medium", "dimension": "conflict", "direction": "up", "strength": "medium", "text": "你们已经不只是在讨论不同答案。"},
+    {"id": "conflict_up_strong", "dimension": "conflict", "direction": "up", "strength": "strong", "text": "这场互动正在迅速失去修复空间。"},
+    {"id": "conflict_down_slight", "dimension": "conflict", "direction": "down", "strength": "slight", "text": "刚才的分歧松开了一点。"},
+    {"id": "conflict_down_medium", "dimension": "conflict", "direction": "down", "strength": "medium", "text": "你们找到了让分歧停下来、以后再谈的方法。"},
+    {"id": "conflict_down_strong", "dimension": "conflict", "direction": "down", "strength": "strong", "text": "积着的敌意终于退回到可以好好说话的位置。"}
+  ]
+}

@@ -17,6 +17,7 @@ interface SavedEnding {
 interface SavedReport {
   completeChoiceSpace: number;
   terminalTrajectories: number;
+  earlyTerminalTrajectories: number;
   weightedTotal: number;
   endings: Record<string, SavedEnding>;
 }
@@ -24,13 +25,14 @@ interface SavedReport {
 function enumerateFormalIntpData() {
   const endings = new Map<string, SavedEnding>();
   let terminalTrajectories = 0;
+  let earlyTerminalTrajectories = 0;
 
   function visit(questionIndex: number, state: typeof INITIAL_STATE, path: string[]): void {
     const question = intpQuestions[questionIndex];
     question.options.forEach((option) => {
       const nextState = applyEffects(state, option.effects);
       const nextPath = [...path, option.id];
-      const result = resolveEnding(question.order, option, nextState);
+      const result = resolveEnding(question.order, nextState);
       if (result) {
         const key = endingResultKey(result);
         const current = endings.get(key) ?? {
@@ -42,7 +44,8 @@ function enumerateFormalIntpData() {
         current.trajectories += 1;
         current.weightedPaths += 4 ** (intpQuestions.length - questionIndex - 1);
         endings.set(key, current);
-        if (questionIndex < intpQuestions.length - 1) terminalTrajectories += 1;
+        terminalTrajectories += 1;
+        if (questionIndex < intpQuestions.length - 1) earlyTerminalTrajectories += 1;
         return;
       }
       visit(questionIndex + 1, nextState, nextPath);
@@ -52,6 +55,7 @@ function enumerateFormalIntpData() {
   visit(0, { ...INITIAL_STATE }, []);
   return {
     terminalTrajectories,
+    earlyTerminalTrajectories,
     endings: Object.fromEntries([...endings.entries()].sort(([a], [b]) => a.localeCompare(b))),
   };
 }
@@ -76,6 +80,7 @@ describe("INTP formal data migration", () => {
     expect(4 ** intpQuestions.length).toBe(saved.completeChoiceSpace);
     expect(saved.weightedTotal).toBe(saved.completeChoiceSpace);
     expect(actual.terminalTrajectories).toBe(saved.terminalTrajectories);
+    expect(actual.earlyTerminalTrajectories).toBe(saved.earlyTerminalTrajectories);
     expect(actual.endings).toEqual(saved.endings);
   });
 });

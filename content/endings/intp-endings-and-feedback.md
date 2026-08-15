@@ -1,6 +1,6 @@
 # INTP 结局与状态反馈目录 v0.1
 
-> 状态：规则身份、判定优先级、结局文案、关系评价、模糊反馈和问题追踪已完成；`balance-choice-game-paths` 已于 2026-08-12 验证全部运行时结果可达。  
+> 状态：规则身份、判定优先级、结局文案、关系评价、模糊反馈和问题追踪已完成；`balance-choice-game-paths` 已于 2026-08-15 重新验证全部运行时结果可达。
 > 问题来源：[INTP 正式十题内容草案](../questions/intp-ten-question-draft.md)。  
 > 运行时合同：[核心规则](../../docs/02-core-rules.md) 与 `src/game/rules.ts`。本目录不修改现有 ENTP 运行时数据。
 > 机制模式：`reuse`；下列 `R_*` 均为审计用 companion ID，不是 `src/game/rules.ts` 返回的运行时 rule ID。本次仅更新玩家文案，不修改共享机制。
@@ -29,21 +29,21 @@
 | 20 | `R_GLOBAL_CONFLICT_80` | 每题后 | `conflict >= 80` | 含 80 | `conflict_break` | 先于舒适、信任、阶段门槛和最终分类 |
 | 30 | `R_GLOBAL_COMFORT_05` | 每题后 | `comfort <= 5` | 含 5 | `strong_discomfort` | 若与低信任同时成立，舒适规则优先 |
 | 40 | `R_GLOBAL_TRUST_05` | 每题后 | `trust <= 5` | 含 5 | `trust_broken` | 先于所有阶段门槛和最终分类 |
-| 50 | `R_GATE_Q02` | 仅 Q02 后 | `NOT (trust >= 15 AND comfort >= 15 AND conflict <= 50)` | 门槛均包含边界 | `no_second_meeting` | 只在三项全局规则均未命中后检查 |
-| 60 | `R_GATE_Q05` | 仅 Q05 后 | `NOT (trust >= 25 AND comfort >= 20 AND conflict <= 60)` | 门槛均包含边界 | `fade_out` | 只在更高优先级规则未命中后检查 |
-| 70 | `R_GATE_Q08` | 仅 Q08 后 | `NOT (attraction >= 35 AND trust >= 25 AND comfort >= 20 AND conflict <= 65)` | 门槛均包含边界 | `stay_acquaintances` | 只在更高优先级规则未命中后检查 |
-| 80 | `R_FINAL_FOUNDATION_LOST` | 仅 Q10 后 | `trust <= 20 OR comfort <= 20 OR conflict >= 70` | 含 20/70 | `strangers_after_all` | 最终分类第一项；高吸引不能覆盖 |
-| 90 | `R_FINAL_CONFIRMED` | 仅 Q10 后 | `attraction >= 70 AND trust >= 50 AND comfort >= 45 AND conflict <= 45` | 均包含边界 | `confirmed_relationship` | 命中后进入关系评价，不再检查其他最终结局 |
-| 91 | `R_EVAL_ROMANCE_STABLE` | `R_FINAL_CONFIRMED` 命中后 | `trust >= 65 AND comfort >= 60 AND conflict <= 25` | 均包含边界 | `romance_stable`（评价） | 二级分类第一项 |
+| 50 | `R_GATE_Q02` | 仅 Q02 后 | `NOT (attraction >= 25 AND trust >= 20 AND comfort >= 20 AND conflict <= 20)` | 门槛均包含边界 | `no_second_meeting` | 只在三项全局规则均未命中后检查 |
+| 60 | `R_GATE_Q05` | 仅 Q05 后 | `NOT (attraction >= 35 AND trust >= 30 AND comfort >= 25 AND conflict <= 45)` | 门槛均包含边界 | `fade_out` | 只在更高优先级规则未命中后检查 |
+| 70 | `R_GATE_Q08` | 仅 Q08 后 | `NOT (attraction >= 45 AND trust >= 40 AND comfort >= 35 AND conflict <= 45)` | 门槛均包含边界 | `stay_acquaintances` | 只在更高优先级规则未命中后检查 |
+| 80 | `R_FINAL_FOUNDATION_LOST` | 仅 Q10 后 | `trust < 35 OR comfort < 35 OR conflict > 50` | 不含 35/50 | `strangers_after_all` | 最终分类第一项；高吸引不能覆盖 |
+| 90 | `R_FINAL_CONFIRMED` | 仅 Q10 后 | `attraction >= 85 AND trust >= 65 AND comfort >= 60 AND conflict <= 25` | 均包含边界 | `confirmed_relationship` | 命中后进入关系评价，不再检查其他最终结局 |
+| 91 | `R_EVAL_ROMANCE_STABLE` | `R_FINAL_CONFIRMED` 命中后 | `trust >= 75 AND comfort >= 70 AND conflict <= 15` | 均包含边界 | `romance_stable`（评价） | 二级分类第一项 |
 | 92 | `R_EVAL_ROMANCE_HIDDEN_RISK` | `R_FINAL_CONFIRMED` 命中后 | 未命中 `R_EVAL_ROMANCE_STABLE` | else | `romance_hidden_risk`（评价） | 二级分类兜底 |
-| 100 | `R_FINAL_DANGEROUS_ATTRACTION` | 仅 Q10 后 | `attraction >= 70` | 含 70 | `dangerous_lovers` | 仅在陌路与确认恋爱均未命中时检查 |
-| 110 | `R_FINAL_FRIENDS` | 仅 Q10 后 | `trust >= 45 AND comfort >= 45 AND conflict <= 45 AND attraction < 60` | 前三项含边界；吸引不含 60 | `friends` | 仅在更高优先级最终分类未命中时检查 |
+| 100 | `R_FINAL_DANGEROUS_ATTRACTION` | 仅 Q10 后 | `attraction >= 90 AND (trust < 65 OR comfort < 60)` | 含 90；不含 65/60 | `dangerous_lovers` | 仅在陌路与确认恋爱均未命中时检查 |
+| 110 | `R_FINAL_FRIENDS` | 仅 Q10 后 | `attraction < 65 AND trust >= 50 AND comfort >= 45 AND conflict <= 40` | 吸引不含 65；其余包含边界 | `friends` | 仅在更高优先级最终分类未命中时检查 |
 | 120 | `R_FINAL_AMBIGUOUS_FALLBACK` | 仅 Q10 后 | 未命中以上任何最终分类 | else | `unresolved_ambiguity` | 最终兜底，理论上覆盖所有剩余状态 |
 
 ### 2.1 同次命中的确定性示例
 
 - 任一选项使冲突达到 80、舒适降到 5、信任降到 5 时，只返回 `conflict_break`；
-- Q10 后若 `trust <= 20` 且 `attraction >= 70`，只返回 `strangers_after_all`；
+- Q10 后若 `trust < 35` 且 `attraction >= 90`，只返回 `strangers_after_all`；
 - `confirmed_relationship` 的状态不可能继续分类为 `dangerous_lovers`，只会附加一个关系评价。
 
 ## 3. 结局记录
@@ -295,17 +295,17 @@
 | Q07 | `q07_laugh_off` | — | `comfort_down_medium`, `trust_down_slight` |
 | Q07 | `q07_private_repair` | — | `trust_up_medium`, `comfort_up_medium` |
 | Q08 | `q08_pause_with_anchor` | `R_GATE_Q08` | `trust_up_medium`, `conflict_down_medium` |
-| Q08 | `q08_accept_pause` | `R_GATE_Q08` | `attraction_up_slight`, `conflict_down_slight` |
-| Q08 | `q08_adjust_time` | `R_GATE_Q08` | `trust_up_strong`, `comfort_up_slight` |
+| Q08 | `q08_accept_pause` | `R_GATE_Q08` | `conflict_down_slight` |
+| Q08 | `q08_adjust_time` | `R_GATE_Q08` | `trust_up_strong`, `conflict_up_slight` |
 | Q08 | `q08_force_now` | `R_GATE_Q08` | `comfort_down_medium`, `conflict_up_strong` |
 | Q09 | `q09_need_answer` | — | `trust_up_strong`, `comfort_up_slight` |
-| Q09 | `q09_let_ta_define` | — | `trust_down_medium`, `conflict_down_medium` |
-| Q09 | `q09_define_terms` | — | `trust_up_strong`, `attraction_up_medium` |
+| Q09 | `q09_let_ta_define` | — | `trust_down_medium`, `comfort_down_medium` |
+| Q09 | `q09_define_terms` | — | `trust_up_medium`, `attraction_up_strong` |
 | Q09 | `q09_announce_unilaterally` | — | `comfort_down_strong`, `conflict_up_strong` |
 | Q10 | `q10_accept_independence` | `R_FINAL_*` | `attraction_up_strong`, `trust_down_slight` |
 | Q10 | `q10_state_minimum` | `R_FINAL_*` | `trust_up_strong`, `comfort_up_slight` |
 | Q10 | `q10_demand_all_weekends` | `R_FINAL_*` | `comfort_down_strong`, `conflict_up_strong` |
-| Q10 | `q10_build_rhythm` | `R_FINAL_*` | `comfort_up_strong`, `attraction_up_medium` |
+| Q10 | `q10_build_rhythm` | `R_FINAL_*` | `trust_up_slight`, `attraction_up_strong` |
 
 补充追踪规则：每个选项在到达上述 checkpoint 前，都可能先命中 `R_GLOBAL_CONFLICT_80`、`R_GLOBAL_COMFORT_05` 或 `R_GLOBAL_TRUST_05`；Q10 的 `R_FINAL_*` 依次展开为优先级 80～120 的所有最终规则。
 

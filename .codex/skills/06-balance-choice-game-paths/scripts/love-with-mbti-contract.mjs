@@ -42,38 +42,64 @@ export const effectConstraints = {
 export const balanceConfig = {
   globalDanger: {
     endingIds: GLOBAL_DANGER_ENDING_IDS,
-    recommendedEachRange: [3, 8],
+    recommendedEachRanges: {
+      conflict_break: [3, 5],
+      strong_discomfort: [4, 6],
+      trust_broken: [4, 6],
+    },
     hardEachMaximum: 10,
-    recommendedCombinedRange: [12, 18],
+    recommendedCombinedRange: [11, 17],
     hardCombinedMaximum: 20,
   },
   stageGates: [
     {
       questionId: "Q02",
       endingId: "no_second_meeting",
-      recommendedRange: [5, 15],
+      recommendedRange: [20, 25],
+      anomalyAbove: 30,
     },
     {
       questionId: "Q05",
       endingId: "fade_out",
-      recommendedRange: [10, 20],
-      anomalyAbove: 25,
+      recommendedRange: [30, 38],
+      anomalyAbove: 45,
     },
     {
       questionId: "Q08",
       endingId: "stay_acquaintances",
-      recommendedRange: [10, 20],
-      anomalyAbove: 25,
+      recommendedRange: [35, 45],
+      anomalyAbove: 55,
     },
   ],
   finalClassifier: {
     questionId: "Q10",
     outcomeIds: finalOutcomeIds,
-    recommendedReachRange: [35, 55],
-    minimumOutcomeConditionalPercentage: 5,
-    recommendedOutcomeConditionalRange: [10, 25],
-    warningOutcomeConditionalPercentage: 40,
-    maximumOutcomeConditionalPercentage: 45,
+    recommendedReachRange: [20, 30],
+    outcomeGroups: {
+      strangers_after_all: {
+        outcomeIds: ["strangers_after_all"],
+        recommendedRange: [15, 20],
+      },
+      confirmed_relationship: {
+        outcomeIds: [
+          "confirmed_relationship:romance_stable",
+          "confirmed_relationship:romance_hidden_risk",
+        ],
+        recommendedRange: [10, 15],
+      },
+      dangerous_lovers: {
+        outcomeIds: ["dangerous_lovers"],
+        recommendedRange: [5, 10],
+      },
+      friends: {
+        outcomeIds: ["friends"],
+        recommendedRange: [18, 25],
+      },
+      unresolved_ambiguity: {
+        outcomeIds: ["unresolved_ambiguity"],
+        recommendedRange: [35, 45],
+      },
+    },
   },
 };
 

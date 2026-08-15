@@ -1,0 +1,250 @@
+{
+  "completeChoiceSpace": 1048576,
+  "terminalTrajectories": 290101,
+  "earlyTerminalTrajectories": 14245,
+  "weightedTotal": 1048576,
+  "endings": {
+    "confirmed_relationship:romance_hidden_risk": {
+      "trajectories": 15910,
+      "weightedPaths": 15910,
+      "examplePath": [
+        "q01_go_now",
+        "q02_roll_dice",
+        "q03_request_pause",
+        "q04_talk_privately",
+        "q05_keep_playing",
+        "q06_reject_logic",
+        "q07_redesign_together",
+        "q08_recognize_and_request",
+        "q09_trial_agreement",
+        "q10_chase_thrill"
+      ],
+      "exampleState": {
+        "attraction": 90,
+        "trust": 65,
+        "comfort": 70,
+        "conflict": 20
+      }
+    },
+    "confirmed_relationship:romance_stable": {
+      "trajectories": 12034,
+      "weightedPaths": 12034,
+      "examplePath": [
+        "q01_go_now",
+        "q02_roll_dice",
+        "q03_request_pause",
+        "q04_talk_privately",
+        "q05_keep_playing",
+        "q06_reject_logic",
+        "q07_redesign_together",
+        "q08_recognize_and_request",
+        "q09_trial_agreement",
+        "q10_flexible_ritual"
+      ],
+      "exampleState": {
+        "attraction": 100,
+        "trust": 75,
+        "comfort": 85,
+        "conflict": 5
+      }
+    },
+    "conflict_break": {
+      "trajectories": 921,
+      "weightedPaths": 3480,
+      "examplePath": [
+        "q01_go_now",
+        "q02_roll_dice",
+        "q03_counter_ridicule",
+        "q04_talk_privately",
+        "q05_withdraw_silently",
+        "q06_ask_for_presence",
+        "q07_mock_publicly",
+        "q08_force_confession",
+        "q09_control",
+        "q10_chase_thrill"
+      ],
+      "exampleState": {
+        "attraction": 65,
+        "trust": 30,
+        "comfort": 20,
+        "conflict": 80
+      }
+    },
+    "dangerous_lovers": {
+      "trajectories": 25111,
+      "weightedPaths": 25111,
+      "examplePath": [
+        "q01_go_now",
+        "q02_roll_dice",
+        "q03_request_pause",
+        "q04_talk_privately",
+        "q05_keep_playing",
+        "q06_reject_logic",
+        "q07_redesign_together",
+        "q08_recognize_and_request",
+        "q09_keep_ambiguous",
+        "q10_chase_thrill"
+      ],
+      "exampleState": {
+        "attraction": 90,
+        "trust": 45,
+        "comfort": 60,
+        "conflict": 30
+      }
+    },
+    "fade_out": {
+      "trajectories": 264,
+      "weightedPaths": 270336,
+      "examplePath": [
+        "q01_go_now",
+        "q02_roll_dice",
+        "q03_request_pause",
+        "q04_expose_in_return",
+        "q05_withdraw_silently"
+      ],
+      "exampleState": {
+        "attraction": 35,
+        "trust": 15,
+        "comfort": 45,
+        "conflict": 25
+      }
+    },
+    "friends": {
+      "trajectories": 52866,
+      "weightedPaths": 52866,
+      "examplePath": [
+        "q01_go_now",
+        "q02_roll_dice",
+        "q03_request_pause",
+        "q04_talk_privately",
+        "q05_keep_playing",
+        "q06_reject_logic",
+        "q07_redesign_together",
+        "q08_recognize_and_request",
+        "q09_state_boundary",
+        "q10_fix_everything"
+      ],
+      "exampleState": {
+        "attraction": 45,
+        "trust": 65,
+        "comfort": 75,
+        "conflict": 15
+      }
+    },
+    "no_second_meeting": {
+      "trajectories": 4,
+      "weightedPaths": 262144,
+      "examplePath": [
+        "q01_go_now",
+        "q02_accept_all"
+      ],
+      "exampleState": {
+        "attraction": 45,
+        "trust": 10,
+        "comfort": 25,
+        "conflict": 15
+      }
+    },
+    "stay_acquaintances": {
+      "trajectories": 13702,
+      "weightedPaths": 219232,
+      "examplePath": [
+        "q01_go_now",
+        "q02_roll_dice",
+        "q03_request_pause",
+        "q04_talk_privately",
+        "q05_keep_playing",
+        "q06_reject_logic",
+        "q07_redesign_together",
+        "q08_treat_as_service"
+      ],
+      "exampleState": {
+        "attraction": 55,
+        "trust": 35,
+        "comfort": 55,
+        "conflict": 20
+      }
+    },
+    "strangers_after_all": {
+      "trajectories": 48609,
+      "weightedPaths": 48609,
+      "examplePath": [
+        "q01_go_now",
+        "q02_roll_dice",
+        "q03_request_pause",
+        "q04_talk_privately",
+        "q05_keep_playing",
+        "q06_reject_logic",
+        "q07_redesign_together",
+        "q08_force_confession",
+        "q09_keep_ambiguous",
+        "q10_let_it_drift"
+      ],
+      "exampleState": {
+        "attraction": 75,
+        "trust": 30,
+        "comfort": 50,
+        "conflict": 25
+      }
+    },
+    "strong_discomfort": {
+      "trajectories": 120,
+      "weightedPaths": 1920,
+      "examplePath": [
+        "q01_keep_original",
+        "q02_roll_dice",
+        "q03_request_pause",
+        "q04_laugh_it_off",
+        "q05_demand_answer",
+        "q06_reject_logic",
+        "q07_follow_rule",
+        "q08_force_confession"
+      ],
+      "exampleState": {
+        "attraction": 35,
+        "trust": 35,
+        "comfort": 5,
+        "conflict": 50
+      }
+    },
+    "trust_broken": {
+      "trajectories": 10,
+      "weightedPaths": 16384,
+      "examplePath": [
+        "q01_go_now",
+        "q02_roll_dice",
+        "q03_request_pause",
+        "q04_expose_in_return",
+        "q05_keep_playing"
+      ],
+      "exampleState": {
+        "attraction": 50,
+        "trust": 5,
+        "comfort": 40,
+        "conflict": 25
+      }
+    },
+    "unresolved_ambiguity": {
+      "trajectories": 120550,
+      "weightedPaths": 120550,
+      "examplePath": [
+        "q01_go_now",
+        "q02_roll_dice",
+        "q03_request_pause",
+        "q04_talk_privately",
+        "q05_keep_playing",
+        "q06_reject_logic",
+        "q07_redesign_together",
+        "q08_recognize_and_request",
+        "q09_keep_ambiguous",
+        "q10_fix_everything"
+      ],
+      "exampleState": {
+        "attraction": 70,
+        "trust": 50,
+        "comfort": 60,
+        "conflict": 20
+      }
+    }
+  }
+}

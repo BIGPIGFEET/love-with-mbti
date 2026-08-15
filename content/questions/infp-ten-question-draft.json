@@ -10,7 +10,7 @@
     "conflictDimensions": ["C02", "C11"],
     "researchRefs": ["S01", "S02", "S08", "S10"],
     "tags": ["初识", "真实表达", "兴趣差异", "共同价值"],
-    "designNote": "低风险首题；测试不懂对方兴趣时是否仍能真实参与。不同意见和礼貌换题都必须可行，不能奖励伪装共鸣。数值为 Stage 04 初始假设。",
+    "designNote": "低风险首题；测试不懂对方兴趣时是否仍能真实参与。不同意见和礼貌换题都必须可行，不能奖励伪装共鸣。数值已通过 Stage 06 全路径平衡。",
     "options": [
       {
         "id": "q01_admit_and_ask",
@@ -27,7 +27,7 @@
         "strategy": "accommodate",
         "strategyLabel": "顺势附和",
         "text": "“我也喜欢这种留白，解释太多反而没意思。”先沿着 TA 的观点聊下去。",
-        "effects": {"attraction": 5, "trust": -10, "comfort": -5, "conflict": 5},
+        "effects": {"attraction": 0, "trust": -10, "comfort": -5, "conflict": 5},
         "npcResponse": "TA 看了看你，又看了看封底：“这本其实不是开放式结局。你是不是没看过？”",
         "feedbackIds": ["trust_down_medium", "conflict_up_slight"],
         "feedbackText": ["TA开始怀疑这句话之后会不会算数。", "这件事留下了一点尚未处理的摩擦。"]
@@ -65,14 +65,14 @@
     "conflictDimensions": ["C01", "C09", "C12"],
     "researchRefs": ["S01", "S02", "S03", "S08", "S09"],
     "tags": ["初识", "安静", "披露节奏", "低压力续联"],
-    "designNote": "Q02 阶段门槛题；安静不能被写成惩罚或待破解信号。玩家可以询问、安静同行或结束约会。数值为初始假设。",
+    "designNote": "Q02 阶段门槛题；安静不能被写成惩罚或待破解信号。玩家可以询问、安静同行或结束约会。数值已通过 Stage 06 全路径平衡。",
     "options": [
       {
         "id": "q02_end_gently",
         "strategy": "accommodate",
         "strategyLabel": "顺应节奏",
         "text": "“好，那今天就到这里。到家后给我发个‘到了’就行，不用接着聊天。”",
-        "effects": {"attraction": 0, "trust": 5, "comfort": 10, "conflict": -5},
+        "effects": {"attraction": -5, "trust": 5, "comfort": 10, "conflict": -5},
         "npcResponse": "TA 点点头。到家后，消息只有四个字：“到了，谢谢。”但后面多了一个明天再聊的时间。",
         "feedbackIds": ["comfort_up_medium", "conflict_down_slight"],
         "feedbackText": ["TA明显更敢直接说出自己的需要。", "刚才的分歧松开了一点。"]
@@ -92,7 +92,7 @@
         "strategy": "risky",
         "strategyLabel": "追问求证",
         "text": "一路追问“到底怎么了”，回家后再连发几条消息，直到 TA 给出明确原因。",
-        "effects": {"attraction": -5, "trust": -10, "comfort": -10, "conflict": 10},
+        "effects": {"attraction": -10, "trust": -5, "comfort": -10, "conflict": 10},
         "npcResponse": "TA 最后只回：“我说了现在不想说话。”之后把消息提醒关掉了。",
         "feedbackIds": ["comfort_down_medium", "conflict_up_medium"],
         "feedbackText": ["TA开始把原本会说出口的话收回去。", "你们已经不只是在讨论不同答案。"]
@@ -120,17 +120,17 @@
     "conflictDimensions": ["C08", "C12"],
     "researchRefs": ["S03", "S04", "S08", "S09"],
     "tags": ["接触", "细节表达", "信号澄清", "礼物边界"],
-    "designNote": "区分个性化表达和关系承诺；具体感谢、不追问定义与轻量确认都可以成立。数值为初始假设。",
+    "designNote": "区分个性化表达和关系承诺；具体感谢、不追问定义与轻量确认都可以成立。数值已通过 Stage 06 全路径平衡。",
     "options": [
       {
         "id": "q03_tease_in_public",
         "strategy": "risky",
         "strategyLabel": "公开起哄",
         "text": "举起书签朝旁边的朋友笑：“证据确凿，TA 连我随口说的话都记得。”",
-        "effects": {"attraction": -5, "trust": -10, "comfort": -10, "conflict": 10},
+        "effects": {"attraction": -5, "trust": -15, "comfort": -5, "conflict": 15},
         "npcResponse": "TA 把视线移开：“我只是送给你，不是送给这桌人的讨论。”",
-        "feedbackIds": ["comfort_down_medium", "trust_down_medium"],
-        "feedbackText": ["TA开始把原本会说出口的话收回去。", "TA开始怀疑这句话之后会不会算数。"]
+        "feedbackIds": ["trust_down_strong", "conflict_up_strong"],
+        "feedbackText": ["TA不再愿意把重要的事放进这段关系。", "这场互动正在迅速失去修复空间。"]
       },
       {
         "id": "q03_ask_lightly",
@@ -175,7 +175,7 @@
     "conflictDimensions": ["C09"],
     "researchRefs": ["S02", "S08", "S09"],
     "tags": ["接触", "约会安排", "精力边界", "退出权"],
-    "designNote": "玩家想共同体验也是合理需要；合理拒绝不受惩罚，取消全部行程也不是自动最优。数值为初始假设。",
+    "designNote": "玩家想共同体验也是合理需要；合理拒绝不受惩罚，取消全部行程也不是自动最优。数值已通过 Stage 06 全路径平衡。",
     "options": [
       {
         "id": "q04_build_exit_point",
@@ -192,7 +192,7 @@
         "strategy": "confront",
         "strategyLabel": "强推适应",
         "text": "“难得出来一次，别还没开始就给自己设限。跟着走，玩起来就不累了。”",
-        "effects": {"attraction": -10, "trust": -10, "comfort": -15, "conflict": 15},
+        "effects": {"attraction": -5, "trust": 0, "comfort": -20, "conflict": 15},
         "npcResponse": "TA 把行程单还给你：“我是在告诉你边界，不是在邀请你纠正我的体力。”",
         "feedbackIds": ["comfort_down_strong", "conflict_up_strong"],
         "feedbackText": ["TA已经很难在这段互动里放松下来。", "这场互动正在迅速失去修复空间。"]
@@ -230,7 +230,7 @@
     "conflictDimensions": ["C03", "C14"],
     "researchRefs": ["S03", "S08", "S09", "S11", "S12"],
     "tags": ["接触", "未来愿景", "现实核验", "理想化"],
-    "designNote": "Q05 门槛题；保护愿景和核验条件都应有吸引力。不能让全盘迎合成为无成本浪漫捷径。数值为初始假设。",
+    "designNote": "Q05 门槛题；保护愿景和核验条件都应有吸引力。不能让全盘迎合成为无成本浪漫捷径。数值已通过 Stage 06 全路径平衡。",
     "options": [
       {
         "id": "q05_promise_the_month",
@@ -247,10 +247,10 @@
         "strategy": "risky",
         "strategyLabel": "泼冷水玩笑",
         "text": "“我们先确保下周还聊得下去，再讨论海边养老吧。”笑着把话题压回眼前。",
-        "effects": {"attraction": -10, "trust": -5, "comfort": -10, "conflict": 10},
+        "effects": {"attraction": -5, "trust": 0, "comfort": -5, "conflict": 20},
         "npcResponse": "TA 也笑了一下，但没再继续描述：“好，当我没说。”",
-        "feedbackIds": ["attraction_down_medium", "comfort_down_medium"],
-        "feedbackText": ["TA不再像刚才那样想继续靠近。", "TA开始把原本会说出口的话收回去。"]
+        "feedbackIds": ["conflict_up_strong", "comfort_down_slight"],
+        "feedbackText": ["这场互动正在迅速失去修复空间。", "对话里多了一点需要小心绕开的地方。"]
       },
       {
         "id": "q05_make_small_version",
@@ -285,14 +285,14 @@
     "conflictDimensions": ["C04", "C13"],
     "researchRefs": ["S01", "S02", "S07", "S08"],
     "tags": ["熟悉", "情绪支持", "解决问题", "个人责任"],
-    "designNote": "改变视角：玩家必须表达需求并承担自己的任务，TA 不提供无限情绪或执行劳动。数值为初始假设。",
+    "designNote": "改变视角：玩家必须表达需求并承担自己的任务，TA 不提供无限情绪或执行劳动。数值已通过 Stage 06 全路径平衡。",
     "options": [
       {
         "id": "q06_sequence_support",
         "strategy": "negotiate",
         "strategyLabel": "安排顺序",
         "text": "“再听我讲十分钟。十分钟后，帮我把修改拆成三步，但最终决定和提交由我来做。”",
-        "effects": {"attraction": 5, "trust": 10, "comfort": 10, "conflict": -10},
+        "effects": {"attraction": 10, "trust": 10, "comfort": 10, "conflict": -10},
         "npcResponse": "TA 设了一个十分钟计时器，却没有催你。时间到后，只问：“第一步你想保留什么？”",
         "feedbackIds": ["comfort_up_medium", "conflict_down_medium"],
         "feedbackText": ["TA明显更敢直接说出自己的需要。", "你们找到了让分歧停下来、以后再谈的方法。"]
@@ -302,7 +302,7 @@
         "strategy": "accommodate",
         "strategyLabel": "留在情绪里",
         "text": "“先别提方案，我今晚只想继续骂一会儿。明早再说。”",
-        "effects": {"attraction": 5, "trust": -5, "comfort": 10, "conflict": 5},
+        "effects": {"attraction": 5, "trust": -5, "comfort": 10, "conflict": 10},
         "npcResponse": "TA 留下来继续听，却看了一眼时间：“可以。但我不能替明早的你承担今晚没开始的部分。”",
         "feedbackIds": ["comfort_up_medium", "trust_down_slight"],
         "feedbackText": ["TA明显更敢直接说出自己的需要。", "TA对你刚才的说法留下了一个问号。"]
@@ -312,7 +312,7 @@
         "strategy": "honest",
         "strategyLabel": "直接求助",
         "text": "“谢谢你先听我说。现在请陪我列一个最小可交版本，我卡住时再问你，不把整份任务交给你。”",
-        "effects": {"attraction": 0, "trust": 15, "comfort": 5, "conflict": -5},
+        "effects": {"attraction": 5, "trust": 15, "comfort": 5, "conflict": -5},
         "npcResponse": "TA 把纸分成‘必须改’和‘可以晚点’两栏：“这样我是在帮你，不是在接管你。”",
         "feedbackIds": ["trust_up_strong", "conflict_down_slight"],
         "feedbackText": ["TA相信重要的事可以交给你共同决定。", "刚才的分歧松开了一点。"]
@@ -322,10 +322,10 @@
         "strategy": "confront",
         "strategyLabel": "迁怒指责",
         "text": "“你听了这么久，怎么连一个能用的办法都没给？光理解我有什么用？”",
-        "effects": {"attraction": -10, "trust": -10, "comfort": -15, "conflict": 15},
+        "effects": {"attraction": -5, "trust": 0, "comfort": -10, "conflict": 20},
         "npcResponse": "TA 把纸笔放下：“你可以要求帮助，但不能把你的截止日期变成我没尽责。”",
-        "feedbackIds": ["comfort_down_strong", "conflict_up_strong"],
-        "feedbackText": ["TA已经很难在这段互动里放松下来。", "这场互动正在迅速失去修复空间。"]
+        "feedbackIds": ["comfort_down_medium", "conflict_up_strong"],
+        "feedbackText": ["TA开始把原本会说出口的话收回去。", "这场互动正在迅速失去修复空间。"]
       }
     ]
   },
@@ -340,14 +340,14 @@
     "conflictDimensions": ["C05", "C12"],
     "researchRefs": ["S01", "S03", "S04", "S07", "S08", "S10"],
     "tags": ["熟悉", "冲突暂停", "返回承诺", "修复责任"],
-    "designNote": "必须同时展示 TA 的返回责任；不给空间和无限期等待都不是理想答案。数值为初始假设。",
+    "designNote": "必须同时展示 TA 的返回责任；不给空间和无限期等待都不是理想答案。数值已通过 Stage 06 全路径平衡。",
     "options": [
       {
         "id": "q07_name_limit",
         "strategy": "honest",
         "strategyLabel": "说明底线",
         "text": "“我愿意停，但不能变成没有下文。你离开前告诉我：最晚什么时候回来谈？”",
-        "effects": {"attraction": 0, "trust": 10, "comfort": 5, "conflict": 0},
+        "effects": {"attraction": 5, "trust": 10, "comfort": 5, "conflict": 0},
         "npcResponse": "TA 想了一会儿：“明天晚上七点。如果我还没整理好，会在七点前给新时间。”",
         "feedbackIds": ["trust_up_medium", "comfort_up_slight"],
         "feedbackText": ["TA开始认真把你的话算进之后的安排。", "TA在你面前少斟酌了一句话。"]
@@ -357,7 +357,7 @@
         "strategy": "risky",
         "strategyLabel": "追逐施压",
         "text": "挡住话题不让结束：“不行，现在就说清楚。你一走就是冷处理。”",
-        "effects": {"attraction": -10, "trust": -10, "comfort": -15, "conflict": 15},
+        "effects": {"attraction": -5, "trust": 0, "comfort": -15, "conflict": 20},
         "npcResponse": "TA 后退一步：“我正在告诉你我会说坏。你可以不喜欢暂停，但不能取消我的离开权。”",
         "feedbackIds": ["comfort_down_strong", "conflict_up_strong"],
         "feedbackText": ["TA已经很难在这段互动里放松下来。", "这场互动正在迅速失去修复空间。"]
@@ -395,14 +395,14 @@
     "conflictDimensions": ["C02", "C11"],
     "researchRefs": ["S01", "S02", "S07", "S08", "S10"],
     "tags": ["熟悉", "价值分歧", "现实压力", "决定边界"],
-    "designNote": "双方需要均合理：玩家需要收入并拥有工作决定权，TA 可以拒绝认同误导表达。允许保留分歧，不能默认 TA 更高尚或替玩家决定。数值为初始假设。",
+    "designNote": "双方需要均合理：玩家需要收入并拥有工作决定权，TA 可以拒绝认同误导表达。允许保留分歧，不能默认 TA 更高尚或替玩家决定。数值已通过 Stage 06 全路径平衡。",
     "options": [
       {
         "id": "q08_negotiate_claims",
         "strategy": "negotiate",
         "strategyLabel": "划分共同边界",
         "text": "先跟客户说清楚：只写现有材料能证明的效果；对方如果坚持夸大，你就不接。之后把结果如实告诉 TA。",
-        "effects": {"attraction": -5, "trust": 15, "comfort": 10, "conflict": -5},
+        "effects": {"attraction": 5, "trust": 15, "comfort": 10, "conflict": -5},
         "npcResponse": "TA 没替你宣布辞职，只问：“如果客户拒绝修改，你真的会走吗？”得到确认后，TA 把争论停在了具体条件上。",
         "feedbackIds": ["trust_up_strong", "comfort_up_medium"],
         "feedbackText": ["TA相信重要的事可以交给你共同决定。", "TA明显更敢直接说出自己的需要。"]
@@ -422,7 +422,7 @@
         "strategy": "confront",
         "strategyLabel": "否定边界",
         "text": "“理想主义又不能付账单。你不懂现实，就别管我的工作。”按客户原要求接下。",
-        "effects": {"attraction": -10, "trust": -15, "comfort": -15, "conflict": 15},
+        "effects": {"attraction": 0, "trust": -20, "comfort": 0, "conflict": 20},
         "npcResponse": "TA 没再替你算收入，只说：“你可以不同意我，不用把我的立场说成不懂现实。”",
         "feedbackIds": ["trust_down_strong", "conflict_up_strong"],
         "feedbackText": ["TA不再愿意把重要的事放进这段关系。", "这场互动正在迅速失去修复空间。"]
@@ -432,10 +432,10 @@
         "strategy": "honest",
         "strategyLabel": "保留不同立场",
         "text": "“我需要这笔收入，也不会写自己认为虚假的话。我会先接洽并争取修改；最后接不接由我决定，我们可以保留不同意见。”",
-        "effects": {"attraction": 0, "trust": 10, "comfort": 5, "conflict": 5},
+        "effects": {"attraction": 0, "trust": 10, "comfort": 5, "conflict": 10},
         "npcResponse": "TA 仍不完全赞同，却点了头：“决定是你的。我会看你最后怎么写，而不是要求你先证明站在我这边。”",
-        "feedbackIds": ["trust_up_medium", "conflict_up_slight"],
-        "feedbackText": ["TA开始认真把你的话算进之后的安排。", "这件事留下了一点尚未处理的摩擦。"]
+        "feedbackIds": ["trust_up_medium", "conflict_up_medium"],
+        "feedbackText": ["TA开始认真把你的话算进之后的安排。", "你们已经不只是在讨论不同答案。"]
       }
     ]
   },
@@ -450,37 +450,37 @@
     "conflictDimensions": ["C08", "C10"],
     "researchRefs": ["S01", "S02", "S03", "S04", "S08", "S09"],
     "tags": ["暧昧", "长信", "关系定义", "排他同意"],
-    "designNote": "必须区分浪漫表达、隐私托付与关系同意。清晰提问和给予考虑时间都可行；不能把长信自动当承诺。数值为初始假设。",
+    "designNote": "必须区分浪漫表达、隐私托付与关系同意。清晰提问和给予考虑时间都可行；不能把长信自动当承诺。数值已通过 Stage 06 全路径平衡。",
     "options": [
       {
         "id": "q09_treat_as_yes",
         "strategy": "risky",
         "strategyLabel": "擅自定义",
         "text": "“写到这个程度，答案已经很明显了。”从今天起直接把 TA 当作排他伴侣。",
-        "effects": {"attraction": 5, "trust": -10, "comfort": -10, "conflict": 10},
+        "effects": {"attraction": 0, "trust": -10, "comfort": -10, "conflict": 20},
         "npcResponse": "TA 把信收回一点：“我写的是我在乎你，不是授权你替我回答。”",
-        "feedbackIds": ["trust_down_medium", "conflict_up_medium"],
-        "feedbackText": ["TA开始怀疑这句话之后会不会算数。", "你们已经不只是在讨论不同答案。"]
+        "feedbackIds": ["trust_down_medium", "conflict_up_strong"],
+        "feedbackText": ["TA开始怀疑这句话之后会不会算数。", "这场互动正在迅速失去修复空间。"]
       },
       {
         "id": "q09_define_three_terms",
         "strategy": "negotiate",
         "strategyLabel": "拆解协议",
         "text": "先说清三件事：是否停止和其他人约会、在朋友面前如何介绍、一个月后何时复盘；称呼可以最后决定。",
-        "effects": {"attraction": 10, "trust": 15, "comfort": 10, "conflict": -5},
+        "effects": {"attraction": 15, "trust": 15, "comfort": 5, "conflict": -5},
         "npcResponse": "TA 在信背面写下三行答案：“这样我知道自己答应的是什么，也知道你不是只要一个漂亮称呼。”",
-        "feedbackIds": ["trust_up_strong", "attraction_up_medium"],
-        "feedbackText": ["TA相信重要的事可以交给你共同决定。", "TA明显更期待下一次只属于你们的时间。"]
+        "feedbackIds": ["trust_up_strong", "attraction_up_strong"],
+        "feedbackText": ["TA相信重要的事可以交给你共同决定。", "TA已经开始主动把“下次”说成具体安排。"]
       },
       {
         "id": "q09_wait_without_need",
         "strategy": "accommodate",
         "strategyLabel": "继续模糊",
         "text": "“没关系，不用回答。只要你还愿意写信给我就够了。”把自己的关系需求先收起来。",
-        "effects": {"attraction": 10, "trust": -5, "comfort": 5, "conflict": -5},
+        "effects": {"attraction": 20, "trust": -10, "comfort": 5, "conflict": -5},
         "npcResponse": "TA 被你的温柔打动，却没有因此更清楚：“可我还是不知道，你到底在等什么。”",
-        "feedbackIds": ["attraction_up_medium", "trust_down_slight"],
-        "feedbackText": ["TA明显更期待下一次只属于你们的时间。", "TA对你刚才的说法留下了一个问号。"]
+        "feedbackIds": ["attraction_up_strong", "trust_down_medium"],
+        "feedbackText": ["TA已经开始主动把“下次”说成具体安排。", "TA开始怀疑这句话之后会不会算数。"]
       },
       {
         "id": "q09_set_answer_window",
@@ -505,24 +505,24 @@
     "conflictDimensions": ["C05", "C07"],
     "researchRefs": ["S01", "S02", "S03", "S06", "S07", "S10", "S12"],
     "tags": ["暧昧", "长期维护", "联系节奏", "弹性与可靠"],
-    "designNote": "最终题检验双向维护。TA 必须同样提出可兑现投入；不把独立写成高级，也不把稳定需求写成黏人。数值为初始假设。",
+    "designNote": "最终题检验双向维护。TA 必须同样提出可兑现投入；不把独立写成高级，也不把稳定需求写成黏人。数值已通过 Stage 06 全路径平衡。",
     "options": [
       {
         "id": "q10_follow_their_impulse",
         "strategy": "accommodate",
         "strategyLabel": "交出节奏",
         "text": "“那就都随你。你想见我时再约，我不会催。”",
-        "effects": {"attraction": 10, "trust": -5, "comfort": 5, "conflict": 0},
+        "effects": {"attraction": 20, "trust": -20, "comfort": 0, "conflict": 5},
         "npcResponse": "TA 先松了口气，又把日历停在空白页：“可这样只有我的节奏，你的需要没有出现。”",
-        "feedbackIds": ["attraction_up_medium", "trust_down_slight"],
-        "feedbackText": ["TA明显更期待下一次只属于你们的时间。", "TA对你刚才的说法留下了一个问号。"]
+        "feedbackIds": ["attraction_up_strong", "trust_down_strong"],
+        "feedbackText": ["TA已经开始主动把“下次”说成具体安排。", "TA不再愿意把重要的事放进这段关系。"]
       },
       {
         "id": "q10_state_minimum",
         "strategy": "honest",
         "strategyLabel": "说明兼容底线",
         "text": "“我最低需要每周一次认真见面；如果知道自己会忙到两天顾不上回复，就提前说。如果长期做不到，我们可能喜欢彼此也不适合确认关系。”",
-        "effects": {"attraction": -5, "trust": 15, "comfort": 5, "conflict": 5},
+        "effects": {"attraction": -10, "trust": 15, "comfort": 5, "conflict": 5},
         "npcResponse": "TA 没把“不适合”当威胁：“一次见面我能答应。回复这条，我想改成一天内报个平安，可以吗？”",
         "feedbackIds": ["trust_up_strong", "conflict_up_slight"],
         "feedbackText": ["TA相信重要的事可以交给你共同决定。", "这件事留下了一点尚未处理的摩擦。"]
@@ -532,7 +532,7 @@
         "strategy": "risky",
         "strategyLabel": "消失测试",
         "text": "不谈规则，故意消失几天：“看看你什么时候会主动找我，就知道你到底在不在乎。”",
-        "effects": {"attraction": -10, "trust": -15, "comfort": -15, "conflict": 20},
+        "effects": {"attraction": 0, "trust": -20, "comfort": -10, "conflict": 20},
         "npcResponse": "TA 没有追着证明，只在你回来后说：“测试不是协议。你让我在不知情时参加了一场考试。”",
         "feedbackIds": ["trust_down_strong", "conflict_up_strong"],
         "feedbackText": ["TA不再愿意把重要的事放进这段关系。", "这场互动正在迅速失去修复空间。"]
@@ -542,10 +542,10 @@
         "strategy": "negotiate",
         "strategyLabel": "建立弹性协议",
         "text": "约定每七到十天至少一次提前确定的见面；想临时改期的人尽早说明并给新时间，没力气聊天时也直接说一声。",
-        "effects": {"attraction": 10, "trust": 10, "comfort": 15, "conflict": -10},
+        "effects": {"attraction": 15, "trust": 15, "comfort": 10, "conflict": 0},
         "npcResponse": "TA 在日历上留出第一个时间块：“这样随性不是失联，固定也不是打卡。改期的人负责把下一次放回来。”",
-        "feedbackIds": ["comfort_up_strong", "trust_up_medium"],
-        "feedbackText": ["这一刻，你们都不必预演下一句话。", "TA开始认真把你的话算进之后的安排。"]
+        "feedbackIds": ["attraction_up_strong", "trust_up_strong"],
+        "feedbackText": ["TA已经开始主动把“下次”说成具体安排。", "TA相信重要的事可以交给你共同决定。"]
       }
     ]
   }

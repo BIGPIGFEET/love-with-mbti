@@ -30,6 +30,18 @@ describe("Love with MBTI primary flow", () => {
     expect(screen.getByText(/保留证据/)).toBeInTheDocument();
   });
 
+  it("starts the balanced INFP game with its own formal content", () => {
+    render(<App />);
+
+    fireEvent.click(screen.getByRole("button", { name: "开始认识 INFP" }));
+    expect(screen.getByLabelText("当前阶段：初识，第 1 题，共 10 题")).toBeInTheDocument();
+    expect(screen.getByText(/冷门小说/)).toBeInTheDocument();
+    expect(screen.getByText(/不代表现实中的所有 INFP/)).toBeInTheDocument();
+
+    fireEvent.click(screen.getByRole("button", { name: /我没读过/ }));
+    expect(screen.getByText(/只讲这一段/)).toBeInTheDocument();
+  });
+
   it("returns to the type selector from the question screen", () => {
     render(<App />);
     fireEvent.click(screen.getByRole("button", { name: "开始认识 ENTP" }));

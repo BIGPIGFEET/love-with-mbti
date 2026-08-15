@@ -93,10 +93,19 @@ function validateBalanceConfig(config, questionIds) {
       fail("balanceConfig.globalDanger.endingIds must be a non-empty array");
     }
     validateIdArray(config.globalDanger.endingIds, "balanceConfig.globalDanger.endingIds");
-    validateRange(
-      config.globalDanger.recommendedEachRange,
-      "balanceConfig.globalDanger.recommendedEachRange",
-    );
+    if (config.globalDanger.recommendedEachRanges !== undefined) {
+      for (const endingId of config.globalDanger.endingIds) {
+        validateRange(
+          config.globalDanger.recommendedEachRanges[endingId],
+          `balanceConfig.globalDanger.recommendedEachRanges.${endingId}`,
+        );
+      }
+    } else {
+      validateRange(
+        config.globalDanger.recommendedEachRange,
+        "balanceConfig.globalDanger.recommendedEachRange",
+      );
+    }
     validateRange(
       config.globalDanger.recommendedCombinedRange,
       "balanceConfig.globalDanger.recommendedCombinedRange",
@@ -107,8 +116,10 @@ function validateBalanceConfig(config, questionIds) {
       }
     }
     if (
-      config.globalDanger.recommendedEachRange[1] >
-        config.globalDanger.hardEachMaximum ||
+      config.globalDanger.endingIds.some((endingId) =>
+        (config.globalDanger.recommendedEachRanges?.[endingId] ??
+          config.globalDanger.recommendedEachRange)[1] >
+          config.globalDanger.hardEachMaximum) ||
       config.globalDanger.recommendedCombinedRange[1] >
         config.globalDanger.hardCombinedMaximum
     ) {
@@ -156,28 +167,43 @@ function validateBalanceConfig(config, questionIds) {
       finalConfig.recommendedReachRange,
       "balanceConfig.finalClassifier.recommendedReachRange",
     );
-    validateRange(
-      finalConfig.recommendedOutcomeConditionalRange,
-      "balanceConfig.finalClassifier.recommendedOutcomeConditionalRange",
-    );
-    for (const key of [
-      "minimumOutcomeConditionalPercentage",
-      "warningOutcomeConditionalPercentage",
-      "maximumOutcomeConditionalPercentage",
-    ]) {
-      if (!Number.isFinite(finalConfig[key]) || finalConfig[key] < 0) {
-        fail(`balanceConfig.finalClassifier.${key} must be non-negative`);
+    if (finalConfig.outcomeGroups !== undefined) {
+      if (!finalConfig.outcomeGroups || typeof finalConfig.outcomeGroups !== "object" || Array.isArray(finalConfig.outcomeGroups)) {
+        fail("balanceConfig.finalClassifier.outcomeGroups must be an object");
       }
-    }
-    if (
-      finalConfig.minimumOutcomeConditionalPercentage >
-        finalConfig.recommendedOutcomeConditionalRange[0] ||
-      finalConfig.recommendedOutcomeConditionalRange[1] >
-        finalConfig.warningOutcomeConditionalPercentage ||
-      finalConfig.warningOutcomeConditionalPercentage >
-        finalConfig.maximumOutcomeConditionalPercentage
-    ) {
-      fail("Final-classifier minimum/recommended/warning/maximum values are inconsistent");
+      const grouped = [];
+      for (const [groupId, group] of Object.entries(finalConfig.outcomeGroups)) {
+        validateIdArray(group.outcomeIds, `balanceConfig.finalClassifier.outcomeGroups.${groupId}.outcomeIds`);
+        validateRange(group.recommendedRange, `balanceConfig.finalClassifier.outcomeGroups.${groupId}.recommendedRange`);
+        grouped.push(...group.outcomeIds);
+      }
+      if (new Set(grouped).size !== grouped.length || grouped.length !== finalConfig.outcomeIds.length || finalConfig.outcomeIds.some((id) => !grouped.includes(id))) {
+        fail("Final-classifier outcome groups must cover every outcome exactly once");
+      }
+    } else {
+      validateRange(
+        finalConfig.recommendedOutcomeConditionalRange,
+        "balanceConfig.finalClassifier.recommendedOutcomeConditionalRange",
+      );
+      for (const key of [
+        "minimumOutcomeConditionalPercentage",
+        "warningOutcomeConditionalPercentage",
+        "maximumOutcomeConditionalPercentage",
+      ]) {
+        if (!Number.isFinite(finalConfig[key]) || finalConfig[key] < 0) {
+          fail(`balanceConfig.finalClassifier.${key} must be non-negative`);
+        }
+      }
+      if (
+        finalConfig.minimumOutcomeConditionalPercentage >
+          finalConfig.recommendedOutcomeConditionalRange[0] ||
+        finalConfig.recommendedOutcomeConditionalRange[1] >
+          finalConfig.warningOutcomeConditionalPercentage ||
+        finalConfig.warningOutcomeConditionalPercentage >
+          finalConfig.maximumOutcomeConditionalPercentage
+      ) {
+        fail("Final-classifier minimum/recommended/warning/maximum values are inconsistent");
+      }
     }
   }
 }
@@ -791,7 +817,8 @@ function buildBalanceReport(adapter, enumeration, completeChoiceSpace, baseEndin
         reachable: data.weightedPaths > 0,
         status: rangeStatus(
           weightedPercentage,
-          config.globalDanger.recommendedEachRange,
+          config.globalDanger.recommendedEachRanges?.[endingId] ??
+            config.globalDanger.recommendedEachRange,
           {
             hardMaximum: config.globalDanger.hardEachMaximum,
             requireReachable: true,
@@ -874,21 +901,38 @@ function buildBalanceReport(adapter, enumeration, completeChoiceSpace, baseEndin
         reachable: data.weightedPaths > 0,
         examplePath: data.examplePath ?? null,
         exampleState: data.exampleState ?? null,
-        status: rangeStatus(
-          weightedConditionalPercentage,
-          config.finalClassifier.recommendedOutcomeConditionalRange,
-          {
-            minimum:
-              config.finalClassifier.minimumOutcomeConditionalPercentage,
-            anomalyAbove:
-              config.finalClassifier.maximumOutcomeConditionalPercentage,
-            warningAbove:
-              config.finalClassifier.warningOutcomeConditionalPercentage,
-            requireReachable: true,
-          },
-        ),
+        status: config.finalClassifier.outcomeGroups
+          ? (data.weightedPaths > 0 ? "reported_only" : "unreachable")
+          : rangeStatus(
+              weightedConditionalPercentage,
+              config.finalClassifier.recommendedOutcomeConditionalRange,
+              {
+                minimum:
+                  config.finalClassifier.minimumOutcomeConditionalPercentage,
+                anomalyAbove:
+                  config.finalClassifier.maximumOutcomeConditionalPercentage,
+                warningAbove:
+                  config.finalClassifier.warningOutcomeConditionalPercentage,
+                requireReachable: true,
+              },
+            ),
       };
     }
+    const byGroup = config.finalClassifier.outcomeGroups
+      ? Object.fromEntries(Object.entries(config.finalClassifier.outcomeGroups).map(([groupId, group]) => {
+          const weightedPaths = group.outcomeIds.reduce((sum, outcomeId) => sum + (outcomes[outcomeId]?.weightedPaths ?? 0), 0);
+          const trajectories = group.outcomeIds.reduce((sum, outcomeId) => sum + (outcomes[outcomeId]?.trajectories ?? 0), 0);
+          const weightedConditionalPercentage = percentage(weightedPaths, reachedWeightedPaths);
+          return [groupId, {
+            outcomeIds: group.outcomeIds,
+            trajectories,
+            weightedPaths,
+            weightedConditionalPercentage,
+            trajectoryConditionalPercentage: percentage(trajectories, reachedTrajectories),
+            status: rangeStatus(weightedConditionalPercentage, group.recommendedRange, { requireReachable: true }),
+          }];
+        }))
+      : undefined;
     const weightedReachPercentage = percentage(
       reachedWeightedPaths,
       completeChoiceSpace,
@@ -903,6 +947,7 @@ function buildBalanceReport(adapter, enumeration, completeChoiceSpace, baseEndin
         config.finalClassifier.recommendedReachRange,
       ),
       byOutcome,
+      ...(byGroup ? { byGroup } : {}),
     };
   }
 
@@ -1054,6 +1099,12 @@ function printHuman(report) {
         const value = data.weightedConditionalPercentage;
         console.log(
           `- final ${outcomeId}: ${value === null ? "n/a" : `${value.toFixed(2)}%`} of classified paths (${data.status})`,
+        );
+      }
+      for (const [groupId, data] of Object.entries(final.byGroup ?? {})) {
+        const value = data.weightedConditionalPercentage;
+        console.log(
+          `- final group ${groupId}: ${value === null ? "n/a" : `${value.toFixed(2)}%`} of classified paths (${data.status})`,
         );
       }
     }

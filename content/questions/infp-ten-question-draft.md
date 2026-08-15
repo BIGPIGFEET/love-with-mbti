@@ -1,11 +1,11 @@
-# INFP 正式十题 Stage 04 交接
+# INFP 正式十题 Stage 04–06 交接
 
-> 状态：完整非运行时草案，2026-08-13。  
+> 状态：已完成 Stage 05 结局绑定与 Stage 06 全路径平衡的非运行时草案，2026-08-15。
 > 权威题目记录：[infp-ten-question-draft.json](infp-ten-question-draft.json)。  
 > 上游正式序列：[infp-formal-sequence.json](../traceability/infp-formal-sequence.json)。  
 > 逐题与逐选项设计追踪：[infp-question-traceability.json](../traceability/infp-question-traceability.json)。
 
-当前数值是 Stage 04 的初始假设，尚未经过 INFP 结局设计和 `4^10` 全路径平衡。INFP 尚无独立结局/模糊反馈内容包，也未加入运行时类型路由，因此本轮没有写入 `src/content/`。
+当前数值已通过 `4^10` 全路径平衡，并绑定 INFP 独立结局、关系评价和模糊反馈草案。INFP 尚未加入运行时类型路由，因此仍未写入 `src/content/`；完整分布见 [infp-balance-report.md](infp-balance-report.md)。
 
 ## 1. 运行时字段映射
 
@@ -17,7 +17,7 @@
 | `npc_behavior` | `Question.npcQuote` | 用一句可观察发言承载 | 结构检查 |
 | `conflict_ids` | `Question.conflictDimensions` | 与 Stage 03 ID 集完全一致 | 追踪校验器 |
 | `evidence_refs` | `Question.researchRefs` | 只允许 `evidence_source` | 追踪校验器 |
-| `author_notes` | `Question.designNote` | 明确写入数值仍为假设 | 结构检查 |
+| `author_notes` | `Question.designNote` | 记录场景护栏与 Stage 06 平衡状态 | 结构检查 |
 | `option_id` / strategy / text / effects | `QuestionOption` 对应字段 | 四选项、合法策略、四维合法步长 | 结构检查 |
 | `immediate_response` | `QuestionOption.npcResponse` | 直接回应玩家当下行动 | 人工一致性审查 |
 | `fuzzy_hints` | `feedbackIds` + `feedbackText` | 按维度、方向、5/10/15+ 强度确定 | 反馈方向/强度检查 |
@@ -39,22 +39,22 @@
 | Q09 | INFP-S09 / I14 | TA 用长信表达在乎，却没有回答排他关系问题。 | 如何区分浪漫表达、私密托付和关系同意。 |
 | Q10 | INFP-S10 / I17 | 双方已谈关系定义，开始讨论随性、联系和见面频率。 | 如何把吸引落实为双方都能兑现的维护协议。 |
 
-## 3. 选项与初始效果总览
+## 3. 选项与平衡后效果总览
 
 效果顺序为 `attraction / trust / comfort / conflict`。完整玩家行动、TA 即时反应、模糊提示文本和设计理由保存在 JSON 与追踪文件中。
 
 | 题目 | 选项位置 1 → 4 | option effects |
 |---|---|---|
-| Q01 | honest / accommodate / negotiate / risky | `q01_admit_and_ask 5/10/5/0`<br>`q01_vague_agreement 5/-10/-5/5`<br>`q01_trade_references 10/5/10/-5`<br>`q01_thirty_second_pitch 10/0/-5/5` |
-| Q02 | accommodate / honest / risky / negotiate | `q02_end_gently 0/5/10/-5`<br>`q02_check_without_pressure 0/10/5/-5`<br>`q02_message_until_answer -5/-10/-10/10`<br>`q02_offer_two_exits 5/5/15/-5` |
-| Q03 | risky / honest / accommodate / negotiate | `q03_tease_in_public -5/-10/-10/10`<br>`q03_ask_lightly 0/10/5/0`<br>`q03_receive_without_label 10/5/10/0`<br>`q03_set_gift_tone 5/10/10/-5` |
-| Q04 | negotiate / confront / accommodate / honest | `q04_build_exit_point 5/10/15/-5`<br>`q04_push_through -10/-10/-15/15`<br>`q04_cancel_everything 0/-5/5/-5`<br>`q04_keep_own_plan 10/15/10/0` |
-| Q05 | accommodate / risky / negotiate / honest | `q05_promise_the_month 15/-5/5/0`<br>`q05_mock_the_fantasy -10/-5/-10/10`<br>`q05_make_small_version 5/15/10/-5`<br>`q05_name_uncertainty -5/10/5/5` |
-| Q06 | negotiate / accommodate / honest / confront | `q06_sequence_support 5/10/10/-10`<br>`q06_keep_venting 5/-5/10/5`<br>`q06_request_structure 0/15/5/-5`<br>`q06_blame_for_not_fixing -10/-10/-15/15` |
-| Q07 | honest / risky / negotiate / accommodate | `q07_name_limit 0/10/5/0`<br>`q07_force_resolution -10/-10/-15/15`<br>`q07_pause_with_anchor -5/15/10/-10`<br>`q07_wait_without_anchor 0/-5/5/-5` |
-| Q08 | negotiate / accommodate / confront / honest | `q08_negotiate_claims -5/15/10/-5`<br>`q08_refuse_immediately 0/-5/5/-10`<br>`q08_take_and_dismiss -10/-15/-15/15`<br>`q08_keep_decision_right 0/10/5/5` |
-| Q09 | risky / negotiate / accommodate / honest | `q09_treat_as_yes 5/-10/-10/10`<br>`q09_define_three_terms 10/15/10/-5`<br>`q09_wait_without_need 10/-5/5/-5`<br>`q09_set_answer_window -5/20/5/5` |
-| Q10 | accommodate / honest / risky / negotiate | `q10_follow_their_impulse 10/-5/5/0`<br>`q10_state_minimum -5/15/5/5`<br>`q10_disappear_to_test -10/-15/-15/20`<br>`q10_build_flexible_rhythm 10/10/15/-10` |
+| Q01 | honest / accommodate / negotiate / risky | `q01_admit_and_ask 5/10/5/0`<br>`q01_vague_agreement 0/-10/-5/5`<br>`q01_trade_references 10/5/10/-5`<br>`q01_thirty_second_pitch 10/0/-5/5` |
+| Q02 | accommodate / honest / risky / negotiate | `q02_end_gently -5/5/10/-5`<br>`q02_check_without_pressure 0/10/5/-5`<br>`q02_message_until_answer -10/-5/-10/10`<br>`q02_offer_two_exits 5/5/15/-5` |
+| Q03 | risky / honest / accommodate / negotiate | `q03_tease_in_public -5/-15/-5/15`<br>`q03_ask_lightly 0/10/5/0`<br>`q03_receive_without_label 10/5/10/0`<br>`q03_set_gift_tone 5/10/10/-5` |
+| Q04 | negotiate / confront / accommodate / honest | `q04_build_exit_point 5/10/15/-5`<br>`q04_push_through -5/0/-20/15`<br>`q04_cancel_everything 0/-5/5/-5`<br>`q04_keep_own_plan 10/15/10/0` |
+| Q05 | accommodate / risky / negotiate / honest | `q05_promise_the_month 15/-5/5/0`<br>`q05_mock_the_fantasy -5/0/-5/20`<br>`q05_make_small_version 5/15/10/-5`<br>`q05_name_uncertainty -5/10/5/5` |
+| Q06 | negotiate / accommodate / honest / confront | `q06_sequence_support 10/10/10/-10`<br>`q06_keep_venting 5/-5/10/10`<br>`q06_request_structure 5/15/5/-5`<br>`q06_blame_for_not_fixing -5/0/-10/20` |
+| Q07 | honest / risky / negotiate / accommodate | `q07_name_limit 5/10/5/0`<br>`q07_force_resolution -5/0/-15/20`<br>`q07_pause_with_anchor -5/15/10/-10`<br>`q07_wait_without_anchor 0/-5/5/-5` |
+| Q08 | negotiate / accommodate / confront / honest | `q08_negotiate_claims 5/15/10/-5`<br>`q08_refuse_immediately 0/-5/5/-10`<br>`q08_take_and_dismiss 0/-20/0/20`<br>`q08_keep_decision_right 0/10/5/10` |
+| Q09 | risky / negotiate / accommodate / honest | `q09_treat_as_yes 0/-10/-10/20`<br>`q09_define_three_terms 15/15/5/-5`<br>`q09_wait_without_need 20/-10/5/-5`<br>`q09_set_answer_window -5/20/5/5` |
+| Q10 | accommodate / honest / risky / negotiate | `q10_follow_their_impulse 20/-20/0/5`<br>`q10_state_minimum -10/15/5/5`<br>`q10_disappear_to_test 0/-20/-10/20`<br>`q10_build_flexible_rhythm 15/15/10/0` |
 
 ## 4. 整套 QA
 
@@ -79,7 +79,7 @@
 - 每个选项引用 1～2 个反馈键；方向和强度与其对应效果完全一致，相同反馈键的临时文案没有漂移。
 - 普通拒绝、不匹配、要求暂停或保留价值分歧均通过四维状态进入统一判定。
 - 局部支配检查已执行；每题至少保留两条不存在全维明显优劣的可信路线。被明显支配的路线只用于具体表现持续追问、否定边界、迁怒、擅自定义或消失测试等高风险行为。
-- 人性化只修改玩家可见文字；ID、顺序、策略、效果、反馈键、来源和追踪集合保持不变。
+- Stage 06 只调整目标类型的选项效果与对应反馈强度；ID、顺序、策略、来源和上游追踪集合保持不变，共享规则未修改。
 
 ## 5. 开放风险
 
@@ -91,11 +91,11 @@
 - Q07 的高信任来自 TA 按约返回，不来自玩家无限给空间。
 - Q08 的宣传工作必须保持灰度：产品合法、玩家有现实压力，但夸张话术确有误导风险；不能把 TA 写成天然正确的道德裁判。
 - Q09、Q10 需要叙事连续：前者至少确认一项关系协议，后者才讨论长期维护。具体路径不应假设玩家一定选择了单一“最佳选项”。
-- 当前反馈文本只是 Stage 04 临时映射；Stage 05 应将用到的 20 个反馈键整理为 INFP 独立内容包，并保持键、方向和强度不变。
-- 当前数值尚未做全路径枚举。不得据本稿声称结局分布、策略平衡或所有结果可达。
+- 当前反馈文本已与 Stage 05 的 24 键独立内容包逐字对齐。
+- Stage 06 已验证 11 个基础结局和 12 个完整结果全部可达；规则遮蔽仍因运行时没有诊断钩子而保持未知。
 
 ## 6. 下一步交接
 
-下一阶段使用 `05-design-choice-game-endings`：复用现有稳定结局 ID、状态方向、门槛和规则优先级，为 INFP 编写独立结局、关系评价与模糊反馈文案。完成后再把本草案投影为独立 `src/content/infp-questions.ts`，加入类型路由，并运行内容验证、测试、构建及 Stage 06 全路径分析。
+设计阶段 01–06 已形成闭环。下一步如需上线，应在明确授权后把本草案投影为独立 `src/content/infp-questions.ts` 与 INFP 结局模块，加入类型路由，并运行内容验证、生产路径分析、测试和构建。
 
-**本阶段没有批准结局文案、门槛变化、共享规则修改或最终平衡数值。**
+**本阶段批准的是 INFP 目标内容效果与反馈强度；没有修改共享门槛、规则优先级或稳定结果 ID。**

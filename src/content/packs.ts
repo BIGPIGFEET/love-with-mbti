@@ -1,5 +1,7 @@
 import type { AvailableMbtiType, ContentPack } from "./content-pack.ts";
 import { endings, fuzzyFeedback, relationshipEvaluations } from "./endings.ts";
+import { infpEndings, infpFuzzyFeedback, infpRelationshipEvaluations } from "./infp-endings.ts";
+import { infpQuestions } from "./infp-questions.ts";
 import { intpEndings, intpFuzzyFeedback, intpRelationshipEvaluations } from "./intp-endings.ts";
 import { intpQuestions } from "./intp-questions.ts";
 import { questions } from "./questions.ts";
@@ -21,6 +23,14 @@ export const contentPacks = {
     endings: intpEndings,
     relationshipEvaluations: intpRelationshipEvaluations,
     fuzzyFeedback: intpFuzzyFeedback,
+  },
+  INFP: {
+    type: "INFP",
+    description: "十次真实表达、理想落地、边界确认与关系维护之间的取舍。",
+    questions: infpQuestions,
+    endings: infpEndings,
+    relationshipEvaluations: infpRelationshipEvaluations,
+    fuzzyFeedback: infpFuzzyFeedback,
   },
 } as const satisfies Record<AvailableMbtiType, ContentPack>;
 

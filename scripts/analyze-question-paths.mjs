@@ -6,10 +6,15 @@ import { ENDING_IDS, RELATIONSHIP_EVALUATION_IDS, validateContent } from "../src
 import { applyEffects, endingResultKey, INITIAL_STATE, resolveEnding } from "../src/game/rules.ts";
 
 const GLOBAL_DANGER = ["conflict_break", "strong_discomfort", "trust_broken"];
+const GLOBAL_DANGER_TARGETS = {
+  conflict_break: [3, 5],
+  strong_discomfort: [4, 6],
+  trust_broken: [4, 6],
+};
 const STAGE_GATES = [
-  ["Q02", "no_second_meeting", [5, 15]],
-  ["Q05", "fade_out", [10, 20], 25],
-  ["Q08", "stay_acquaintances", [10, 20], 25],
+  ["Q02", "no_second_meeting", [20, 25], 30],
+  ["Q05", "fade_out", [30, 38], 45],
+  ["Q08", "stay_acquaintances", [35, 45], 55],
 ];
 const FINAL_OUTCOMES = [
   "strangers_after_all",
@@ -19,6 +24,19 @@ const FINAL_OUTCOMES = [
   "friends",
   "unresolved_ambiguity",
 ];
+const FINAL_GROUPS = {
+  strangers_after_all: { outcomeIds: ["strangers_after_all"], recommendedRange: [15, 20] },
+  confirmed_relationship: {
+    outcomeIds: [
+      "confirmed_relationship:romance_stable",
+      "confirmed_relationship:romance_hidden_risk",
+    ],
+    recommendedRange: [10, 15],
+  },
+  dangerous_lovers: { outcomeIds: ["dangerous_lovers"], recommendedRange: [5, 10] },
+  friends: { outcomeIds: ["friends"], recommendedRange: [18, 25] },
+  unresolved_ambiguity: { outcomeIds: ["unresolved_ambiguity"], recommendedRange: [35, 45] },
+};
 const EXPECTED_OUTCOMES = [
   ...ENDING_IDS.filter((id) => id !== "confirmed_relationship"),
   ...RELATIONSHIP_EVALUATION_IDS.map((id) => `confirmed_relationship:${id}`),
@@ -142,7 +160,7 @@ function analyzePack(type, pack) {
   const globalByEnding = Object.fromEntries(GLOBAL_DANGER.map((id) => {
     const data = baseEndingData[id] ?? { trajectories: 0, weightedPaths: 0 };
     const weightedPercentage = percent(data.weightedPaths, fullChoiceSpace);
-    return [id, { ...data, weightedPercentage, reachable: data.weightedPaths > 0, status: status(weightedPercentage, [3, 8], { hardMaximum: 10, reachable: true }) }];
+    return [id, { ...data, weightedPercentage, reachable: data.weightedPaths > 0, status: status(weightedPercentage, GLOBAL_DANGER_TARGETS[id], { hardMaximum: 10, reachable: true }) }];
   }));
   const globalWeightedPaths = Object.values(globalByEnding).reduce((total, item) => total + item.weightedPaths, 0);
   const globalTrajectories = Object.values(globalByEnding).reduce((total, item) => total + item.trajectories, 0);
@@ -157,7 +175,20 @@ function analyzePack(type, pack) {
   const finalByOutcome = Object.fromEntries(FINAL_OUTCOMES.map((id) => {
     const data = finalData[id] ?? { trajectories: 0, weightedPaths: 0, examplePath: null, exampleState: null };
     const weightedConditionalPercentage = percent(data.weightedPaths, finalWeightedPaths);
-    return [id, { ...data, weightedConditionalPercentage, trajectoryConditionalPercentage: percent(data.trajectories, finalTrajectories), reachable: data.weightedPaths > 0, status: status(weightedConditionalPercentage, [10, 25], { minimum: 5, anomalyAbove: 45, warningAbove: 40, reachable: true }) }];
+    return [id, { ...data, weightedConditionalPercentage, trajectoryConditionalPercentage: percent(data.trajectories, finalTrajectories), reachable: data.weightedPaths > 0, status: data.weightedPaths > 0 ? "reported_only" : "unreachable" }];
+  }));
+  const finalByGroup = Object.fromEntries(Object.entries(FINAL_GROUPS).map(([id, config]) => {
+    const weightedPaths = config.outcomeIds.reduce((total, outcomeId) => total + (finalData[outcomeId]?.weightedPaths ?? 0), 0);
+    const trajectories = config.outcomeIds.reduce((total, outcomeId) => total + (finalData[outcomeId]?.trajectories ?? 0), 0);
+    const weightedConditionalPercentage = percent(weightedPaths, finalWeightedPaths);
+    return [id, {
+      outcomeIds: config.outcomeIds,
+      trajectories,
+      weightedPaths,
+      weightedConditionalPercentage,
+      trajectoryConditionalPercentage: percent(trajectories, finalTrajectories),
+      status: status(weightedConditionalPercentage, config.recommendedRange, { reachable: true }),
+    }];
   }));
   const allStrategies = [...new Set(questions.flatMap((question) => question.options.map((option) => option.strategy)))].sort();
   const fixedStrategies = allStrategies.map((strategy) => ({ strategy, ...simulate(questions, (question) => question.options.find((option) => option.strategy === strategy)) }));
@@ -185,9 +216,9 @@ function analyzePack(type, pack) {
     baseEndingTrajectoryPercentages: distribution(baseEndings, terminalTrajectories, "trajectories"),
     baseEndingWeightedPathPercentages: distribution(baseEndings, fullChoiceSpace, "weightedPaths"),
     balance: {
-      globalDanger: { byEnding: globalByEnding, combined: { trajectories: globalTrajectories, weightedPaths: globalWeightedPaths, weightedPercentage: percent(globalWeightedPaths, fullChoiceSpace), status: status(percent(globalWeightedPaths, fullChoiceSpace), [12, 18], { hardMaximum: 20 }) } },
+      globalDanger: { byEnding: globalByEnding, combined: { trajectories: globalTrajectories, weightedPaths: globalWeightedPaths, weightedPercentage: percent(globalWeightedPaths, fullChoiceSpace), status: status(percent(globalWeightedPaths, fullChoiceSpace), [11, 17], { hardMaximum: 20 }) } },
       stageGates,
-      finalClassifier: { questionId: "Q10", reachedTrajectories: finalTrajectories, reachedWeightedPaths: finalWeightedPaths, weightedReachPercentage: percent(finalWeightedPaths, fullChoiceSpace), reachStatus: status(percent(finalWeightedPaths, fullChoiceSpace), [35, 55]), byOutcome: finalByOutcome },
+      finalClassifier: { questionId: "Q10", reachedTrajectories: finalTrajectories, reachedWeightedPaths: finalWeightedPaths, weightedReachPercentage: percent(finalWeightedPaths, fullChoiceSpace), reachStatus: status(percent(finalWeightedPaths, fullChoiceSpace), [20, 30]), byOutcome: finalByOutcome, byGroup: finalByGroup },
     },
     coverage: {
       endings: { expected: [...ENDING_IDS], observed: observedEndingIds, missing: ENDING_IDS.filter((id) => !baseEndings.has(id)), unexpected: observedEndingIds.filter((id) => !ENDING_IDS.includes(id)) },

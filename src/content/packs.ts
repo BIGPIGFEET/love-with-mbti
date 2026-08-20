@@ -2,6 +2,8 @@ import type { AvailableMbtiType, ContentPack } from "./content-pack.ts";
 import { endings, fuzzyFeedback, relationshipEvaluations } from "./endings.ts";
 import { infpEndings, infpFuzzyFeedback, infpRelationshipEvaluations } from "./infp-endings.ts";
 import { infpQuestions } from "./infp-questions.ts";
+import { isfpEndings, isfpFuzzyFeedback, isfpRelationshipEvaluations } from "./isfp-endings.ts";
+import { isfpQuestions } from "./isfp-questions.ts";
 import { intpEndings, intpFuzzyFeedback, intpRelationshipEvaluations } from "./intp-endings.ts";
 import { intpQuestions } from "./intp-questions.ts";
 import { questions } from "./questions.ts";
@@ -31,6 +33,14 @@ export const contentPacks = {
     endings: infpEndings,
     relationshipEvaluations: infpRelationshipEvaluations,
     fuzzyFeedback: infpFuzzyFeedback,
+  },
+  ISFP: {
+    type: "ISFP",
+    description: "十次具体体验、安静边界、隐私责任与共同修复之间的取舍。",
+    questions: isfpQuestions,
+    endings: isfpEndings,
+    relationshipEvaluations: isfpRelationshipEvaluations,
+    fuzzyFeedback: isfpFuzzyFeedback,
   },
 } as const satisfies Record<AvailableMbtiType, ContentPack>;
 

@@ -1,0 +1,182 @@
+[
+  {
+    "question_id": "Q01",
+    "order": 1,
+    "stage": "first_meeting",
+    "scene_id": "ISFP-SC01",
+    "candidate_id": "ISFP-C01",
+    "behavior_ids": ["ISFP-B02"],
+    "feature_ids": ["ISFP-F07", "ISFP-F01"],
+    "source_ids": ["ISFP-S02", "ISFP-S03", "ISFP-S05", "ISFP-S06", "ISFP-S10", "ISFP-S11", "ISFP-S17"],
+    "conflict_ids": ["ISFP-K02"],
+    "state_ids": ["attraction", "comfort"],
+    "options": [
+      {"option_id": "q01_decline_kindly", "strategy": "honest", "rationale": "诚实拒绝具体活动，同时不把差异说成关系问题。"},
+      {"option_id": "q01_label_interest", "strategy": "accommodate", "rationale": "用类型标签替代真实询问，短期配合但损害被当作个体的信任。"},
+      {"option_id": "q01_join_briefly", "strategy": "negotiate", "rationale": "提出短时、可退出的共同体验，兼顾兴趣与拒绝权。"},
+      {"option_id": "q01_push_art_test", "strategy": "risky", "rationale": "以审美试探制造火花，同时增加被评审和被归类的不适。"}
+    ]
+  },
+  {
+    "question_id": "Q02",
+    "order": 2,
+    "stage": "first_meeting",
+    "scene_id": "ISFP-SC02",
+    "candidate_id": "ISFP-C03",
+    "behavior_ids": ["ISFP-B01"],
+    "feature_ids": ["ISFP-F02"],
+    "source_ids": ["ISFP-S03", "ISFP-S04", "ISFP-S06", "ISFP-S17"],
+    "conflict_ids": ["ISFP-K01"],
+    "state_ids": ["comfort", "trust", "conflict"],
+    "options": [
+      {"option_id": "q02_offer_exit", "strategy": "accommodate", "rationale": "提供低压力退出和陪伴选项，降低对披露的强迫。"},
+      {"option_id": "q02_check_gently", "strategy": "honest", "rationale": "把需要直接交还给 TA，增加可信的沟通。"},
+      {"option_id": "q02_question_repeatedly", "strategy": "risky", "rationale": "将不确定变成连续追问，主要伤害舒适并升高冲突。"},
+      {"option_id": "q02_end_respectfully", "strategy": "negotiate", "rationale": "承认关系仍可结束，以明确退出换取边界安全。"}
+    ]
+  },
+  {
+    "question_id": "Q03",
+    "order": 3,
+    "stage": "contact",
+    "scene_id": "ISFP-SC03",
+    "candidate_id": "ISFP-C05",
+    "behavior_ids": ["ISFP-B04"],
+    "feature_ids": ["ISFP-F08", "ISFP-F03"],
+    "source_ids": ["ISFP-S03", "ISFP-S04", "ISFP-S07", "ISFP-S17"],
+    "conflict_ids": ["ISFP-K03", "ISFP-K09"],
+    "state_ids": ["attraction", "trust", "comfort"],
+    "options": [
+      {"option_id": "q03_force_meaning", "strategy": "risky", "rationale": "公开逼出暧昧含义，保留火花但伤害安全感。"},
+      {"option_id": "q03_set_boundary", "strategy": "negotiate", "rationale": "逐项确认行动意图，避免把照顾自动解释为承诺。"},
+      {"option_id": "q03_receive_and_name", "strategy": "honest", "rationale": "接住行动并说出语言确认需要，建立互译。"},
+      {"option_id": "q03_treat_as_debt", "strategy": "accommodate", "rationale": "把关心转成欠债，降低舒适并增加人情压力。"}
+    ]
+  },
+  {
+    "question_id": "Q04",
+    "order": 4,
+    "stage": "contact",
+    "scene_id": "ISFP-SC04",
+    "candidate_id": "ISFP-C07",
+    "behavior_ids": ["ISFP-B05", "ISFP-B10"],
+    "feature_ids": ["ISFP-F05", "ISFP-F07"],
+    "source_ids": ["ISFP-S02", "ISFP-S03", "ISFP-S06", "ISFP-S10", "ISFP-S17"],
+    "conflict_ids": ["ISFP-K04"],
+    "state_ids": ["trust", "comfort", "conflict"],
+    "options": [
+      {"option_id": "q04_keep_original", "strategy": "honest", "rationale": "说明自己的不可变条件，拒绝不等于惩罚对方。"},
+      {"option_id": "q04_blame_change", "strategy": "risky", "rationale": "把一次变化升级为人格指责，主要提高冲突和不适。"},
+      {"option_id": "q04_split_plan", "strategy": "negotiate", "rationale": "把临时兴趣拆进原计划或下次安排，兼顾两方成本。"},
+      {"option_id": "q04_drop_everything", "strategy": "accommodate", "rationale": "全盘让步看似温和，却制造隐性怨气和可靠性疑问。"}
+    ]
+  },
+  {
+    "question_id": "Q05",
+    "order": 5,
+    "stage": "contact",
+    "scene_id": "ISFP-SC05",
+    "candidate_id": "ISFP-C09",
+    "behavior_ids": ["ISFP-B06"],
+    "feature_ids": ["ISFP-F06", "ISFP-F03"],
+    "source_ids": ["ISFP-S02", "ISFP-S03", "ISFP-S04", "ISFP-S07", "ISFP-S10"],
+    "conflict_ids": ["ISFP-K05", "ISFP-K08"],
+    "state_ids": ["trust", "comfort", "conflict"],
+    "options": [
+      {"option_id": "q05_change_topic", "strategy": "accommodate", "rationale": "降低即时摩擦，但把重要边界留在未解决状态。"},
+      {"option_id": "q05_find_common_ground", "strategy": "negotiate", "rationale": "把价值分歧拆成不可接受与可协作部分。"},
+      {"option_id": "q05_call_overreaction", "strategy": "risky", "rationale": "以敏感标签反击，否定对方表达资格并提高冲突。"},
+      {"option_id": "q05_ask_impact", "strategy": "honest", "rationale": "承认本意与影响的差异，允许对方说明具体边界。"}
+    ]
+  },
+  {
+    "question_id": "Q06",
+    "order": 6,
+    "stage": "familiarity",
+    "scene_id": "ISFP-SC06",
+    "candidate_id": "ISFP-C08",
+    "behavior_ids": ["ISFP-B04", "ISFP-B08"],
+    "feature_ids": ["ISFP-F08", "ISFP-F03"],
+    "source_ids": ["ISFP-S03", "ISFP-S04", "ISFP-S07", "ISFP-S17"],
+    "conflict_ids": ["ISFP-K03"],
+    "state_ids": ["comfort", "trust", "conflict"],
+    "options": [
+      {"option_id": "q06_set_sequence", "strategy": "negotiate", "rationale": "约定倾听与行动的先后，保留双方责任。"},
+      {"option_id": "q06_blame_silence", "strategy": "risky", "rationale": "要求对方猜中需要，把支持责任单向转移并升高冲突。"},
+      {"option_id": "q06_accept_action", "strategy": "accommodate", "rationale": "接受行动帮助但不把决定权交出，代价较低且仍有未表达空间。"},
+      {"option_id": "q06_ask_presence", "strategy": "honest", "rationale": "明确只需要陪伴，避免双方猜测支持方式。"}
+    ]
+  },
+  {
+    "question_id": "Q07",
+    "order": 7,
+    "stage": "familiarity",
+    "scene_id": "ISFP-SC07",
+    "candidate_id": "ISFP-C11",
+    "behavior_ids": ["ISFP-B07", "ISFP-B12"],
+    "feature_ids": ["ISFP-F04"],
+    "source_ids": ["ISFP-S04", "ISFP-S07"],
+    "conflict_ids": ["ISFP-K05", "ISFP-K06"],
+    "state_ids": ["comfort", "trust", "conflict"],
+    "options": [
+      {"option_id": "q07_force_now", "strategy": "risky", "rationale": "取消暂停权，主要造成强烈不适并提高冲突。"},
+      {"option_id": "q07_wait_unbounded", "strategy": "honest", "rationale": "说明自己的底线，降低追问但保留修复不确定性。"},
+      {"option_id": "q07_accept_anchor", "strategy": "negotiate", "rationale": "用回谈时间和改期通知把暂停变成可预期流程。"},
+      {"option_id": "q07_give_space", "strategy": "accommodate", "rationale": "尊重当下退出，同时保留回来说明的责任。"}
+    ]
+  },
+  {
+    "question_id": "Q08",
+    "order": 8,
+    "stage": "familiarity",
+    "scene_id": "ISFP-SC08",
+    "candidate_id": "ISFP-C14",
+    "behavior_ids": ["ISFP-B09", "ISFP-B12"],
+    "feature_ids": ["ISFP-F02", "ISFP-F03"],
+    "source_ids": ["ISFP-S03", "ISFP-S04", "ISFP-S07"],
+    "conflict_ids": ["ISFP-K07"],
+    "state_ids": ["trust", "comfort", "conflict"],
+    "options": [
+      {"option_id": "q08_check_spread", "strategy": "negotiate", "rationale": "先查清传播范围再共同制定补救，承担事实与后果。"},
+      {"option_id": "q08_minimize_publicly", "strategy": "accommodate", "rationale": "为维持气氛淡化隐私影响，主要损害信任并提高冲突。"},
+      {"option_id": "q08_apologize_and_delete", "strategy": "honest", "rationale": "若确有责任则立即承认、删除和告知，开启修复但不把必要补救直接计作信任恢复。"},
+      {"option_id": "q08_deflect_blame", "strategy": "risky", "rationale": "把分享责任反推给受损者，造成明显舒适下降与冲突后果。"}
+    ]
+  },
+  {
+    "question_id": "Q09",
+    "order": 9,
+    "stage": "ambiguity",
+    "scene_id": "ISFP-SC09",
+    "candidate_id": "ISFP-C16",
+    "behavior_ids": ["ISFP-B11"],
+    "feature_ids": ["ISFP-F03", "ISFP-F06", "ISFP-F08"],
+    "source_ids": ["ISFP-S02", "ISFP-S03", "ISFP-S04", "ISFP-S07"],
+    "conflict_ids": ["ISFP-K03", "ISFP-K09"],
+    "state_ids": ["attraction", "trust", "comfort", "conflict"],
+    "options": [
+      {"option_id": "q09_state_boundary", "strategy": "honest", "rationale": "说明喜欢与投入边界，并取得双方在答案出现前先按朋友相处的明确同意。"},
+      {"option_id": "q09_define_terms", "strategy": "negotiate", "rationale": "把关系定义拆为可拒绝、可执行的部分，并取得双方对排他与见面方式的明确同意。"},
+      {"option_id": "q09_accept_ambiguity", "strategy": "accommodate", "rationale": "保留当下火花但隐藏需求，短期吸引上升、长期信任留下问号。"},
+      {"option_id": "q09_demand_exclusivity", "strategy": "risky", "rationale": "把关系期待变成控制通知，同时严重损害信任与舒适并升高冲突。"}
+    ]
+  },
+  {
+    "question_id": "Q10",
+    "order": 10,
+    "stage": "ambiguity",
+    "scene_id": "ISFP-SC10",
+    "candidate_id": "ISFP-C18",
+    "behavior_ids": ["ISFP-B07", "ISFP-B12"],
+    "feature_ids": ["ISFP-F04", "ISFP-F06", "ISFP-F08"],
+    "source_ids": ["ISFP-S04", "ISFP-S07"],
+    "conflict_ids": ["ISFP-K05", "ISFP-K06"],
+    "state_ids": ["trust", "comfort", "conflict"],
+    "options": [
+      {"option_id": "q10_name_remaining_need", "strategy": "honest", "rationale": "接受回谈但保留尚未恢复的信任，以未来行为验证修复。"},
+      {"option_id": "q10_accept_without_discussion", "strategy": "accommodate", "rationale": "用不再追问换取表面平静，实质退出双方共同承担的修复。"},
+      {"option_id": "q10_require_perfect_apology", "strategy": "risky", "rationale": "把修复变成无尽审讯，主要损害舒适并重新升高冲突。"},
+      {"option_id": "q10_build_repair_rule", "strategy": "negotiate", "rationale": "把暂停、报平安和回谈变成双方都能执行的修复约定。"}
+    ]
+  }
+]

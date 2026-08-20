@@ -1,0 +1,112 @@
+[
+  {
+    "order": 1,
+    "stage": "first_meeting",
+    "scene_id": "ISFP-SC01",
+    "candidate_id": "ISFP-C01",
+    "behavior_ids": ["ISFP-B02"],
+    "feature_ids": ["ISFP-F07", "ISFP-F01"],
+    "source_ids": ["ISFP-S02", "ISFP-S03", "ISFP-S05", "ISFP-S06", "ISFP-S10", "ISFP-S11", "ISFP-S17"],
+    "conflict_ids": ["ISFP-K02"],
+    "state_ids": ["attraction", "comfort"]
+  },
+  {
+    "order": 2,
+    "stage": "first_meeting",
+    "scene_id": "ISFP-SC02",
+    "candidate_id": "ISFP-C03",
+    "behavior_ids": ["ISFP-B01"],
+    "feature_ids": ["ISFP-F02"],
+    "source_ids": ["ISFP-S03", "ISFP-S04", "ISFP-S06", "ISFP-S17"],
+    "conflict_ids": ["ISFP-K01"],
+    "state_ids": ["comfort", "trust", "conflict"]
+  },
+  {
+    "order": 3,
+    "stage": "contact",
+    "scene_id": "ISFP-SC03",
+    "candidate_id": "ISFP-C05",
+    "behavior_ids": ["ISFP-B04"],
+    "feature_ids": ["ISFP-F08", "ISFP-F03"],
+    "source_ids": ["ISFP-S03", "ISFP-S04", "ISFP-S07", "ISFP-S17"],
+    "conflict_ids": ["ISFP-K03", "ISFP-K09"],
+    "state_ids": ["attraction", "trust", "comfort"]
+  },
+  {
+    "order": 4,
+    "stage": "contact",
+    "scene_id": "ISFP-SC04",
+    "candidate_id": "ISFP-C07",
+    "behavior_ids": ["ISFP-B05", "ISFP-B10"],
+    "feature_ids": ["ISFP-F05", "ISFP-F07"],
+    "source_ids": ["ISFP-S02", "ISFP-S03", "ISFP-S06", "ISFP-S10", "ISFP-S17"],
+    "conflict_ids": ["ISFP-K04"],
+    "state_ids": ["trust", "comfort", "conflict"]
+  },
+  {
+    "order": 5,
+    "stage": "contact",
+    "scene_id": "ISFP-SC05",
+    "candidate_id": "ISFP-C09",
+    "behavior_ids": ["ISFP-B06"],
+    "feature_ids": ["ISFP-F06", "ISFP-F03"],
+    "source_ids": ["ISFP-S02", "ISFP-S03", "ISFP-S04", "ISFP-S07", "ISFP-S10"],
+    "conflict_ids": ["ISFP-K05", "ISFP-K08"],
+    "state_ids": ["trust", "comfort", "conflict"]
+  },
+  {
+    "order": 6,
+    "stage": "familiarity",
+    "scene_id": "ISFP-SC06",
+    "candidate_id": "ISFP-C08",
+    "behavior_ids": ["ISFP-B04", "ISFP-B08"],
+    "feature_ids": ["ISFP-F08", "ISFP-F03"],
+    "source_ids": ["ISFP-S03", "ISFP-S04", "ISFP-S07", "ISFP-S17"],
+    "conflict_ids": ["ISFP-K03"],
+    "state_ids": ["comfort", "trust", "conflict"]
+  },
+  {
+    "order": 7,
+    "stage": "familiarity",
+    "scene_id": "ISFP-SC07",
+    "candidate_id": "ISFP-C11",
+    "behavior_ids": ["ISFP-B07", "ISFP-B12"],
+    "feature_ids": ["ISFP-F04"],
+    "source_ids": ["ISFP-S04", "ISFP-S07"],
+    "conflict_ids": ["ISFP-K05", "ISFP-K06"],
+    "state_ids": ["comfort", "trust", "conflict"]
+  },
+  {
+    "order": 8,
+    "stage": "familiarity",
+    "scene_id": "ISFP-SC08",
+    "candidate_id": "ISFP-C14",
+    "behavior_ids": ["ISFP-B09", "ISFP-B12"],
+    "feature_ids": ["ISFP-F02", "ISFP-F03"],
+    "source_ids": ["ISFP-S03", "ISFP-S04", "ISFP-S07"],
+    "conflict_ids": ["ISFP-K07"],
+    "state_ids": ["trust", "comfort", "conflict"]
+  },
+  {
+    "order": 9,
+    "stage": "ambiguity",
+    "scene_id": "ISFP-SC09",
+    "candidate_id": "ISFP-C16",
+    "behavior_ids": ["ISFP-B11"],
+    "feature_ids": ["ISFP-F03", "ISFP-F06", "ISFP-F08"],
+    "source_ids": ["ISFP-S02", "ISFP-S03", "ISFP-S04", "ISFP-S07"],
+    "conflict_ids": ["ISFP-K03", "ISFP-K09"],
+    "state_ids": ["attraction", "trust", "comfort", "conflict"]
+  },
+  {
+    "order": 10,
+    "stage": "ambiguity",
+    "scene_id": "ISFP-SC10",
+    "candidate_id": "ISFP-C18",
+    "behavior_ids": ["ISFP-B07", "ISFP-B12"],
+    "feature_ids": ["ISFP-F04", "ISFP-F06", "ISFP-F08"],
+    "source_ids": ["ISFP-S04", "ISFP-S07"],
+    "conflict_ids": ["ISFP-K05", "ISFP-K06"],
+    "state_ids": ["trust", "comfort", "conflict"]
+  }
+]

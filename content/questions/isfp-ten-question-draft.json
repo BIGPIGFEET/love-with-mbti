@@ -1,0 +1,1113 @@
+[
+  {
+    "id": "Q01",
+    "order": 1,
+    "stage": "first_meeting",
+    "title": "先一起看看，不必假装喜欢",
+    "scene": "第一次见面快结束时，街角有一个只开放半小时的小型手作展。TA 在门口停了一下，说里面有一件作品的光影很有意思，但也补了一句：不想去的话，走到地铁站也一样。",
+    "npcQuote": "我只是想进去看那一件。你不感兴趣也没关系。",
+    "prompt": "你会怎么回应这个临时邀请？",
+    "conflictDimensions": [
+      "ISFP-K02"
+    ],
+    "researchRefs": [
+      "ISFP-S02",
+      "ISFP-S03",
+      "ISFP-S05",
+      "ISFP-S06",
+      "ISFP-S10",
+      "ISFP-S11",
+      "ISFP-S17"
+    ],
+    "tags": [
+      "初识",
+      "共同体验",
+      "兴趣差异",
+      "反刻板"
+    ],
+    "designNote": "低风险首题；测试玩家是否能在不把艺术标签当门槛的前提下参与或拒绝具体体验。效果已通过 Stage-06 全路径枚举调整。",
+    "options": [
+      {
+        "id": "q01_decline_kindly",
+        "strategy": "honest",
+        "strategyLabel": "坦诚表达",
+        "text": "我对手作展没什么感觉，但可以陪你走到门口，之后我们再见。",
+        "effects": {
+          "attraction": 5,
+          "trust": 10,
+          "comfort": 5,
+          "conflict": 0
+        },
+        "npcResponse": "TA 没有失望的样子：“这样就很好。你不用为了证明合得来而进去。”",
+        "feedbackIds": [
+          "trust_up_medium",
+          "comfort_up_slight"
+        ],
+        "feedbackText": [
+          "真实表达被认真接住。",
+          "相处保持自在。"
+        ]
+      },
+      {
+        "id": "q01_label_interest",
+        "strategy": "accommodate",
+        "strategyLabel": "顺着标签",
+        "text": "你们 ISFP 不是都喜欢这种吗？那我陪你进去。",
+        "effects": {
+          "attraction": 0,
+          "trust": -10,
+          "comfort": -5,
+          "conflict": 5
+        },
+        "npcResponse": "TA 的手离开了门把：“我不想因为四个字母被安排进展览。你想不想去可以直接说。”",
+        "feedbackIds": [
+          "trust_down_medium",
+          "comfort_down_slight"
+        ],
+        "feedbackText": [
+          "标签让信任打了折扣。",
+          "TA开始防备被归类。"
+        ]
+      },
+      {
+        "id": "q01_join_briefly",
+        "strategy": "negotiate",
+        "strategyLabel": "协商参与",
+        "text": "进去看那一件，十分钟后如果你想走我们就走。",
+        "effects": {
+          "attraction": 10,
+          "trust": 5,
+          "comfort": 10,
+          "conflict": -5
+        },
+        "npcResponse": "TA 点点头：“好，十分钟。你不喜欢也可以直接说，不用配合我。”",
+        "feedbackIds": [
+          "attraction_up_medium",
+          "comfort_up_medium"
+        ],
+        "feedbackText": [
+          "共同体验勾起了兴趣。",
+          "退出边界被照顾到了。"
+        ]
+      },
+      {
+        "id": "q01_push_art_test",
+        "strategy": "risky",
+        "strategyLabel": "冒险试探",
+        "text": "进去吧，我倒想看看你说的审美到底有多特别。",
+        "effects": {
+          "attraction": 10,
+          "trust": -5,
+          "comfort": -10,
+          "conflict": 10
+        },
+        "npcResponse": "TA 笑了一下：“看作品可以，别把我也当成要被评审的作品。”",
+        "feedbackIds": [
+          "attraction_up_medium",
+          "comfort_down_medium"
+        ],
+        "feedbackText": [
+          "挑衅带来一点火花。",
+          "试探让舒适感下降。"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "Q02",
+    "order": 2,
+    "stage": "first_meeting",
+    "title": "安静不等于答案",
+    "scene": "展览结束后，人群变多了。TA 走慢了一点，回复也从完整句子变成点头和短短的‘嗯’。你们还没有熟到能替对方解释状态。",
+    "npcQuote": "这里现在有点吵。不是你的问题。",
+    "prompt": "你会如何处理这段突然安静的时间？",
+    "conflictDimensions": [
+      "ISFP-K01"
+    ],
+    "researchRefs": [
+      "ISFP-S03",
+      "ISFP-S04",
+      "ISFP-S06",
+      "ISFP-S17"
+    ],
+    "tags": [
+      "初识",
+      "披露节奏",
+      "社交边界",
+      "避免读心"
+    ],
+    "designNote": "阶段门槛前的边界题；玩家可以询问、给出口或结束互动，不能把沉默直接当成拒绝或同意。效果已通过 Stage-06 全路径枚举调整。",
+    "options": [
+      {
+        "id": "q02_offer_exit",
+        "strategy": "accommodate",
+        "strategyLabel": "给出退路",
+        "text": "那我们先走到安静一点的地方；你想回去也可以，我不会追问。",
+        "effects": {
+          "attraction": 5,
+          "trust": 5,
+          "comfort": 15,
+          "conflict": -5
+        },
+        "npcResponse": "TA 松了口气：“走一段就好。谢谢你没把我的安静解释成别的东西。”",
+        "feedbackIds": [
+          "comfort_up_strong",
+          "conflict_down_slight"
+        ],
+        "feedbackText": [
+          "TA在你面前更放松了。",
+          "不确定感缓和了一些。"
+        ]
+      },
+      {
+        "id": "q02_check_gently",
+        "strategy": "honest",
+        "strategyLabel": "轻量确认",
+        "text": "我听见你说不是我的问题。你现在需要我陪着，还是想自己走？",
+        "effects": {
+          "attraction": 5,
+          "trust": 10,
+          "comfort": 10,
+          "conflict": -5
+        },
+        "npcResponse": "TA 想了想：“陪我走到路口就好。这样我也不用猜你会不会误会。”",
+        "feedbackIds": [
+          "trust_up_medium",
+          "comfort_up_medium"
+        ],
+        "feedbackText": [
+          "你把选择权留给了 TA。",
+          "相处节奏更清楚了。"
+        ]
+      },
+      {
+        "id": "q02_question_repeatedly",
+        "strategy": "risky",
+        "strategyLabel": "连续追问",
+        "text": "你刚才还好好的，现在到底怎么了？是不是我哪里做错了？",
+        "effects": {
+          "attraction": -10,
+          "trust": -5,
+          "comfort": -10,
+          "conflict": 10
+        },
+        "npcResponse": "TA 抿了下嘴：“我已经说不是你的问题了。你现在是在让我证明给你看。”",
+        "feedbackIds": [
+          "comfort_down_medium",
+          "conflict_up_medium"
+        ],
+        "feedbackText": [
+          "TA开始难以在这段互动里放松。",
+          "问题被追问成了冲突。"
+        ]
+      },
+      {
+        "id": "q02_end_respectfully",
+        "strategy": "negotiate",
+        "strategyLabel": "尊重结束",
+        "text": "那今天先到这里。你想再见时告诉我，不想也不用解释。",
+        "effects": {
+          "attraction": -5,
+          "trust": 10,
+          "comfort": 10,
+          "conflict": -5
+        },
+        "npcResponse": "TA 看着你：“我会告诉你的。你这样说，反而让我没那么想逃。”",
+        "feedbackIds": [
+          "trust_up_medium",
+          "comfort_up_medium"
+        ],
+        "feedbackText": [
+          "边界被尊重了。",
+          "舒适感回升。"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "Q03",
+    "order": 3,
+    "stage": "contact",
+    "title": "关心要不要说出来",
+    "scene": "你前几天提过手机充电线接触不良。再次见面时，TA 从包里拿出一根新的，放到你面前，语气故意说得很随便。",
+    "npcQuote": "凑单多出来的。省得你下次聊到一半又没电。",
+    "prompt": "你会怎么接住这份行动式关心？",
+    "conflictDimensions": [
+      "ISFP-K03",
+      "ISFP-K09"
+    ],
+    "researchRefs": [
+      "ISFP-S03",
+      "ISFP-S04",
+      "ISFP-S07",
+      "ISFP-S17"
+    ],
+    "tags": [
+      "接触",
+      "行动表达",
+      "语言确认",
+      "暧昧边界"
+    ],
+    "designNote": "把行动表达和语言确认拆开；玩家可以认可行动，也可以说明自己不想靠猜测理解关系。效果已通过 Stage-06 全路径枚举调整。",
+    "options": [
+      {
+        "id": "q03_force_meaning",
+        "strategy": "risky",
+        "strategyLabel": "冒险起哄",
+        "text": "承认吧，你就是特别关心我。否则怎么不送别人？",
+        "effects": {
+          "attraction": 10,
+          "trust": -5,
+          "comfort": -10,
+          "conflict": 10
+        },
+        "npcResponse": "TA 立刻把线往你手里一塞：“不要就还我。”耳朵有点红，话题也被岔开了。",
+        "feedbackIds": [
+          "attraction_up_medium",
+          "comfort_down_medium"
+        ],
+        "feedbackText": [
+          "玩笑带来一点火花。",
+          "TA暂时收起了脆弱的一面。"
+        ]
+      },
+      {
+        "id": "q03_set_boundary",
+        "strategy": "negotiate",
+        "strategyLabel": "协商表达",
+        "text": "我很感谢，但我想先知道这是普通帮忙，还是你希望我把它理解成别的？",
+        "effects": {
+          "attraction": 5,
+          "trust": 15,
+          "comfort": 5,
+          "conflict": 0
+        },
+        "npcResponse": "TA 沉默几秒：“是我想照顾你。至于是不是别的，我们还可以慢慢说。”",
+        "feedbackIds": [
+          "trust_up_strong",
+          "comfort_up_slight"
+        ],
+        "feedbackText": [
+          "TA愿意把含义说清楚。",
+          "靠近没有被迫加速。"
+        ]
+      },
+      {
+        "id": "q03_receive_and_name",
+        "strategy": "honest",
+        "strategyLabel": "坦诚接住",
+        "text": "谢谢，我正好需要。你还记得这件事，我会把它当成你的关心。",
+        "effects": {
+          "attraction": 10,
+          "trust": 10,
+          "comfort": 10,
+          "conflict": -5
+        },
+        "npcResponse": "TA 把视线挪开：“你知道就行。”过了一会儿又问：“线够长吗？”",
+        "feedbackIds": [
+          "trust_up_medium",
+          "comfort_up_medium"
+        ],
+        "feedbackText": [
+          "行动被认真看见了。",
+          "彼此的期待更清楚了。"
+        ]
+      },
+      {
+        "id": "q03_treat_as_debt",
+        "strategy": "accommodate",
+        "strategyLabel": "顺着人情",
+        "text": "那我收下。以后你缺什么也告诉我，我不想欠你。",
+        "effects": {
+          "attraction": 5,
+          "trust": 0,
+          "comfort": -5,
+          "conflict": 5
+        },
+        "npcResponse": "TA 眉头动了一下：“不是交换。你要是觉得有压力，可以不用收。”",
+        "feedbackIds": [
+          "attraction_up_slight",
+          "comfort_down_slight"
+        ],
+        "feedbackText": [
+          "心意仍被接住了一部分。",
+          "回应里多了人情压力。"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "Q04",
+    "order": 4,
+    "stage": "contact",
+    "title": "临时换一个地方",
+    "scene": "你们约好去看一场小型演出。出发前，TA 发现附近有一处只开放今天的夜市，想把原来的计划换掉。你已经为演出安排好了交通。",
+    "npcQuote": "那个夜市今天才有。我真的很想去，但你原来的安排也不是可以随便删掉的。",
+    "prompt": "你会如何处理这个临时变化？",
+    "conflictDimensions": [
+      "ISFP-K04"
+    ],
+    "researchRefs": [
+      "ISFP-S02",
+      "ISFP-S03",
+      "ISFP-S06",
+      "ISFP-S10",
+      "ISFP-S17"
+    ],
+    "tags": [
+      "接触",
+      "当下体验",
+      "计划变化",
+      "可靠安排"
+    ],
+    "designNote": "测试弹性与兑现的可协商空间；不把随性自动写成失信，也不把计划自动写成控制。效果已通过 Stage-06 全路径枚举调整。",
+    "options": [
+      {
+        "id": "q04_keep_original",
+        "strategy": "honest",
+        "strategyLabel": "坚持原约",
+        "text": "我今天确实只能按原计划来。夜市下次去，或者你今天自己去也行。",
+        "effects": {
+          "attraction": 5,
+          "trust": 10,
+          "comfort": 5,
+          "conflict": 0
+        },
+        "npcResponse": "TA 点点头：“好，我不想因为临时发现就让你承担全部变化。”",
+        "feedbackIds": [
+          "trust_up_medium",
+          "comfort_up_slight"
+        ],
+        "feedbackText": [
+          "你的边界被认真对待。",
+          "相处仍然稳定。"
+        ]
+      },
+      {
+        "id": "q04_blame_change",
+        "strategy": "risky",
+        "strategyLabel": "指责变化",
+        "text": "你每次都这样，想到什么就要别人跟着改。那你自己去吧。",
+        "effects": {
+          "attraction": -5,
+          "trust": -5,
+          "comfort": -5,
+          "conflict": 20
+        },
+        "npcResponse": "TA 的表情沉下来：“我是在问你，不是在命令你。你可以拒绝，但不用先把我判了。”",
+        "feedbackIds": [
+          "comfort_down_slight",
+          "conflict_up_strong"
+        ],
+        "feedbackText": [
+          "相处开始出现防备。",
+          "冲突迅速升温。"
+        ]
+      },
+      {
+        "id": "q04_split_plan",
+        "strategy": "negotiate",
+        "strategyLabel": "拆分安排",
+        "text": "演出先按原计划去，夜市如果还来得及就去逛一圈；下次再专门留给它。",
+        "effects": {
+          "attraction": 10,
+          "trust": 10,
+          "comfort": 5,
+          "conflict": -5
+        },
+        "npcResponse": "TA 算了算时间：“这样我不用放弃想去的，也不用让你原来的安排作废。”",
+        "feedbackIds": [
+          "trust_up_medium",
+          "conflict_down_slight"
+        ],
+        "feedbackText": [
+          "弹性和可靠被放在了一起。",
+          "临时摩擦缓和了。"
+        ]
+      },
+      {
+        "id": "q04_drop_everything",
+        "strategy": "accommodate",
+        "strategyLabel": "全盘顺从",
+        "text": "那就都听你的，演出不去了。反正你开心最重要。",
+        "effects": {
+          "attraction": 5,
+          "trust": -5,
+          "comfort": -5,
+          "conflict": 5
+        },
+        "npcResponse": "TA 反而皱眉：“你自己的安排呢？别把迁就说得像我应该接受的礼物。”",
+        "feedbackIds": [
+          "trust_down_slight",
+          "comfort_down_slight"
+        ],
+        "feedbackText": [
+          "可靠感出现了疑问。",
+          "过度迁就让双方都不自在。"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "Q05",
+    "order": 5,
+    "stage": "contact",
+    "title": "温和也可以有底线",
+    "scene": "你们聊到社区准备为减少夜间噪声而撤走广场长椅。你赞成统一撤走，TA 则提到老人、夜班工作者和行动不便的人白天也需要这些座位。TA 一直语气平静，说到具体影响时却把杯子放下，明显不打算顺着你的说法带过。",
+    "npcQuote": "我知道你担心噪声，但把长椅全撤掉，会先让真正需要休息的人没有地方坐。这不只是审美或偏好不同。",
+    "prompt": "你会怎么回应这条明确的价值边界？",
+    "conflictDimensions": [
+      "ISFP-K05",
+      "ISFP-K08"
+    ],
+    "researchRefs": [
+      "ISFP-S02",
+      "ISFP-S03",
+      "ISFP-S04",
+      "ISFP-S07",
+      "ISFP-S10"
+    ],
+    "tags": [
+      "接触",
+      "价值分歧",
+      "边界",
+      "温和与坚持"
+    ],
+    "designNote": "接触阶段的门槛题；不把温和写成顺从，也不把价值坚持写成天然正确。效果已通过 Stage-06 全路径枚举调整。",
+    "options": [
+      {
+        "id": "q05_change_topic",
+        "strategy": "accommodate",
+        "strategyLabel": "顺势回避",
+        "text": "好吧，那我们换个轻松的。今天难得见面，别让这个毁了气氛。",
+        "effects": {
+          "attraction": -10,
+          "trust": -10,
+          "comfort": 0,
+          "conflict": -5
+        },
+        "npcResponse": "TA 没有继续争：“可以换，但这件事不会因为换话题就消失。”",
+        "feedbackIds": [
+          "trust_down_medium",
+          "conflict_down_slight"
+        ],
+        "feedbackText": [
+          "回避让信任明显下降。",
+          "当下争执暂时停住了。"
+        ]
+      },
+      {
+        "id": "q05_find_common_ground",
+        "strategy": "negotiate",
+        "strategyLabel": "寻找边界",
+        "text": "我们先说清楚各自不能接受的部分，再看看哪些行动其实可以一致。",
+        "effects": {
+          "attraction": 5,
+          "trust": 5,
+          "comfort": 10,
+          "conflict": -5
+        },
+        "npcResponse": "TA 想了一会儿：“可以。不同意我，不代表你不能尊重这条底线。”",
+        "feedbackIds": [
+          "attraction_up_slight",
+          "conflict_down_slight"
+        ],
+        "feedbackText": [
+          "差异没有阻止继续靠近。",
+          "你们找到继续对话的方式。"
+        ]
+      },
+      {
+        "id": "q05_call_overreaction",
+        "strategy": "risky",
+        "strategyLabel": "冒险反击",
+        "text": "你也太容易被冒犯了吧。聊天而已，别把自己说得像裁判。",
+        "effects": {
+          "attraction": -5,
+          "trust": -10,
+          "comfort": -10,
+          "conflict": 15
+        },
+        "npcResponse": "TA 看着你：“我说的是具体影响。你现在只是在评价我有没有资格不舒服。”",
+        "feedbackIds": [
+          "trust_down_medium",
+          "conflict_up_strong"
+        ],
+        "feedbackText": [
+          "TA开始怀疑你是否会尊重边界。",
+          "分歧升级成了防御。"
+        ]
+      },
+      {
+        "id": "q05_ask_impact",
+        "strategy": "honest",
+        "strategyLabel": "承认影响",
+        "text": "我先听你说为什么会造成伤害。我的本意不是这样，但本意不代表影响不存在。",
+        "effects": {
+          "attraction": 5,
+          "trust": 10,
+          "comfort": 10,
+          "conflict": -5
+        },
+        "npcResponse": "TA 的肩膀松了一点：“我不要求你立刻同意，但至少你没有把我说成太敏感。”",
+        "feedbackIds": [
+          "trust_up_medium",
+          "comfort_up_medium"
+        ],
+        "feedbackText": [
+          "你愿意承担影响，信任上升。",
+          "分歧变得可以继续谈。"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "Q06",
+    "order": 6,
+    "stage": "familiarity",
+    "title": "你现在需要哪一种帮忙",
+    "scene": "你告诉 TA，今天准备很久的方案被一句话否掉了。TA 没有急着评价，只是把手机放到一边，等你说完。",
+    "npcQuote": "我在听。你想让我陪你把这口气吐完，还是一起想明天怎么办？",
+    "prompt": "你现在最需要什么？",
+    "conflictDimensions": [
+      "ISFP-K03"
+    ],
+    "researchRefs": [
+      "ISFP-S03",
+      "ISFP-S04",
+      "ISFP-S07",
+      "ISFP-S17"
+    ],
+    "tags": [
+      "熟悉",
+      "支持方式",
+      "倾听",
+      "需求表达"
+    ],
+    "designNote": "把行动式关心推进到明确协商；没有唯一正确支持方式，玩家需要对自己的需求负责。效果已通过 Stage-06 全路径枚举调整。",
+    "options": [
+      {
+        "id": "q06_set_sequence",
+        "strategy": "negotiate",
+        "strategyLabel": "协商顺序",
+        "text": "先让我说十分钟，之后你再帮我把明天能做的第一步理出来。",
+        "effects": {
+          "attraction": 10,
+          "trust": 10,
+          "comfort": 10,
+          "conflict": -5
+        },
+        "npcResponse": "TA 看了眼时间：“好，第十一分钟我再开始多管闲事。”然后真的没打断你。",
+        "feedbackIds": [
+          "attraction_up_medium",
+          "comfort_up_medium"
+        ],
+        "feedbackText": [
+          "共同节奏变得更自然。",
+          "支持方式被协商清楚了。"
+        ]
+      },
+      {
+        "id": "q06_blame_silence",
+        "strategy": "risky",
+        "strategyLabel": "迁怒",
+        "text": "你既然在乎我，就该知道我现在不想听方案。还要我自己说吗？",
+        "effects": {
+          "attraction": -5,
+          "trust": -5,
+          "comfort": -5,
+          "conflict": 20
+        },
+        "npcResponse": "TA 的语气也硬了：“我给你选择了。你不能先拒绝说明，再怪我没猜中。”",
+        "feedbackIds": [
+          "comfort_down_slight",
+          "conflict_up_strong"
+        ],
+        "feedbackText": [
+          "支持开始变成压力。",
+          "冲突正在迅速扩大。"
+        ]
+      },
+      {
+        "id": "q06_accept_action",
+        "strategy": "accommodate",
+        "strategyLabel": "顺着行动",
+        "text": "那你帮我理理吧。我现在脑子很乱，听你的就行。",
+        "effects": {
+          "attraction": 5,
+          "trust": 5,
+          "comfort": 0,
+          "conflict": 0
+        },
+        "npcResponse": "TA 很快列出三步方案：“我可以帮你拆，但明天发不发、怎么发还是你决定。”",
+        "feedbackIds": [
+          "attraction_up_slight",
+          "trust_up_slight"
+        ],
+        "feedbackText": [
+          "行动式关心仍然有效。",
+          "TA没有替你接管决定。"
+        ]
+      },
+      {
+        "id": "q06_ask_presence",
+        "strategy": "honest",
+        "strategyLabel": "直接求陪伴",
+        "text": "先别解决。你陪我坐一会儿，我把这件事骂完就好。",
+        "effects": {
+          "attraction": 5,
+          "trust": 10,
+          "comfort": 15,
+          "conflict": -5
+        },
+        "npcResponse": "TA 把手机扣下：“好。今天不做项目复盘，只负责陪你骂五分钟。”",
+        "feedbackIds": [
+          "comfort_up_strong",
+          "trust_up_medium"
+        ],
+        "feedbackText": [
+          "你的需要被清楚接住。",
+          "TA更愿意把时间交给你。"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "Q07",
+    "order": 7,
+    "stage": "familiarity",
+    "title": "暂停之后要回来",
+    "scene": "你指出 TA 刚才的一句话让你觉得被否定。TA 没有继续解释，而是把杯子放下，说自己需要离开现场整理一下。",
+    "npcQuote": "我现在继续说只会更糟。今晚十点前我再回来谈，可以吗？",
+    "prompt": "你会如何回应这次暂停？",
+    "conflictDimensions": [
+      "ISFP-K05",
+      "ISFP-K06"
+    ],
+    "researchRefs": [
+      "ISFP-S04",
+      "ISFP-S07"
+    ],
+    "tags": [
+      "熟悉",
+      "冲突暂停",
+      "返回承诺",
+      "修复"
+    ],
+    "designNote": "暂停与追问、无限等待、约定回谈形成三种不同压力；选项不能直接结束故事，后续由规则与第十题处理。效果已通过 Stage-06 全路径枚举调整。",
+    "options": [
+      {
+        "id": "q07_force_now",
+        "strategy": "risky",
+        "strategyLabel": "强行解决",
+        "text": "不行，今天不说清楚谁都别走。你每次暂停就是在逃避。",
+        "effects": {
+          "attraction": -5,
+          "trust": 0,
+          "comfort": -15,
+          "conflict": 15
+        },
+        "npcResponse": "TA 往后退了一步：“我说的是需要冷静，不是拒绝谈。你现在把我逼得更不敢开口。”",
+        "feedbackIds": [
+          "comfort_down_strong",
+          "conflict_up_strong"
+        ],
+        "feedbackText": [
+          "TA已经很难在这里放松。",
+          "冲突几乎失去缓冲。"
+        ]
+      },
+      {
+        "id": "q07_wait_unbounded",
+        "strategy": "honest",
+        "strategyLabel": "坦诚保留",
+        "text": "你先走。我不会催，但如果你不回来，我也会把这当成答案。",
+        "effects": {
+          "attraction": -5,
+          "trust": 10,
+          "comfort": 5,
+          "conflict": 5
+        },
+        "npcResponse": "TA 停在门口：“我听见了。你不是在威胁我，是在说自己的底线。”",
+        "feedbackIds": [
+          "trust_up_medium",
+          "conflict_up_slight"
+        ],
+        "feedbackText": [
+          "你的边界被清楚说出。",
+          "暂停仍带着一点压力。"
+        ]
+      },
+      {
+        "id": "q07_accept_anchor",
+        "strategy": "negotiate",
+        "strategyLabel": "约定回谈",
+        "text": "可以。十点前你发一句消息，哪怕只是说需要改时间，也别让我一直猜。",
+        "effects": {
+          "attraction": 5,
+          "trust": 15,
+          "comfort": 10,
+          "conflict": -10
+        },
+        "npcResponse": "TA 点头：“我会发。暂停不是把你丢在原地。”",
+        "feedbackIds": [
+          "trust_up_strong",
+          "conflict_down_medium"
+        ],
+        "feedbackText": [
+          "可预期的返回让信任上升。",
+          "冲突暂时获得了出口。"
+        ]
+      },
+      {
+        "id": "q07_give_space",
+        "strategy": "accommodate",
+        "strategyLabel": "先给空间",
+        "text": "好，你先走。我今晚不会再追，但你准备好时要告诉我发生了什么。",
+        "effects": {
+          "attraction": 0,
+          "trust": 10,
+          "comfort": 10,
+          "conflict": -5
+        },
+        "npcResponse": "TA 低声说：“谢谢。我不保证十点前能说完，但我会告诉你我还在处理。”",
+        "feedbackIds": [
+          "trust_up_medium",
+          "comfort_up_medium"
+        ],
+        "feedbackText": [
+          "暂停没有被当成惩罚。",
+          "舒适感有所恢复。"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "Q08",
+    "order": 8,
+    "stage": "familiarity",
+    "title": "隐私不是小事",
+    "scene": "TA 之前只在你面前分享过一段私人记录。今天第三个人突然提起其中一句，TA 看向你，先没有责怪，只问这句话可能从哪里出去的。",
+    "npcQuote": "我想知道发生了什么。不是为了抓谁，是因为我需要知道以后还能把什么交出来。",
+    "prompt": "你会如何处理这次隐私受损？",
+    "conflictDimensions": [
+      "ISFP-K07"
+    ],
+    "researchRefs": [
+      "ISFP-S03",
+      "ISFP-S04",
+      "ISFP-S07"
+    ],
+    "tags": [
+      "熟悉",
+      "隐私",
+      "责任",
+      "修复"
+    ],
+    "designNote": "熟悉阶段高风险题；伤害来自具体的泄露、公开或淡化行为，不来自类型标签。效果已通过 Stage-06 全路径枚举调整。",
+    "options": [
+      {
+        "id": "q08_check_spread",
+        "strategy": "negotiate",
+        "strategyLabel": "共同查清",
+        "text": "我们先确认是哪一段、谁看过、还能不能撤回。查清后我会按范围补救。",
+        "effects": {
+          "attraction": 5,
+          "trust": 0,
+          "comfort": 0,
+          "conflict": -10
+        },
+        "npcResponse": "TA 把手机递给你：“好，先把事实列出来。你愿意一起承担，这很重要。”",
+        "feedbackIds": [
+          "conflict_down_medium"
+        ],
+        "feedbackText": [
+          "争执转向了具体补救。"
+        ]
+      },
+      {
+        "id": "q08_minimize_publicly",
+        "strategy": "accommodate",
+        "strategyLabel": "顺势淡化",
+        "text": "这句话也没多私密吧，大家听过就算了，别把气氛弄得这么重。",
+        "effects": {
+          "attraction": -5,
+          "trust": -20,
+          "comfort": -5,
+          "conflict": 10
+        },
+        "npcResponse": "TA 把记录收回去：“对你不私密，不代表我可以接受它被拿来聊天。”",
+        "feedbackIds": [
+          "trust_down_strong",
+          "conflict_up_medium"
+        ],
+        "feedbackText": [
+          "TA不再愿意把重要的事交给你。",
+          "冲突明显升级。"
+        ]
+      },
+      {
+        "id": "q08_apologize_and_delete",
+        "strategy": "honest",
+        "strategyLabel": "承认补救",
+        "text": "如果是我保存或转发出去的，我现在就说明、删除，并告诉你我做了什么。",
+        "effects": {
+          "attraction": 0,
+          "trust": 0,
+          "comfort": 0,
+          "conflict": -5
+        },
+        "npcResponse": "TA 没有马上说没关系：“我需要时间重新建立信任，但至少你没有让我自己查。”",
+        "feedbackIds": [
+          "conflict_down_slight"
+        ],
+        "feedbackText": [
+          "承认责任阻止了争执继续升级。"
+        ]
+      },
+      {
+        "id": "q08_deflect_blame",
+        "strategy": "risky",
+        "strategyLabel": "反咬质问",
+        "text": "你既然这么怕别人知道，当初就不该发给我。现在凭什么只问我？",
+        "effects": {
+          "attraction": -5,
+          "trust": -10,
+          "comfort": -10,
+          "conflict": 10
+        },
+        "npcResponse": "TA 的声音很轻：“我告诉你，不等于同意你把责任推回来。”",
+        "feedbackIds": [
+          "comfort_down_medium",
+          "conflict_up_medium"
+        ],
+        "feedbackText": [
+          "被反咬让 TA 更难安全表达。",
+          "冲突明显升级。"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "Q09",
+    "order": 9,
+    "stage": "ambiguity",
+    "title": "亲近不自动等于关系",
+    "scene": "你们已经连续几周单独见面，也会互相照顾小事。你想知道双方是否在约会、是否排他。TA 没有立刻回答，而是把问题拆成几个部分。",
+    "npcQuote": "我是在乎你，但我不想把在乎变成报备。你希望确认的是称呼、排他，还是我们下一步怎么见面？",
+    "prompt": "你会如何回应这次关系定义？",
+    "conflictDimensions": [
+      "ISFP-K03",
+      "ISFP-K09"
+    ],
+    "researchRefs": [
+      "ISFP-S02",
+      "ISFP-S03",
+      "ISFP-S04",
+      "ISFP-S07"
+    ],
+    "tags": [
+      "暧昧",
+      "关系定义",
+      "自由",
+      "明确期待"
+    ],
+    "designNote": "暧昧阶段的关系定义题；不把排他视为唯一正确答案，也不把含糊视为自动浪漫。效果已通过 Stage-06 全路径枚举调整。",
+    "options": [
+      {
+        "id": "q09_state_boundary",
+        "strategy": "honest",
+        "strategyLabel": "说明边界",
+        "text": "我喜欢你，但我没办法一直靠猜。你没想好恋爱之前，我会把我们当朋友，也会少投入一点。",
+        "effects": {
+          "attraction": -5,
+          "trust": 15,
+          "comfort": 15,
+          "conflict": 0
+        },
+        "npcResponse": "TA 没有马上挽留：“好，在我想清楚之前，我们就按朋友相处。你不是在逼我回答，是在告诉我你能承受什么。”",
+        "feedbackIds": [
+          "trust_up_strong",
+          "comfort_up_strong"
+        ],
+        "feedbackText": [
+          "你的边界被认真对待。",
+          "关系里的压力下降了。"
+        ]
+      },
+      {
+        "id": "q09_define_terms",
+        "strategy": "negotiate",
+        "strategyLabel": "拆开协商",
+        "text": "我想和你以排他的约会关系继续，也想确认见面方式；恋人的称呼可以慢一点。我们把双方愿意做的部分先说清楚。",
+        "effects": {
+          "attraction": 20,
+          "trust": 10,
+          "comfort": 5,
+          "conflict": -5
+        },
+        "npcResponse": "TA 追问了几句哪些算排他，最后点头：“我愿意和你以排他的约会关系继续，见面方式也按我们刚才说的来。恋人的称呼可以慢一点，至少不是谁单方面替我们命名。”",
+        "feedbackIds": [
+          "attraction_up_strong",
+          "trust_up_medium"
+        ],
+        "feedbackText": [
+          "双向确认让靠近变得非常明确。",
+          "具体约定增加了信任。"
+        ]
+      },
+      {
+        "id": "q09_accept_ambiguity",
+        "strategy": "accommodate",
+        "strategyLabel": "顺其自然",
+        "text": "那就先不说。反正现在这样也挺开心的，等感觉到了再说。",
+        "effects": {
+          "attraction": 20,
+          "trust": -10,
+          "comfort": 0,
+          "conflict": 5
+        },
+        "npcResponse": "TA 明显松了口气，主动问你下周还要不要见面：“好，那就先开心。”问题被放回了原处。",
+        "feedbackIds": [
+          "attraction_up_strong",
+          "trust_down_medium"
+        ],
+        "feedbackText": [
+          "当下的吸引迅速升温。",
+          "回避定义让信任留下明显缺口。"
+        ]
+      },
+      {
+        "id": "q09_demand_exclusivity",
+        "strategy": "risky",
+        "strategyLabel": "强制排他",
+        "text": "很简单，以后不许再和别人发展同样的关系。做不到就是不够在乎我。",
+        "effects": {
+          "attraction": 0,
+          "trust": -15,
+          "comfort": -15,
+          "conflict": 10
+        },
+        "npcResponse": "TA 往后靠了靠：“那你不是在问我，你是在通知我。”",
+        "feedbackIds": [
+          "trust_down_strong",
+          "conflict_up_medium"
+        ],
+        "feedbackText": [
+          "信任明显下降。",
+          "TA 的舒适感下降，冲突明显升级。"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "Q10",
+    "order": 10,
+    "stage": "ambiguity",
+    "title": "修复不是假装没发生",
+    "scene": "第七题的暂停之后，TA 按约回来。TA 先说自己理解到你当时的受伤，也承认只说‘我需要空间’还不够解释接下来会怎样。",
+    "npcQuote": "我不想只说对不起然后继续原样。你觉得下次我该怎么回来，才不会让你一直猜？",
+    "prompt": "你会如何回应这次回谈？",
+    "conflictDimensions": [
+      "ISFP-K05",
+      "ISFP-K06"
+    ],
+    "researchRefs": [
+      "ISFP-S04",
+      "ISFP-S07"
+    ],
+    "tags": [
+      "暧昧",
+      "冲突修复",
+      "回谈",
+      "长期可靠"
+    ],
+    "designNote": "最终题只检验修复和共同维护，不直接替规则选择结局；回来不等于自动原谅，仍需双方提出可执行变化。效果已通过 Stage-06 全路径枚举调整。",
+    "options": [
+      {
+        "id": "q10_name_remaining_need",
+        "strategy": "honest",
+        "strategyLabel": "保留分歧",
+        "text": "我接受你愿意回来，但我还没完全放心。我们可以继续，但这个变化要真的发生。",
+        "effects": {
+          "attraction": 15,
+          "trust": 5,
+          "comfort": 5,
+          "conflict": -5
+        },
+        "npcResponse": "TA 点头：“可以。你不用现在就原谅我，我会用下一次怎么做来回答。”",
+        "feedbackIds": [
+          "attraction_up_strong",
+          "trust_up_slight"
+        ],
+        "feedbackText": [
+          "坦白尚未放心，反而让靠近更真实。",
+          "信任开始从具体变化中恢复。"
+        ]
+      },
+      {
+        "id": "q10_accept_without_discussion",
+        "strategy": "accommodate",
+        "strategyLabel": "先放下",
+        "text": "你回来就行。以后想走就走，我不会再问，也不把这当成需要我们一起处理的事。",
+        "effects": {
+          "attraction": -15,
+          "trust": -15,
+          "comfort": -5,
+          "conflict": -5
+        },
+        "npcResponse": "TA 看了你一会儿：“你说的是不再追问，还是不再需要我回来？”这次回谈停在了没有答案的地方。",
+        "feedbackIds": [
+          "attraction_down_strong",
+          "trust_down_strong"
+        ],
+        "feedbackText": [
+          "TA 听出了你正在退出共同修复。",
+          "TA 不再确定你是否愿意继续承担关系。"
+        ]
+      },
+      {
+        "id": "q10_require_perfect_apology",
+        "strategy": "risky",
+        "strategyLabel": "追问到底",
+        "text": "你先把那天每一句话都解释清楚，再谈下次。否则这次回来没有意义。",
+        "effects": {
+          "attraction": 0,
+          "trust": -5,
+          "comfort": -15,
+          "conflict": 20
+        },
+        "npcResponse": "TA 深吸一口气：“我愿意承担，但我不能把修复变成一场永远答不完的审讯。”",
+        "feedbackIds": [
+          "comfort_down_strong",
+          "conflict_up_strong"
+        ],
+        "feedbackText": [
+          "回谈再次变得难以承受。",
+          "冲突重新升高。"
+        ]
+      },
+      {
+        "id": "q10_build_repair_rule",
+        "strategy": "negotiate",
+        "strategyLabel": "共同约定",
+        "text": "下次你可以先说需要多久、什么时候报平安；我也会说清楚自己想继续谈还是需要停一下。",
+        "effects": {
+          "attraction": 20,
+          "trust": 5,
+          "comfort": 10,
+          "conflict": -5
+        },
+        "npcResponse": "TA 打开备忘录：“那我们都写下来。空间不是消失，回来也不只靠猜。”",
+        "feedbackIds": [
+          "attraction_up_strong",
+          "conflict_down_slight"
+        ],
+        "feedbackText": [
+          "共同修复让彼此更明确地愿意靠近。",
+          "积着的摩擦缓和了。"
+        ]
+      }
+    ]
+  }
+]

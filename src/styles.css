@@ -305,7 +305,7 @@ button:disabled {
 
 .npc-quote {
   position: relative;
-  margin: -28px 10px 26px;
+  margin: 18px 10px 26px;
   padding: clamp(30px, 6vw, 48px) clamp(28px, 7vw, 58px);
   clip-path: polygon(0.4% 1.5%, 99.5% 0, 98.8% 98.8%, 1.2% 100%);
   background-color: var(--paper-deep);

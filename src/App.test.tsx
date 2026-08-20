@@ -42,6 +42,18 @@ describe("Love with MBTI primary flow", () => {
     expect(screen.getByText(/只讲这一段/)).toBeInTheDocument();
   });
 
+  it("starts the balanced ISFP game with its own formal content", () => {
+    render(<App />);
+
+    fireEvent.click(screen.getByRole("button", { name: "开始认识 ISFP" }));
+    expect(screen.getByLabelText("当前阶段：初识，第 1 题，共 10 题")).toBeInTheDocument();
+    expect(screen.getByText(/小型手作展/)).toBeInTheDocument();
+    expect(screen.getByText(/不代表现实中的所有 ISFP/)).toBeInTheDocument();
+
+    fireEvent.click(screen.getByRole("button", { name: /进去看那一件/ }));
+    expect(screen.getByText(/你不喜欢也可以直接说/)).toBeInTheDocument();
+  });
+
   it("returns to the type selector from the question screen", () => {
     render(<App />);
     fireEvent.click(screen.getByRole("button", { name: "开始认识 ENTP" }));

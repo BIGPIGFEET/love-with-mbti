@@ -1,0 +1,1042 @@
+{
+  "personalityType": "ENFP",
+  "stage": "05-design-choice-game-endings",
+  "status": "balanced_non_runtime",
+  "mechanicsMode": "reuse",
+  "sharedMechanicsChanged": false,
+  "canonicalSources": {
+    "rules": "src/game/rules.ts",
+    "schema": "src/content/schema.ts",
+    "questions": "content/questions/enfp-ten-question-draft.json",
+    "questionTraceability": "content/traceability/enfp-question-traceability.json",
+    "behaviorModel": "content/enfp-behavior-model.md",
+    "endingContent": "content/endings/enfp-ending-content-draft.json"
+  },
+  "ruleIdPolicy": "All ENFP-AUDIT-* identifiers are documentation-only labels. The shared runtime does not expose stable rule IDs, so these labels must not be exported as Stage-06 expectedRuleIds or described as executable IDs.",
+  "precedence": [
+    "ENFP-AUDIT-R-GLOBAL-CONFLICT-80",
+    "ENFP-AUDIT-R-GLOBAL-COMFORT-05",
+    "ENFP-AUDIT-R-GLOBAL-TRUST-05",
+    "ENFP-AUDIT-R-GATE-Q02",
+    "ENFP-AUDIT-R-GATE-Q05",
+    "ENFP-AUDIT-R-GATE-Q08",
+    "ENFP-AUDIT-R-FINAL-STRANGERS",
+    "ENFP-AUDIT-R-FINAL-CONFIRMED",
+    "ENFP-AUDIT-R-FINAL-DANGEROUS",
+    "ENFP-AUDIT-R-FINAL-FRIENDS",
+    "ENFP-AUDIT-R-FINAL-AMBIGUOUS"
+  ],
+  "rules": [
+    {
+      "auditRuleId": "ENFP-AUDIT-R-GLOBAL-CONFLICT-80",
+      "scope": "global",
+      "checkpoint": "after_every_choice",
+      "when": "conflict >= 80",
+      "inclusive": true,
+      "result": "conflict_break"
+    },
+    {
+      "auditRuleId": "ENFP-AUDIT-R-GLOBAL-COMFORT-05",
+      "scope": "global",
+      "checkpoint": "after_every_choice",
+      "when": "comfort <= 5",
+      "inclusive": true,
+      "result": "strong_discomfort"
+    },
+    {
+      "auditRuleId": "ENFP-AUDIT-R-GLOBAL-TRUST-05",
+      "scope": "global",
+      "checkpoint": "after_every_choice",
+      "when": "trust <= 5",
+      "inclusive": true,
+      "result": "trust_broken"
+    },
+    {
+      "auditRuleId": "ENFP-AUDIT-R-GATE-Q02",
+      "scope": "checkpoint",
+      "checkpoint": "after_Q02",
+      "when": "NOT (attraction >= 25 AND trust >= 20 AND comfort >= 20 AND conflict <= 20)",
+      "inclusive": "mixed",
+      "result": "no_second_meeting"
+    },
+    {
+      "auditRuleId": "ENFP-AUDIT-R-GATE-Q05",
+      "scope": "checkpoint",
+      "checkpoint": "after_Q05",
+      "when": "NOT (attraction >= 35 AND trust >= 30 AND comfort >= 25 AND conflict <= 45)",
+      "inclusive": "mixed",
+      "result": "fade_out"
+    },
+    {
+      "auditRuleId": "ENFP-AUDIT-R-GATE-Q08",
+      "scope": "checkpoint",
+      "checkpoint": "after_Q08",
+      "when": "NOT (attraction >= 45 AND trust >= 40 AND comfort >= 35 AND conflict <= 45)",
+      "inclusive": "mixed",
+      "result": "stay_acquaintances"
+    },
+    {
+      "auditRuleId": "ENFP-AUDIT-R-FINAL-STRANGERS",
+      "scope": "final",
+      "checkpoint": "after_Q10",
+      "when": "trust < 35 OR comfort < 35 OR conflict > 50",
+      "inclusive": false,
+      "result": "strangers_after_all"
+    },
+    {
+      "auditRuleId": "ENFP-AUDIT-R-FINAL-CONFIRMED",
+      "scope": "final",
+      "checkpoint": "after_Q10",
+      "when": "attraction >= 85 AND trust >= 65 AND comfort >= 60 AND conflict <= 25",
+      "inclusive": true,
+      "result": "confirmed_relationship",
+      "secondaryEvaluation": "romance_stable if trust >= 75 AND comfort >= 70 AND conflict <= 15; otherwise romance_hidden_risk"
+    },
+    {
+      "auditRuleId": "ENFP-AUDIT-R-FINAL-DANGEROUS",
+      "scope": "final",
+      "checkpoint": "after_Q10",
+      "when": "attraction >= 90 AND (trust < 65 OR comfort < 60)",
+      "inclusive": "mixed",
+      "result": "dangerous_lovers"
+    },
+    {
+      "auditRuleId": "ENFP-AUDIT-R-FINAL-FRIENDS",
+      "scope": "final",
+      "checkpoint": "after_Q10",
+      "when": "attraction < 65 AND trust >= 50 AND comfort >= 45 AND conflict <= 40",
+      "inclusive": "mixed",
+      "result": "friends"
+    },
+    {
+      "auditRuleId": "ENFP-AUDIT-R-FINAL-AMBIGUOUS",
+      "scope": "final",
+      "checkpoint": "after_Q10",
+      "when": "no earlier rule matched",
+      "inclusive": "n/a",
+      "result": "unresolved_ambiguity"
+    }
+  ],
+  "secondaryClassifiers": [
+    {
+      "auditRuleId": "ENFP-AUDIT-R-EVAL-ROMANCE-STABLE",
+      "parentAuditRuleId": "ENFP-AUDIT-R-FINAL-CONFIRMED",
+      "when": "trust >= 75 AND comfort >= 70 AND conflict <= 15",
+      "outcomeId": "confirmed_relationship:romance_stable"
+    },
+    {
+      "auditRuleId": "ENFP-AUDIT-R-EVAL-ROMANCE-HIDDEN-RISK",
+      "parentAuditRuleId": "ENFP-AUDIT-R-FINAL-CONFIRMED",
+      "when": "confirmed_relationship matched and the stable evaluation did not",
+      "outcomeId": "confirmed_relationship:romance_hidden_risk"
+    }
+  ],
+  "checkpointTraceability": [
+    {
+      "checkpoint": "after_every_choice",
+      "applicableAuditRuleIds": [
+        "ENFP-AUDIT-R-GLOBAL-CONFLICT-80",
+        "ENFP-AUDIT-R-GLOBAL-COMFORT-05",
+        "ENFP-AUDIT-R-GLOBAL-TRUST-05"
+      ],
+      "endingIds": [
+        "conflict_break",
+        "strong_discomfort",
+        "trust_broken"
+      ],
+      "feedbackKeySource": "optionTraceability[*].options[*].feedbackIds"
+    },
+    {
+      "checkpoint": "after_Q02",
+      "applicableAuditRuleIds": [
+        "ENFP-AUDIT-R-GATE-Q02"
+      ],
+      "endingIds": [
+        "no_second_meeting"
+      ],
+      "feedbackKeySource": "optionTraceability[Q02].options[*].feedbackIds"
+    },
+    {
+      "checkpoint": "after_Q05",
+      "applicableAuditRuleIds": [
+        "ENFP-AUDIT-R-GATE-Q05"
+      ],
+      "endingIds": [
+        "fade_out"
+      ],
+      "feedbackKeySource": "optionTraceability[Q05].options[*].feedbackIds"
+    },
+    {
+      "checkpoint": "after_Q08",
+      "applicableAuditRuleIds": [
+        "ENFP-AUDIT-R-GATE-Q08"
+      ],
+      "endingIds": [
+        "stay_acquaintances"
+      ],
+      "feedbackKeySource": "optionTraceability[Q08].options[*].feedbackIds"
+    },
+    {
+      "checkpoint": "after_Q10",
+      "applicableAuditRuleIds": [
+        "ENFP-AUDIT-R-FINAL-STRANGERS",
+        "ENFP-AUDIT-R-FINAL-CONFIRMED",
+        "ENFP-AUDIT-R-FINAL-DANGEROUS",
+        "ENFP-AUDIT-R-FINAL-FRIENDS",
+        "ENFP-AUDIT-R-FINAL-AMBIGUOUS"
+      ],
+      "endingIds": [
+        "strangers_after_all",
+        "confirmed_relationship",
+        "dangerous_lovers",
+        "friends",
+        "unresolved_ambiguity"
+      ],
+      "outcomeIds": [
+        "strangers_after_all",
+        "confirmed_relationship:romance_stable",
+        "confirmed_relationship:romance_hidden_risk",
+        "dangerous_lovers",
+        "friends",
+        "unresolved_ambiguity"
+      ],
+      "feedbackKeySource": "optionTraceability[Q10].options[*].feedbackIds"
+    }
+  ],
+  "endingRecords": [
+    {
+      "endingId": "conflict_break",
+      "family": "global",
+      "auditRuleIds": [
+        "ENFP-AUDIT-R-GLOBAL-CONFLICT-80"
+      ],
+      "reachability": "verified_stage_06",
+      "actions": [
+        "restart",
+        "share",
+        "return_to_type_selection"
+      ],
+      "tone": "firm_final",
+      "stateSummaryPolicy": [
+        "conflict_severe",
+        "relationship_ended"
+      ],
+      "contentNotes": "Firmly name public humiliation, coercion, and accumulated escalation without diagnosing either person or romanticizing verbal aggression.",
+      "characterBasis": {
+        "behaviorIds": [
+          "ENFP-B02",
+          "ENFP-B04",
+          "ENFP-B09",
+          "ENFP-B12"
+        ],
+        "questionIds": [
+          "Q02",
+          "Q05",
+          "Q07",
+          "Q08",
+          "Q10"
+        ]
+      }
+    },
+    {
+      "endingId": "strong_discomfort",
+      "family": "global",
+      "auditRuleIds": [
+        "ENFP-AUDIT-R-GLOBAL-COMFORT-05"
+      ],
+      "reachability": "verified_stage_06",
+      "actions": [
+        "restart",
+        "share",
+        "return_to_type_selection"
+      ],
+      "tone": "firm_protective",
+      "stateSummaryPolicy": [
+        "comfort_severe",
+        "relationship_ended"
+      ],
+      "contentNotes": "Protect reply pace, refusal, privacy, low-energy states, and exit rights; distinguish enthusiastic intent from sustained pressure.",
+      "characterBasis": {
+        "behaviorIds": [
+          "ENFP-B01",
+          "ENFP-B07",
+          "ENFP-B09",
+          "ENFP-B10",
+          "ENFP-B12"
+        ],
+        "questionIds": [
+          "Q01",
+          "Q04",
+          "Q05",
+          "Q07",
+          "Q09",
+          "Q10"
+        ]
+      }
+    },
+    {
+      "endingId": "trust_broken",
+      "family": "global",
+      "auditRuleIds": [
+        "ENFP-AUDIT-R-GLOBAL-TRUST-05"
+      ],
+      "reachability": "verified_stage_06",
+      "actions": [
+        "restart",
+        "share",
+        "return_to_type_selection"
+      ],
+      "tone": "firm_sober",
+      "stateSummaryPolicy": [
+        "trust_severe",
+        "relationship_ended"
+      ],
+      "contentNotes": "Focus on agreement, privacy, disclosure, and repair failures; neither high contact nor helping intensity can replace reliability.",
+      "characterBasis": {
+        "behaviorIds": [
+          "ENFP-B04",
+          "ENFP-B05",
+          "ENFP-B06",
+          "ENFP-B09",
+          "ENFP-B11",
+          "ENFP-B12"
+        ],
+        "questionIds": [
+          "Q03",
+          "Q04",
+          "Q07",
+          "Q08",
+          "Q09",
+          "Q10"
+        ]
+      }
+    },
+    {
+      "endingId": "no_second_meeting",
+      "family": "stage_gate",
+      "auditRuleIds": [
+        "ENFP-AUDIT-R-GATE-Q02"
+      ],
+      "reachability": "verified_stage_06",
+      "actions": [
+        "restart",
+        "share",
+        "return_to_type_selection"
+      ],
+      "tone": "gentle_closed",
+      "stateSummaryPolicy": [
+        "first_meeting_stopped",
+        "no_future_promise"
+      ],
+      "contentNotes": "Keep the outcome proportionate; group inclusion and lively conversation do not guarantee romantic or one-to-one interest.",
+      "characterBasis": {
+        "behaviorIds": [
+          "ENFP-B01",
+          "ENFP-B02"
+        ],
+        "questionIds": [
+          "Q01",
+          "Q02"
+        ]
+      }
+    },
+    {
+      "endingId": "fade_out",
+      "family": "stage_gate",
+      "auditRuleIds": [
+        "ENFP-AUDIT-R-GATE-Q05"
+      ],
+      "reachability": "verified_stage_06",
+      "actions": [
+        "restart",
+        "share",
+        "return_to_type_selection"
+      ],
+      "tone": "quiet_melancholy",
+      "stateSummaryPolicy": [
+        "contact_stage_ended",
+        "interest_insufficient_alone"
+      ],
+      "contentNotes": "Show gradual withdrawal without diagnosing avoidance; message volume and novelty are not proof of a durable relationship.",
+      "characterBasis": {
+        "behaviorIds": [
+          "ENFP-B05",
+          "ENFP-B07",
+          "ENFP-B09"
+        ],
+        "questionIds": [
+          "Q03",
+          "Q04",
+          "Q05"
+        ]
+      }
+    },
+    {
+      "endingId": "stay_acquaintances",
+      "family": "stage_gate",
+      "auditRuleIds": [
+        "ENFP-AUDIT-R-GATE-Q08"
+      ],
+      "reachability": "verified_stage_06",
+      "actions": [
+        "restart",
+        "share",
+        "return_to_type_selection"
+      ],
+      "tone": "warm_bounded",
+      "stateSummaryPolicy": [
+        "acquaintance_only",
+        "romance_not_entered"
+      ],
+      "contentNotes": "Preserve ordinary respect and group contact; empathy for good intentions does not erase delayed work or missing repair.",
+      "characterBasis": {
+        "behaviorIds": [
+          "ENFP-B06",
+          "ENFP-B07",
+          "ENFP-B08",
+          "ENFP-B09"
+        ],
+        "questionIds": [
+          "Q06",
+          "Q07",
+          "Q08"
+        ]
+      }
+    },
+    {
+      "endingId": "strangers_after_all",
+      "family": "final",
+      "auditRuleIds": [
+        "ENFP-AUDIT-R-FINAL-STRANGERS"
+      ],
+      "reachability": "verified_stage_06",
+      "actions": [
+        "restart",
+        "share",
+        "return_to_type_selection"
+      ],
+      "tone": "final_reflective",
+      "stateSummaryPolicy": [
+        "relationship_ended",
+        "foundation_insufficient"
+      ],
+      "contentNotes": "Acknowledge real past closeness while making clear that completion and intensity do not override low trust, low comfort, or high conflict.",
+      "characterBasis": {
+        "behaviorIds": [
+          "ENFP-B04",
+          "ENFP-B06",
+          "ENFP-B09",
+          "ENFP-B11",
+          "ENFP-B12"
+        ],
+        "questionIds": [
+          "Q07",
+          "Q08",
+          "Q09",
+          "Q10"
+        ]
+      }
+    },
+    {
+      "endingId": "confirmed_relationship",
+      "family": "final",
+      "auditRuleIds": [
+        "ENFP-AUDIT-R-FINAL-CONFIRMED"
+      ],
+      "reachability": "verified_stage_06",
+      "actions": [
+        "restart",
+        "share",
+        "return_to_type_selection"
+      ],
+      "tone": "joyful_grounded",
+      "stateSummaryPolicy": [
+        "romance_confirmed",
+        "show_secondary_evaluation"
+      ],
+      "contentNotes": "Confirmed romance must come from mutual naming, boundaries, reliable adjustment, and repair—not from ENFP-coded enthusiasm or intensity alone.",
+      "characterBasis": {
+        "behaviorIds": [
+          "ENFP-B04",
+          "ENFP-B05",
+          "ENFP-B06",
+          "ENFP-B07",
+          "ENFP-B08",
+          "ENFP-B09",
+          "ENFP-B11",
+          "ENFP-B12"
+        ],
+        "questionIds": [
+          "Q03",
+          "Q04",
+          "Q06",
+          "Q07",
+          "Q08",
+          "Q09",
+          "Q10"
+        ]
+      }
+    },
+    {
+      "endingId": "dangerous_lovers",
+      "family": "final",
+      "auditRuleIds": [
+        "ENFP-AUDIT-R-FINAL-DANGEROUS"
+      ],
+      "reachability": "verified_stage_06",
+      "actions": [
+        "restart",
+        "share",
+        "return_to_type_selection"
+      ],
+      "tone": "intense_cautionary",
+      "stateSummaryPolicy": [
+        "romance_confirmed",
+        "foundation_unstable"
+      ],
+      "contentNotes": "Do not romanticize instability as passionate destiny; high attraction cannot compensate for weak trust, comfort, or consent practice.",
+      "characterBasis": {
+        "behaviorIds": [
+          "ENFP-B07",
+          "ENFP-B09",
+          "ENFP-B11",
+          "ENFP-B12"
+        ],
+        "questionIds": [
+          "Q04",
+          "Q07",
+          "Q09",
+          "Q10"
+        ]
+      }
+    },
+    {
+      "endingId": "friends",
+      "family": "final",
+      "auditRuleIds": [
+        "ENFP-AUDIT-R-FINAL-FRIENDS"
+      ],
+      "reachability": "verified_stage_06",
+      "actions": [
+        "restart",
+        "share",
+        "return_to_type_selection"
+      ],
+      "tone": "warm_clear",
+      "stateSummaryPolicy": [
+        "friendship_confirmed",
+        "not_a_downgrade"
+      ],
+      "contentNotes": "Friendship is a complete outcome; shared ideas, support, and clear boundaries must not be framed as waiting for romance.",
+      "characterBasis": {
+        "behaviorIds": [
+          "ENFP-B01",
+          "ENFP-B02",
+          "ENFP-B05",
+          "ENFP-B08",
+          "ENFP-B09"
+        ],
+        "questionIds": [
+          "Q01",
+          "Q02",
+          "Q03",
+          "Q06",
+          "Q07",
+          "Q08",
+          "Q10"
+        ]
+      }
+    },
+    {
+      "endingId": "unresolved_ambiguity",
+      "family": "final",
+      "auditRuleIds": [
+        "ENFP-AUDIT-R-FINAL-AMBIGUOUS"
+      ],
+      "reachability": "verified_stage_06",
+      "actions": [
+        "restart",
+        "share",
+        "return_to_type_selection"
+      ],
+      "tone": "open_uncertain",
+      "stateSummaryPolicy": [
+        "relationship_unclassified",
+        "future_not_promised"
+      ],
+      "contentNotes": "Do not imply that emotional intensity or continued messaging inevitably becomes romance; future clarification remains mutual work.",
+      "characterBasis": {
+        "behaviorIds": [
+          "ENFP-B04",
+          "ENFP-B07",
+          "ENFP-B11",
+          "ENFP-B12"
+        ],
+        "questionIds": [
+          "Q04",
+          "Q09",
+          "Q10"
+        ]
+      }
+    }
+  ],
+  "relationshipEvaluationRecords": [
+    {
+      "evaluationId": "romance_stable",
+      "parentEndingId": "confirmed_relationship",
+      "outcomeId": "confirmed_relationship:romance_stable",
+      "tone": "secure_lively",
+      "contentNotes": "Stability means exploration can coexist with explicit costs, reply capacity, equal social boundaries, and repeatable repair—not permanent excitement.",
+      "characterBasis": {
+        "behaviorIds": [
+          "ENFP-B05",
+          "ENFP-B06",
+          "ENFP-B08",
+          "ENFP-B11",
+          "ENFP-B12"
+        ],
+        "questionIds": [
+          "Q03",
+          "Q06",
+          "Q08",
+          "Q09",
+          "Q10"
+        ]
+      },
+      "reachability": "verified_stage_06"
+    },
+    {
+      "evaluationId": "romance_hidden_risk",
+      "parentEndingId": "confirmed_relationship",
+      "outcomeId": "confirmed_relationship:romance_hidden_risk",
+      "tone": "hopeful_cautious",
+      "contentNotes": "Preserve confirmed romance while naming untested contact rhythm, social boundaries, follow-through, or repair responsibilities.",
+      "characterBasis": {
+        "behaviorIds": [
+          "ENFP-B06",
+          "ENFP-B07",
+          "ENFP-B09",
+          "ENFP-B11",
+          "ENFP-B12"
+        ],
+        "questionIds": [
+          "Q04",
+          "Q07",
+          "Q08",
+          "Q09",
+          "Q10"
+        ]
+      },
+      "reachability": "verified_stage_06"
+    }
+  ],
+  "optionTraceability": [
+    {
+      "questionId": "Q01",
+      "checkpointAuditRuleIds": [],
+      "options": [
+        {
+          "optionId": "q01_set_pace",
+          "feedbackIds": [
+            "trust_up_medium",
+            "comfort_up_medium"
+          ]
+        },
+        {
+          "optionId": "q01_join_energy",
+          "feedbackIds": [
+            "attraction_up_strong",
+            "comfort_up_slight"
+          ]
+        },
+        {
+          "optionId": "q01_take_quiet_exit",
+          "feedbackIds": [
+            "comfort_up_strong",
+            "trust_up_medium"
+          ]
+        },
+        {
+          "optionId": "q01_claim_special",
+          "feedbackIds": [
+            "comfort_down_medium",
+            "conflict_up_medium"
+          ]
+        }
+      ]
+    },
+    {
+      "questionId": "Q02",
+      "checkpointAuditRuleIds": [
+        "ENFP-AUDIT-R-GATE-Q02"
+      ],
+      "options": [
+        {
+          "optionId": "q02_laugh_it_off",
+          "feedbackIds": [
+            "trust_down_slight",
+            "conflict_up_medium"
+          ]
+        },
+        {
+          "optionId": "q02_ask_for_one_case",
+          "feedbackIds": [
+            "trust_up_medium",
+            "comfort_up_slight"
+          ]
+        },
+        {
+          "optionId": "q02_compare_constraints",
+          "feedbackIds": [
+            "trust_up_medium",
+            "conflict_down_slight"
+          ]
+        },
+        {
+          "optionId": "q02_attack_the_group",
+          "feedbackIds": [
+            "conflict_up_strong",
+            "comfort_down_slight"
+          ]
+        }
+      ]
+    },
+    {
+      "questionId": "Q03",
+      "checkpointAuditRuleIds": [],
+      "options": [
+        {
+          "optionId": "q03_follow_the_detour",
+          "feedbackIds": [
+            "attraction_up_strong",
+            "trust_down_slight"
+          ]
+        },
+        {
+          "optionId": "q03_keep_original_plan",
+          "feedbackIds": [
+            "trust_up_slight",
+            "comfort_up_medium"
+          ]
+        },
+        {
+          "optionId": "q03_hide_the_deadline",
+          "feedbackIds": [
+            "trust_down_medium",
+            "conflict_up_medium"
+          ]
+        },
+        {
+          "optionId": "q03_try_twenty_minutes",
+          "feedbackIds": [
+            "comfort_up_medium",
+            "conflict_down_slight"
+          ]
+        }
+      ]
+    },
+    {
+      "questionId": "Q04",
+      "checkpointAuditRuleIds": [],
+      "options": [
+        {
+          "optionId": "q04_name_reply_window",
+          "feedbackIds": [
+            "trust_up_slight",
+            "comfort_up_medium"
+          ]
+        },
+        {
+          "optionId": "q04_public_partner_label",
+          "feedbackIds": [
+            "attraction_up_strong",
+            "trust_down_strong"
+          ]
+        },
+        {
+          "optionId": "q04_reply_when_able",
+          "feedbackIds": [
+            "attraction_up_strong",
+            "comfort_up_slight"
+          ]
+        },
+        {
+          "optionId": "q04_separate_pace_and_intent",
+          "feedbackIds": [
+            "trust_up_medium",
+            "conflict_down_slight"
+          ]
+        }
+      ]
+    },
+    {
+      "questionId": "Q05",
+      "checkpointAuditRuleIds": [
+        "ENFP-AUDIT-R-GATE-Q05"
+      ],
+      "options": [
+        {
+          "optionId": "q05_change_topic",
+          "feedbackIds": [
+            "comfort_up_medium",
+            "conflict_down_slight"
+          ]
+        },
+        {
+          "optionId": "q05_accuse_avoidance",
+          "feedbackIds": [
+            "comfort_down_strong",
+            "conflict_up_strong"
+          ]
+        },
+        {
+          "optionId": "q05_offer_support_menu",
+          "feedbackIds": [
+            "trust_up_medium",
+            "comfort_up_medium"
+          ]
+        },
+        {
+          "optionId": "q05_state_care_without_claim",
+          "feedbackIds": [
+            "trust_up_slight",
+            "comfort_up_medium"
+          ]
+        }
+      ]
+    },
+    {
+      "questionId": "Q06",
+      "checkpointAuditRuleIds": [],
+      "options": [
+        {
+          "optionId": "q06_demand_mind_reading",
+          "feedbackIds": [
+            "conflict_up_strong",
+            "trust_down_medium"
+          ]
+        },
+        {
+          "optionId": "q06_request_listening",
+          "feedbackIds": [
+            "comfort_up_strong",
+            "trust_up_slight"
+          ]
+        },
+        {
+          "optionId": "q06_choose_silent_walk",
+          "feedbackIds": [
+            "attraction_up_medium",
+            "comfort_up_medium"
+          ]
+        },
+        {
+          "optionId": "q06_split_today_tomorrow",
+          "feedbackIds": [
+            "trust_up_medium",
+            "conflict_down_slight"
+          ]
+        }
+      ]
+    },
+    {
+      "questionId": "Q07",
+      "checkpointAuditRuleIds": [],
+      "options": [
+        {
+          "optionId": "q07_confirm_check_in",
+          "feedbackIds": [
+            "trust_up_medium",
+            "conflict_down_slight"
+          ]
+        },
+        {
+          "optionId": "q07_share_offline_photo",
+          "feedbackIds": [
+            "trust_down_strong",
+            "conflict_up_strong"
+          ]
+        },
+        {
+          "optionId": "q07_offer_thirty_minutes",
+          "feedbackIds": [
+            "comfort_up_strong",
+            "trust_up_slight"
+          ]
+        },
+        {
+          "optionId": "q07_leave_room_without_questions",
+          "feedbackIds": [
+            "attraction_up_medium",
+            "comfort_up_medium"
+          ]
+        }
+      ]
+    },
+    {
+      "questionId": "Q08",
+      "checkpointAuditRuleIds": [
+        "ENFP-AUDIT-R-GATE-Q08"
+      ],
+      "options": [
+        {
+          "optionId": "q08_name_cost_and_deadline",
+          "feedbackIds": [
+            "trust_up_slight",
+            "conflict_down_medium"
+          ]
+        },
+        {
+          "optionId": "q08_absorb_the_work",
+          "feedbackIds": [
+            "trust_down_medium",
+            "comfort_down_medium"
+          ]
+        },
+        {
+          "optionId": "q08_reduce_them_to_a_label",
+          "feedbackIds": [
+            "conflict_up_strong",
+            "attraction_down_strong"
+          ]
+        },
+        {
+          "optionId": "q08_replan_with_checkpoints",
+          "feedbackIds": [
+            "trust_up_medium",
+            "conflict_down_medium"
+          ]
+        }
+      ]
+    },
+    {
+      "questionId": "Q09",
+      "checkpointAuditRuleIds": [],
+      "options": [
+        {
+          "optionId": "q09_keep_it_undefined",
+          "feedbackIds": [
+            "attraction_up_strong",
+            "trust_down_medium"
+          ]
+        },
+        {
+          "optionId": "q09_state_exclusive_need",
+          "feedbackIds": [
+            "trust_up_strong",
+            "comfort_up_medium"
+          ]
+        },
+        {
+          "optionId": "q09_demand_social_proof",
+          "feedbackIds": [
+            "trust_down_strong",
+            "comfort_down_strong"
+          ]
+        },
+        {
+          "optionId": "q09_define_four_axes",
+          "feedbackIds": [
+            "attraction_up_slight",
+            "trust_up_strong"
+          ]
+        }
+      ]
+    },
+    {
+      "questionId": "Q10",
+      "checkpointAuditRuleIds": [
+        "ENFP-AUDIT-R-FINAL-STRANGERS",
+        "ENFP-AUDIT-R-FINAL-CONFIRMED",
+        "ENFP-AUDIT-R-FINAL-DANGEROUS",
+        "ENFP-AUDIT-R-FINAL-FRIENDS",
+        "ENFP-AUDIT-R-FINAL-AMBIGUOUS"
+      ],
+      "options": [
+        {
+          "optionId": "q10_demand_total_cutoff",
+          "feedbackIds": [
+            "trust_down_strong",
+            "comfort_down_strong"
+          ]
+        },
+        {
+          "optionId": "q10_write_equal_rules",
+          "feedbackIds": [
+            "trust_up_strong",
+            "comfort_up_medium"
+          ]
+        },
+        {
+          "optionId": "q10_name_specific_boundary",
+          "feedbackIds": [
+            "trust_up_strong",
+            "attraction_down_slight"
+          ]
+        },
+        {
+          "optionId": "q10_hide_jealousy",
+          "feedbackIds": [
+            "attraction_up_medium",
+            "trust_down_medium"
+          ]
+        }
+      ]
+    }
+  ],
+  "feedbackDictionaryPolicy": {
+    "source": "content/endings/enfp-ending-content-draft.json",
+    "stableKeyCount": 24,
+    "healthDirections": {
+      "attraction": "up",
+      "trust": "up",
+      "comfort": "up",
+      "conflict": "down"
+    },
+    "strengthByAbsoluteDelta": {
+      "5": "slight",
+      "10": "medium",
+      "15_or_20": "strong"
+    },
+    "zeroChange": "show_no_hint_for_that_dimension",
+    "combinedHint": "show one or two keys that best explain the immediate relational consequence",
+    "copyCompatibility": "All 24 texts remain identical to the approved shared dictionary and every Stage-04 feedbackText entry."
+  },
+  "stage06Handoff": {
+    "expectedBaseEndingIds": [
+      "conflict_break",
+      "strong_discomfort",
+      "trust_broken",
+      "no_second_meeting",
+      "fade_out",
+      "stay_acquaintances",
+      "strangers_after_all",
+      "confirmed_relationship",
+      "dangerous_lovers",
+      "friends",
+      "unresolved_ambiguity"
+    ],
+    "expectedOutcomeIds": [
+      "conflict_break",
+      "strong_discomfort",
+      "trust_broken",
+      "no_second_meeting",
+      "fade_out",
+      "stay_acquaintances",
+      "strangers_after_all",
+      "confirmed_relationship:romance_stable",
+      "confirmed_relationship:romance_hidden_risk",
+      "dangerous_lovers",
+      "friends",
+      "unresolved_ambiguity"
+    ],
+    "expectedRuleIds": null,
+    "ruleCoverageReason": "The runtime has no stable rule IDs or applicable-rule diagnostic hook. Audit-only labels must not be treated as analyzer rule IDs.",
+    "reachability": "verified_all_declared_endings_and_outcomes",
+    "requiredAdapterBehavior": "Import the ENFP question draft and call the real applyEffects, resolveEnding, and endingResultKey implementations.",
+    "baselineReport": "content/questions/enfp-balance-baseline.json",
+    "finalReport": "content/questions/enfp-balance-report.json"
+  },
+  "globalRulePolicy": "After every option, global danger rules run in conflict, comfort, trust order before any matching checkpoint or final classifier; evaluation stops at the first result.",
+  "reachabilityPolicy": "Stage 06 exhaustively enumerated all 1,048,576 equivalent complete ENFP paths through the production state application and resolver. All 11 base endings and 12 full outcomes are verified reachable. Runtime rule shadowing remains unknown because no stable rule IDs or applicable-rule diagnostic hook is exposed."
+}

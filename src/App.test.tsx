@@ -54,6 +54,54 @@ describe("Love with MBTI primary flow", () => {
     expect(screen.getByText(/你不喜欢也可以直接说/)).toBeInTheDocument();
   });
 
+  it("starts the balanced INTJ game with its own formal content", () => {
+    render(<App />);
+
+    fireEvent.click(screen.getByRole("button", { name: "开始认识 INTJ" }));
+    expect(screen.getByLabelText("当前阶段：初识，第 1 题，共 10 题")).toBeInTheDocument();
+    expect(screen.getByText(/周末开放的夜间展/)).toBeInTheDocument();
+    expect(screen.getByText(/不代表现实中的所有 INTJ/)).toBeInTheDocument();
+
+    fireEvent.click(screen.getByRole("button", { name: /各给一个方案一起选/ }));
+    expect(screen.getByText(/两个人的计划/)).toBeInTheDocument();
+  });
+
+  it("starts the balanced ENTJ game with its own formal content", () => {
+    render(<App />);
+
+    fireEvent.click(screen.getByRole("button", { name: "开始认识 ENTJ" }));
+    expect(screen.getByLabelText("当前阶段：初识，第 1 题，共 10 题")).toBeInTheDocument();
+    expect(screen.getByText(/ENTJ 都是霸总和天生领导/)).toBeInTheDocument();
+    expect(screen.getByText(/不代表现实中的所有 ENTJ/)).toBeInTheDocument();
+
+    fireEvent.click(screen.getByRole("button", { name: /承认自己把标签说满了/ }));
+    expect(screen.getByText(/这问题比“你管多少人”好答/)).toBeInTheDocument();
+  });
+
+  it("starts the balanced INFJ game with its own formal content", () => {
+    render(<App />);
+
+    fireEvent.click(screen.getByRole("button", { name: "开始认识 INFJ" }));
+    expect(screen.getByLabelText("当前阶段：初识，第 1 题，共 10 题")).toBeInTheDocument();
+    expect(screen.getByText(/第一次见面的书店咖啡区/)).toBeInTheDocument();
+    expect(screen.getByText(/不代表现实中的所有 INFJ/)).toBeInTheDocument();
+
+    fireEvent.click(screen.getByRole("button", { name: /愿意分享的联想/ }));
+    expect(screen.getByText(/这一层就很好/)).toBeInTheDocument();
+  });
+
+  it("starts the balanced ENFP game with its own formal content", () => {
+    render(<App />);
+
+    fireEvent.click(screen.getByRole("button", { name: "开始认识 ENFP" }));
+    expect(screen.getByLabelText("当前阶段：初识，第 1 题，共 10 题")).toBeInTheDocument();
+    expect(screen.getByText(/周五晚的小型主题聚会上/)).toBeInTheDocument();
+    expect(screen.getByText(/不代表现实中的所有 ENFP/)).toBeInTheDocument();
+
+    fireEvent.click(screen.getByRole("button", { name: /先说想听完大家这段/ }));
+    expect(screen.getByText(/等这段收住我再来找你/)).toBeInTheDocument();
+  });
+
   it("returns to the type selector from the question screen", () => {
     render(<App />);
     fireEvent.click(screen.getByRole("button", { name: "开始认识 ENTP" }));

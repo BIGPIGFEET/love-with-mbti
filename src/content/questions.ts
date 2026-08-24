@@ -480,7 +480,7 @@ export const questions = [
         strategyLabel: "协商解决",
         text: "我想要的是别再和别人发展暧昧，不是查你行程。我们先这样试一个月，有不舒服就直接说。",
         effects: { attraction: 15, trust: 15, comfort: 10, conflict: -5 },
-        npcResponse: "TA 追问了几句哪些算暧昧，最后点头：“可以。至少这次规则是我们一起定的。”",
+      npcResponse: "TA 追问了几句哪些算暧昧，最后点头：“可以。先试一个月，有哪里不舒服就直接说。”",
         feedbackIds: ["trust_up_strong", "conflict_down_slight"],
         feedbackText: ["TA愿意和你一起定义边界。", "信任显著上升。"],
       },

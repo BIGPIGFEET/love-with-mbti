@@ -1,0 +1,1353 @@
+{
+  "questionCount": 10,
+  "optionCounts": [
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4
+  ],
+  "completeChoiceSpace": 1048576,
+  "terminalTrajectories": 270799,
+  "earlyTerminalTrajectories": 6239,
+  "weightedTotal": 1048576,
+  "endings": {
+    "conflict_break": {
+      "trajectories": 30,
+      "weightedPaths": 480,
+      "examplePath": [
+        "q01_share_one_layer",
+        "q02_name_your_state",
+        "q03_receive_the_help",
+        "q04_name_your_need",
+        "q05_use_the_laugh_as_proof",
+        "q06_call_it_scorekeeping",
+        "q07_force_an_answer_now",
+        "q08_demand_total_surrender"
+      ],
+      "exampleState": {
+        "attraction": 55,
+        "trust": 0,
+        "comfort": 5,
+        "conflict": 85
+      }
+    },
+    "fade_out": {
+      "trajectories": 122,
+      "weightedPaths": 124928,
+      "examplePath": [
+        "q01_share_one_layer",
+        "q02_name_your_state",
+        "q03_receive_the_help",
+        "q04_investigate_anyway",
+        "q05_stop_without_discussion"
+      ],
+      "exampleState": {
+        "attraction": 55,
+        "trust": 25,
+        "comfort": 50,
+        "conflict": 10
+      }
+    },
+    "friends": {
+      "trajectories": 76884,
+      "weightedPaths": 76884,
+      "examplePath": [
+        "q01_share_one_layer",
+        "q02_name_your_state",
+        "q03_receive_the_help",
+        "q04_confirm_relevant_facts",
+        "q05_own_the_assumption",
+        "q06_make_support_mutual",
+        "q07_accept_the_pause",
+        "q08_not_ready_to_forgive",
+        "q09_translate_the_ideal",
+        "q10_claim_default_exclusivity"
+      ],
+      "exampleState": {
+        "attraction": 60,
+        "trust": 80,
+        "comfort": 90,
+        "conflict": 15
+      }
+    },
+    "no_second_meeting": {
+      "trajectories": 6,
+      "weightedPaths": 393216,
+      "examplePath": [
+        "q01_share_one_layer",
+        "q02_make_them_guess"
+      ],
+      "exampleState": {
+        "attraction": 40,
+        "trust": 15,
+        "comfort": 20,
+        "conflict": 20
+      }
+    },
+    "stay_acquaintances": {
+      "trajectories": 5803,
+      "weightedPaths": 92848,
+      "examplePath": [
+        "q01_share_one_layer",
+        "q02_name_your_state",
+        "q03_receive_the_help",
+        "q04_confirm_relevant_facts",
+        "q05_own_the_assumption",
+        "q06_call_it_scorekeeping",
+        "q07_force_an_answer_now",
+        "q08_demand_total_surrender"
+      ],
+      "exampleState": {
+        "attraction": 55,
+        "trust": 25,
+        "comfort": 30,
+        "conflict": 60
+      }
+    },
+    "strangers_after_all": {
+      "trajectories": 25913,
+      "weightedPaths": 25913,
+      "examplePath": [
+        "q01_share_one_layer",
+        "q02_name_your_state",
+        "q03_receive_the_help",
+        "q04_confirm_relevant_facts",
+        "q05_own_the_assumption",
+        "q06_make_support_mutual",
+        "q07_accept_the_pause",
+        "q08_demand_total_surrender",
+        "q09_declare_soulmates",
+        "q10_claim_default_exclusivity"
+      ],
+      "exampleState": {
+        "attraction": 60,
+        "trust": 30,
+        "comfort": 70,
+        "conflict": 50
+      }
+    },
+    "strong_discomfort": {
+      "trajectories": 111,
+      "weightedPaths": 84336,
+      "examplePath": [
+        "q01_share_one_layer",
+        "q02_name_your_state",
+        "q03_receive_the_help",
+        "q04_investigate_anyway",
+        "q05_own_the_assumption",
+        "q06_call_it_scorekeeping",
+        "q07_force_an_answer_now",
+        "q08_demand_total_surrender"
+      ],
+      "exampleState": {
+        "attraction": 55,
+        "trust": 0,
+        "comfort": 0,
+        "conflict": 70
+      }
+    },
+    "trust_broken": {
+      "trajectories": 935,
+      "weightedPaths": 88976,
+      "examplePath": [
+        "q01_share_one_layer",
+        "q02_name_your_state",
+        "q03_receive_the_help",
+        "q04_confirm_relevant_facts",
+        "q05_own_the_assumption",
+        "q06_call_it_scorekeeping",
+        "q07_accept_the_pause",
+        "q08_demand_total_surrender",
+        "q09_declare_soulmates",
+        "q10_claim_default_exclusivity"
+      ],
+      "exampleState": {
+        "attraction": 60,
+        "trust": 5,
+        "comfort": 45,
+        "conflict": 55
+      }
+    },
+    "unresolved_ambiguity": {
+      "trajectories": 160995,
+      "weightedPaths": 160995,
+      "examplePath": [
+        "q01_share_one_layer",
+        "q02_name_your_state",
+        "q03_receive_the_help",
+        "q04_confirm_relevant_facts",
+        "q05_own_the_assumption",
+        "q06_make_support_mutual",
+        "q07_accept_the_pause",
+        "q08_not_ready_to_forgive",
+        "q09_translate_the_ideal",
+        "q10_give_your_answer"
+      ],
+      "exampleState": {
+        "attraction": 80,
+        "trust": 100,
+        "comfort": 100,
+        "conflict": 0
+      }
+    }
+  },
+  "baseEndings": {
+    "conflict_break": {
+      "trajectories": 30,
+      "weightedPaths": 480,
+      "examplePath": [
+        "q01_share_one_layer",
+        "q02_name_your_state",
+        "q03_receive_the_help",
+        "q04_name_your_need",
+        "q05_use_the_laugh_as_proof",
+        "q06_call_it_scorekeeping",
+        "q07_force_an_answer_now",
+        "q08_demand_total_surrender"
+      ],
+      "exampleState": {
+        "attraction": 55,
+        "trust": 0,
+        "comfort": 5,
+        "conflict": 85
+      }
+    },
+    "fade_out": {
+      "trajectories": 122,
+      "weightedPaths": 124928,
+      "examplePath": [
+        "q01_share_one_layer",
+        "q02_name_your_state",
+        "q03_receive_the_help",
+        "q04_investigate_anyway",
+        "q05_stop_without_discussion"
+      ],
+      "exampleState": {
+        "attraction": 55,
+        "trust": 25,
+        "comfort": 50,
+        "conflict": 10
+      }
+    },
+    "friends": {
+      "trajectories": 76884,
+      "weightedPaths": 76884,
+      "examplePath": [
+        "q01_share_one_layer",
+        "q02_name_your_state",
+        "q03_receive_the_help",
+        "q04_confirm_relevant_facts",
+        "q05_own_the_assumption",
+        "q06_make_support_mutual",
+        "q07_accept_the_pause",
+        "q08_not_ready_to_forgive",
+        "q09_translate_the_ideal",
+        "q10_claim_default_exclusivity"
+      ],
+      "exampleState": {
+        "attraction": 60,
+        "trust": 80,
+        "comfort": 90,
+        "conflict": 15
+      }
+    },
+    "no_second_meeting": {
+      "trajectories": 6,
+      "weightedPaths": 393216,
+      "examplePath": [
+        "q01_share_one_layer",
+        "q02_make_them_guess"
+      ],
+      "exampleState": {
+        "attraction": 40,
+        "trust": 15,
+        "comfort": 20,
+        "conflict": 20
+      }
+    },
+    "stay_acquaintances": {
+      "trajectories": 5803,
+      "weightedPaths": 92848,
+      "examplePath": [
+        "q01_share_one_layer",
+        "q02_name_your_state",
+        "q03_receive_the_help",
+        "q04_confirm_relevant_facts",
+        "q05_own_the_assumption",
+        "q06_call_it_scorekeeping",
+        "q07_force_an_answer_now",
+        "q08_demand_total_surrender"
+      ],
+      "exampleState": {
+        "attraction": 55,
+        "trust": 25,
+        "comfort": 30,
+        "conflict": 60
+      }
+    },
+    "strangers_after_all": {
+      "trajectories": 25913,
+      "weightedPaths": 25913,
+      "examplePath": [
+        "q01_share_one_layer",
+        "q02_name_your_state",
+        "q03_receive_the_help",
+        "q04_confirm_relevant_facts",
+        "q05_own_the_assumption",
+        "q06_make_support_mutual",
+        "q07_accept_the_pause",
+        "q08_demand_total_surrender",
+        "q09_declare_soulmates",
+        "q10_claim_default_exclusivity"
+      ],
+      "exampleState": {
+        "attraction": 60,
+        "trust": 30,
+        "comfort": 70,
+        "conflict": 50
+      }
+    },
+    "strong_discomfort": {
+      "trajectories": 111,
+      "weightedPaths": 84336,
+      "examplePath": [
+        "q01_share_one_layer",
+        "q02_name_your_state",
+        "q03_receive_the_help",
+        "q04_investigate_anyway",
+        "q05_own_the_assumption",
+        "q06_call_it_scorekeeping",
+        "q07_force_an_answer_now",
+        "q08_demand_total_surrender"
+      ],
+      "exampleState": {
+        "attraction": 55,
+        "trust": 0,
+        "comfort": 0,
+        "conflict": 70
+      }
+    },
+    "trust_broken": {
+      "trajectories": 935,
+      "weightedPaths": 88976,
+      "examplePath": [
+        "q01_share_one_layer",
+        "q02_name_your_state",
+        "q03_receive_the_help",
+        "q04_confirm_relevant_facts",
+        "q05_own_the_assumption",
+        "q06_call_it_scorekeeping",
+        "q07_accept_the_pause",
+        "q08_demand_total_surrender",
+        "q09_declare_soulmates",
+        "q10_claim_default_exclusivity"
+      ],
+      "exampleState": {
+        "attraction": 60,
+        "trust": 5,
+        "comfort": 45,
+        "conflict": 55
+      }
+    },
+    "unresolved_ambiguity": {
+      "trajectories": 160995,
+      "weightedPaths": 160995,
+      "examplePath": [
+        "q01_share_one_layer",
+        "q02_name_your_state",
+        "q03_receive_the_help",
+        "q04_confirm_relevant_facts",
+        "q05_own_the_assumption",
+        "q06_make_support_mutual",
+        "q07_accept_the_pause",
+        "q08_not_ready_to_forgive",
+        "q09_translate_the_ideal",
+        "q10_give_your_answer"
+      ],
+      "exampleState": {
+        "attraction": 80,
+        "trust": 100,
+        "comfort": 100,
+        "conflict": 0
+      }
+    }
+  },
+  "outcomes": {
+    "conflict_break": {
+      "trajectories": 30,
+      "weightedPaths": 480,
+      "examplePath": [
+        "q01_share_one_layer",
+        "q02_name_your_state",
+        "q03_receive_the_help",
+        "q04_name_your_need",
+        "q05_use_the_laugh_as_proof",
+        "q06_call_it_scorekeeping",
+        "q07_force_an_answer_now",
+        "q08_demand_total_surrender"
+      ],
+      "exampleState": {
+        "attraction": 55,
+        "trust": 0,
+        "comfort": 5,
+        "conflict": 85
+      }
+    },
+    "fade_out": {
+      "trajectories": 122,
+      "weightedPaths": 124928,
+      "examplePath": [
+        "q01_share_one_layer",
+        "q02_name_your_state",
+        "q03_receive_the_help",
+        "q04_investigate_anyway",
+        "q05_stop_without_discussion"
+      ],
+      "exampleState": {
+        "attraction": 55,
+        "trust": 25,
+        "comfort": 50,
+        "conflict": 10
+      }
+    },
+    "friends": {
+      "trajectories": 76884,
+      "weightedPaths": 76884,
+      "examplePath": [
+        "q01_share_one_layer",
+        "q02_name_your_state",
+        "q03_receive_the_help",
+        "q04_confirm_relevant_facts",
+        "q05_own_the_assumption",
+        "q06_make_support_mutual",
+        "q07_accept_the_pause",
+        "q08_not_ready_to_forgive",
+        "q09_translate_the_ideal",
+        "q10_claim_default_exclusivity"
+      ],
+      "exampleState": {
+        "attraction": 60,
+        "trust": 80,
+        "comfort": 90,
+        "conflict": 15
+      }
+    },
+    "no_second_meeting": {
+      "trajectories": 6,
+      "weightedPaths": 393216,
+      "examplePath": [
+        "q01_share_one_layer",
+        "q02_make_them_guess"
+      ],
+      "exampleState": {
+        "attraction": 40,
+        "trust": 15,
+        "comfort": 20,
+        "conflict": 20
+      }
+    },
+    "stay_acquaintances": {
+      "trajectories": 5803,
+      "weightedPaths": 92848,
+      "examplePath": [
+        "q01_share_one_layer",
+        "q02_name_your_state",
+        "q03_receive_the_help",
+        "q04_confirm_relevant_facts",
+        "q05_own_the_assumption",
+        "q06_call_it_scorekeeping",
+        "q07_force_an_answer_now",
+        "q08_demand_total_surrender"
+      ],
+      "exampleState": {
+        "attraction": 55,
+        "trust": 25,
+        "comfort": 30,
+        "conflict": 60
+      }
+    },
+    "strangers_after_all": {
+      "trajectories": 25913,
+      "weightedPaths": 25913,
+      "examplePath": [
+        "q01_share_one_layer",
+        "q02_name_your_state",
+        "q03_receive_the_help",
+        "q04_confirm_relevant_facts",
+        "q05_own_the_assumption",
+        "q06_make_support_mutual",
+        "q07_accept_the_pause",
+        "q08_demand_total_surrender",
+        "q09_declare_soulmates",
+        "q10_claim_default_exclusivity"
+      ],
+      "exampleState": {
+        "attraction": 60,
+        "trust": 30,
+        "comfort": 70,
+        "conflict": 50
+      }
+    },
+    "strong_discomfort": {
+      "trajectories": 111,
+      "weightedPaths": 84336,
+      "examplePath": [
+        "q01_share_one_layer",
+        "q02_name_your_state",
+        "q03_receive_the_help",
+        "q04_investigate_anyway",
+        "q05_own_the_assumption",
+        "q06_call_it_scorekeeping",
+        "q07_force_an_answer_now",
+        "q08_demand_total_surrender"
+      ],
+      "exampleState": {
+        "attraction": 55,
+        "trust": 0,
+        "comfort": 0,
+        "conflict": 70
+      }
+    },
+    "trust_broken": {
+      "trajectories": 935,
+      "weightedPaths": 88976,
+      "examplePath": [
+        "q01_share_one_layer",
+        "q02_name_your_state",
+        "q03_receive_the_help",
+        "q04_confirm_relevant_facts",
+        "q05_own_the_assumption",
+        "q06_call_it_scorekeeping",
+        "q07_accept_the_pause",
+        "q08_demand_total_surrender",
+        "q09_declare_soulmates",
+        "q10_claim_default_exclusivity"
+      ],
+      "exampleState": {
+        "attraction": 60,
+        "trust": 5,
+        "comfort": 45,
+        "conflict": 55
+      }
+    },
+    "unresolved_ambiguity": {
+      "trajectories": 160995,
+      "weightedPaths": 160995,
+      "examplePath": [
+        "q01_share_one_layer",
+        "q02_name_your_state",
+        "q03_receive_the_help",
+        "q04_confirm_relevant_facts",
+        "q05_own_the_assumption",
+        "q06_make_support_mutual",
+        "q07_accept_the_pause",
+        "q08_not_ready_to_forgive",
+        "q09_translate_the_ideal",
+        "q10_give_your_answer"
+      ],
+      "exampleState": {
+        "attraction": 80,
+        "trust": 100,
+        "comfort": 100,
+        "conflict": 0
+      }
+    }
+  },
+  "rules": {},
+  "trajectoryPercentages": {
+    "conflict_break": 0.011,
+    "fade_out": 0.045,
+    "friends": 28.392,
+    "no_second_meeting": 0.002,
+    "stay_acquaintances": 2.143,
+    "strangers_after_all": 9.569,
+    "strong_discomfort": 0.041,
+    "trust_broken": 0.345,
+    "unresolved_ambiguity": 59.452
+  },
+  "weightedPathPercentages": {
+    "conflict_break": 0.046,
+    "fade_out": 11.914,
+    "friends": 7.332,
+    "no_second_meeting": 37.5,
+    "stay_acquaintances": 8.855,
+    "strangers_after_all": 2.471,
+    "strong_discomfort": 8.043,
+    "trust_broken": 8.485,
+    "unresolved_ambiguity": 15.354
+  },
+  "baseEndingTrajectoryPercentages": {
+    "conflict_break": 0.011,
+    "fade_out": 0.045,
+    "friends": 28.392,
+    "no_second_meeting": 0.002,
+    "stay_acquaintances": 2.143,
+    "strangers_after_all": 9.569,
+    "strong_discomfort": 0.041,
+    "trust_broken": 0.345,
+    "unresolved_ambiguity": 59.452
+  },
+  "baseEndingWeightedPathPercentages": {
+    "conflict_break": 0.046,
+    "fade_out": 11.914,
+    "friends": 7.332,
+    "no_second_meeting": 37.5,
+    "stay_acquaintances": 8.855,
+    "strangers_after_all": 2.471,
+    "strong_discomfort": 8.043,
+    "trust_broken": 8.485,
+    "unresolved_ambiguity": 15.354
+  },
+  "coverage": {
+    "declared": true,
+    "endings": {
+      "declared": true,
+      "expected": [
+        "confirmed_relationship",
+        "conflict_break",
+        "dangerous_lovers",
+        "fade_out",
+        "friends",
+        "no_second_meeting",
+        "stay_acquaintances",
+        "strangers_after_all",
+        "strong_discomfort",
+        "trust_broken",
+        "unresolved_ambiguity"
+      ],
+      "observed": [
+        "conflict_break",
+        "fade_out",
+        "friends",
+        "no_second_meeting",
+        "stay_acquaintances",
+        "strangers_after_all",
+        "strong_discomfort",
+        "trust_broken",
+        "unresolved_ambiguity"
+      ],
+      "missing": [
+        "confirmed_relationship",
+        "dangerous_lovers"
+      ],
+      "unexpected": []
+    },
+    "outcomes": {
+      "declared": true,
+      "expected": [
+        "confirmed_relationship:romance_hidden_risk",
+        "confirmed_relationship:romance_stable",
+        "conflict_break",
+        "dangerous_lovers",
+        "fade_out",
+        "friends",
+        "no_second_meeting",
+        "stay_acquaintances",
+        "strangers_after_all",
+        "strong_discomfort",
+        "trust_broken",
+        "unresolved_ambiguity"
+      ],
+      "observed": [
+        "conflict_break",
+        "fade_out",
+        "friends",
+        "no_second_meeting",
+        "stay_acquaintances",
+        "strangers_after_all",
+        "strong_discomfort",
+        "trust_broken",
+        "unresolved_ambiguity"
+      ],
+      "missing": [
+        "confirmed_relationship:romance_hidden_risk",
+        "confirmed_relationship:romance_stable",
+        "dangerous_lovers"
+      ],
+      "unexpected": []
+    },
+    "rules": {
+      "declared": false,
+      "expected": [],
+      "observed": [],
+      "missing": [],
+      "unexpected": []
+    },
+    "ruleDiagnostics": {
+      "shadowingStatus": "unknown",
+      "applicable": [],
+      "selected": [],
+      "shadowed": []
+    }
+  },
+  "fixedPositions": [
+    {
+      "position": 1,
+      "applicable": true,
+      "ending": "unresolved_ambiguity",
+      "baseEnding": "unresolved_ambiguity",
+      "ruleIds": [],
+      "path": [
+        "q01_share_one_layer",
+        "q02_name_your_state",
+        "q03_receive_the_help",
+        "q04_confirm_relevant_facts",
+        "q05_own_the_assumption",
+        "q06_make_support_mutual",
+        "q07_accept_the_pause",
+        "q08_not_ready_to_forgive",
+        "q09_translate_the_ideal",
+        "q10_give_your_answer"
+      ],
+      "state": {
+        "attraction": 80,
+        "trust": 100,
+        "comfort": 100,
+        "conflict": 0
+      }
+    },
+    {
+      "position": 2,
+      "applicable": true,
+      "ending": "friends",
+      "baseEnding": "friends",
+      "ruleIds": [],
+      "path": [
+        "q01_follow_deeper",
+        "q02_correct_the_method",
+        "q03_ask_what_it_means",
+        "q04_name_your_need",
+        "q05_stop_without_discussion",
+        "q06_call_it_scorekeeping",
+        "q07_state_your_waiting_limit",
+        "q08_three_part_repair",
+        "q09_state_the_mismatch",
+        "q10_follow_their_preference"
+      ],
+      "state": {
+        "attraction": 55,
+        "trust": 90,
+        "comfort": 60,
+        "conflict": 20
+      }
+    },
+    {
+      "position": 3,
+      "applicable": true,
+      "ending": "no_second_meeting",
+      "baseEnding": "no_second_meeting",
+      "ruleIds": [],
+      "path": [
+        "q01_keep_it_light",
+        "q02_make_them_guess"
+      ],
+      "state": {
+        "attraction": 30,
+        "trust": 15,
+        "comfort": 30,
+        "conflict": 20
+      }
+    },
+    {
+      "position": 4,
+      "applicable": true,
+      "ending": "no_second_meeting",
+      "baseEnding": "no_second_meeting",
+      "ruleIds": [],
+      "path": [
+        "q01_mock_the_question",
+        "q02_agree_to_avoid_awkwardness"
+      ],
+      "state": {
+        "attraction": 15,
+        "trust": 20,
+        "comfort": 20,
+        "conflict": 15
+      }
+    }
+  ],
+  "fixedStrategies": [
+    {
+      "strategy": "accommodate",
+      "applicable": true,
+      "ending": "stay_acquaintances",
+      "baseEnding": "stay_acquaintances",
+      "ruleIds": [],
+      "path": [
+        "q01_follow_deeper",
+        "q02_agree_to_avoid_awkwardness",
+        "q03_receive_the_help",
+        "q04_never_ask_again",
+        "q05_stop_without_discussion",
+        "q06_never_share_again",
+        "q07_accept_the_pause",
+        "q08_skip_to_closeness"
+      ],
+      "state": {
+        "attraction": 50,
+        "trust": 35,
+        "comfort": 90,
+        "conflict": 5
+      }
+    },
+    {
+      "strategy": "confront",
+      "applicable": false,
+      "missingAt": "Q01"
+    },
+    {
+      "strategy": "honest",
+      "applicable": true,
+      "ending": "friends",
+      "baseEnding": "friends",
+      "ruleIds": [],
+      "path": [
+        "q01_keep_it_light",
+        "q02_name_your_state",
+        "q03_ask_what_it_means",
+        "q04_name_your_need",
+        "q05_own_the_assumption",
+        "q06_find_other_support",
+        "q07_state_your_waiting_limit",
+        "q08_not_ready_to_forgive",
+        "q09_state_the_mismatch",
+        "q10_give_your_answer"
+      ],
+      "state": {
+        "attraction": 60,
+        "trust": 100,
+        "comfort": 80,
+        "conflict": 15
+      }
+    },
+    {
+      "strategy": "negotiate",
+      "applicable": true,
+      "ending": "unresolved_ambiguity",
+      "baseEnding": "unresolved_ambiguity",
+      "ruleIds": [],
+      "path": [
+        "q01_share_one_layer",
+        "q02_correct_the_method",
+        "q03_set_a_help_boundary",
+        "q04_confirm_relevant_facts",
+        "q05_build_a_signal",
+        "q06_make_support_mutual",
+        "q07_confirm_the_return",
+        "q08_three_part_repair",
+        "q09_translate_the_ideal",
+        "q10_build_a_real_agreement"
+      ],
+      "state": {
+        "attraction": 70,
+        "trust": 100,
+        "comfort": 100,
+        "conflict": 0
+      }
+    },
+    {
+      "strategy": "risky",
+      "applicable": true,
+      "ending": "strong_discomfort",
+      "baseEnding": "strong_discomfort",
+      "ruleIds": [],
+      "path": [
+        "q01_mock_the_question",
+        "q02_make_them_guess"
+      ],
+      "state": {
+        "attraction": 15,
+        "trust": 15,
+        "comfort": 5,
+        "conflict": 20
+      }
+    }
+  ],
+  "localDominance": [
+    {
+      "questionId": "Q01",
+      "dominantOption": "q01_share_one_layer",
+      "dominatedOption": "q01_follow_deeper"
+    },
+    {
+      "questionId": "Q01",
+      "dominantOption": "q01_share_one_layer",
+      "dominatedOption": "q01_mock_the_question"
+    },
+    {
+      "questionId": "Q01",
+      "dominantOption": "q01_follow_deeper",
+      "dominatedOption": "q01_mock_the_question"
+    },
+    {
+      "questionId": "Q01",
+      "dominantOption": "q01_keep_it_light",
+      "dominatedOption": "q01_mock_the_question"
+    },
+    {
+      "questionId": "Q02",
+      "dominantOption": "q02_name_your_state",
+      "dominatedOption": "q02_make_them_guess"
+    },
+    {
+      "questionId": "Q02",
+      "dominantOption": "q02_name_your_state",
+      "dominatedOption": "q02_agree_to_avoid_awkwardness"
+    },
+    {
+      "questionId": "Q02",
+      "dominantOption": "q02_correct_the_method",
+      "dominatedOption": "q02_make_them_guess"
+    },
+    {
+      "questionId": "Q02",
+      "dominantOption": "q02_correct_the_method",
+      "dominatedOption": "q02_agree_to_avoid_awkwardness"
+    },
+    {
+      "questionId": "Q02",
+      "dominantOption": "q02_agree_to_avoid_awkwardness",
+      "dominatedOption": "q02_make_them_guess"
+    },
+    {
+      "questionId": "Q03",
+      "dominantOption": "q03_receive_the_help",
+      "dominatedOption": "q03_call_it_a_debt"
+    },
+    {
+      "questionId": "Q03",
+      "dominantOption": "q03_ask_what_it_means",
+      "dominatedOption": "q03_call_it_a_debt"
+    },
+    {
+      "questionId": "Q03",
+      "dominantOption": "q03_set_a_help_boundary",
+      "dominatedOption": "q03_call_it_a_debt"
+    },
+    {
+      "questionId": "Q04",
+      "dominantOption": "q04_confirm_relevant_facts",
+      "dominatedOption": "q04_investigate_anyway"
+    },
+    {
+      "questionId": "Q04",
+      "dominantOption": "q04_confirm_relevant_facts",
+      "dominatedOption": "q04_never_ask_again"
+    },
+    {
+      "questionId": "Q04",
+      "dominantOption": "q04_name_your_need",
+      "dominatedOption": "q04_investigate_anyway"
+    },
+    {
+      "questionId": "Q04",
+      "dominantOption": "q04_never_ask_again",
+      "dominatedOption": "q04_investigate_anyway"
+    },
+    {
+      "questionId": "Q05",
+      "dominantOption": "q05_own_the_assumption",
+      "dominatedOption": "q05_use_the_laugh_as_proof"
+    },
+    {
+      "questionId": "Q05",
+      "dominantOption": "q05_stop_without_discussion",
+      "dominatedOption": "q05_use_the_laugh_as_proof"
+    },
+    {
+      "questionId": "Q05",
+      "dominantOption": "q05_build_a_signal",
+      "dominatedOption": "q05_use_the_laugh_as_proof"
+    },
+    {
+      "questionId": "Q06",
+      "dominantOption": "q06_make_support_mutual",
+      "dominatedOption": "q06_call_it_scorekeeping"
+    },
+    {
+      "questionId": "Q06",
+      "dominantOption": "q06_make_support_mutual",
+      "dominatedOption": "q06_never_share_again"
+    },
+    {
+      "questionId": "Q06",
+      "dominantOption": "q06_find_other_support",
+      "dominatedOption": "q06_call_it_scorekeeping"
+    },
+    {
+      "questionId": "Q06",
+      "dominantOption": "q06_find_other_support",
+      "dominatedOption": "q06_never_share_again"
+    },
+    {
+      "questionId": "Q06",
+      "dominantOption": "q06_never_share_again",
+      "dominatedOption": "q06_call_it_scorekeeping"
+    },
+    {
+      "questionId": "Q07",
+      "dominantOption": "q07_accept_the_pause",
+      "dominatedOption": "q07_force_an_answer_now"
+    },
+    {
+      "questionId": "Q07",
+      "dominantOption": "q07_state_your_waiting_limit",
+      "dominatedOption": "q07_force_an_answer_now"
+    },
+    {
+      "questionId": "Q07",
+      "dominantOption": "q07_confirm_the_return",
+      "dominatedOption": "q07_force_an_answer_now"
+    },
+    {
+      "questionId": "Q08",
+      "dominantOption": "q08_not_ready_to_forgive",
+      "dominatedOption": "q08_demand_total_surrender"
+    },
+    {
+      "questionId": "Q08",
+      "dominantOption": "q08_three_part_repair",
+      "dominatedOption": "q08_skip_to_closeness"
+    },
+    {
+      "questionId": "Q08",
+      "dominantOption": "q08_three_part_repair",
+      "dominatedOption": "q08_demand_total_surrender"
+    },
+    {
+      "questionId": "Q08",
+      "dominantOption": "q08_skip_to_closeness",
+      "dominatedOption": "q08_demand_total_surrender"
+    },
+    {
+      "questionId": "Q09",
+      "dominantOption": "q09_translate_the_ideal",
+      "dominatedOption": "q09_echo_the_ideal"
+    },
+    {
+      "questionId": "Q09",
+      "dominantOption": "q09_translate_the_ideal",
+      "dominatedOption": "q09_declare_soulmates"
+    },
+    {
+      "questionId": "Q09",
+      "dominantOption": "q09_echo_the_ideal",
+      "dominatedOption": "q09_declare_soulmates"
+    },
+    {
+      "questionId": "Q10",
+      "dominantOption": "q10_give_your_answer",
+      "dominatedOption": "q10_follow_their_preference"
+    },
+    {
+      "questionId": "Q10",
+      "dominantOption": "q10_give_your_answer",
+      "dominatedOption": "q10_claim_default_exclusivity"
+    },
+    {
+      "questionId": "Q10",
+      "dominantOption": "q10_follow_their_preference",
+      "dominatedOption": "q10_claim_default_exclusivity"
+    },
+    {
+      "questionId": "Q10",
+      "dominantOption": "q10_build_a_real_agreement",
+      "dominatedOption": "q10_follow_their_preference"
+    },
+    {
+      "questionId": "Q10",
+      "dominantOption": "q10_build_a_real_agreement",
+      "dominatedOption": "q10_claim_default_exclusivity"
+    }
+  ],
+  "globalStrategyDominance": [],
+  "effectBudgetWarnings": [
+    {
+      "type": "total_absolute_change",
+      "questionId": "Q04",
+      "optionId": "q04_investigate_anyway",
+      "actual": 45,
+      "recommendedMaximum": 40
+    },
+    {
+      "type": "total_absolute_change",
+      "questionId": "Q06",
+      "optionId": "q06_call_it_scorekeeping",
+      "actual": 45,
+      "recommendedMaximum": 40
+    },
+    {
+      "type": "total_absolute_change",
+      "questionId": "Q07",
+      "optionId": "q07_force_an_answer_now",
+      "actual": 50,
+      "recommendedMaximum": 40
+    },
+    {
+      "type": "total_absolute_change",
+      "questionId": "Q08",
+      "optionId": "q08_demand_total_surrender",
+      "actual": 45,
+      "recommendedMaximum": 40
+    },
+    {
+      "type": "total_absolute_change",
+      "questionId": "Q09",
+      "optionId": "q09_declare_soulmates",
+      "actual": 50,
+      "recommendedMaximum": 40
+    },
+    {
+      "type": "total_absolute_change",
+      "questionId": "Q10",
+      "optionId": "q10_claim_default_exclusivity",
+      "actual": 50,
+      "recommendedMaximum": 40
+    }
+  ],
+  "balance": {
+    "configured": true,
+    "globalDanger": {
+      "byEnding": {
+        "conflict_break": {
+          "trajectories": 30,
+          "weightedPaths": 480,
+          "weightedPercentage": 0.046,
+          "reachable": true,
+          "status": "below_recommended"
+        },
+        "strong_discomfort": {
+          "trajectories": 111,
+          "weightedPaths": 84336,
+          "weightedPercentage": 8.043,
+          "reachable": true,
+          "status": "above_recommended"
+        },
+        "trust_broken": {
+          "trajectories": 935,
+          "weightedPaths": 88976,
+          "weightedPercentage": 8.485,
+          "reachable": true,
+          "status": "above_recommended"
+        }
+      },
+      "combined": {
+        "trajectories": 1076,
+        "weightedPaths": 173792,
+        "weightedPercentage": 16.574,
+        "status": "within_recommended"
+      }
+    },
+    "stageGates": [
+      {
+        "questionId": "Q02",
+        "endingId": "no_second_meeting",
+        "eligibleTrajectoryPrefixes": 15,
+        "failureTrajectoryPrefixes": 6,
+        "trajectoryPrefixFailurePercentage": 40,
+        "eligibleWeightedPaths": 983040,
+        "failureWeightedPaths": 393216,
+        "weightedConditionalFailurePercentage": 40,
+        "status": "anomalous_high"
+      },
+      {
+        "questionId": "Q05",
+        "endingId": "fade_out",
+        "eligibleTrajectoryPrefixes": 478,
+        "failureTrajectoryPrefixes": 122,
+        "trajectoryPrefixFailurePercentage": 25.523,
+        "eligibleWeightedPaths": 489472,
+        "failureWeightedPaths": 124928,
+        "weightedConditionalFailurePercentage": 25.523,
+        "status": "below_recommended"
+      },
+      {
+        "questionId": "Q08",
+        "endingId": "stay_acquaintances",
+        "eligibleTrajectoryPrefixes": 22338,
+        "failureTrajectoryPrefixes": 5803,
+        "trajectoryPrefixFailurePercentage": 25.978,
+        "eligibleWeightedPaths": 357408,
+        "failureWeightedPaths": 92848,
+        "weightedConditionalFailurePercentage": 25.978,
+        "status": "below_recommended"
+      }
+    ],
+    "finalClassifier": {
+      "questionId": "Q10",
+      "reachedTrajectories": 263792,
+      "reachedWeightedPaths": 263792,
+      "weightedReachPercentage": 25.157,
+      "reachStatus": "within_recommended",
+      "byOutcome": {
+        "strangers_after_all": {
+          "trajectories": 25913,
+          "weightedPaths": 25913,
+          "weightedConditionalPercentage": 9.823,
+          "trajectoryConditionalPercentage": 9.823,
+          "reachable": true,
+          "examplePath": [
+            "q01_share_one_layer",
+            "q02_name_your_state",
+            "q03_receive_the_help",
+            "q04_confirm_relevant_facts",
+            "q05_own_the_assumption",
+            "q06_make_support_mutual",
+            "q07_accept_the_pause",
+            "q08_demand_total_surrender",
+            "q09_declare_soulmates",
+            "q10_claim_default_exclusivity"
+          ],
+          "exampleState": {
+            "attraction": 60,
+            "trust": 30,
+            "comfort": 70,
+            "conflict": 50
+          },
+          "status": "reported_only"
+        },
+        "dangerous_lovers": {
+          "trajectories": 0,
+          "weightedPaths": 0,
+          "weightedConditionalPercentage": 0,
+          "trajectoryConditionalPercentage": 0,
+          "reachable": false,
+          "examplePath": null,
+          "exampleState": null,
+          "status": "unreachable"
+        },
+        "friends": {
+          "trajectories": 76884,
+          "weightedPaths": 76884,
+          "weightedConditionalPercentage": 29.146,
+          "trajectoryConditionalPercentage": 29.146,
+          "reachable": true,
+          "examplePath": [
+            "q01_share_one_layer",
+            "q02_name_your_state",
+            "q03_receive_the_help",
+            "q04_confirm_relevant_facts",
+            "q05_own_the_assumption",
+            "q06_make_support_mutual",
+            "q07_accept_the_pause",
+            "q08_not_ready_to_forgive",
+            "q09_translate_the_ideal",
+            "q10_claim_default_exclusivity"
+          ],
+          "exampleState": {
+            "attraction": 60,
+            "trust": 80,
+            "comfort": 90,
+            "conflict": 15
+          },
+          "status": "reported_only"
+        },
+        "unresolved_ambiguity": {
+          "trajectories": 160995,
+          "weightedPaths": 160995,
+          "weightedConditionalPercentage": 61.031,
+          "trajectoryConditionalPercentage": 61.031,
+          "reachable": true,
+          "examplePath": [
+            "q01_share_one_layer",
+            "q02_name_your_state",
+            "q03_receive_the_help",
+            "q04_confirm_relevant_facts",
+            "q05_own_the_assumption",
+            "q06_make_support_mutual",
+            "q07_accept_the_pause",
+            "q08_not_ready_to_forgive",
+            "q09_translate_the_ideal",
+            "q10_give_your_answer"
+          ],
+          "exampleState": {
+            "attraction": 80,
+            "trust": 100,
+            "comfort": 100,
+            "conflict": 0
+          },
+          "status": "reported_only"
+        },
+        "confirmed_relationship:romance_stable": {
+          "trajectories": 0,
+          "weightedPaths": 0,
+          "weightedConditionalPercentage": 0,
+          "trajectoryConditionalPercentage": 0,
+          "reachable": false,
+          "examplePath": null,
+          "exampleState": null,
+          "status": "unreachable"
+        },
+        "confirmed_relationship:romance_hidden_risk": {
+          "trajectories": 0,
+          "weightedPaths": 0,
+          "weightedConditionalPercentage": 0,
+          "trajectoryConditionalPercentage": 0,
+          "reachable": false,
+          "examplePath": null,
+          "exampleState": null,
+          "status": "unreachable"
+        }
+      },
+      "byGroup": {
+        "strangers_after_all": {
+          "outcomeIds": [
+            "strangers_after_all"
+          ],
+          "trajectories": 25913,
+          "weightedPaths": 25913,
+          "weightedConditionalPercentage": 9.823,
+          "trajectoryConditionalPercentage": 9.823,
+          "status": "below_recommended"
+        },
+        "confirmed_relationship": {
+          "outcomeIds": [
+            "confirmed_relationship:romance_stable",
+            "confirmed_relationship:romance_hidden_risk"
+          ],
+          "trajectories": 0,
+          "weightedPaths": 0,
+          "weightedConditionalPercentage": 0,
+          "trajectoryConditionalPercentage": 0,
+          "status": "unreachable"
+        },
+        "dangerous_lovers": {
+          "outcomeIds": [
+            "dangerous_lovers"
+          ],
+          "trajectories": 0,
+          "weightedPaths": 0,
+          "weightedConditionalPercentage": 0,
+          "trajectoryConditionalPercentage": 0,
+          "status": "unreachable"
+        },
+        "friends": {
+          "outcomeIds": [
+            "friends"
+          ],
+          "trajectories": 76884,
+          "weightedPaths": 76884,
+          "weightedConditionalPercentage": 29.146,
+          "trajectoryConditionalPercentage": 29.146,
+          "status": "above_recommended"
+        },
+        "unresolved_ambiguity": {
+          "outcomeIds": [
+            "unresolved_ambiguity"
+          ],
+          "trajectories": 160995,
+          "weightedPaths": 160995,
+          "weightedConditionalPercentage": 61.031,
+          "trajectoryConditionalPercentage": 61.031,
+          "status": "above_recommended"
+        }
+      }
+    }
+  }
+}

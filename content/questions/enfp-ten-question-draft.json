@@ -1,0 +1,1147 @@
+[
+  {
+    "id": "Q01",
+    "order": 1,
+    "stage": "first_meeting",
+    "title": "给彼此留个入口",
+    "scene": "周五晚的小型主题聚会上，大家正围着一个旧话题聊得飞快。你刚到不久，还没找到插话的时机。TA 停下来补了一句背景，又把话头递给你。",
+    "npcQuote": "你刚才提到的那件小事，我还挺想听后续的。不想现在接也没关系，先听我们聊。",
+    "prompt": "你会怎样接住 TA 留下的这个入口？",
+    "conflictDimensions": [
+      "ENFP-K01"
+    ],
+    "researchRefs": [
+      "ENFP-S03",
+      "ENFP-S05",
+      "ENFP-S06",
+      "ENFP-S16",
+      "ENFP-S32"
+    ],
+    "tags": [
+      "初识",
+      "社交包容",
+      "群体节奏",
+      "拒绝空间"
+    ],
+    "designNote": "对应 ENFP-SC01；主测玩家如何回应主动纳入与可退出的双重信号，不把社交热情自动等同于亲密承诺。数值已由 Stage 06 全路径平衡验证。",
+    "options": [
+      {
+        "id": "q01_set_pace",
+        "strategy": "negotiate",
+        "strategyLabel": "接话也调节节奏",
+        "text": "先说想听完大家这段，再请 TA 稍后接着问刚才那件事。",
+        "effects": {
+          "attraction": 5,
+          "trust": 10,
+          "comfort": 10,
+          "conflict": -5
+        },
+        "npcResponse": "TA 点点头，把你的后续记在手机备忘里：‘好，等这段收住我再来找你。’",
+        "feedbackIds": [
+          "trust_up_medium",
+          "comfort_up_medium"
+        ],
+        "feedbackText": [
+          "TA真的记住了你刚说的那件事。",
+          "TA接话时明显自在了一些。"
+        ]
+      },
+      {
+        "id": "q01_join_energy",
+        "strategy": "accommodate",
+        "strategyLabel": "顺势加入热场",
+        "text": "接过话头，把自己的后续讲成一个笑点，再顺势问回大家。",
+        "effects": {
+          "attraction": 15,
+          "trust": 0,
+          "comfort": 5,
+          "conflict": 0
+        },
+        "npcResponse": "TA 笑着替你接住最后一句，随后把注意力还给了整桌人。",
+        "feedbackIds": [
+          "attraction_up_strong",
+          "comfort_up_slight"
+        ],
+        "feedbackText": [
+          "TA看你的眼神明显亮了。",
+          "TA的尾音又带上了笑意。"
+        ]
+      },
+      {
+        "id": "q01_take_quiet_exit",
+        "strategy": "honest",
+        "strategyLabel": "坦白想先旁听",
+        "text": "谢谢 TA 记得，但直说自己今天想先听一会儿，晚点再单独聊。",
+        "effects": {
+          "attraction": 0,
+          "trust": 10,
+          "comfort": 15,
+          "conflict": -5
+        },
+        "npcResponse": "TA 没再追问，只给你挪出一个更安静的位置：‘收到，晚点看你还有没有电。’",
+        "feedbackIds": [
+          "comfort_up_strong",
+          "trust_up_medium"
+        ],
+        "feedbackText": [
+          "TA让刚冒出来的情绪留在了脸上。",
+          "TA把你的需要留在了下一步里。"
+        ]
+      },
+      {
+        "id": "q01_claim_special",
+        "strategy": "risky",
+        "strategyLabel": "当众解读成偏爱",
+        "text": "笑着问“你只记得我说过什么，是不是对我特别有兴趣？”，让全桌等 TA 回答。",
+        "effects": {
+          "attraction": 5,
+          "trust": -5,
+          "comfort": -10,
+          "conflict": 10
+        },
+        "npcResponse": "TA 顿了一下，把话题放回聚会：‘我是在照顾新来的人，先别替我下结论。’",
+        "feedbackIds": [
+          "comfort_down_medium",
+          "conflict_up_medium"
+        ],
+        "feedbackText": [
+          "TA把原本靠近的动作收了回去。",
+          "你们的情绪开始盖过原本的话题。"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "Q02",
+    "order": 2,
+    "stage": "first_meeting",
+    "title": "笑着说的也值得认真听",
+    "scene": "聚会临时决定下一站去哪。TA 一口气提了三个点子，也说明最晚离开的时间。有人笑着说：“别听 TA 的，TA 就负责制造节目效果。”",
+    "npcQuote": "我确实爱开玩笑，但这三个地方是真查过。你们可以否掉，至少先听完理由吧？",
+    "prompt": "大家拿TA开玩笑时，你会怎么接？",
+    "conflictDimensions": [
+      "ENFP-K02"
+    ],
+    "researchRefs": [
+      "ENFP-S03",
+      "ENFP-S04",
+      "ENFP-S05",
+      "ENFP-S06",
+      "ENFP-S13",
+      "ENFP-S16"
+    ],
+    "tags": [
+      "初识",
+      "幽默表达",
+      "创意提案",
+      "被认真对待"
+    ],
+    "designNote": "对应 ENFP-SC02；主测玩家能否在活泼表达与实际判断之间保留区分，而不是把幽默直接当成不可靠。数值已由 Stage 06 全路径平衡验证。",
+    "options": [
+      {
+        "id": "q02_laugh_it_off",
+        "strategy": "risky",
+        "strategyLabel": "跟着大家起哄",
+        "text": "接一句“先排除 TA 的选项才安全”，让大家从剩下的地方里选。",
+        "effects": {
+          "attraction": -5,
+          "trust": -5,
+          "comfort": 0,
+          "conflict": 10
+        },
+        "npcResponse": "TA 收起地图：‘可以不选，但拿我当固定笑料就没法讨论了。’",
+        "feedbackIds": [
+          "trust_down_slight",
+          "conflict_up_medium"
+        ],
+        "feedbackText": [
+          "TA歪了歪头，没有马上信这句话。",
+          "你们已经不是只在争这一件事。"
+        ]
+      },
+      {
+        "id": "q02_ask_for_one_case",
+        "strategy": "honest",
+        "strategyLabel": "请TA讲清方案",
+        "text": "请 TA 先挑一个最可行的选项，把路程、时间和推荐理由讲完。",
+        "effects": {
+          "attraction": 5,
+          "trust": 10,
+          "comfort": 5,
+          "conflict": 0
+        },
+        "npcResponse": "TA 立刻删掉两个备选，只讲最稳的那个：‘好，先让我把它当真说一次。’",
+        "feedbackIds": [
+          "trust_up_medium",
+          "comfort_up_slight"
+        ],
+        "feedbackText": [
+          "TA没有让你的话落空。",
+          "TA说话时重新有了那股轻快。"
+        ]
+      },
+      {
+        "id": "q02_compare_constraints",
+        "strategy": "negotiate",
+        "strategyLabel": "把点子放进条件里",
+        "text": "把大家的预算和离场时间写出来，再请 TA 一起按这些条件比较三个选项。",
+        "effects": {
+          "attraction": 10,
+          "trust": 10,
+          "comfort": 5,
+          "conflict": -5
+        },
+        "npcResponse": "TA 接过清单，主动划掉一个超时方案：‘这样否掉我服气，继续。’",
+        "feedbackIds": [
+          "trust_up_medium",
+          "conflict_down_slight"
+        ],
+        "feedbackText": [
+          "TA愿意照新的节奏再试试。",
+          "刚才卡住的气氛重新活了起来。"
+        ]
+      },
+      {
+        "id": "q02_attack_the_group",
+        "strategy": "confront",
+        "strategyLabel": "替TA强硬反击",
+        "text": "对其他人说“至少 TA 有脑子想方案，你们只会泼冷水”，逼大家道歉。",
+        "effects": {
+          "attraction": 10,
+          "trust": -5,
+          "comfort": -5,
+          "conflict": 15
+        },
+        "npcResponse": "TA 拉住你的话头：‘谢谢你想帮我，但别把讨论变成人身对打。’",
+        "feedbackIds": [
+          "conflict_up_strong",
+          "comfort_down_slight"
+        ],
+        "feedbackText": [
+          "这句话把气氛一下推坏了。",
+          "热闹的气氛忽然断了一拍。"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "Q03",
+    "order": 3,
+    "stage": "contact",
+    "title": "临时发现的岔路",
+    "scene": "你们原本约好先看展，再去附近吃饭。走到门口时，TA 发现隔壁有一场只开放四十分钟的临时活动；绕过去大约会多花五十分钟。",
+    "npcQuote": "我现在很想去，但原计划是我们一起定的。排队太长就放弃，你也可以直接说不。",
+    "prompt": "面对这个临时出现的新选项，你会怎样决定？",
+    "conflictDimensions": [
+      "ENFP-K03"
+    ],
+    "researchRefs": [
+      "ENFP-S03",
+      "ENFP-S04",
+      "ENFP-S13",
+      "ENFP-S14",
+      "ENFP-S16",
+      "ENFP-S33"
+    ],
+    "tags": [
+      "接触",
+      "临时变化",
+      "探索欲",
+      "计划边界"
+    ],
+    "designNote": "对应 ENFP-SC03；让探索欲与守约、时间容量在同一决策中产生真实取舍。数值已由 Stage 06 全路径平衡验证。",
+    "options": [
+      {
+        "id": "q03_follow_the_detour",
+        "strategy": "accommodate",
+        "strategyLabel": "跟着临时转向",
+        "text": "同意先去临时活动，把吃饭往后推；今天愿意体验一次 TA 的即兴路线。",
+        "effects": {
+          "attraction": 15,
+          "trust": -5,
+          "comfort": 5,
+          "conflict": 0
+        },
+        "npcResponse": "TA 眼睛一亮，先把餐厅延后预订：‘这次算我欠你一个按原计划走的晚上。’",
+        "feedbackIds": [
+          "attraction_up_strong",
+          "trust_down_slight"
+        ],
+        "feedbackText": [
+          "TA笑得比刚才坦白多了。",
+          "TA的笑停了一下，显然还有点拿不准。"
+        ]
+      },
+      {
+        "id": "q03_keep_original_plan",
+        "strategy": "honest",
+        "strategyLabel": "守住原定安排",
+        "text": "直说自己必须按时离开，今天保留展览和吃饭，下次再找类似活动。",
+        "effects": {
+          "attraction": 0,
+          "trust": 5,
+          "comfort": 10,
+          "conflict": -5
+        },
+        "npcResponse": "TA 又看了一眼入口，还是把手机收起来：‘好，想去不等于今天非去不可。’",
+        "feedbackIds": [
+          "trust_up_slight",
+          "comfort_up_medium"
+        ],
+        "feedbackText": [
+          "TA顺着这个话题又多说了一句。",
+          "TA把原本会收住的话说了出来。"
+        ]
+      },
+      {
+        "id": "q03_hide_the_deadline",
+        "strategy": "risky",
+        "strategyLabel": "先答应再临时走",
+        "text": "先说“都行”，不提自己的离场时间，准备来不及就中途突然离开。",
+        "effects": {
+          "attraction": 10,
+          "trust": -10,
+          "comfort": -5,
+          "conflict": 10
+        },
+        "npcResponse": "TA 听出你的迟疑：‘如果你有截止时间，现在说比半路消失好。’",
+        "feedbackIds": [
+          "trust_down_medium",
+          "conflict_up_medium"
+        ],
+        "feedbackText": [
+          "TA没有马上相信这句保证。",
+          "分歧正在变成彼此不肯让步的拉扯。"
+        ]
+      },
+      {
+        "id": "q03_try_twenty_minutes",
+        "strategy": "negotiate",
+        "strategyLabel": "限定试探窗口",
+        "text": "提议只给临时活动二十分钟：排队超过五分钟就撤，再按原计划行动。",
+        "effects": {
+          "attraction": 10,
+          "trust": 5,
+          "comfort": 10,
+          "conflict": -5
+        },
+        "npcResponse": "TA 定好闹钟：‘有边界的冲动也算冲动，走，先看队伍。’",
+        "feedbackIds": [
+          "comfort_up_medium",
+          "conflict_down_slight"
+        ],
+        "feedbackText": [
+          "TA不再先猜哪句话会让你不舒服。",
+          "你们都让刚才那句话停在了那里。"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "Q04",
+    "order": 4,
+    "stage": "contact",
+    "title": "消息像烟花",
+    "scene": "连续几天，TA 发来零碎见闻、夸奖和临时邀约，常常一条话题还没结束，下一条已经跳到别处。你们尚未谈过这段关系的性质。",
+    "npcQuote": "我一聊兴奋就会开很多窗口。你不用秒回；如果密度太高，告诉我什么节奏对你舒服。",
+    "prompt": "这些消息让你有点跟不上，你会怎么说？",
+    "conflictDimensions": [
+      "ENFP-K06",
+      "ENFP-K10"
+    ],
+    "researchRefs": [
+      "ENFP-S09",
+      "ENFP-S18",
+      "ENFP-S19",
+      "ENFP-S21",
+      "ENFP-S22",
+      "ENFP-S32",
+      "ENFP-S39",
+      "ENFP-S40"
+    ],
+    "tags": [
+      "接触",
+      "高频表达",
+      "联系节奏",
+      "关系解读"
+    ],
+    "designNote": "对应 ENFP-SC04；把表达强度、回复容量和关系含义拆开处理，避免把高热度自动判成承诺。数值已由 Stage 06 全路径平衡验证。",
+    "options": [
+      {
+        "id": "q04_name_reply_window",
+        "strategy": "honest",
+        "strategyLabel": "说出可持续节奏",
+        "text": "说自己喜欢收到这些分享，但白天跟不上，通常会在晚上集中回复。",
+        "effects": {
+          "attraction": 10,
+          "trust": 5,
+          "comfort": 10,
+          "conflict": 0
+        },
+        "npcResponse": "TA 给你的消息加了一个“晚间拆封”备注：‘好，我负责分享，不拿速度考你。’",
+        "feedbackIds": [
+          "trust_up_slight",
+          "comfort_up_medium"
+        ],
+        "feedbackText": [
+          "TA没有把刚冒出的念头收回去。",
+          "TA在你面前少了一点顾虑。"
+        ]
+      },
+      {
+        "id": "q04_public_partner_label",
+        "strategy": "risky",
+        "strategyLabel": "抢先替关系命名",
+        "text": "把所有消息都热烈回满，并在共同群聊里直接称 TA 为“我对象”，看 TA 会不会默认。",
+        "effects": {
+          "attraction": 15,
+          "trust": -15,
+          "comfort": -10,
+          "conflict": 10
+        },
+        "npcResponse": "TA 很快私聊你：‘先把“对象”收回去吧。我是喜欢跟你靠近，但我们还没说过这个。’",
+        "feedbackIds": [
+          "attraction_up_strong",
+          "trust_down_strong"
+        ],
+        "feedbackText": [
+          "TA这次没有躲开你的靠近。",
+          "TA收回了原本想告诉你的部分。"
+        ]
+      },
+      {
+        "id": "q04_reply_when_able",
+        "strategy": "accommodate",
+        "strategyLabel": "享受热度暂不定义",
+        "text": "按自己有空的速度回复，享受来回的兴奋感，暂时不追问它代表什么。",
+        "effects": {
+          "attraction": 15,
+          "trust": -5,
+          "comfort": 5,
+          "conflict": 0
+        },
+        "npcResponse": "TA 继续把新鲜事发给你，也没有催问那些尚未回复的话题。",
+        "feedbackIds": [
+          "attraction_up_strong",
+          "comfort_up_slight"
+        ],
+        "feedbackText": [
+          "TA看你的眼神明显亮了。",
+          "TA的声音里又有了兴奋。"
+        ]
+      },
+      {
+        "id": "q04_separate_pace_and_intent",
+        "strategy": "negotiate",
+        "strategyLabel": "拆开节奏与意图",
+        "text": "一起约定回复节奏，再问清这些邀约目前是朋友式靠近，还是在尝试约会。",
+        "effects": {
+          "attraction": 5,
+          "trust": 10,
+          "comfort": 5,
+          "conflict": -5
+        },
+        "npcResponse": "TA 认真分开回答了两个问题：‘消息可以慢，意图我不想让你一直猜。’",
+        "feedbackIds": [
+          "trust_up_medium",
+          "conflict_down_slight"
+        ],
+        "feedbackText": [
+          "TA转过来，认真问了你的想法。",
+          "刚冒出来的火气散了些。"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "Q05",
+    "order": 5,
+    "stage": "contact",
+    "title": "能聊很多，不代表什么都要说",
+    "scene": "几次见面后，你们散步时聊到过去。你追问 TA 曾提过的一段低潮，TA 沉默几秒，明确表示今天不想讲细节，但愿意继续一起走。",
+    "npcQuote": "不是不信任你，我只是还没准备好把那段摊开。我们可以换个话题，或者安静走一会儿。",
+    "prompt": "你会怎样回应这条突然出现的私人边界？",
+    "conflictDimensions": [
+      "ENFP-K01",
+      "ENFP-K09"
+    ],
+    "researchRefs": [
+      "ENFP-S05",
+      "ENFP-S06",
+      "ENFP-S07",
+      "ENFP-S08",
+      "ENFP-S16",
+      "ENFP-S17",
+      "ENFP-S32"
+    ],
+    "tags": [
+      "接触",
+      "私人边界",
+      "公开与私密",
+      "拒绝追问"
+    ],
+    "designNote": "对应 ENFP-SC05；主测玩家能否接受外向表达与选择性披露并存，不以话多推导无条件透明。数值已由 Stage 06 全路径平衡验证。",
+    "options": [
+      {
+        "id": "q05_change_topic",
+        "strategy": "accommodate",
+        "strategyLabel": "不追问地换题",
+        "text": "说“好”，换到沿路刚看到的事，不要求 TA 解释为什么不想说。",
+        "effects": {
+          "attraction": 0,
+          "trust": 0,
+          "comfort": 10,
+          "conflict": -5
+        },
+        "npcResponse": "TA 跟上了新话题，走出一段后主动说：‘谢谢你没把停下当成拒绝你。’",
+        "feedbackIds": [
+          "comfort_up_medium",
+          "conflict_down_slight"
+        ],
+        "feedbackText": [
+          "TA的语气重新活了起来。",
+          "那阵别扭终于松开了一点。"
+        ]
+      },
+      {
+        "id": "q05_accuse_avoidance",
+        "strategy": "confront",
+        "strategyLabel": "把沉默判成逃避",
+        "text": "说“平时什么都能聊，关键时刻却躲开，那就别装得跟我很近”。",
+        "effects": {
+          "attraction": -5,
+          "trust": -10,
+          "comfort": -15,
+          "conflict": 15
+        },
+        "npcResponse": "TA 停下脚步：‘我说不想讲，不是在邀请你替我解释动机。’",
+        "feedbackIds": [
+          "comfort_down_strong",
+          "conflict_up_strong"
+        ],
+        "feedbackText": [
+          "TA已经很难在你面前自然地接话。",
+          "TA已经不想接着争下去。"
+        ]
+      },
+      {
+        "id": "q05_offer_support_menu",
+        "strategy": "negotiate",
+        "strategyLabel": "确认可接受的支持",
+        "text": "问 TA 现在更想安静、换题还是回去，并约定除非 TA 主动提起，自己不再追问。",
+        "effects": {
+          "attraction": 5,
+          "trust": 10,
+          "comfort": 10,
+          "conflict": -5
+        },
+        "npcResponse": "TA 选了继续走和换题：‘这样我能决定今天打开哪扇门。’",
+        "feedbackIds": [
+          "trust_up_medium",
+          "comfort_up_medium"
+        ],
+        "feedbackText": [
+          "TA把原来的安排改了一点。",
+          "TA说起这件事时不再那么拘谨。"
+        ]
+      },
+      {
+        "id": "q05_state_care_without_claim",
+        "strategy": "honest",
+        "strategyLabel": "表达关心但不索取",
+        "text": "坦白自己会好奇也会担心，但 TA 可以不说；若以后涉及你们共同的决定，再讲必要部分。",
+        "effects": {
+          "attraction": 5,
+          "trust": 5,
+          "comfort": 10,
+          "conflict": 0
+        },
+        "npcResponse": "TA 呼出一口气：‘这我能答应。等它真的影响到我们，我不会让你蒙着。’",
+        "feedbackIds": [
+          "trust_up_slight",
+          "comfort_up_medium"
+        ],
+        "feedbackText": [
+          "TA愿意继续把心里的话摊开。",
+          "TA把原本会收住的话说了出来。"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "Q06",
+    "order": 6,
+    "stage": "familiarity",
+    "title": "别急着把我修好",
+    "scene": "一次计划受挫后，你明显很烦。TA 没有立刻灌鸡汤，而是把手机扣在桌上，问你今晚需要哪一种陪伴。",
+    "npcQuote": "我今晚能听一会儿，也能陪你出去走。要是你想自己待着，我就先走。你现在更想要哪一种？",
+    "prompt": "TA这样问时，你会怎么回答？",
+    "conflictDimensions": [
+      "ENFP-K07",
+      "ENFP-K13"
+    ],
+    "researchRefs": [
+      "ENFP-S03",
+      "ENFP-S04",
+      "ENFP-S09",
+      "ENFP-S12",
+      "ENFP-S18",
+      "ENFP-S19",
+      "ENFP-S23",
+      "ENFP-S32"
+    ],
+    "tags": [
+      "熟悉",
+      "情绪支持",
+      "给予方式",
+      "自主选择"
+    ],
+    "designNote": "对应 ENFP-SC06；主测支持是否以接收者需要为准，同时保留双方容量，不把热心自动判为有效。数值已由 Stage 06 全路径平衡验证。",
+    "options": [
+      {
+        "id": "q06_demand_mind_reading",
+        "strategy": "confront",
+        "strategyLabel": "要求TA自己猜中",
+        "text": "说“真正在乎就该知道我需要什么，开菜单只是在走流程”。",
+        "effects": {
+          "attraction": -5,
+          "trust": -10,
+          "comfort": -15,
+          "conflict": 20
+        },
+        "npcResponse": "TA 没替自己辩解：‘我可以继续在乎，但不能靠猜来证明。你准备好说时我再听。’",
+        "feedbackIds": [
+          "conflict_up_strong",
+          "trust_down_medium"
+        ],
+        "feedbackText": [
+          "你们开始只听见最刺人的部分。",
+          "TA开始等着看你会不会真的做到。"
+        ]
+      },
+      {
+        "id": "q06_request_listening",
+        "strategy": "honest",
+        "strategyLabel": "明确只听不建议",
+        "text": "说自己需要十分钟把情绪讲完，今晚先不要分析，也不需要马上振作。",
+        "effects": {
+          "attraction": 0,
+          "trust": 5,
+          "comfort": 15,
+          "conflict": -5
+        },
+        "npcResponse": "TA 把计时器设成静音，只问了一句：‘要我回应，还是只确认我听见了？’",
+        "feedbackIds": [
+          "comfort_up_strong",
+          "trust_up_slight"
+        ],
+        "feedbackText": [
+          "TA没有掩饰这一刻真正的感受。",
+          "TA又补上了一句真正想说的。"
+        ]
+      },
+      {
+        "id": "q06_choose_silent_walk",
+        "strategy": "accommodate",
+        "strategyLabel": "接受安静陪伴",
+        "text": "选一起走一段，不急着说原因；如果心情缓过来，再决定要不要聊。",
+        "effects": {
+          "attraction": 10,
+          "trust": 0,
+          "comfort": 10,
+          "conflict": -5
+        },
+        "npcResponse": "TA 陪你走到街角，真的没有用问题填满沉默。",
+        "feedbackIds": [
+          "attraction_up_medium",
+          "comfort_up_medium"
+        ],
+        "feedbackText": [
+          "TA已经主动问起下次见面的时间。",
+          "TA不再先猜哪句话会让你不舒服。"
+        ]
+      },
+      {
+        "id": "q06_split_today_tomorrow",
+        "strategy": "negotiate",
+        "strategyLabel": "把安慰和行动分开",
+        "text": "今晚先听，明天再一起定一个最小行动；同时让 TA 不必取消自己的原安排。",
+        "effects": {
+          "attraction": 10,
+          "trust": 10,
+          "comfort": 5,
+          "conflict": -5
+        },
+        "npcResponse": "TA 看了眼自己原来的安排：‘行。今晚我陪你一会儿，明天再一起想办法。’",
+        "feedbackIds": [
+          "trust_up_medium",
+          "conflict_down_slight"
+        ],
+        "feedbackText": [
+          "TA真的记住了你刚说的那件事。",
+          "谁也没有再把那句重话接下去。"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "Q07",
+    "order": 7,
+    "stage": "familiarity",
+    "title": "今晚不用当小太阳",
+    "scene": "一场热闹活动结束后，TA 突然安静下来，明确说今晚没力气继续活跃，也不想解释原因。TA 希望先独处半小时，明天再联系。",
+    "npcQuote": "我不是在生你的气，只是现在不想表演没事。给我一点安静，明天中午前我会给你消息。",
+    "prompt": "TA突然安静下来，你会怎么做？",
+    "conflictDimensions": [
+      "ENFP-K08",
+      "ENFP-K09"
+    ],
+    "researchRefs": [
+      "ENFP-S05",
+      "ENFP-S06",
+      "ENFP-S07",
+      "ENFP-S08",
+      "ENFP-S16",
+      "ENFP-S17",
+      "ENFP-S32"
+    ],
+    "tags": [
+      "熟悉",
+      "低能量",
+      "隐私",
+      "公开形象"
+    ],
+    "designNote": "对应 ENFP-SC07；主测玩家是否允许活跃者拥有不公开、不可供围观的低落时刻。数值已由 Stage 06 全路径平衡验证。",
+    "options": [
+      {
+        "id": "q07_confirm_check_in",
+        "strategy": "negotiate",
+        "strategyLabel": "确认空间与回访",
+        "text": "确认 TA 想独处而不是安静陪伴，并约好明天中午若没消息，自己只发一次问候。",
+        "effects": {
+          "attraction": 5,
+          "trust": 10,
+          "comfort": 10,
+          "conflict": -5
+        },
+        "npcResponse": "TA 把约定复述了一遍：‘一次问候就好，我会负责告诉你我的状态。’",
+        "feedbackIds": [
+          "trust_up_medium",
+          "conflict_down_slight"
+        ],
+        "feedbackText": [
+          "TA把你的需要留在了下一步里。",
+          "你们终于没再互相顶着。"
+        ]
+      },
+      {
+        "id": "q07_share_offline_photo",
+        "strategy": "risky",
+        "strategyLabel": "把低落做成玩笑",
+        "text": "没问 TA 就拍一张照片发到群里，配文“小太阳今晚离线”，想逗 TA 开心。",
+        "effects": {
+          "attraction": -10,
+          "trust": -20,
+          "comfort": -10,
+          "conflict": 20
+        },
+        "npcResponse": "TA 要你立刻删掉：‘我说不想表演，照片也不是另一种表演许可。’",
+        "feedbackIds": [
+          "trust_down_strong",
+          "conflict_up_strong"
+        ],
+        "feedbackText": [
+          "TA不再打算让你参与下一步。",
+          "这场对话正从分歧变成攻击。"
+        ]
+      },
+      {
+        "id": "q07_offer_thirty_minutes",
+        "strategy": "honest",
+        "strategyLabel": "说明自己的陪伴容量",
+        "text": "说自己能安静陪半小时，之后需要回家；TA 若想独处，自己现在就走。",
+        "effects": {
+          "attraction": 5,
+          "trust": 5,
+          "comfort": 15,
+          "conflict": 0
+        },
+        "npcResponse": "TA 选择自己待着，也认真道谢：‘你说清能给多少，比硬撑着陪我更安心。’",
+        "feedbackIds": [
+          "comfort_up_strong",
+          "trust_up_slight"
+        ],
+        "feedbackText": [
+          "TA这次没有把情绪匆忙收好。",
+          "TA没有躲开更真实的那部分。"
+        ]
+      },
+      {
+        "id": "q07_leave_room_without_questions",
+        "strategy": "accommodate",
+        "strategyLabel": "安静留出空间",
+        "text": "把水放在 TA 手边，不再追问，告诉 TA 明天想联系时自己在。",
+        "effects": {
+          "attraction": 10,
+          "trust": 0,
+          "comfort": 10,
+          "conflict": -5
+        },
+        "npcResponse": "TA 收下水，朝你挥了挥手：‘明天见。今晚谢谢你没逼我恢复出厂设置。’",
+        "feedbackIds": [
+          "attraction_up_medium",
+          "comfort_up_medium"
+        ],
+        "feedbackText": [
+          "TA顺势把话题带到了下一次见面。",
+          "TA在你面前少了一点顾虑。"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "Q08",
+    "order": 8,
+    "stage": "familiarity",
+    "title": "热心不能抵掉迟到",
+    "scene": "你和 TA 约好今晚完成一项共同准备。TA 临时去帮另一位朋友处理事情，导致自己负责的部分晚交。现在 TA 带着未完成清单回来，先道歉，再提出补救。",
+    "npcQuote": "我以为两边都赶得上，结果让你白等了。是我算错了。剩下的我今晚补，或者我们现在重排。",
+    "prompt": "TA是去帮人，但也确实失约了。你会怎么处理？",
+    "conflictDimensions": [
+      "ENFP-K03",
+      "ENFP-K04",
+      "ENFP-K07",
+      "ENFP-K12"
+    ],
+    "researchRefs": [
+      "ENFP-S12",
+      "ENFP-S13",
+      "ENFP-S14",
+      "ENFP-S16",
+      "ENFP-S17",
+      "ENFP-S23"
+    ],
+    "tags": [
+      "熟悉",
+      "失约修复",
+      "过度承诺",
+      "责任边界"
+    ],
+    "designNote": "对应 ENFP-SC08；让助人动机、履约结果和修复能力分别接受判断，不以善意免除影响，也不以一次失约概括人格。数值已由 Stage 06 全路径平衡验证。",
+    "options": [
+      {
+        "id": "q08_name_cost_and_deadline",
+        "strategy": "honest",
+        "strategyLabel": "讲清影响与底线",
+        "text": "承认 TA 是去帮人，但明确等待造成的成本，并给出自己能接受的最晚完成时间。",
+        "effects": {
+          "attraction": 0,
+          "trust": 5,
+          "comfort": 5,
+          "conflict": -10
+        },
+        "npcResponse": "TA 把你说的时间写进清单：‘好。帮朋友是我的选择，不能让你替我吞掉这段等待。’",
+        "feedbackIds": [
+          "trust_up_slight",
+          "conflict_down_medium"
+        ],
+        "feedbackText": [
+          "TA把没说完的感受接着说了下去。",
+          "这场分歧终于有了出口。"
+        ]
+      },
+      {
+        "id": "q08_absorb_the_work",
+        "strategy": "accommodate",
+        "strategyLabel": "嘴上没事全部接手",
+        "text": "说“你也是好心，没关系”，把剩余工作全接过来，但不说自己其实很生气。",
+        "effects": {
+          "attraction": -5,
+          "trust": -10,
+          "comfort": -10,
+          "conflict": 5
+        },
+        "npcResponse": "TA 没把清单交给你：‘你说没事，但脸上不是。别用接手替我们跳过问题。’",
+        "feedbackIds": [
+          "trust_down_medium",
+          "comfort_down_medium"
+        ],
+        "feedbackText": [
+          "TA对下一次还留着疑问。",
+          "TA不动声色地往后退了一点。"
+        ]
+      },
+      {
+        "id": "q08_reduce_them_to_a_label",
+        "strategy": "confront",
+        "strategyLabel": "用标签判掉整个人",
+        "text": "说“你就是三分钟热度又爱乱答应，以后任何重要部分都别碰”。",
+        "effects": {
+          "attraction": -15,
+          "trust": -10,
+          "comfort": -10,
+          "conflict": 20
+        },
+        "npcResponse": "TA 接受失约的责任，却没有接受判词：‘你可以限制这次分工，但别把一次结果写成我的全部。’",
+        "feedbackIds": [
+          "conflict_up_strong",
+          "attraction_down_strong"
+        ],
+        "feedbackText": [
+          "这句话把气氛一下推坏了。",
+          "TA似乎已经不想再把这种感觉理解成心动。"
+        ]
+      },
+      {
+        "id": "q08_replan_with_checkpoints",
+        "strategy": "negotiate",
+        "strategyLabel": "重排任务与检查点",
+        "text": "一起删掉非必要部分，重新分工并设一个中途检查点；下次新增承诺前先互相确认。",
+        "effects": {
+          "attraction": 0,
+          "trust": 10,
+          "comfort": 10,
+          "conflict": -10
+        },
+        "npcResponse": "TA 主动拿走最容易检查的一段：‘先把这次补上。保证的话，等做完再说。’",
+        "feedbackIds": [
+          "trust_up_medium",
+          "conflict_down_medium"
+        ],
+        "feedbackText": [
+          "TA没有让你的话落空。",
+          "你们没有再让同一句话继续变重。"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "Q09",
+    "order": 9,
+    "stage": "ambiguity",
+    "title": "热度之外，我们是什么",
+    "scene": "你们已经有过几次很像约会的单独相处，也有高频联系，但始终没有正式定义。今晚分别前，TA 主动停下来谈这件事。",
+    "npcQuote": "靠近是真的，但我不想让热度替我们自动签合同。排他、公开、联系频率和未来预期，我们可以一项项说。",
+    "prompt": "TA把话说到这里，你会怎么回答？",
+    "conflictDimensions": [
+      "ENFP-K05",
+      "ENFP-K10"
+    ],
+    "researchRefs": [
+      "ENFP-S10",
+      "ENFP-S11",
+      "ENFP-S18",
+      "ENFP-S39",
+      "ENFP-S40",
+      "ENFP-S41"
+    ],
+    "tags": [
+      "暧昧",
+      "关系定义",
+      "表达强度",
+      "承诺协商"
+    ],
+    "designNote": "对应 ENFP-SC09；主测玩家是否能把真实热度与承诺条款分开确认，同时允许不同关系诉求被清楚表达。数值已由 Stage 06 全路径平衡验证。",
+    "options": [
+      {
+        "id": "q09_keep_it_undefined",
+        "strategy": "accommodate",
+        "strategyLabel": "维持热度不命名",
+        "text": "说现在这样很开心，不必谈定义，继续靠感觉往前走就好。",
+        "effects": {
+          "attraction": 15,
+          "trust": -10,
+          "comfort": 0,
+          "conflict": 5
+        },
+        "npcResponse": "TA 点点头，却没把话题收回去：‘可以慢一点。但你一直不说，我也不知道该把自己放在哪。’",
+        "feedbackIds": [
+          "attraction_up_strong",
+          "trust_down_medium"
+        ],
+        "feedbackText": [
+          "TA笑得比刚才坦白多了。",
+          "TA没有马上相信这句保证。"
+        ]
+      },
+      {
+        "id": "q09_state_exclusive_need",
+        "strategy": "honest",
+        "strategyLabel": "说出自己的关系诉求",
+        "text": "坦白自己希望进入排他的约会关系；如果 TA 不想，也会把投入退回朋友范围。",
+        "effects": {
+          "attraction": -5,
+          "trust": 15,
+          "comfort": 10,
+          "conflict": 0
+        },
+        "npcResponse": "TA 没回避这个条件：‘谢谢你把愿望和后果都说清了，我也会给明确答案。’",
+        "feedbackIds": [
+          "trust_up_strong",
+          "comfort_up_medium"
+        ],
+        "feedbackText": [
+          "TA把接下来怎么走也问了你的想法。",
+          "TA的语气重新活了起来。"
+        ]
+      },
+      {
+        "id": "q09_demand_social_proof",
+        "strategy": "risky",
+        "strategyLabel": "用断联证明真心",
+        "text": "要求 TA 先删掉所有让你觉得暧昧的联系人，以此证明这段关系值得定义。",
+        "effects": {
+          "attraction": 0,
+          "trust": -15,
+          "comfort": -15,
+          "conflict": 10
+        },
+        "npcResponse": "TA 没接受这份证明方式：‘边界可以谈，但我不会用你单方面列出的断联名单换资格。’",
+        "feedbackIds": [
+          "trust_down_strong",
+          "comfort_down_strong"
+        ],
+        "feedbackText": [
+          "TA开始把重要的事留在安全距离外。",
+          "TA把原本轻快的情绪全收了回去。"
+        ]
+      },
+      {
+        "id": "q09_define_four_axes",
+        "strategy": "negotiate",
+        "strategyLabel": "逐项定义关系",
+        "text": "分别讨论排他、公开、联系频率和近期预期，先达成当前版本，一个月后再复盘。",
+        "effects": {
+          "attraction": 5,
+          "trust": 15,
+          "comfort": 5,
+          "conflict": -5
+        },
+        "npcResponse": "TA 把四项记下来：‘先照这个来。一个月后如果谁不舒服，我们再改。’",
+        "feedbackIds": [
+          "attraction_up_slight",
+          "trust_up_strong"
+        ],
+        "feedbackText": [
+          "TA看着你笑了好一会儿。",
+          "TA没有替你决定下一次该怎么见面。"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "Q10",
+    "order": 10,
+    "stage": "ambiguity",
+    "title": "关系不是社交禁令",
+    "scene": "在讨论是否进入更正式的关系时，你提到 TA 与许多人保持热络联系。TA 没用“我就是这样”结束话题，而是请你指出具体担心的行为。",
+    "npcQuote": "广泛交朋友对我很重要，但这不等于什么边界都没有。友好、调情、私密分享和报备，我们得用同一套规则谈清楚。",
+    "prompt": "你最想先和TA说清哪件事？",
+    "conflictDimensions": [
+      "ENFP-K05",
+      "ENFP-K11",
+      "ENFP-K12"
+    ],
+    "researchRefs": [
+      "ENFP-S06",
+      "ENFP-S10",
+      "ENFP-S11",
+      "ENFP-S12",
+      "ENFP-S18",
+      "ENFP-S32"
+    ],
+    "tags": [
+      "暧昧",
+      "社交边界",
+      "自主性",
+      "对等规则"
+    ],
+    "designNote": "对应 ENFP-SC10；把广泛友谊、浪漫信号、隐私和共同协议拆开，避免用类型标签替代对等边界。数值已由 Stage 06 全路径平衡验证。",
+    "options": [
+      {
+        "id": "q10_demand_total_cutoff",
+        "strategy": "confront",
+        "strategyLabel": "要求清空潜在关系",
+        "text": "说“真在乎我就该删掉所有可能发展的人”，拒绝再区分具体互动。",
+        "effects": {
+          "attraction": -10,
+          "trust": -15,
+          "comfort": -15,
+          "conflict": 10
+        },
+        "npcResponse": "TA 没继续证明自己：‘我能承诺边界，不能接受把我的社交世界先清空再谈信任。’",
+        "feedbackIds": [
+          "trust_down_strong",
+          "comfort_down_strong"
+        ],
+        "feedbackText": [
+          "TA收回了原本想告诉你的部分。",
+          "TA已经不想再让这场互动继续下去。"
+        ]
+      },
+      {
+        "id": "q10_write_equal_rules",
+        "strategy": "negotiate",
+        "strategyLabel": "共同写对等规则",
+        "text": "双方各列在意的具体行为，区分公开友好与私密暧昧，形成彼此都遵守的规则。",
+        "effects": {
+          "attraction": 15,
+          "trust": 15,
+          "comfort": 10,
+          "conflict": -5
+        },
+        "npcResponse": "TA 先把规则应用到自己身上，再问你的社交也是否接受同样标准：‘对等我就愿意签。’",
+        "feedbackIds": [
+          "trust_up_strong",
+          "comfort_up_medium"
+        ],
+        "feedbackText": [
+          "TA把后面的安排摊开来和你商量。",
+          "TA的语气重新松快起来。"
+        ]
+      },
+      {
+        "id": "q10_name_specific_boundary",
+        "strategy": "honest",
+        "strategyLabel": "说具体不贴标签",
+        "text": "说出哪些具体行为让自己不安，也说明尊重 TA 的普通友谊；若无法一致，就暂不正式确认关系。",
+        "effects": {
+          "attraction": -5,
+          "trust": 15,
+          "comfort": 5,
+          "conflict": 0
+        },
+        "npcResponse": "TA 一条条听完：‘这样我听得懂。至少我们争的是哪件事，不是谁更在乎。’",
+        "feedbackIds": [
+          "trust_up_strong",
+          "attraction_down_slight"
+        ],
+        "feedbackText": [
+          "TA等着你一起定下下一步。",
+          "TA对这次互动少了一点期待。"
+        ]
+      },
+      {
+        "id": "q10_hide_jealousy",
+        "strategy": "accommodate",
+        "strategyLabel": "假装完全不介意",
+        "text": "为了显得大方，告诉 TA 什么都不用改，隐藏自己真正介意的互动。",
+        "effects": {
+          "attraction": 10,
+          "trust": -10,
+          "comfort": -5,
+          "conflict": 5
+        },
+        "npcResponse": "TA 没把这句轻松话当成共识：‘我宁愿现在听见不舒服，也不想以后才知道你一直在忍。’",
+        "feedbackIds": [
+          "attraction_up_medium",
+          "trust_down_medium"
+        ],
+        "feedbackText": [
+          "TA没有等你开口就提了下次。",
+          "TA开始等着看你会不会真的做到。"
+        ]
+      }
+    ]
+  }
+]

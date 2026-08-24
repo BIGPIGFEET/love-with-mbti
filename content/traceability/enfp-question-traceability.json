@@ -1,0 +1,182 @@
+[
+  {
+    "question_id": "Q01",
+    "order": 1,
+    "stage": "first_meeting",
+    "scene_id": "ENFP-SC01",
+    "candidate_id": "ENFP-C01",
+    "behavior_ids": ["ENFP-B01"],
+    "feature_ids": ["ENFP-F01", "ENFP-F04"],
+    "source_ids": ["ENFP-S03", "ENFP-S05", "ENFP-S06", "ENFP-S16", "ENFP-S32"],
+    "conflict_ids": ["ENFP-K01"],
+    "state_ids": ["attraction", "comfort", "trust"],
+    "options": [
+      {"option_id": "q01_set_pace", "strategy": "negotiate", "rationale": "接住邀请但主动约定稍后的谈话节奏，主要提高信任与舒适。"},
+      {"option_id": "q01_join_energy", "strategy": "accommodate", "rationale": "顺势进入群体热场，主要提高即时吸引力，但不增加承诺性信任。"},
+      {"option_id": "q01_take_quiet_exit", "strategy": "honest", "rationale": "明确使用对方给出的退出空间，主要提高舒适与信任。"},
+      {"option_id": "q01_claim_special", "strategy": "risky", "rationale": "把社交包容当众解释为浪漫偏爱，主要损害舒适并增加冲突。"}
+    ]
+  },
+  {
+    "question_id": "Q02",
+    "order": 2,
+    "stage": "first_meeting",
+    "scene_id": "ENFP-SC02",
+    "candidate_id": "ENFP-C03",
+    "behavior_ids": ["ENFP-B02"],
+    "feature_ids": ["ENFP-F02", "ENFP-F03"],
+    "source_ids": ["ENFP-S03", "ENFP-S04", "ENFP-S05", "ENFP-S06", "ENFP-S13", "ENFP-S16"],
+    "conflict_ids": ["ENFP-K02"],
+    "state_ids": ["attraction", "comfort", "conflict"],
+    "options": [
+      {"option_id": "q02_laugh_it_off", "strategy": "risky", "rationale": "跟随群体把创意提案降格为固定笑料，损害信任并增加冲突。"},
+      {"option_id": "q02_ask_for_one_case", "strategy": "honest", "rationale": "直接要求一个可检验方案，让活泼表达有被认真评估的机会。"},
+      {"option_id": "q02_compare_constraints", "strategy": "negotiate", "rationale": "用共同条件比较点子，在认可创意与现实约束之间建立可执行讨论。"},
+      {"option_id": "q02_attack_the_group", "strategy": "confront", "rationale": "以人身攻击替 TA 辩护，短期可能制造吸引，但显著放大冲突。"}
+    ]
+  },
+  {
+    "question_id": "Q03",
+    "order": 3,
+    "stage": "contact",
+    "scene_id": "ENFP-SC03",
+    "candidate_id": "ENFP-C05",
+    "behavior_ids": ["ENFP-B05"],
+    "feature_ids": ["ENFP-F03"],
+    "source_ids": ["ENFP-S03", "ENFP-S04", "ENFP-S13", "ENFP-S14", "ENFP-S16", "ENFP-S33"],
+    "conflict_ids": ["ENFP-K03"],
+    "state_ids": ["attraction", "trust", "comfort", "conflict"],
+    "options": [
+      {"option_id": "q03_follow_the_detour", "strategy": "accommodate", "rationale": "本次顺应探索冲动，主要提高吸引力，但对原计划的可靠性略有折损。"},
+      {"option_id": "q03_keep_original_plan", "strategy": "honest", "rationale": "坦白时间上限并守住原约定，主要提高信任与舒适。"},
+      {"option_id": "q03_hide_the_deadline", "strategy": "risky", "rationale": "用表面同意掩盖真实截止时间，把分歧推迟为履约问题。"},
+      {"option_id": "q03_try_twenty_minutes", "strategy": "negotiate", "rationale": "以排队和时长阈值容纳探索，同时保留原计划。"}
+    ]
+  },
+  {
+    "question_id": "Q04",
+    "order": 4,
+    "stage": "contact",
+    "scene_id": "ENFP-SC04",
+    "candidate_id": "ENFP-C07",
+    "behavior_ids": ["ENFP-B07"],
+    "feature_ids": ["ENFP-F06"],
+    "source_ids": ["ENFP-S09", "ENFP-S18", "ENFP-S19", "ENFP-S21", "ENFP-S22", "ENFP-S32", "ENFP-S39", "ENFP-S40"],
+    "conflict_ids": ["ENFP-K06", "ENFP-K10"],
+    "state_ids": ["attraction", "trust", "comfort"],
+    "options": [
+      {"option_id": "q04_name_reply_window", "strategy": "honest", "rationale": "认可分享本身并说明可持续回复窗口，均衡提高信任、舒适和吸引。"},
+      {"option_id": "q04_public_partner_label", "strategy": "risky", "rationale": "用公开称呼测试未确认关系，保留热度却严重越过共同命名边界。"},
+      {"option_id": "q04_reply_when_able", "strategy": "accommodate", "rationale": "享受当前互动且不强行解释，主要提高吸引力，关系含义仍保持开放。"},
+      {"option_id": "q04_separate_pace_and_intent", "strategy": "negotiate", "rationale": "分别协商消息节奏与约会意图，主要提高关系可预期性。"}
+    ]
+  },
+  {
+    "question_id": "Q05",
+    "order": 5,
+    "stage": "contact",
+    "scene_id": "ENFP-SC05",
+    "candidate_id": "ENFP-C09",
+    "behavior_ids": ["ENFP-B09"],
+    "feature_ids": ["ENFP-F01", "ENFP-F04", "ENFP-F05"],
+    "source_ids": ["ENFP-S05", "ENFP-S06", "ENFP-S07", "ENFP-S08", "ENFP-S16", "ENFP-S17", "ENFP-S32"],
+    "conflict_ids": ["ENFP-K01", "ENFP-K09"],
+    "state_ids": ["trust", "comfort", "conflict"],
+    "options": [
+      {"option_id": "q05_change_topic", "strategy": "accommodate", "rationale": "直接尊重停止信号，不索取边界说明，主要提高舒适。"},
+      {"option_id": "q05_accuse_avoidance", "strategy": "confront", "rationale": "以话多为由否认选择性披露，严重损害舒适并升级冲突。"},
+      {"option_id": "q05_offer_support_menu", "strategy": "negotiate", "rationale": "让 TA 选择当下支持方式并约定不追问，主要提高信任。"},
+      {"option_id": "q05_state_care_without_claim", "strategy": "honest", "rationale": "承认关心与好奇，同时把知情需求限定在共同决定所需部分。"}
+    ]
+  },
+  {
+    "question_id": "Q06",
+    "order": 6,
+    "stage": "familiarity",
+    "scene_id": "ENFP-SC06",
+    "candidate_id": "ENFP-C10",
+    "behavior_ids": ["ENFP-B07", "ENFP-B08"],
+    "feature_ids": ["ENFP-F01", "ENFP-F06", "ENFP-F09"],
+    "source_ids": ["ENFP-S03", "ENFP-S04", "ENFP-S09", "ENFP-S12", "ENFP-S18", "ENFP-S19", "ENFP-S23", "ENFP-S32"],
+    "conflict_ids": ["ENFP-K07", "ENFP-K13"],
+    "state_ids": ["comfort", "trust", "attraction"],
+    "options": [
+      {"option_id": "q06_demand_mind_reading", "strategy": "confront", "rationale": "用读心要求检验关心，否定对方主动询问，显著增加冲突。"},
+      {"option_id": "q06_request_listening", "strategy": "honest", "rationale": "清楚指定只听不建议，让支持与当前需要匹配，主要提高舒适。"},
+      {"option_id": "q06_choose_silent_walk", "strategy": "accommodate", "rationale": "接受非语言陪伴并保留之后开口的选择，提高吸引与舒适。"},
+      {"option_id": "q06_split_today_tomorrow", "strategy": "negotiate", "rationale": "把即时安慰、后续行动和双方容量拆开协商，主要提高信任。"}
+    ]
+  },
+  {
+    "question_id": "Q07",
+    "order": 7,
+    "stage": "familiarity",
+    "scene_id": "ENFP-SC07",
+    "candidate_id": "ENFP-C11",
+    "behavior_ids": ["ENFP-B09"],
+    "feature_ids": ["ENFP-F01", "ENFP-F04", "ENFP-F05"],
+    "source_ids": ["ENFP-S05", "ENFP-S06", "ENFP-S07", "ENFP-S08", "ENFP-S16", "ENFP-S17", "ENFP-S32"],
+    "conflict_ids": ["ENFP-K08", "ENFP-K09"],
+    "state_ids": ["trust", "comfort", "conflict"],
+    "options": [
+      {"option_id": "q07_confirm_check_in", "strategy": "negotiate", "rationale": "确认独处偏好并约定有限回访，在尊重空间的同时保持可预期联系。"},
+      {"option_id": "q07_share_offline_photo", "strategy": "risky", "rationale": "未经同意公开低能量时刻，把隐私再次变成社交表演，严重损害信任。"},
+      {"option_id": "q07_offer_thirty_minutes", "strategy": "honest", "rationale": "如实说明可提供的陪伴时长，也允许对方选择独处，提高舒适与信任。"},
+      {"option_id": "q07_leave_room_without_questions", "strategy": "accommodate", "rationale": "不追问地接受独处请求，并留下低压力的后续入口。"}
+    ]
+  },
+  {
+    "question_id": "Q08",
+    "order": 8,
+    "stage": "familiarity",
+    "scene_id": "ENFP-SC08",
+    "candidate_id": "ENFP-C14",
+    "behavior_ids": ["ENFP-B05", "ENFP-B06", "ENFP-B08"],
+    "feature_ids": ["ENFP-F01", "ENFP-F03", "ENFP-F09"],
+    "source_ids": ["ENFP-S12", "ENFP-S13", "ENFP-S14", "ENFP-S16", "ENFP-S17", "ENFP-S23"],
+    "conflict_ids": ["ENFP-K03", "ENFP-K04", "ENFP-K07", "ENFP-K12"],
+    "state_ids": ["trust", "comfort", "conflict"],
+    "options": [
+      {"option_id": "q08_name_cost_and_deadline", "strategy": "honest", "rationale": "同时承认助人动机与实际成本，并给出修复底线。"},
+      {"option_id": "q08_absorb_the_work", "strategy": "accommodate", "rationale": "用接手和表面宽容掩盖愤怒，使真实协作状态变得不可信。"},
+      {"option_id": "q08_reduce_them_to_a_label", "strategy": "confront", "rationale": "把一次失约扩大成人格判词，主要推高冲突并削弱吸引。"},
+      {"option_id": "q08_replan_with_checkpoints", "strategy": "negotiate", "rationale": "用删减、重分工和检查点把道歉转化为可验证修复。"}
+    ]
+  },
+  {
+    "question_id": "Q09",
+    "order": 9,
+    "stage": "ambiguity",
+    "scene_id": "ENFP-SC09",
+    "candidate_id": "ENFP-C15",
+    "behavior_ids": ["ENFP-B11"],
+    "feature_ids": ["ENFP-F07", "ENFP-F08"],
+    "source_ids": ["ENFP-S10", "ENFP-S11", "ENFP-S18", "ENFP-S39", "ENFP-S40", "ENFP-S41"],
+    "conflict_ids": ["ENFP-K05", "ENFP-K10"],
+    "state_ids": ["attraction", "trust", "comfort", "conflict"],
+    "options": [
+      {"option_id": "q09_keep_it_undefined", "strategy": "accommodate", "rationale": "保留高热度但回避关系定义，提升吸引的同时降低可预期信任。"},
+      {"option_id": "q09_state_exclusive_need", "strategy": "honest", "rationale": "明确排他诉求和不匹配时的投入边界，主要提高信任。"},
+      {"option_id": "q09_demand_social_proof", "strategy": "risky", "rationale": "用单方面断联名单作为关系资格测试，严重损害信任与舒适。"},
+      {"option_id": "q09_define_four_axes", "strategy": "negotiate", "rationale": "分项协商并设置复盘点，让热度转化为可修改的共同承诺。"}
+    ]
+  },
+  {
+    "question_id": "Q10",
+    "order": 10,
+    "stage": "ambiguity",
+    "scene_id": "ENFP-SC10",
+    "candidate_id": "ENFP-C16",
+    "behavior_ids": ["ENFP-B04", "ENFP-B12"],
+    "feature_ids": ["ENFP-F04", "ENFP-F06", "ENFP-F08", "ENFP-F09"],
+    "source_ids": ["ENFP-S06", "ENFP-S10", "ENFP-S11", "ENFP-S12", "ENFP-S18", "ENFP-S32"],
+    "conflict_ids": ["ENFP-K05", "ENFP-K11", "ENFP-K12"],
+    "state_ids": ["trust", "comfort", "conflict"],
+    "options": [
+      {"option_id": "q10_demand_total_cutoff", "strategy": "confront", "rationale": "用全面断联替代具体边界讨论，严重压低信任与舒适。"},
+      {"option_id": "q10_write_equal_rules", "strategy": "negotiate", "rationale": "区分互动类型并制定双方适用的规则，主要提高信任。"},
+      {"option_id": "q10_name_specific_boundary", "strategy": "honest", "rationale": "表达具体不安、保留对普通友谊的尊重，并说明不匹配时的决定。"},
+      {"option_id": "q10_hide_jealousy", "strategy": "accommodate", "rationale": "以表面大方换取靠近却隐藏真实需求，短期吸引上升、信任下降。"}
+    ]
+  }
+]

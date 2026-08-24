@@ -1,0 +1,112 @@
+[
+  {
+    "order": 1,
+    "stage": "first_meeting",
+    "scene_id": "ENTJ-SC01",
+    "candidate_id": "ENTJ-C01",
+    "behavior_ids": ["ENTJ-B01"],
+    "feature_ids": ["ENTJ-F01", "ENTJ-F03", "ENTJ-F11"],
+    "source_ids": ["ENTJ-S04", "ENTJ-S05", "ENTJ-S06", "ENTJ-S07", "ENTJ-S26", "ENTJ-S27"],
+    "conflict_ids": ["ENTJ-K01"],
+    "state_ids": ["attraction", "comfort", "conflict"]
+  },
+  {
+    "order": 2,
+    "stage": "first_meeting",
+    "scene_id": "ENTJ-SC02",
+    "candidate_id": "ENTJ-C03",
+    "behavior_ids": ["ENTJ-B02", "ENTJ-B06"],
+    "feature_ids": ["ENTJ-F01", "ENTJ-F02", "ENTJ-F04"],
+    "source_ids": ["ENTJ-S03", "ENTJ-S04", "ENTJ-S05", "ENTJ-S06", "ENTJ-S17", "ENTJ-S26"],
+    "conflict_ids": ["ENTJ-K02", "ENTJ-K06"],
+    "state_ids": ["attraction", "comfort", "conflict"]
+  },
+  {
+    "order": 3,
+    "stage": "contact",
+    "scene_id": "ENTJ-SC03",
+    "candidate_id": "ENTJ-C05",
+    "behavior_ids": ["ENTJ-B02", "ENTJ-B03"],
+    "feature_ids": ["ENTJ-F01", "ENTJ-F05"],
+    "source_ids": ["ENTJ-S03", "ENTJ-S04", "ENTJ-S15", "ENTJ-S17"],
+    "conflict_ids": ["ENTJ-K02", "ENTJ-K03"],
+    "state_ids": ["attraction", "trust", "comfort"]
+  },
+  {
+    "order": 4,
+    "stage": "contact",
+    "scene_id": "ENTJ-SC04",
+    "candidate_id": "ENTJ-C06",
+    "behavior_ids": ["ENTJ-B04"],
+    "feature_ids": ["ENTJ-F02", "ENTJ-F06"],
+    "source_ids": ["ENTJ-S04", "ENTJ-S08", "ENTJ-S09", "ENTJ-S11", "ENTJ-S24"],
+    "conflict_ids": ["ENTJ-K02", "ENTJ-K04"],
+    "state_ids": ["attraction", "trust", "comfort"]
+  },
+  {
+    "order": 5,
+    "stage": "contact",
+    "scene_id": "ENTJ-SC05",
+    "candidate_id": "ENTJ-C07",
+    "behavior_ids": ["ENTJ-B05"],
+    "feature_ids": ["ENTJ-F03", "ENTJ-F05", "ENTJ-F09"],
+    "source_ids": ["ENTJ-S02", "ENTJ-S03", "ENTJ-S07", "ENTJ-S10", "ENTJ-S13", "ENTJ-S16", "ENTJ-S17"],
+    "conflict_ids": ["ENTJ-K05"],
+    "state_ids": ["trust", "comfort", "conflict"]
+  },
+  {
+    "order": 6,
+    "stage": "familiarity",
+    "scene_id": "ENTJ-SC06",
+    "candidate_id": "ENTJ-C11",
+    "behavior_ids": ["ENTJ-B02", "ENTJ-B07"],
+    "feature_ids": ["ENTJ-F01", "ENTJ-F02", "ENTJ-F08"],
+    "source_ids": ["ENTJ-S03", "ENTJ-S04", "ENTJ-S11", "ENTJ-S12", "ENTJ-S17", "ENTJ-S28"],
+    "conflict_ids": ["ENTJ-K02", "ENTJ-K07"],
+    "state_ids": ["trust", "comfort", "conflict"]
+  },
+  {
+    "order": 7,
+    "stage": "familiarity",
+    "scene_id": "ENTJ-SC07",
+    "candidate_id": "ENTJ-C14",
+    "behavior_ids": ["ENTJ-B08", "ENTJ-B10"],
+    "feature_ids": ["ENTJ-F05", "ENTJ-F07", "ENTJ-F09"],
+    "source_ids": ["ENTJ-S02", "ENTJ-S10", "ENTJ-S13", "ENTJ-S14", "ENTJ-S16"],
+    "conflict_ids": ["ENTJ-K08"],
+    "state_ids": ["trust", "comfort", "conflict"]
+  },
+  {
+    "order": 8,
+    "stage": "familiarity",
+    "scene_id": "ENTJ-SC08",
+    "candidate_id": "ENTJ-C15",
+    "behavior_ids": ["ENTJ-B10", "ENTJ-B12"],
+    "feature_ids": ["ENTJ-F02", "ENTJ-F05", "ENTJ-F08", "ENTJ-F09"],
+    "source_ids": ["ENTJ-S02", "ENTJ-S03", "ENTJ-S10", "ENTJ-S11", "ENTJ-S12", "ENTJ-S13", "ENTJ-S16", "ENTJ-S17"],
+    "conflict_ids": ["ENTJ-K08"],
+    "state_ids": ["trust", "comfort", "conflict"]
+  },
+  {
+    "order": 9,
+    "stage": "ambiguity",
+    "scene_id": "ENTJ-SC09",
+    "candidate_id": "ENTJ-C16",
+    "behavior_ids": ["ENTJ-B06", "ENTJ-B11"],
+    "feature_ids": ["ENTJ-F01", "ENTJ-F04", "ENTJ-F06", "ENTJ-F10"],
+    "source_ids": ["ENTJ-S04", "ENTJ-S08", "ENTJ-S09", "ENTJ-S14", "ENTJ-S15", "ENTJ-S17", "ENTJ-S24", "ENTJ-S28"],
+    "conflict_ids": ["ENTJ-K04", "ENTJ-K06", "ENTJ-K10"],
+    "state_ids": ["attraction", "trust", "comfort", "conflict"]
+  },
+  {
+    "order": 10,
+    "stage": "ambiguity",
+    "scene_id": "ENTJ-SC10",
+    "candidate_id": "ENTJ-C17",
+    "behavior_ids": ["ENTJ-B09", "ENTJ-B11"],
+    "feature_ids": ["ENTJ-F06", "ENTJ-F07", "ENTJ-F10"],
+    "source_ids": ["ENTJ-S08", "ENTJ-S09", "ENTJ-S14", "ENTJ-S15", "ENTJ-S17", "ENTJ-S24", "ENTJ-S28"],
+    "conflict_ids": ["ENTJ-K04", "ENTJ-K09", "ENTJ-K10"],
+    "state_ids": ["attraction", "trust", "comfort", "conflict"]
+  }
+]

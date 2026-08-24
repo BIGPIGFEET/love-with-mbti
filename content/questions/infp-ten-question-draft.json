@@ -20,7 +20,7 @@
         "effects": {"attraction": 5, "trust": 10, "comfort": 5, "conflict": 0},
         "npcResponse": "TA 把书翻回夹着书签的那页：“那我只讲这一段，不剧透。你可以听完再反对我。”",
         "feedbackIds": ["trust_up_medium", "comfort_up_slight"],
-        "feedbackText": ["TA开始认真把你的话算进之后的安排。", "TA在你面前少斟酌了一句话。"]
+        "feedbackText": ["TA把你的需要留在了下一次里。", "TA在你面前多说了一句真心话。"]
       },
       {
         "id": "q01_vague_agreement",
@@ -30,7 +30,7 @@
         "effects": {"attraction": 0, "trust": -10, "comfort": -5, "conflict": 5},
         "npcResponse": "TA 看了看你，又看了看封底：“这本其实不是开放式结局。你是不是没看过？”",
         "feedbackIds": ["trust_down_medium", "conflict_up_slight"],
-        "feedbackText": ["TA开始怀疑这句话之后会不会算数。", "这件事留下了一点尚未处理的摩擦。"]
+        "feedbackText": ["TA开始拿不准这句承诺能不能当真。", "这句话留下了一点没说开的别扭。"]
       },
       {
         "id": "q01_trade_references",
@@ -40,7 +40,7 @@
         "effects": {"attraction": 10, "trust": 5, "comfort": 10, "conflict": -5},
         "npcResponse": "TA 把书递给你：“成交。不同意也算认真看过，不用交标准答案。”",
         "feedbackIds": ["attraction_up_medium", "comfort_up_medium"],
-        "feedbackText": ["TA明显更期待下一次只属于你们的时间。", "TA明显更敢直接说出自己的需要。"]
+        "feedbackText": ["TA已经开始期待下一次单独见面。", "TA这次没有把需要藏回去。"]
       },
       {
         "id": "q01_thirty_second_pitch",
@@ -50,7 +50,7 @@
         "effects": {"attraction": 10, "trust": 0, "comfort": -5, "conflict": 5},
         "npcResponse": "TA 真按下计时器：“可以。但你把我喜欢的东西变成路演了，我会扣一点气氛分。”",
         "feedbackIds": ["attraction_up_medium", "comfort_down_slight"],
-        "feedbackText": ["TA明显更期待下一次只属于你们的时间。", "对话里多了一点需要小心绕开的地方。"]
+        "feedbackText": ["TA把下一次两个人的时间看得更认真了。", "对话里悄悄多了一处禁区。"]
       }
     ]
   },
@@ -75,7 +75,7 @@
         "effects": {"attraction": -5, "trust": 5, "comfort": 10, "conflict": -5},
         "npcResponse": "TA 点点头。到家后，消息只有四个字：“到了，谢谢。”但后面多了一个明天再聊的时间。",
         "feedbackIds": ["comfort_up_medium", "conflict_down_slight"],
-        "feedbackText": ["TA明显更敢直接说出自己的需要。", "刚才的分歧松开了一点。"]
+        "feedbackText": ["TA把原本会省略的话说了出来。", "刚才僵着的气氛缓了下来。"]
       },
       {
         "id": "q02_check_without_pressure",
@@ -85,7 +85,7 @@
         "effects": {"attraction": 0, "trust": 10, "comfort": 5, "conflict": -5},
         "npcResponse": "TA 摇头：“不是你。谢谢你问了，也谢谢你没要求我立刻解释。”",
         "feedbackIds": ["trust_up_medium", "conflict_down_slight"],
-        "feedbackText": ["TA开始认真把你的话算进之后的安排。", "刚才的分歧松开了一点。"]
+        "feedbackText": ["TA真的照你说的改了一步。", "你们都没有再把那句重话往下接。"]
       },
       {
         "id": "q02_message_until_answer",
@@ -95,7 +95,7 @@
         "effects": {"attraction": -10, "trust": -5, "comfort": -10, "conflict": 10},
         "npcResponse": "TA 最后只回：“我说了现在不想说话。”之后把消息提醒关掉了。",
         "feedbackIds": ["comfort_down_medium", "conflict_up_medium"],
-        "feedbackText": ["TA开始把原本会说出口的话收回去。", "你们已经不只是在讨论不同答案。"]
+        "feedbackText": ["TA把刚到嘴边的话悄悄咽了回去。", "分歧已经碰到了彼此真正介意的部分。"]
       },
       {
         "id": "q02_offer_two_exits",
@@ -105,7 +105,7 @@
         "effects": {"attraction": 5, "trust": 5, "comfort": 15, "conflict": -5},
         "npcResponse": "TA 选择和你慢慢走到地铁。一路没说几句，但分别前主动问：“下周那家书店，你还去吗？”",
         "feedbackIds": ["comfort_up_strong", "trust_up_slight"],
-        "feedbackText": ["这一刻，你们都不必预演下一句话。", "TA愿意把你的话多当真一点。"]
+        "feedbackText": ["这一刻，沉默也不会让人紧张。", "TA愿意把你的话多当真一点。"]
       }
     ]
   },
@@ -130,7 +130,7 @@
         "effects": {"attraction": -5, "trust": -15, "comfort": -5, "conflict": 15},
         "npcResponse": "TA 把视线移开：“我只是送给你，不是送给这桌人的讨论。”",
         "feedbackIds": ["trust_down_strong", "conflict_up_strong"],
-        "feedbackText": ["TA不再愿意把重要的事放进这段关系。", "这场互动正在迅速失去修复空间。"]
+        "feedbackText": ["TA开始把重要的事从这段关系里收回去。", "这场对话已经很难收回来。"]
       },
       {
         "id": "q03_ask_lightly",
@@ -140,7 +140,7 @@
         "effects": {"attraction": 0, "trust": 10, "comfort": 5, "conflict": 0},
         "npcResponse": "TA 捏了下包装角：“靠近一点。还没靠近到替我们定义关系。”",
         "feedbackIds": ["trust_up_medium", "comfort_up_slight"],
-        "feedbackText": ["TA开始认真把你的话算进之后的安排。", "TA在你面前少斟酌了一句话。"]
+        "feedbackText": ["TA没有略过你刚才的要求。", "TA没有再把刚到嘴边的话收回去。"]
       },
       {
         "id": "q03_receive_without_label",
@@ -150,7 +150,7 @@
         "effects": {"attraction": 10, "trust": 5, "comfort": 10, "conflict": 0},
         "npcResponse": "TA 看见书签真的被用上，笑得比递给你时明显：“那它没有买错。”",
         "feedbackIds": ["attraction_up_medium", "comfort_up_medium"],
-        "feedbackText": ["TA明显更期待下一次只属于你们的时间。", "TA明显更敢直接说出自己的需要。"]
+        "feedbackText": ["TA说起下次见面时明显更高兴。", "TA不再提前设想你会怎样回应。"]
       },
       {
         "id": "q03_set_gift_tone",
@@ -160,7 +160,7 @@
         "effects": {"attraction": 5, "trust": 10, "comfort": 10, "conflict": -5},
         "npcResponse": "TA 点头：“好。小东西可以只是想起你，大事不让你猜。”",
         "feedbackIds": ["trust_up_medium", "comfort_up_medium"],
-        "feedbackText": ["TA开始认真把你的话算进之后的安排。", "TA明显更敢直接说出自己的需要。"]
+        "feedbackText": ["TA把你说的时间记了下来。", "TA说得比刚才直接。"]
       }
     ]
   },
@@ -185,7 +185,7 @@
         "effects": {"attraction": 5, "trust": 10, "comfort": 15, "conflict": -5},
         "npcResponse": "TA 把展览时间圈起来：“这样我敢期待，而不是先担心自己什么时候撑不住。”",
         "feedbackIds": ["comfort_up_strong", "trust_up_medium"],
-        "feedbackText": ["这一刻，你们都不必预演下一句话。", "TA开始认真把你的话算进之后的安排。"]
+        "feedbackText": ["你们终于可以想到什么就说什么。", "TA把你的需要留在了下一次里。"]
       },
       {
         "id": "q04_push_through",
@@ -195,7 +195,7 @@
         "effects": {"attraction": -5, "trust": 0, "comfort": -20, "conflict": 15},
         "npcResponse": "TA 把行程单还给你：“我是在告诉你边界，不是在邀请你纠正我的体力。”",
         "feedbackIds": ["comfort_down_strong", "conflict_up_strong"],
-        "feedbackText": ["TA已经很难在这段互动里放松下来。", "这场互动正在迅速失去修复空间。"]
+        "feedbackText": ["TA把原本想说的话重新藏了起来。", "你们开始只剩下互相防备。"]
       },
       {
         "id": "q04_cancel_everything",
@@ -205,7 +205,7 @@
         "effects": {"attraction": 0, "trust": -5, "comfort": 5, "conflict": -5},
         "npcResponse": "TA 没有立刻答应：“可你明明想去。把你的需要删掉，不会让我更轻松。”",
         "feedbackIds": ["trust_down_slight", "conflict_down_slight"],
-        "feedbackText": ["TA对你刚才的说法留下了一个问号。", "刚才的分歧松开了一点。"]
+        "feedbackText": ["TA没有立刻相信你刚才的答案。", "刚才压着的火气缓了下来。"]
       },
       {
         "id": "q04_keep_own_plan",
@@ -215,7 +215,7 @@
         "effects": {"attraction": 10, "trust": 15, "comfort": 10, "conflict": 0},
         "npcResponse": "TA 松了口气：“可以。你不用为了证明体贴，把自己的周末也关掉。”",
         "feedbackIds": ["trust_up_strong", "attraction_up_medium"],
-        "feedbackText": ["TA相信重要的事可以交给你共同决定。", "TA明显更期待下一次只属于你们的时间。"]
+        "feedbackText": ["TA愿意和你一起定下这件事。", "TA没有藏住对下一次独处的期待。"]
       }
     ]
   },
@@ -240,7 +240,7 @@
         "effects": {"attraction": 15, "trust": -5, "comfort": 5, "conflict": 0},
         "npcResponse": "TA 被这句话击中了一瞬，又问：“你明年的假期已经确定了吗？”",
         "feedbackIds": ["attraction_up_strong", "trust_down_slight"],
-        "feedbackText": ["TA已经开始主动把“下次”说成具体安排。", "TA对你刚才的说法留下了一个问号。"]
+        "feedbackText": ["TA主动给出了下一次的时间。", "TA开始拿不准这句话有几分认真。"]
       },
       {
         "id": "q05_mock_the_fantasy",
@@ -250,7 +250,7 @@
         "effects": {"attraction": -5, "trust": 0, "comfort": -5, "conflict": 20},
         "npcResponse": "TA 也笑了一下，但没再继续描述：“好，当我没说。”",
         "feedbackIds": ["conflict_up_strong", "comfort_down_slight"],
-        "feedbackText": ["这场互动正在迅速失去修复空间。", "对话里多了一点需要小心绕开的地方。"]
+        "feedbackText": ["这件事正越说越伤人。", "你们都开始避开刚才碰到的地方。"]
       },
       {
         "id": "q05_make_small_version",
@@ -260,7 +260,7 @@
         "effects": {"attraction": 5, "trust": 15, "comfort": 10, "conflict": -5},
         "npcResponse": "TA 打开日历，没有急着订票：“两天版可以。愿景先不用消失，但要让现实有机会回答。”",
         "feedbackIds": ["trust_up_strong", "comfort_up_medium"],
-        "feedbackText": ["TA相信重要的事可以交给你共同决定。", "TA明显更敢直接说出自己的需要。"]
+        "feedbackText": ["TA没有收回交给你的那部分。", "TA这次没有把需要藏回去。"]
       },
       {
         "id": "q05_name_uncertainty",
@@ -270,7 +270,7 @@
         "effects": {"attraction": -5, "trust": 10, "comfort": 5, "conflict": 5},
         "npcResponse": "TA 安静几秒：“有点扫兴，但比你先答应、以后再躲开好。”",
         "feedbackIds": ["trust_up_medium", "conflict_up_slight"],
-        "feedbackText": ["TA开始认真把你的话算进之后的安排。", "这件事留下了一点尚未处理的摩擦。"]
+        "feedbackText": ["TA真的照你说的改了一步。", "刚才那点情绪还没有完全过去。"]
       }
     ]
   },
@@ -281,7 +281,7 @@
     "title": "听完以后，截止日期还在",
     "scene": "你准备很久的方案被否定，回家后向 TA 讲了很久。TA 一直听着，也准确复述了最让你难受的部分。可手机提醒弹出：修改稿明早九点前必须提交。",
     "npcQuote": "我可以继续听，也可以和你一起拆下一步。现在你更需要哪一个？",
-    "prompt": "你会怎样回应 TA 的支持？",
+    "prompt": "截止时间还在，你会请TA怎么帮？",
     "conflictDimensions": ["C04", "C13"],
     "researchRefs": ["S01", "S02", "S07", "S08"],
     "tags": ["熟悉", "情绪支持", "解决问题", "个人责任"],
@@ -295,7 +295,7 @@
         "effects": {"attraction": 10, "trust": 10, "comfort": 10, "conflict": -10},
         "npcResponse": "TA 设了一个十分钟计时器，却没有催你。时间到后，只问：“第一步你想保留什么？”",
         "feedbackIds": ["comfort_up_medium", "conflict_down_medium"],
-        "feedbackText": ["TA明显更敢直接说出自己的需要。", "你们找到了让分歧停下来、以后再谈的方法。"]
+        "feedbackText": ["TA把原本会省略的话说了出来。", "你们先把分歧停在了不会继续伤人的位置。"]
       },
       {
         "id": "q06_keep_venting",
@@ -305,7 +305,7 @@
         "effects": {"attraction": 5, "trust": -5, "comfort": 10, "conflict": 10},
         "npcResponse": "TA 留下来继续听，却看了一眼时间：“可以。但我不能替明早的你承担今晚没开始的部分。”",
         "feedbackIds": ["comfort_up_medium", "trust_down_slight"],
-        "feedbackText": ["TA明显更敢直接说出自己的需要。", "TA对你刚才的说法留下了一个问号。"]
+        "feedbackText": ["TA终于不用先猜这句话会不会被误解。", "TA对你的承诺多了一点迟疑。"]
       },
       {
         "id": "q06_request_structure",
@@ -313,9 +313,9 @@
         "strategyLabel": "直接求助",
         "text": "“谢谢你先听我说。现在请陪我列一个最小可交版本，我卡住时再问你，不把整份任务交给你。”",
         "effects": {"attraction": 5, "trust": 15, "comfort": 5, "conflict": -5},
-        "npcResponse": "TA 把纸分成‘必须改’和‘可以晚点’两栏：“这样我是在帮你，不是在接管你。”",
+        "npcResponse": "TA 把纸分成‘今晚必须改’和‘可以晚点’两栏：“先做到能交。最后怎么写，你来定。”",
         "feedbackIds": ["trust_up_strong", "conflict_down_slight"],
-        "feedbackText": ["TA相信重要的事可以交给你共同决定。", "刚才的分歧松开了一点。"]
+        "feedbackText": ["TA把下一步也放到了你面前。", "你们之间那点紧张终于松开了。"]
       },
       {
         "id": "q06_blame_for_not_fixing",
@@ -323,9 +323,9 @@
         "strategyLabel": "迁怒指责",
         "text": "“你听了这么久，怎么连一个能用的办法都没给？光理解我有什么用？”",
         "effects": {"attraction": -5, "trust": 0, "comfort": -10, "conflict": 20},
-        "npcResponse": "TA 把纸笔放下：“你可以要求帮助，但不能把你的截止日期变成我没尽责。”",
+        "npcResponse": "TA 把纸笔放下：“你可以嫌我的办法没用。但这份稿子没交，不全是我的责任。”",
         "feedbackIds": ["comfort_down_medium", "conflict_up_strong"],
-        "feedbackText": ["TA开始把原本会说出口的话收回去。", "这场互动正在迅速失去修复空间。"]
+        "feedbackText": ["TA开始省略原本想告诉你的部分。", "TA已经不想继续这一轮争执。"]
       }
     ]
   },
@@ -336,7 +336,7 @@
     "title": "暂停不能没有返回时间",
     "scene": "一次分歧越说越快。TA 被你的一句话刺到，沉默片刻后拿起外套，明显已经无法继续好好表达。",
     "npcQuote": "我现在继续说，只会说出更伤人的话。我想先一个人待一会儿。",
-    "prompt": "你会怎样回应这次暂停？",
+    "prompt": "TA想先离开一会儿，你会怎么回应？",
     "conflictDimensions": ["C05", "C12"],
     "researchRefs": ["S01", "S03", "S04", "S07", "S08", "S10"],
     "tags": ["熟悉", "冲突暂停", "返回承诺", "修复责任"],
@@ -350,7 +350,7 @@
         "effects": {"attraction": 5, "trust": 10, "comfort": 5, "conflict": 0},
         "npcResponse": "TA 想了一会儿：“明天晚上七点。如果我还没整理好，会在七点前给新时间。”",
         "feedbackIds": ["trust_up_medium", "comfort_up_slight"],
-        "feedbackText": ["TA开始认真把你的话算进之后的安排。", "TA在你面前少斟酌了一句话。"]
+        "feedbackText": ["TA没有略过你刚才的要求。", "TA这次说话时少了一层顾虑。"]
       },
       {
         "id": "q07_force_resolution",
@@ -358,9 +358,9 @@
         "strategyLabel": "追逐施压",
         "text": "挡住话题不让结束：“不行，现在就说清楚。你一走就是冷处理。”",
         "effects": {"attraction": -5, "trust": 0, "comfort": -15, "conflict": 20},
-        "npcResponse": "TA 后退一步：“我正在告诉你我会说坏。你可以不喜欢暂停，但不能取消我的离开权。”",
+        "npcResponse": "TA 后退一步：“我已经快说出更难听的话了。你可以生气，但现在别拦我。”",
         "feedbackIds": ["comfort_down_strong", "conflict_up_strong"],
-        "feedbackText": ["TA已经很难在这段互动里放松下来。", "这场互动正在迅速失去修复空间。"]
+        "feedbackText": ["TA已经很难在你面前安心做自己。", "这场对话已经很难收回来。"]
       },
       {
         "id": "q07_pause_with_anchor",
@@ -370,7 +370,7 @@
         "effects": {"attraction": -5, "trust": 15, "comfort": 10, "conflict": -10},
         "npcResponse": "TA 点头，把时间写进日历。第二天六点五十八分，消息准时出现：“我准备好了。”",
         "feedbackIds": ["trust_up_strong", "conflict_down_medium"],
-        "feedbackText": ["TA相信重要的事可以交给你共同决定。", "你们找到了让分歧停下来、以后再谈的方法。"]
+        "feedbackText": ["TA仍愿意让你参与重要安排。", "你们给这次争执留出了以后再谈的余地。"]
       },
       {
         "id": "q07_wait_without_anchor",
@@ -380,7 +380,7 @@
         "effects": {"attraction": 0, "trust": -5, "comfort": 5, "conflict": -5},
         "npcResponse": "TA 得到了安静，却在门口停了一下：“我是不是也该告诉你什么时候回来？”",
         "feedbackIds": ["trust_down_slight", "conflict_down_slight"],
-        "feedbackText": ["TA对你刚才的说法留下了一个问号。", "刚才的分歧松开了一点。"]
+        "feedbackText": ["TA没有把这句话完全当真。", "刚才那句话终于没有继续伤人。"]
       }
     ]
   },
@@ -391,7 +391,7 @@
     "title": "这份工作值不值得接",
     "scene": "你得到一份报酬很高的短期宣传工作。产品本身合法，但客户希望把效果写得比现有材料更肯定。你需要这笔收入，也认为自己可以争取改掉夸张部分。TA 听完后明确反对原方案。",
     "npcQuote": "你当然可以接工作。但如果明知道那句话会让人误解，我没法把它当成普通包装。",
-    "prompt": "你会怎样处理这次价值分歧？",
+    "prompt": "这份工作关系到收入，也碰到TA的底线。你会怎么做？",
     "conflictDimensions": ["C02", "C11"],
     "researchRefs": ["S01", "S02", "S07", "S08", "S10"],
     "tags": ["熟悉", "价值分歧", "现实压力", "决定边界"],
@@ -403,9 +403,9 @@
         "strategyLabel": "划分共同边界",
         "text": "先跟客户说清楚：只写现有材料能证明的效果；对方如果坚持夸大，你就不接。之后把结果如实告诉 TA。",
         "effects": {"attraction": 5, "trust": 15, "comfort": 10, "conflict": -5},
-        "npcResponse": "TA 没替你宣布辞职，只问：“如果客户拒绝修改，你真的会走吗？”得到确认后，TA 把争论停在了具体条件上。",
+        "npcResponse": "TA 没替你回绝工作，只问：“如果客户不让改，你真的会走吗？”听见你的回答后，TA 没再往别处争。",
         "feedbackIds": ["trust_up_strong", "comfort_up_medium"],
-        "feedbackText": ["TA相信重要的事可以交给你共同决定。", "TA明显更敢直接说出自己的需要。"]
+        "feedbackText": ["TA没有独自决定这件事的答案。", "TA说得比刚才直接。"]
       },
       {
         "id": "q08_refuse_immediately",
@@ -415,7 +415,7 @@
         "effects": {"attraction": 0, "trust": -5, "comfort": 5, "conflict": -10},
         "npcResponse": "TA 没有因此轻松：“我说的是我不能认同那句话，不是让你把决定和后果都交给我。”",
         "feedbackIds": ["trust_down_slight", "conflict_down_medium"],
-        "feedbackText": ["TA对你刚才的说法留下了一个问号。", "你们找到了让分歧停下来、以后再谈的方法。"]
+        "feedbackText": ["TA开始怀疑你是否真的明白这件事。", "你们终于没有让同一个问题继续升级。"]
       },
       {
         "id": "q08_take_and_dismiss",
@@ -425,7 +425,7 @@
         "effects": {"attraction": 0, "trust": -20, "comfort": 0, "conflict": 20},
         "npcResponse": "TA 没再替你算收入，只说：“你可以不同意我，不用把我的立场说成不懂现实。”",
         "feedbackIds": ["trust_down_strong", "conflict_up_strong"],
-        "feedbackText": ["TA不再愿意把重要的事放进这段关系。", "这场互动正在迅速失去修复空间。"]
+        "feedbackText": ["TA不再想让你参与那些真正重要的决定。", "你们开始只剩下互相防备。"]
       },
       {
         "id": "q08_keep_decision_right",
@@ -435,7 +435,7 @@
         "effects": {"attraction": 0, "trust": 10, "comfort": 5, "conflict": 10},
         "npcResponse": "TA 仍不完全赞同，却点了头：“决定是你的。我会看你最后怎么写，而不是要求你先证明站在我这边。”",
         "feedbackIds": ["trust_up_medium", "conflict_up_medium"],
-        "feedbackText": ["TA开始认真把你的话算进之后的安排。", "你们已经不只是在讨论不同答案。"]
+        "feedbackText": ["TA把你说的时间记了下来。", "你们争的已经不只是眼前这件事。"]
       }
     ]
   },
@@ -446,7 +446,7 @@
     "title": "长信没有回答那个问题",
     "scene": "一次约会结束后，TA 给你一封很长的信，写了记得的细节、感谢和想继续靠近的愿望。你读完很心动，却发现信里没有回答你上次提出的排他关系问题。",
     "npcQuote": "我不是在回避你。我只是怕一个词说出口以后，里面装着的不是同一件事。",
-    "prompt": "你会怎样推进这次关系确认？",
+    "prompt": "信里没有回答排他的问题，你会怎么问？",
     "conflictDimensions": ["C08", "C10"],
     "researchRefs": ["S01", "S02", "S03", "S04", "S08", "S09"],
     "tags": ["暧昧", "长信", "关系定义", "排他同意"],
@@ -460,7 +460,7 @@
         "effects": {"attraction": 0, "trust": -10, "comfort": -10, "conflict": 20},
         "npcResponse": "TA 把信收回一点：“我写的是我在乎你，不是授权你替我回答。”",
         "feedbackIds": ["trust_down_medium", "conflict_up_strong"],
-        "feedbackText": ["TA开始怀疑这句话之后会不会算数。", "这场互动正在迅速失去修复空间。"]
+        "feedbackText": ["TA不知道你之后还会不会记得这句话。", "这件事正越说越伤人。"]
       },
       {
         "id": "q09_define_three_terms",
@@ -468,9 +468,9 @@
         "strategyLabel": "拆解协议",
         "text": "先说清三件事：是否停止和其他人约会、在朋友面前如何介绍、一个月后何时复盘；称呼可以最后决定。",
         "effects": {"attraction": 15, "trust": 15, "comfort": 5, "conflict": -5},
-        "npcResponse": "TA 在信背面写下三行答案：“这样我知道自己答应的是什么，也知道你不是只要一个漂亮称呼。”",
+        "npcResponse": "TA 在信背面写下三行答案：“先把这三件事说清楚。称呼晚一点决定也可以。”",
         "feedbackIds": ["trust_up_strong", "attraction_up_strong"],
-        "feedbackText": ["TA相信重要的事可以交给你共同决定。", "TA已经开始主动把“下次”说成具体安排。"]
+        "feedbackText": ["TA没有收回交给你的那部分。", "TA没让“下次”只停在口头。"]
       },
       {
         "id": "q09_wait_without_need",
@@ -480,7 +480,7 @@
         "effects": {"attraction": 20, "trust": -10, "comfort": 5, "conflict": -5},
         "npcResponse": "TA 被你的温柔打动，却没有因此更清楚：“可我还是不知道，你到底在等什么。”",
         "feedbackIds": ["attraction_up_strong", "trust_down_medium"],
-        "feedbackText": ["TA已经开始主动把“下次”说成具体安排。", "TA开始怀疑这句话之后会不会算数。"]
+        "feedbackText": ["TA把下一次留进了日历。", "TA对这份保证多留了一层怀疑。"]
       },
       {
         "id": "q09_set_answer_window",
@@ -488,9 +488,9 @@
         "strategyLabel": "给出决定窗口",
         "text": "“我珍惜这封信，但我仍需要排他关系的明确答案。你可以考虑一周；如果还不能答，我会把见面和联系退回普通约会的程度。”",
         "effects": {"attraction": -5, "trust": 20, "comfort": 5, "conflict": 5},
-        "npcResponse": "TA 没把期限当作惩罚：“一周可以。你说清楚了等待的代价，我也该说清楚我能不能承担。”",
+        "npcResponse": "TA 把信折好：“一周可以。到时候我会回答，不让你继续靠这封信猜。”",
         "feedbackIds": ["trust_up_strong", "conflict_up_slight"],
-        "feedbackText": ["TA相信重要的事可以交给你共同决定。", "这件事留下了一点尚未处理的摩擦。"]
+        "feedbackText": ["TA把下一步也放到了你面前。", "你们之间多了一处需要以后说清的地方。"]
       }
     ]
   },
@@ -501,7 +501,7 @@
     "title": "随性也要落在日历上",
     "scene": "谈过关系定义后，你们第一次认真讨论长期节奏。你希望见面和联系有基本预期，TA 则担心固定安排会让关系变成打卡。",
     "npcQuote": "我想保留临时起意的空间，但也不想让你一直等。你最低需要怎样的稳定？",
-    "prompt": "你会怎样制定之后的相处节奏？",
+    "prompt": "你最低需要怎样的稳定，才不会一直等？",
     "conflictDimensions": ["C05", "C07"],
     "researchRefs": ["S01", "S02", "S03", "S06", "S07", "S10", "S12"],
     "tags": ["暧昧", "长期维护", "联系节奏", "弹性与可靠"],
@@ -515,7 +515,7 @@
         "effects": {"attraction": 20, "trust": -20, "comfort": 0, "conflict": 5},
         "npcResponse": "TA 先松了口气，又把日历停在空白页：“可这样只有我的节奏，你的需要没有出现。”",
         "feedbackIds": ["attraction_up_strong", "trust_down_strong"],
-        "feedbackText": ["TA已经开始主动把“下次”说成具体安排。", "TA不再愿意把重要的事放进这段关系。"]
+        "feedbackText": ["TA主动给出了下一次的时间。", "TA把原本交给你的信任撤了回来。"]
       },
       {
         "id": "q10_state_minimum",
@@ -525,7 +525,7 @@
         "effects": {"attraction": -10, "trust": 15, "comfort": 5, "conflict": 5},
         "npcResponse": "TA 没把“不适合”当威胁：“一次见面我能答应。回复这条，我想改成一天内报个平安，可以吗？”",
         "feedbackIds": ["trust_up_strong", "conflict_up_slight"],
-        "feedbackText": ["TA相信重要的事可以交给你共同决定。", "这件事留下了一点尚未处理的摩擦。"]
+        "feedbackText": ["TA仍愿意让你参与重要安排。", "这次分歧暂时留在了原地。"]
       },
       {
         "id": "q10_disappear_to_test",
@@ -535,17 +535,17 @@
         "effects": {"attraction": 0, "trust": -20, "comfort": -10, "conflict": 20},
         "npcResponse": "TA 没有追着证明，只在你回来后说：“测试不是协议。你让我在不知情时参加了一场考试。”",
         "feedbackIds": ["trust_down_strong", "conflict_up_strong"],
-        "feedbackText": ["TA不再愿意把重要的事放进这段关系。", "这场互动正在迅速失去修复空间。"]
+        "feedbackText": ["TA已经不愿再把重要心事留在这里。", "TA已经不想继续这一轮争执。"]
       },
       {
         "id": "q10_build_flexible_rhythm",
         "strategy": "negotiate",
         "strategyLabel": "建立弹性协议",
-        "text": "约定每七到十天至少一次提前确定的见面；想临时改期的人尽早说明并给新时间，没力气聊天时也直接说一声。",
+        "text": "希望至少提前定下下一次见面；真要改期就给个新时间，没力气聊天也说一声。",
         "effects": {"attraction": 15, "trust": 15, "comfort": 10, "conflict": 0},
-        "npcResponse": "TA 在日历上留出第一个时间块：“这样随性不是失联，固定也不是打卡。改期的人负责把下一次放回来。”",
+        "npcResponse": "TA 在日历上留出第一个时间块：“这样可以。改期没关系，别只剩一句‘以后再说’。”",
         "feedbackIds": ["attraction_up_strong", "trust_up_strong"],
-        "feedbackText": ["TA已经开始主动把“下次”说成具体安排。", "TA相信重要的事可以交给你共同决定。"]
+        "feedbackText": ["TA没让“下次”只停在口头。", "TA把选择留在了你们两个人之间。"]
       }
     ]
   }

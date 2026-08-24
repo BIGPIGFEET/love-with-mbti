@@ -44,8 +44,8 @@ export const infpQuestions = [
           "comfort_up_slight"
         ],
         "feedbackText": [
-          "TA开始认真把你的话算进之后的安排。",
-          "TA在你面前少斟酌了一句话。"
+          "TA把你的需要留在了下一次里。",
+          "TA在你面前多说了一句真心话。"
         ]
       },
       {
@@ -65,8 +65,8 @@ export const infpQuestions = [
           "conflict_up_slight"
         ],
         "feedbackText": [
-          "TA开始怀疑这句话之后会不会算数。",
-          "这件事留下了一点尚未处理的摩擦。"
+          "TA开始拿不准这句承诺能不能当真。",
+          "这句话留下了一点没说开的别扭。"
         ]
       },
       {
@@ -86,8 +86,8 @@ export const infpQuestions = [
           "comfort_up_medium"
         ],
         "feedbackText": [
-          "TA明显更期待下一次只属于你们的时间。",
-          "TA明显更敢直接说出自己的需要。"
+          "TA已经开始期待下一次单独见面。",
+          "TA这次没有把需要藏回去。"
         ]
       },
       {
@@ -107,8 +107,8 @@ export const infpQuestions = [
           "comfort_down_slight"
         ],
         "feedbackText": [
-          "TA明显更期待下一次只属于你们的时间。",
-          "对话里多了一点需要小心绕开的地方。"
+          "TA把下一次两个人的时间看得更认真了。",
+          "对话里悄悄多了一处禁区。"
         ]
       }
     ]
@@ -158,8 +158,8 @@ export const infpQuestions = [
           "conflict_down_slight"
         ],
         "feedbackText": [
-          "TA明显更敢直接说出自己的需要。",
-          "刚才的分歧松开了一点。"
+          "TA把原本会省略的话说了出来。",
+          "刚才僵着的气氛缓了下来。"
         ]
       },
       {
@@ -179,8 +179,8 @@ export const infpQuestions = [
           "conflict_down_slight"
         ],
         "feedbackText": [
-          "TA开始认真把你的话算进之后的安排。",
-          "刚才的分歧松开了一点。"
+          "TA真的照你说的改了一步。",
+          "你们都没有再把那句重话往下接。"
         ]
       },
       {
@@ -200,8 +200,8 @@ export const infpQuestions = [
           "conflict_up_medium"
         ],
         "feedbackText": [
-          "TA开始把原本会说出口的话收回去。",
-          "你们已经不只是在讨论不同答案。"
+          "TA把刚到嘴边的话悄悄咽了回去。",
+          "分歧已经碰到了彼此真正介意的部分。"
         ]
       },
       {
@@ -221,7 +221,7 @@ export const infpQuestions = [
           "trust_up_slight"
         ],
         "feedbackText": [
-          "这一刻，你们都不必预演下一句话。",
+          "这一刻，沉默也不会让人紧张。",
           "TA愿意把你的话多当真一点。"
         ]
       }
@@ -270,8 +270,8 @@ export const infpQuestions = [
           "conflict_up_strong"
         ],
         "feedbackText": [
-          "TA不再愿意把重要的事放进这段关系。",
-          "这场互动正在迅速失去修复空间。"
+          "TA开始把重要的事从这段关系里收回去。",
+          "这场对话已经很难收回来。"
         ]
       },
       {
@@ -291,8 +291,8 @@ export const infpQuestions = [
           "comfort_up_slight"
         ],
         "feedbackText": [
-          "TA开始认真把你的话算进之后的安排。",
-          "TA在你面前少斟酌了一句话。"
+          "TA没有略过你刚才的要求。",
+          "TA没有再把刚到嘴边的话收回去。"
         ]
       },
       {
@@ -312,8 +312,8 @@ export const infpQuestions = [
           "comfort_up_medium"
         ],
         "feedbackText": [
-          "TA明显更期待下一次只属于你们的时间。",
-          "TA明显更敢直接说出自己的需要。"
+          "TA说起下次见面时明显更高兴。",
+          "TA不再提前设想你会怎样回应。"
         ]
       },
       {
@@ -333,8 +333,8 @@ export const infpQuestions = [
           "comfort_up_medium"
         ],
         "feedbackText": [
-          "TA开始认真把你的话算进之后的安排。",
-          "TA明显更敢直接说出自己的需要。"
+          "TA把你说的时间记了下来。",
+          "TA说得比刚才直接。"
         ]
       }
     ]
@@ -380,8 +380,8 @@ export const infpQuestions = [
           "trust_up_medium"
         ],
         "feedbackText": [
-          "这一刻，你们都不必预演下一句话。",
-          "TA开始认真把你的话算进之后的安排。"
+          "你们终于可以想到什么就说什么。",
+          "TA把你的需要留在了下一次里。"
         ]
       },
       {
@@ -401,8 +401,8 @@ export const infpQuestions = [
           "conflict_up_strong"
         ],
         "feedbackText": [
-          "TA已经很难在这段互动里放松下来。",
-          "这场互动正在迅速失去修复空间。"
+          "TA把原本想说的话重新藏了起来。",
+          "你们开始只剩下互相防备。"
         ]
       },
       {
@@ -422,8 +422,8 @@ export const infpQuestions = [
           "conflict_down_slight"
         ],
         "feedbackText": [
-          "TA对你刚才的说法留下了一个问号。",
-          "刚才的分歧松开了一点。"
+          "TA没有立刻相信你刚才的答案。",
+          "刚才压着的火气缓了下来。"
         ]
       },
       {
@@ -443,8 +443,8 @@ export const infpQuestions = [
           "attraction_up_medium"
         ],
         "feedbackText": [
-          "TA相信重要的事可以交给你共同决定。",
-          "TA明显更期待下一次只属于你们的时间。"
+          "TA愿意和你一起定下这件事。",
+          "TA没有藏住对下一次独处的期待。"
         ]
       }
     ]
@@ -493,8 +493,8 @@ export const infpQuestions = [
           "trust_down_slight"
         ],
         "feedbackText": [
-          "TA已经开始主动把“下次”说成具体安排。",
-          "TA对你刚才的说法留下了一个问号。"
+          "TA主动给出了下一次的时间。",
+          "TA开始拿不准这句话有几分认真。"
         ]
       },
       {
@@ -514,8 +514,8 @@ export const infpQuestions = [
           "comfort_down_slight"
         ],
         "feedbackText": [
-          "这场互动正在迅速失去修复空间。",
-          "对话里多了一点需要小心绕开的地方。"
+          "这件事正越说越伤人。",
+          "你们都开始避开刚才碰到的地方。"
         ]
       },
       {
@@ -535,8 +535,8 @@ export const infpQuestions = [
           "comfort_up_medium"
         ],
         "feedbackText": [
-          "TA相信重要的事可以交给你共同决定。",
-          "TA明显更敢直接说出自己的需要。"
+          "TA没有收回交给你的那部分。",
+          "TA这次没有把需要藏回去。"
         ]
       },
       {
@@ -556,8 +556,8 @@ export const infpQuestions = [
           "conflict_up_slight"
         ],
         "feedbackText": [
-          "TA开始认真把你的话算进之后的安排。",
-          "这件事留下了一点尚未处理的摩擦。"
+          "TA真的照你说的改了一步。",
+          "刚才那点情绪还没有完全过去。"
         ]
       }
     ]
@@ -569,7 +569,7 @@ export const infpQuestions = [
     "title": "听完以后，截止日期还在",
     "scene": "你准备很久的方案被否定，回家后向 TA 讲了很久。TA 一直听着，也准确复述了最让你难受的部分。可手机提醒弹出：修改稿明早九点前必须提交。",
     "npcQuote": "我可以继续听，也可以和你一起拆下一步。现在你更需要哪一个？",
-    "prompt": "你会怎样回应 TA 的支持？",
+    "prompt": "截止时间还在，你会请TA怎么帮？",
     "conflictDimensions": [
       "C04",
       "C13"
@@ -605,8 +605,8 @@ export const infpQuestions = [
           "conflict_down_medium"
         ],
         "feedbackText": [
-          "TA明显更敢直接说出自己的需要。",
-          "你们找到了让分歧停下来、以后再谈的方法。"
+          "TA把原本会省略的话说了出来。",
+          "你们先把分歧停在了不会继续伤人的位置。"
         ]
       },
       {
@@ -626,8 +626,8 @@ export const infpQuestions = [
           "trust_down_slight"
         ],
         "feedbackText": [
-          "TA明显更敢直接说出自己的需要。",
-          "TA对你刚才的说法留下了一个问号。"
+          "TA终于不用先猜这句话会不会被误解。",
+          "TA对你的承诺多了一点迟疑。"
         ]
       },
       {
@@ -641,14 +641,14 @@ export const infpQuestions = [
           "comfort": 5,
           "conflict": -5
         },
-        "npcResponse": "TA 把纸分成‘必须改’和‘可以晚点’两栏：“这样我是在帮你，不是在接管你。”",
+        "npcResponse": "TA 把纸分成‘今晚必须改’和‘可以晚点’两栏：“先做到能交。最后怎么写，你来定。”",
         "feedbackIds": [
           "trust_up_strong",
           "conflict_down_slight"
         ],
         "feedbackText": [
-          "TA相信重要的事可以交给你共同决定。",
-          "刚才的分歧松开了一点。"
+          "TA把下一步也放到了你面前。",
+          "你们之间那点紧张终于松开了。"
         ]
       },
       {
@@ -662,14 +662,14 @@ export const infpQuestions = [
           "comfort": -10,
           "conflict": 20
         },
-        "npcResponse": "TA 把纸笔放下：“你可以要求帮助，但不能把你的截止日期变成我没尽责。”",
+        "npcResponse": "TA 把纸笔放下：“你可以嫌我的办法没用。但这份稿子没交，不全是我的责任。”",
         "feedbackIds": [
           "comfort_down_medium",
           "conflict_up_strong"
         ],
         "feedbackText": [
-          "TA开始把原本会说出口的话收回去。",
-          "这场互动正在迅速失去修复空间。"
+          "TA开始省略原本想告诉你的部分。",
+          "TA已经不想继续这一轮争执。"
         ]
       }
     ]
@@ -681,7 +681,7 @@ export const infpQuestions = [
     "title": "暂停不能没有返回时间",
     "scene": "一次分歧越说越快。TA 被你的一句话刺到，沉默片刻后拿起外套，明显已经无法继续好好表达。",
     "npcQuote": "我现在继续说，只会说出更伤人的话。我想先一个人待一会儿。",
-    "prompt": "你会怎样回应这次暂停？",
+    "prompt": "TA想先离开一会儿，你会怎么回应？",
     "conflictDimensions": [
       "C05",
       "C12"
@@ -719,8 +719,8 @@ export const infpQuestions = [
           "comfort_up_slight"
         ],
         "feedbackText": [
-          "TA开始认真把你的话算进之后的安排。",
-          "TA在你面前少斟酌了一句话。"
+          "TA没有略过你刚才的要求。",
+          "TA这次说话时少了一层顾虑。"
         ]
       },
       {
@@ -734,14 +734,14 @@ export const infpQuestions = [
           "comfort": -15,
           "conflict": 20
         },
-        "npcResponse": "TA 后退一步：“我正在告诉你我会说坏。你可以不喜欢暂停，但不能取消我的离开权。”",
+        "npcResponse": "TA 后退一步：“我已经快说出更难听的话了。你可以生气，但现在别拦我。”",
         "feedbackIds": [
           "comfort_down_strong",
           "conflict_up_strong"
         ],
         "feedbackText": [
-          "TA已经很难在这段互动里放松下来。",
-          "这场互动正在迅速失去修复空间。"
+          "TA已经很难在你面前安心做自己。",
+          "这场对话已经很难收回来。"
         ]
       },
       {
@@ -761,8 +761,8 @@ export const infpQuestions = [
           "conflict_down_medium"
         ],
         "feedbackText": [
-          "TA相信重要的事可以交给你共同决定。",
-          "你们找到了让分歧停下来、以后再谈的方法。"
+          "TA仍愿意让你参与重要安排。",
+          "你们给这次争执留出了以后再谈的余地。"
         ]
       },
       {
@@ -782,8 +782,8 @@ export const infpQuestions = [
           "conflict_down_slight"
         ],
         "feedbackText": [
-          "TA对你刚才的说法留下了一个问号。",
-          "刚才的分歧松开了一点。"
+          "TA没有把这句话完全当真。",
+          "刚才那句话终于没有继续伤人。"
         ]
       }
     ]
@@ -795,7 +795,7 @@ export const infpQuestions = [
     "title": "这份工作值不值得接",
     "scene": "你得到一份报酬很高的短期宣传工作。产品本身合法，但客户希望把效果写得比现有材料更肯定。你需要这笔收入，也认为自己可以争取改掉夸张部分。TA 听完后明确反对原方案。",
     "npcQuote": "你当然可以接工作。但如果明知道那句话会让人误解，我没法把它当成普通包装。",
-    "prompt": "你会怎样处理这次价值分歧？",
+    "prompt": "这份工作关系到收入，也碰到TA的底线。你会怎么做？",
     "conflictDimensions": [
       "C02",
       "C11"
@@ -826,14 +826,14 @@ export const infpQuestions = [
           "comfort": 10,
           "conflict": -5
         },
-        "npcResponse": "TA 没替你宣布辞职，只问：“如果客户拒绝修改，你真的会走吗？”得到确认后，TA 把争论停在了具体条件上。",
+        "npcResponse": "TA 没替你回绝工作，只问：“如果客户不让改，你真的会走吗？”听见你的回答后，TA 没再往别处争。",
         "feedbackIds": [
           "trust_up_strong",
           "comfort_up_medium"
         ],
         "feedbackText": [
-          "TA相信重要的事可以交给你共同决定。",
-          "TA明显更敢直接说出自己的需要。"
+          "TA没有独自决定这件事的答案。",
+          "TA说得比刚才直接。"
         ]
       },
       {
@@ -853,8 +853,8 @@ export const infpQuestions = [
           "conflict_down_medium"
         ],
         "feedbackText": [
-          "TA对你刚才的说法留下了一个问号。",
-          "你们找到了让分歧停下来、以后再谈的方法。"
+          "TA开始怀疑你是否真的明白这件事。",
+          "你们终于没有让同一个问题继续升级。"
         ]
       },
       {
@@ -874,8 +874,8 @@ export const infpQuestions = [
           "conflict_up_strong"
         ],
         "feedbackText": [
-          "TA不再愿意把重要的事放进这段关系。",
-          "这场互动正在迅速失去修复空间。"
+          "TA不再想让你参与那些真正重要的决定。",
+          "你们开始只剩下互相防备。"
         ]
       },
       {
@@ -895,8 +895,8 @@ export const infpQuestions = [
           "conflict_up_medium"
         ],
         "feedbackText": [
-          "TA开始认真把你的话算进之后的安排。",
-          "你们已经不只是在讨论不同答案。"
+          "TA把你说的时间记了下来。",
+          "你们争的已经不只是眼前这件事。"
         ]
       }
     ]
@@ -908,7 +908,7 @@ export const infpQuestions = [
     "title": "长信没有回答那个问题",
     "scene": "一次约会结束后，TA 给你一封很长的信，写了记得的细节、感谢和想继续靠近的愿望。你读完很心动，却发现信里没有回答你上次提出的排他关系问题。",
     "npcQuote": "我不是在回避你。我只是怕一个词说出口以后，里面装着的不是同一件事。",
-    "prompt": "你会怎样推进这次关系确认？",
+    "prompt": "信里没有回答排他的问题，你会怎么问？",
     "conflictDimensions": [
       "C08",
       "C10"
@@ -946,8 +946,8 @@ export const infpQuestions = [
           "conflict_up_strong"
         ],
         "feedbackText": [
-          "TA开始怀疑这句话之后会不会算数。",
-          "这场互动正在迅速失去修复空间。"
+          "TA不知道你之后还会不会记得这句话。",
+          "这件事正越说越伤人。"
         ]
       },
       {
@@ -961,14 +961,14 @@ export const infpQuestions = [
           "comfort": 5,
           "conflict": -5
         },
-        "npcResponse": "TA 在信背面写下三行答案：“这样我知道自己答应的是什么，也知道你不是只要一个漂亮称呼。”",
+        "npcResponse": "TA 在信背面写下三行答案：“先把这三件事说清楚。称呼晚一点决定也可以。”",
         "feedbackIds": [
           "trust_up_strong",
           "attraction_up_strong"
         ],
         "feedbackText": [
-          "TA相信重要的事可以交给你共同决定。",
-          "TA已经开始主动把“下次”说成具体安排。"
+          "TA没有收回交给你的那部分。",
+          "TA没让“下次”只停在口头。"
         ]
       },
       {
@@ -988,8 +988,8 @@ export const infpQuestions = [
           "trust_down_medium"
         ],
         "feedbackText": [
-          "TA已经开始主动把“下次”说成具体安排。",
-          "TA开始怀疑这句话之后会不会算数。"
+          "TA把下一次留进了日历。",
+          "TA对这份保证多留了一层怀疑。"
         ]
       },
       {
@@ -1003,14 +1003,14 @@ export const infpQuestions = [
           "comfort": 5,
           "conflict": 5
         },
-        "npcResponse": "TA 没把期限当作惩罚：“一周可以。你说清楚了等待的代价，我也该说清楚我能不能承担。”",
+        "npcResponse": "TA 把信折好：“一周可以。到时候我会回答，不让你继续靠这封信猜。”",
         "feedbackIds": [
           "trust_up_strong",
           "conflict_up_slight"
         ],
         "feedbackText": [
-          "TA相信重要的事可以交给你共同决定。",
-          "这件事留下了一点尚未处理的摩擦。"
+          "TA把下一步也放到了你面前。",
+          "你们之间多了一处需要以后说清的地方。"
         ]
       }
     ]
@@ -1022,7 +1022,7 @@ export const infpQuestions = [
     "title": "随性也要落在日历上",
     "scene": "谈过关系定义后，你们第一次认真讨论长期节奏。你希望见面和联系有基本预期，TA 则担心固定安排会让关系变成打卡。",
     "npcQuote": "我想保留临时起意的空间，但也不想让你一直等。你最低需要怎样的稳定？",
-    "prompt": "你会怎样制定之后的相处节奏？",
+    "prompt": "你最低需要怎样的稳定，才不会一直等？",
     "conflictDimensions": [
       "C05",
       "C07"
@@ -1061,8 +1061,8 @@ export const infpQuestions = [
           "trust_down_strong"
         ],
         "feedbackText": [
-          "TA已经开始主动把“下次”说成具体安排。",
-          "TA不再愿意把重要的事放进这段关系。"
+          "TA主动给出了下一次的时间。",
+          "TA把原本交给你的信任撤了回来。"
         ]
       },
       {
@@ -1082,8 +1082,8 @@ export const infpQuestions = [
           "conflict_up_slight"
         ],
         "feedbackText": [
-          "TA相信重要的事可以交给你共同决定。",
-          "这件事留下了一点尚未处理的摩擦。"
+          "TA仍愿意让你参与重要安排。",
+          "这次分歧暂时留在了原地。"
         ]
       },
       {
@@ -1103,32 +1103,31 @@ export const infpQuestions = [
           "conflict_up_strong"
         ],
         "feedbackText": [
-          "TA不再愿意把重要的事放进这段关系。",
-          "这场互动正在迅速失去修复空间。"
+          "TA已经不愿再把重要心事留在这里。",
+          "TA已经不想继续这一轮争执。"
         ]
       },
       {
         "id": "q10_build_flexible_rhythm",
         "strategy": "negotiate",
         "strategyLabel": "建立弹性协议",
-        "text": "约定每七到十天至少一次提前确定的见面；想临时改期的人尽早说明并给新时间，没力气聊天时也直接说一声。",
+        "text": "希望至少提前定下下一次见面；真要改期就给个新时间，没力气聊天也说一声。",
         "effects": {
           "attraction": 15,
           "trust": 15,
           "comfort": 10,
           "conflict": 0
         },
-        "npcResponse": "TA 在日历上留出第一个时间块：“这样随性不是失联，固定也不是打卡。改期的人负责把下一次放回来。”",
+        "npcResponse": "TA 在日历上留出第一个时间块：“这样可以。改期没关系，别只剩一句‘以后再说’。”",
         "feedbackIds": [
           "attraction_up_strong",
           "trust_up_strong"
         ],
         "feedbackText": [
-          "TA已经开始主动把“下次”说成具体安排。",
-          "TA相信重要的事可以交给你共同决定。"
+          "TA没让“下次”只停在口头。",
+          "TA把选择留在了你们两个人之间。"
         ]
       }
     ]
   }
 ] as const satisfies readonly Question[];
-

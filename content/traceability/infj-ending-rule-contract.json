@@ -1,0 +1,744 @@
+{
+  "personalityType": "INFJ",
+  "stage": "05-design-choice-game-endings",
+  "status": "production_integrated",
+  "mechanicsMode": "reuse",
+  "sharedMechanicsChanged": false,
+  "canonicalSources": {
+    "rules": "src/game/rules.ts",
+    "schema": "src/content/schema.ts",
+    "questions": "src/content/infj-questions.ts",
+    "questionDraft": "content/questions/infj-ten-question-draft.json",
+    "questionTraceability": "content/traceability/infj-question-traceability.json",
+    "behaviorModel": "content/infj-behavior-model.md",
+    "endingContent": "src/content/infj-endings.ts",
+    "endingDraft": "content/endings/infj-ending-content-draft.json",
+    "runtimePack": "src/content/packs.ts#INFJ"
+  },
+  "ruleIdPolicy": "All INFJ-AUDIT-* identifiers in this file are documentation-only labels. The shared runtime does not expose stable rule IDs, so these labels must not be exported as Stage-06 expectedRuleIds or described as executable IDs.",
+  "precedence": [
+    "INFJ-AUDIT-R-GLOBAL-CONFLICT-80",
+    "INFJ-AUDIT-R-GLOBAL-COMFORT-05",
+    "INFJ-AUDIT-R-GLOBAL-TRUST-05",
+    "INFJ-AUDIT-R-GATE-Q02",
+    "INFJ-AUDIT-R-GATE-Q05",
+    "INFJ-AUDIT-R-GATE-Q08",
+    "INFJ-AUDIT-R-FINAL-STRANGERS",
+    "INFJ-AUDIT-R-FINAL-CONFIRMED",
+    "INFJ-AUDIT-R-FINAL-DANGEROUS",
+    "INFJ-AUDIT-R-FINAL-FRIENDS",
+    "INFJ-AUDIT-R-FINAL-AMBIGUOUS"
+  ],
+  "rules": [
+    {
+      "auditRuleId": "INFJ-AUDIT-R-GLOBAL-CONFLICT-80",
+      "scope": "global",
+      "checkpoint": "after_every_choice",
+      "when": "conflict >= 80",
+      "inclusive": true,
+      "result": "conflict_break"
+    },
+    {
+      "auditRuleId": "INFJ-AUDIT-R-GLOBAL-COMFORT-05",
+      "scope": "global",
+      "checkpoint": "after_every_choice",
+      "when": "comfort <= 5",
+      "inclusive": true,
+      "result": "strong_discomfort"
+    },
+    {
+      "auditRuleId": "INFJ-AUDIT-R-GLOBAL-TRUST-05",
+      "scope": "global",
+      "checkpoint": "after_every_choice",
+      "when": "trust <= 5",
+      "inclusive": true,
+      "result": "trust_broken"
+    },
+    {
+      "auditRuleId": "INFJ-AUDIT-R-GATE-Q02",
+      "scope": "checkpoint",
+      "checkpoint": "after_Q02",
+      "when": "NOT (attraction >= 25 AND trust >= 20 AND comfort >= 20 AND conflict <= 20)",
+      "inclusive": "mixed",
+      "result": "no_second_meeting"
+    },
+    {
+      "auditRuleId": "INFJ-AUDIT-R-GATE-Q05",
+      "scope": "checkpoint",
+      "checkpoint": "after_Q05",
+      "when": "NOT (attraction >= 35 AND trust >= 30 AND comfort >= 25 AND conflict <= 45)",
+      "inclusive": "mixed",
+      "result": "fade_out"
+    },
+    {
+      "auditRuleId": "INFJ-AUDIT-R-GATE-Q08",
+      "scope": "checkpoint",
+      "checkpoint": "after_Q08",
+      "when": "NOT (attraction >= 45 AND trust >= 40 AND comfort >= 35 AND conflict <= 45)",
+      "inclusive": "mixed",
+      "result": "stay_acquaintances"
+    },
+    {
+      "auditRuleId": "INFJ-AUDIT-R-FINAL-STRANGERS",
+      "scope": "final",
+      "checkpoint": "after_Q10",
+      "when": "trust < 35 OR comfort < 35 OR conflict > 50",
+      "inclusive": false,
+      "result": "strangers_after_all"
+    },
+    {
+      "auditRuleId": "INFJ-AUDIT-R-FINAL-CONFIRMED",
+      "scope": "final",
+      "checkpoint": "after_Q10",
+      "when": "attraction >= 85 AND trust >= 65 AND comfort >= 60 AND conflict <= 25",
+      "inclusive": true,
+      "result": "confirmed_relationship",
+      "secondaryEvaluation": "romance_stable if trust >= 75 AND comfort >= 70 AND conflict <= 15; otherwise romance_hidden_risk"
+    },
+    {
+      "auditRuleId": "INFJ-AUDIT-R-FINAL-DANGEROUS",
+      "scope": "final",
+      "checkpoint": "after_Q10",
+      "when": "attraction >= 90 AND (trust < 65 OR comfort < 60)",
+      "inclusive": "mixed",
+      "result": "dangerous_lovers"
+    },
+    {
+      "auditRuleId": "INFJ-AUDIT-R-FINAL-FRIENDS",
+      "scope": "final",
+      "checkpoint": "after_Q10",
+      "when": "attraction < 65 AND trust >= 50 AND comfort >= 45 AND conflict <= 40",
+      "inclusive": "mixed",
+      "result": "friends"
+    },
+    {
+      "auditRuleId": "INFJ-AUDIT-R-FINAL-AMBIGUOUS",
+      "scope": "final",
+      "checkpoint": "after_Q10",
+      "when": "no earlier rule matched",
+      "inclusive": "n/a",
+      "result": "unresolved_ambiguity"
+    }
+  ],
+  "secondaryClassifiers": [
+    {
+      "auditRuleId": "INFJ-AUDIT-R-EVAL-ROMANCE-STABLE",
+      "parentAuditRuleId": "INFJ-AUDIT-R-FINAL-CONFIRMED",
+      "when": "trust >= 75 AND comfort >= 70 AND conflict <= 15",
+      "outcomeId": "confirmed_relationship:romance_stable"
+    },
+    {
+      "auditRuleId": "INFJ-AUDIT-R-EVAL-ROMANCE-HIDDEN-RISK",
+      "parentAuditRuleId": "INFJ-AUDIT-R-FINAL-CONFIRMED",
+      "when": "confirmed_relationship matched and the stable evaluation did not",
+      "outcomeId": "confirmed_relationship:romance_hidden_risk"
+    }
+  ],
+  "checkpointTraceability": [
+    {
+      "checkpoint": "after_every_choice",
+      "applicableAuditRuleIds": [
+        "INFJ-AUDIT-R-GLOBAL-CONFLICT-80",
+        "INFJ-AUDIT-R-GLOBAL-COMFORT-05",
+        "INFJ-AUDIT-R-GLOBAL-TRUST-05"
+      ],
+      "endingIds": [
+        "conflict_break",
+        "strong_discomfort",
+        "trust_broken"
+      ],
+      "feedbackKeySource": "content/questions/infj-ten-question-draft.json[*].options[*].feedbackIds",
+      "feedbackKeysObserved": [
+        "attraction_down_medium",
+        "attraction_up_medium",
+        "attraction_up_slight",
+        "attraction_up_strong",
+        "comfort_down_medium",
+        "comfort_down_slight",
+        "comfort_down_strong",
+        "comfort_up_medium",
+        "comfort_up_slight",
+        "comfort_up_strong",
+        "conflict_down_medium",
+        "conflict_down_slight",
+        "conflict_down_strong",
+        "conflict_up_medium",
+        "conflict_up_slight",
+        "conflict_up_strong",
+        "trust_down_medium",
+        "trust_down_slight",
+        "trust_down_strong",
+        "trust_up_medium",
+        "trust_up_slight",
+        "trust_up_strong"
+      ]
+    },
+    {
+      "checkpoint": "after_Q02",
+      "applicableAuditRuleIds": [
+        "INFJ-AUDIT-R-GATE-Q02"
+      ],
+      "endingIds": [
+        "no_second_meeting"
+      ],
+      "feedbackKeySource": "content/questions/infj-ten-question-draft.json[Q02].options[*].feedbackIds",
+      "feedbackKeysObserved": [
+        "comfort_up_medium",
+        "comfort_up_slight",
+        "conflict_down_slight",
+        "conflict_up_medium",
+        "trust_down_slight",
+        "trust_up_medium",
+        "trust_up_strong"
+      ]
+    },
+    {
+      "checkpoint": "after_Q05",
+      "applicableAuditRuleIds": [
+        "INFJ-AUDIT-R-GATE-Q05"
+      ],
+      "endingIds": [
+        "fade_out"
+      ],
+      "feedbackKeySource": "content/questions/infj-ten-question-draft.json[Q05].options[*].feedbackIds",
+      "feedbackKeysObserved": [
+        "comfort_up_medium",
+        "conflict_down_medium",
+        "conflict_down_slight",
+        "conflict_up_strong",
+        "trust_down_slight",
+        "trust_up_medium"
+      ]
+    },
+    {
+      "checkpoint": "after_Q08",
+      "applicableAuditRuleIds": [
+        "INFJ-AUDIT-R-GATE-Q08"
+      ],
+      "endingIds": [
+        "stay_acquaintances"
+      ],
+      "feedbackKeySource": "content/questions/infj-ten-question-draft.json[Q08].options[*].feedbackIds",
+      "feedbackKeysObserved": [
+        "comfort_up_slight",
+        "conflict_down_strong",
+        "conflict_up_medium",
+        "conflict_up_slight",
+        "conflict_up_strong",
+        "trust_down_slight",
+        "trust_up_medium"
+      ]
+    },
+    {
+      "checkpoint": "after_Q10",
+      "applicableAuditRuleIds": [
+        "INFJ-AUDIT-R-FINAL-STRANGERS",
+        "INFJ-AUDIT-R-FINAL-CONFIRMED",
+        "INFJ-AUDIT-R-FINAL-DANGEROUS",
+        "INFJ-AUDIT-R-FINAL-FRIENDS",
+        "INFJ-AUDIT-R-FINAL-AMBIGUOUS"
+      ],
+      "endingIds": [
+        "strangers_after_all",
+        "confirmed_relationship",
+        "dangerous_lovers",
+        "friends",
+        "unresolved_ambiguity"
+      ],
+      "outcomeIds": [
+        "strangers_after_all",
+        "confirmed_relationship:romance_stable",
+        "confirmed_relationship:romance_hidden_risk",
+        "dangerous_lovers",
+        "friends",
+        "unresolved_ambiguity"
+      ],
+      "feedbackKeySource": "content/questions/infj-ten-question-draft.json[Q10].options[*].feedbackIds",
+      "feedbackKeysObserved": [
+        "attraction_up_strong",
+        "comfort_up_medium",
+        "conflict_up_strong",
+        "trust_down_medium",
+        "trust_down_strong",
+        "trust_up_medium"
+      ]
+    }
+  ],
+  "endingRecords": [
+    {
+      "endingId": "conflict_break",
+      "family": "global",
+      "auditRuleIds": [
+        "INFJ-AUDIT-R-GLOBAL-CONFLICT-80"
+      ],
+      "reachability": "verified_stage_06",
+      "actions": [
+        "restart",
+        "share",
+        "return_to_type_selection"
+      ],
+      "tone": "firm_final",
+      "stateSummaryPolicy": [
+        "conflict_severe",
+        "relationship_ended"
+      ],
+      "contentNotes": "Name coercion and accumulated harm firmly without diagnosing either person or treating conflict as passion.",
+      "characterBasis": {
+        "behaviorIds": [
+          "INFJ-B02",
+          "INFJ-B06",
+          "INFJ-B08",
+          "INFJ-B09",
+          "INFJ-B12"
+        ],
+        "questionIds": [
+          "Q02",
+          "Q04",
+          "Q07",
+          "Q08",
+          "Q10"
+        ]
+      }
+    },
+    {
+      "endingId": "strong_discomfort",
+      "family": "global",
+      "auditRuleIds": [
+        "INFJ-AUDIT-R-GLOBAL-COMFORT-05"
+      ],
+      "reachability": "verified_stage_06",
+      "actions": [
+        "restart",
+        "share",
+        "return_to_type_selection"
+      ],
+      "tone": "firm_protective",
+      "stateSummaryPolicy": [
+        "comfort_severe",
+        "relationship_ended"
+      ],
+      "contentNotes": "Protect disclosure, refusal, support-capacity, and pause rights; distinguish intended care from sustained pressure.",
+      "characterBasis": {
+        "behaviorIds": [
+          "INFJ-B01",
+          "INFJ-B02",
+          "INFJ-B04",
+          "INFJ-B08"
+        ],
+        "questionIds": [
+          "Q01",
+          "Q04",
+          "Q06",
+          "Q07"
+        ]
+      }
+    },
+    {
+      "endingId": "trust_broken",
+      "family": "global",
+      "auditRuleIds": [
+        "INFJ-AUDIT-R-GLOBAL-TRUST-05"
+      ],
+      "reachability": "verified_stage_06",
+      "actions": [
+        "restart",
+        "share",
+        "return_to_type_selection"
+      ],
+      "tone": "quiet_final",
+      "stateSummaryPolicy": [
+        "trust_severe",
+        "relationship_ended"
+      ],
+      "contentNotes": "Focus on accuracy, privacy, reliability, consent, and repair rather than moral character or type diagnosis.",
+      "characterBasis": {
+        "behaviorIds": [
+          "INFJ-B02",
+          "INFJ-B06",
+          "INFJ-B09",
+          "INFJ-B11",
+          "INFJ-B12"
+        ],
+        "questionIds": [
+          "Q02",
+          "Q04",
+          "Q05",
+          "Q08",
+          "Q10"
+        ]
+      }
+    },
+    {
+      "endingId": "no_second_meeting",
+      "family": "stage_gate",
+      "auditRuleIds": [
+        "INFJ-AUDIT-R-GATE-Q02"
+      ],
+      "reachability": "verified_stage_06",
+      "actions": [
+        "restart",
+        "share",
+        "return_to_type_selection"
+      ],
+      "tone": "gentle_low_intensity",
+      "stateSummaryPolicy": [
+        "first_meeting_gate_failed",
+        "no_follow_up"
+      ],
+      "contentNotes": "Treat ordinary mismatch proportionately; neither declining depth nor correcting an observation is rejection by itself.",
+      "characterBasis": {
+        "behaviorIds": [
+          "INFJ-B01",
+          "INFJ-B06"
+        ],
+        "questionIds": [
+          "Q01",
+          "Q02"
+        ]
+      }
+    },
+    {
+      "endingId": "fade_out",
+      "family": "stage_gate",
+      "auditRuleIds": [
+        "INFJ-AUDIT-R-GATE-Q05"
+      ],
+      "reachability": "verified_stage_06",
+      "actions": [
+        "restart",
+        "share",
+        "return_to_type_selection"
+      ],
+      "tone": "wistful_proportionate",
+      "stateSummaryPolicy": [
+        "contact_gate_failed",
+        "gradual_fade"
+      ],
+      "contentNotes": "Preserve earlier care while showing why help, privacy, and boundary handling did not become sustainable contact.",
+      "characterBasis": {
+        "behaviorIds": [
+          "INFJ-B02",
+          "INFJ-B04",
+          "INFJ-B05",
+          "INFJ-B07"
+        ],
+        "questionIds": [
+          "Q03",
+          "Q04",
+          "Q05"
+        ]
+      }
+    },
+    {
+      "endingId": "stay_acquaintances",
+      "family": "stage_gate",
+      "auditRuleIds": [
+        "INFJ-AUDIT-R-GATE-Q08"
+      ],
+      "reachability": "verified_stage_06",
+      "actions": [
+        "restart",
+        "share",
+        "return_to_type_selection"
+      ],
+      "tone": "warm_bounded",
+      "stateSummaryPolicy": [
+        "familiarity_gate_failed",
+        "acquaintanceship"
+      ],
+      "contentNotes": "Keep acquaintanceship distinct from friendship and punishment; a return conversation is not automatically complete repair.",
+      "characterBasis": {
+        "behaviorIds": [
+          "INFJ-B04",
+          "INFJ-B07",
+          "INFJ-B08",
+          "INFJ-B09"
+        ],
+        "questionIds": [
+          "Q06",
+          "Q07",
+          "Q08"
+        ]
+      }
+    },
+    {
+      "endingId": "strangers_after_all",
+      "family": "final",
+      "auditRuleIds": [
+        "INFJ-AUDIT-R-FINAL-STRANGERS"
+      ],
+      "reachability": "verified_stage_06",
+      "actions": [
+        "restart",
+        "share",
+        "return_to_type_selection"
+      ],
+      "tone": "sad_final",
+      "stateSummaryPolicy": [
+        "final_foundation_failed",
+        "no_continued_contact"
+      ],
+      "contentNotes": "Acknowledge real prior closeness without implying that disclosure, care, or time invested creates an obligation to continue.",
+      "characterBasis": {
+        "behaviorIds": [
+          "INFJ-B08",
+          "INFJ-B09",
+          "INFJ-B10",
+          "INFJ-B11",
+          "INFJ-B12"
+        ],
+        "questionIds": [
+          "Q07",
+          "Q08",
+          "Q09",
+          "Q10"
+        ]
+      }
+    },
+    {
+      "endingId": "confirmed_relationship",
+      "family": "final",
+      "auditRuleIds": [
+        "INFJ-AUDIT-R-FINAL-CONFIRMED"
+      ],
+      "relationshipEvaluationIds": [
+        "romance_stable",
+        "romance_hidden_risk"
+      ],
+      "reachability": "verified_stage_06",
+      "actions": [
+        "restart",
+        "share",
+        "return_to_type_selection"
+      ],
+      "tone": "hopeful_grounded",
+      "stateSummaryPolicy": [
+        "romance_confirmed",
+        "show_secondary_evaluation"
+      ],
+      "contentNotes": "Make mutual consent, boundaries, reciprocity, and repair—not depth, intuition, rarity, or type compatibility—the basis of romance.",
+      "characterBasis": {
+        "behaviorIds": [
+          "INFJ-B04",
+          "INFJ-B08",
+          "INFJ-B09",
+          "INFJ-B10",
+          "INFJ-B11",
+          "INFJ-B12"
+        ],
+        "questionIds": [
+          "Q06",
+          "Q07",
+          "Q08",
+          "Q09",
+          "Q10"
+        ]
+      }
+    },
+    {
+      "endingId": "dangerous_lovers",
+      "family": "final",
+      "auditRuleIds": [
+        "INFJ-AUDIT-R-FINAL-DANGEROUS"
+      ],
+      "reachability": "verified_stage_06",
+      "actions": [
+        "restart",
+        "share",
+        "return_to_type_selection"
+      ],
+      "tone": "intense_cautionary",
+      "stateSummaryPolicy": [
+        "attraction_high",
+        "relationship_unstable"
+      ],
+      "contentNotes": "Do not romanticize instability or let deep connection, idealization, or being understood stand in for trust and comfort.",
+      "characterBasis": {
+        "behaviorIds": [
+          "INFJ-B02",
+          "INFJ-B10",
+          "INFJ-B11",
+          "INFJ-B12"
+        ],
+        "questionIds": [
+          "Q04",
+          "Q08",
+          "Q09",
+          "Q10"
+        ]
+      }
+    },
+    {
+      "endingId": "friends",
+      "family": "final",
+      "auditRuleIds": [
+        "INFJ-AUDIT-R-FINAL-FRIENDS"
+      ],
+      "reachability": "verified_stage_06",
+      "actions": [
+        "restart",
+        "share",
+        "return_to_type_selection"
+      ],
+      "tone": "warm_affirming",
+      "stateSummaryPolicy": [
+        "friendship_stable",
+        "romance_not_confirmed"
+      ],
+      "contentNotes": "Treat explicit friendship as a complete valuable outcome, not a waiting room for romance or evidence of failed depth.",
+      "characterBasis": {
+        "behaviorIds": [
+          "INFJ-B01",
+          "INFJ-B04",
+          "INFJ-B05",
+          "INFJ-B06",
+          "INFJ-B12"
+        ],
+        "questionIds": [
+          "Q01",
+          "Q02",
+          "Q03",
+          "Q06",
+          "Q10"
+        ]
+      }
+    },
+    {
+      "endingId": "unresolved_ambiguity",
+      "family": "final",
+      "auditRuleIds": [
+        "INFJ-AUDIT-R-FINAL-AMBIGUOUS"
+      ],
+      "reachability": "verified_stage_06",
+      "actions": [
+        "restart",
+        "share",
+        "return_to_type_selection"
+      ],
+      "tone": "open_uncertain",
+      "stateSummaryPolicy": [
+        "relationship_unclassified",
+        "future_not_promised"
+      ],
+      "contentNotes": "Do not imply that depth, prolonged ambiguity, or continued contact inevitably becomes romance.",
+      "characterBasis": {
+        "behaviorIds": [
+          "INFJ-B09",
+          "INFJ-B10",
+          "INFJ-B11",
+          "INFJ-B12"
+        ],
+        "questionIds": [
+          "Q08",
+          "Q09",
+          "Q10"
+        ]
+      }
+    }
+  ],
+  "relationshipEvaluationRecords": [
+    {
+      "evaluationId": "romance_stable",
+      "parentEndingId": "confirmed_relationship",
+      "outcomeId": "confirmed_relationship:romance_stable",
+      "tone": "secure_grounded",
+      "contentNotes": "Stability means consent, reciprocal support, reliable return, and repair capacity—not perfect understanding or absence of conflict.",
+      "characterBasis": {
+        "behaviorIds": [
+          "INFJ-B04",
+          "INFJ-B08",
+          "INFJ-B09",
+          "INFJ-B11",
+          "INFJ-B12"
+        ],
+        "questionIds": [
+          "Q06",
+          "Q07",
+          "Q08",
+          "Q09",
+          "Q10"
+        ]
+      },
+      "reachability": "verified_stage_06"
+    },
+    {
+      "evaluationId": "romance_hidden_risk",
+      "parentEndingId": "confirmed_relationship",
+      "outcomeId": "confirmed_relationship:romance_hidden_risk",
+      "tone": "hopeful_cautious",
+      "contentNotes": "Preserve confirmed romance while naming support, disclosure, pace, or repair patterns that remain insufficiently tested.",
+      "characterBasis": {
+        "behaviorIds": [
+          "INFJ-B04",
+          "INFJ-B08",
+          "INFJ-B09",
+          "INFJ-B11",
+          "INFJ-B12"
+        ],
+        "questionIds": [
+          "Q06",
+          "Q07",
+          "Q08",
+          "Q09",
+          "Q10"
+        ]
+      },
+      "reachability": "verified_stage_06"
+    }
+  ],
+  "feedbackDictionaryPolicy": {
+    "source": "content/endings/infj-ending-content-draft.json",
+    "stableKeyCount": 24,
+    "healthDirections": {
+      "attraction": "up",
+      "trust": "up",
+      "comfort": "up",
+      "conflict": "down"
+    },
+    "strengthByAbsoluteDelta": {
+      "5": "slight",
+      "10": "medium",
+      "15_or_20": "strong"
+    },
+    "zeroChange": "show_no_hint_for_that_dimension",
+    "combinedHint": "show one or two keys that best explain the immediate relational consequence",
+    "copyCompatibility": "All 24 texts remain identical to the approved shared dictionary and every Stage-04 feedbackText entry. The dictionary covers all dimension, direction, and intensity combinations even when a specific approved option does not use one."
+  },
+  "stage06Handoff": {
+    "expectedBaseEndingIds": [
+      "conflict_break",
+      "strong_discomfort",
+      "trust_broken",
+      "no_second_meeting",
+      "fade_out",
+      "stay_acquaintances",
+      "strangers_after_all",
+      "confirmed_relationship",
+      "dangerous_lovers",
+      "friends",
+      "unresolved_ambiguity"
+    ],
+    "expectedOutcomeIds": [
+      "conflict_break",
+      "strong_discomfort",
+      "trust_broken",
+      "no_second_meeting",
+      "fade_out",
+      "stay_acquaintances",
+      "strangers_after_all",
+      "confirmed_relationship:romance_stable",
+      "confirmed_relationship:romance_hidden_risk",
+      "dangerous_lovers",
+      "friends",
+      "unresolved_ambiguity"
+    ],
+    "expectedRuleIds": null,
+    "ruleCoverageReason": "The runtime has no stable rule IDs or applicable-rule diagnostic hook. Audit-only labels must not be treated as analyzer rule IDs.",
+    "reachability": "verified_all_declared_endings_and_outcomes",
+    "requiredAdapterBehavior": "Import src/content/infj-questions.ts, the same module used by the website, and call the real applyEffects, resolveEnding, and endingResultKey implementations. Preserve both terminal-leaf and weighted-path distributions.",
+    "baselineReport": "content/questions/infj-balance-baseline.json",
+    "finalReport": "content/questions/infj-balance-report.json"
+  },
+  "globalRulePolicy": "After every option, global danger rules run in conflict, comfort, trust order before any matching checkpoint or final classifier; evaluation stops at the first result.",
+  "reachabilityPolicy": "Stage 06 exhaustively enumerated all 1,048,576 equal-choice paths through production applyEffects, resolveEnding, and endingResultKey. All 11 base endings and 12 full outcomes are verified reachable. Runtime rule shadowing remains unknown because no stable rule IDs or applicable-rule diagnostic hook are exposed."
+}

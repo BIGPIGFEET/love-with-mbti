@@ -5,7 +5,16 @@ import type {
   RelationshipEvaluationContent,
 } from "./schema.ts";
 
-export const AVAILABLE_MBTI_TYPES = ["ENTP", "INTP", "INFP", "ISFP"] as const;
+export const AVAILABLE_MBTI_TYPES = [
+  "INTJ",
+  "ENTJ",
+  "ENTP",
+  "ENFP",
+  "INTP",
+  "INFJ",
+  "INFP",
+  "ISFP",
+] as const;
 
 export type AvailableMbtiType = (typeof AVAILABLE_MBTI_TYPES)[number];
 

@@ -1,0 +1,122 @@
+[
+  {
+    "question_id": "Q01",
+    "order": 1,
+    "stage": "first_meeting",
+    "scene_id": "ENFP-SC01",
+    "candidate_id": "ENFP-C01",
+    "behavior_ids": ["ENFP-B01"],
+    "feature_ids": ["ENFP-F01", "ENFP-F04"],
+    "source_ids": ["ENFP-S03", "ENFP-S05", "ENFP-S06", "ENFP-S16", "ENFP-S32"],
+    "conflict_ids": ["ENFP-K01"],
+    "state_ids": ["attraction", "comfort", "trust"]
+  },
+  {
+    "question_id": "Q02",
+    "order": 2,
+    "stage": "first_meeting",
+    "scene_id": "ENFP-SC02",
+    "candidate_id": "ENFP-C03",
+    "behavior_ids": ["ENFP-B02"],
+    "feature_ids": ["ENFP-F02", "ENFP-F03"],
+    "source_ids": ["ENFP-S03", "ENFP-S04", "ENFP-S05", "ENFP-S06", "ENFP-S13", "ENFP-S16"],
+    "conflict_ids": ["ENFP-K02"],
+    "state_ids": ["attraction", "comfort", "conflict"]
+  },
+  {
+    "question_id": "Q03",
+    "order": 3,
+    "stage": "contact",
+    "scene_id": "ENFP-SC03",
+    "candidate_id": "ENFP-C05",
+    "behavior_ids": ["ENFP-B05"],
+    "feature_ids": ["ENFP-F03"],
+    "source_ids": ["ENFP-S03", "ENFP-S04", "ENFP-S13", "ENFP-S14", "ENFP-S16", "ENFP-S33"],
+    "conflict_ids": ["ENFP-K03"],
+    "state_ids": ["attraction", "trust", "comfort", "conflict"]
+  },
+  {
+    "question_id": "Q04",
+    "order": 4,
+    "stage": "contact",
+    "scene_id": "ENFP-SC04",
+    "candidate_id": "ENFP-C07",
+    "behavior_ids": ["ENFP-B07"],
+    "feature_ids": ["ENFP-F06"],
+    "source_ids": ["ENFP-S09", "ENFP-S18", "ENFP-S19", "ENFP-S21", "ENFP-S22", "ENFP-S32", "ENFP-S39", "ENFP-S40"],
+    "conflict_ids": ["ENFP-K06", "ENFP-K10"],
+    "state_ids": ["attraction", "trust", "comfort"]
+  },
+  {
+    "question_id": "Q05",
+    "order": 5,
+    "stage": "contact",
+    "scene_id": "ENFP-SC05",
+    "candidate_id": "ENFP-C09",
+    "behavior_ids": ["ENFP-B09"],
+    "feature_ids": ["ENFP-F01", "ENFP-F04", "ENFP-F05"],
+    "source_ids": ["ENFP-S05", "ENFP-S06", "ENFP-S07", "ENFP-S08", "ENFP-S16", "ENFP-S17", "ENFP-S32"],
+    "conflict_ids": ["ENFP-K01", "ENFP-K09"],
+    "state_ids": ["trust", "comfort", "conflict"]
+  },
+  {
+    "question_id": "Q06",
+    "order": 6,
+    "stage": "familiarity",
+    "scene_id": "ENFP-SC06",
+    "candidate_id": "ENFP-C10",
+    "behavior_ids": ["ENFP-B07", "ENFP-B08"],
+    "feature_ids": ["ENFP-F01", "ENFP-F06", "ENFP-F09"],
+    "source_ids": ["ENFP-S03", "ENFP-S04", "ENFP-S09", "ENFP-S12", "ENFP-S18", "ENFP-S19", "ENFP-S23", "ENFP-S32"],
+    "conflict_ids": ["ENFP-K07", "ENFP-K13"],
+    "state_ids": ["comfort", "trust", "attraction"]
+  },
+  {
+    "question_id": "Q07",
+    "order": 7,
+    "stage": "familiarity",
+    "scene_id": "ENFP-SC07",
+    "candidate_id": "ENFP-C11",
+    "behavior_ids": ["ENFP-B09"],
+    "feature_ids": ["ENFP-F01", "ENFP-F04", "ENFP-F05"],
+    "source_ids": ["ENFP-S05", "ENFP-S06", "ENFP-S07", "ENFP-S08", "ENFP-S16", "ENFP-S17", "ENFP-S32"],
+    "conflict_ids": ["ENFP-K08", "ENFP-K09"],
+    "state_ids": ["trust", "comfort", "conflict"]
+  },
+  {
+    "question_id": "Q08",
+    "order": 8,
+    "stage": "familiarity",
+    "scene_id": "ENFP-SC08",
+    "candidate_id": "ENFP-C14",
+    "behavior_ids": ["ENFP-B05", "ENFP-B06", "ENFP-B08"],
+    "feature_ids": ["ENFP-F01", "ENFP-F03", "ENFP-F09"],
+    "source_ids": ["ENFP-S12", "ENFP-S13", "ENFP-S14", "ENFP-S16", "ENFP-S17", "ENFP-S23"],
+    "conflict_ids": ["ENFP-K03", "ENFP-K04", "ENFP-K07", "ENFP-K12"],
+    "state_ids": ["trust", "comfort", "conflict"]
+  },
+  {
+    "question_id": "Q09",
+    "order": 9,
+    "stage": "ambiguity",
+    "scene_id": "ENFP-SC09",
+    "candidate_id": "ENFP-C15",
+    "behavior_ids": ["ENFP-B11"],
+    "feature_ids": ["ENFP-F07", "ENFP-F08"],
+    "source_ids": ["ENFP-S10", "ENFP-S11", "ENFP-S18", "ENFP-S39", "ENFP-S40", "ENFP-S41"],
+    "conflict_ids": ["ENFP-K05", "ENFP-K10"],
+    "state_ids": ["attraction", "trust", "comfort", "conflict"]
+  },
+  {
+    "question_id": "Q10",
+    "order": 10,
+    "stage": "ambiguity",
+    "scene_id": "ENFP-SC10",
+    "candidate_id": "ENFP-C16",
+    "behavior_ids": ["ENFP-B04", "ENFP-B12"],
+    "feature_ids": ["ENFP-F04", "ENFP-F06", "ENFP-F08", "ENFP-F09"],
+    "source_ids": ["ENFP-S06", "ENFP-S10", "ENFP-S11", "ENFP-S12", "ENFP-S18", "ENFP-S32"],
+    "conflict_ids": ["ENFP-K05", "ENFP-K11", "ENFP-K12"],
+    "state_ids": ["trust", "comfort", "conflict"]
+  }
+]

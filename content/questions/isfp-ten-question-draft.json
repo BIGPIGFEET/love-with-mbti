@@ -455,7 +455,7 @@
     "title": "温和也可以有底线",
     "scene": "你们聊到社区准备为减少夜间噪声而撤走广场长椅。你赞成统一撤走，TA 则提到老人、夜班工作者和行动不便的人白天也需要这些座位。TA 一直语气平静，说到具体影响时却把杯子放下，明显不打算顺着你的说法带过。",
     "npcQuote": "我知道你担心噪声，但把长椅全撤掉，会先让真正需要休息的人没有地方坐。这不只是审美或偏好不同。",
-    "prompt": "你会怎么回应这条明确的价值边界？",
+    "prompt": "TA不愿把这件事轻轻带过，你会怎么回？",
     "conflictDimensions": [
       "ISFP-K05",
       "ISFP-K08"
@@ -549,7 +549,7 @@
           "comfort": 10,
           "conflict": -5
         },
-        "npcResponse": "TA 的肩膀松了一点：“我不要求你立刻同意，但至少你没有把我说成太敏感。”",
+        "npcResponse": "TA 的肩膀松了一点：“我没要求你现在就同意。先别说我是在小题大做就好。”",
         "feedbackIds": [
           "trust_up_medium",
           "comfort_up_medium"
@@ -789,7 +789,7 @@
     "title": "隐私不是小事",
     "scene": "TA 之前只在你面前分享过一段私人记录。今天第三个人突然提起其中一句，TA 看向你，先没有责怪，只问这句话可能从哪里出去的。",
     "npcQuote": "我想知道发生了什么。不是为了抓谁，是因为我需要知道以后还能把什么交出来。",
-    "prompt": "你会如何处理这次隐私受损？",
+    "prompt": "只有你看过的话传了出去，你会先做什么？",
     "conflictDimensions": [
       "ISFP-K07"
     ],
@@ -817,7 +817,7 @@
           "comfort": 0,
           "conflict": -10
         },
-        "npcResponse": "TA 把手机递给你：“好，先把事实列出来。你愿意一起承担，这很重要。”",
+        "npcResponse": "TA 把手机递给你：“好，先看看传到了谁那里。能撤的先撤。”",
         "feedbackIds": [
           "conflict_down_medium"
         ],
@@ -857,7 +857,7 @@
           "comfort": 0,
           "conflict": -5
         },
-        "npcResponse": "TA 没有马上说没关系：“我需要时间重新建立信任，但至少你没有让我自己查。”",
+        "npcResponse": "TA 没有马上说没关系：“我还是会介意。但至少这次不是让我自己绕一圈才查出来。”",
         "feedbackIds": [
           "conflict_down_slight"
         ],
@@ -895,7 +895,7 @@
     "title": "亲近不自动等于关系",
     "scene": "你们已经连续几周单独见面，也会互相照顾小事。你想知道双方是否在约会、是否排他。TA 没有立刻回答，而是把问题拆成几个部分。",
     "npcQuote": "我是在乎你，但我不想把在乎变成报备。你希望确认的是称呼、排他，还是我们下一步怎么见面？",
-    "prompt": "你会如何回应这次关系定义？",
+    "prompt": "TA把问题拆开后，你会先回答哪一件？",
     "conflictDimensions": [
       "ISFP-K03",
       "ISFP-K09"
@@ -925,7 +925,7 @@
           "comfort": 15,
           "conflict": 0
         },
-        "npcResponse": "TA 没有马上挽留：“好，在我想清楚之前，我们就按朋友相处。你不是在逼我回答，是在告诉我你能承受什么。”",
+        "npcResponse": "TA 没有马上挽留：“好。我没想清楚以前，我们就按朋友相处。”",
         "feedbackIds": [
           "trust_up_strong",
           "comfort_up_strong"
@@ -939,14 +939,14 @@
         "id": "q09_define_terms",
         "strategy": "negotiate",
         "strategyLabel": "拆开协商",
-        "text": "我想和你以排他的约会关系继续，也想确认见面方式；恋人的称呼可以慢一点。我们把双方愿意做的部分先说清楚。",
+        "text": "我想先只和你约会，也想把见面方式说清楚；恋人的称呼可以慢一点。",
         "effects": {
           "attraction": 20,
           "trust": 10,
           "comfort": 5,
           "conflict": -5
         },
-        "npcResponse": "TA 追问了几句哪些算排他，最后点头：“我愿意和你以排他的约会关系继续，见面方式也按我们刚才说的来。恋人的称呼可以慢一点，至少不是谁单方面替我们命名。”",
+        "npcResponse": "TA 追问了几句哪些算排他，最后点头：“可以。我也只和你约会。至于叫不叫恋人，我们慢一点。”",
         "feedbackIds": [
           "attraction_up_strong",
           "trust_up_medium"
@@ -1007,7 +1007,7 @@
     "title": "修复不是假装没发生",
     "scene": "第七题的暂停之后，TA 按约回来。TA 先说自己理解到你当时的受伤，也承认只说‘我需要空间’还不够解释接下来会怎样。",
     "npcQuote": "我不想只说对不起然后继续原样。你觉得下次我该怎么回来，才不会让你一直猜？",
-    "prompt": "你会如何回应这次回谈？",
+    "prompt": "TA问下次该怎么回来，你会怎么回答？",
     "conflictDimensions": [
       "ISFP-K05",
       "ISFP-K06"
@@ -1035,7 +1035,7 @@
           "comfort": 5,
           "conflict": -5
         },
-        "npcResponse": "TA 点头：“可以。你不用现在就原谅我，我会用下一次怎么做来回答。”",
+        "npcResponse": "TA 点头：“可以。你不用现在就说已经放心了，下次看我怎么做。”",
         "feedbackIds": [
           "attraction_up_strong",
           "trust_up_slight"
@@ -1077,7 +1077,7 @@
           "comfort": -15,
           "conflict": 20
         },
-        "npcResponse": "TA 深吸一口气：“我愿意承担，但我不能把修复变成一场永远答不完的审讯。”",
+        "npcResponse": "TA 深吸一口气：“我愿意解释，但如果每句话都要反复重审，我们今晚还是走不出去。”",
         "feedbackIds": [
           "comfort_down_strong",
           "conflict_up_strong"
@@ -1098,7 +1098,7 @@
           "comfort": 10,
           "conflict": -5
         },
-        "npcResponse": "TA 打开备忘录：“那我们都写下来。空间不是消失，回来也不只靠猜。”",
+        "npcResponse": "TA 打开备忘录：“好。下次我先说大概要多久，你也告诉我还想不想继续谈。”",
         "feedbackIds": [
           "attraction_up_strong",
           "conflict_down_slight"

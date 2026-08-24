@@ -1,0 +1,1038 @@
+{
+  "personalityType": "ENTJ",
+  "stage": "05-design-choice-game-endings",
+  "status": "balanced_non_runtime",
+  "mechanicsMode": "reuse",
+  "sharedMechanicsChanged": false,
+  "canonicalSources": {
+    "rules": "src/game/rules.ts",
+    "schema": "src/content/schema.ts",
+    "questions": "content/questions/entj-ten-question-draft.json",
+    "questionTraceability": "content/traceability/entj-question-traceability.json",
+    "behaviorModel": "content/entj-behavior-model.md",
+    "endingContent": "content/endings/entj-ending-content-draft.json"
+  },
+  "ruleIdPolicy": "All ENTJ-AUDIT-* identifiers in this file are documentation-only labels. The shared runtime does not expose stable rule IDs, so these labels must not be exported as Stage-06 expectedRuleIds or described as executable IDs.",
+  "precedence": [
+    "ENTJ-AUDIT-R-GLOBAL-CONFLICT-80",
+    "ENTJ-AUDIT-R-GLOBAL-COMFORT-05",
+    "ENTJ-AUDIT-R-GLOBAL-TRUST-05",
+    "ENTJ-AUDIT-R-GATE-Q02",
+    "ENTJ-AUDIT-R-GATE-Q05",
+    "ENTJ-AUDIT-R-GATE-Q08",
+    "ENTJ-AUDIT-R-FINAL-STRANGERS",
+    "ENTJ-AUDIT-R-FINAL-CONFIRMED",
+    "ENTJ-AUDIT-R-FINAL-DANGEROUS",
+    "ENTJ-AUDIT-R-FINAL-FRIENDS",
+    "ENTJ-AUDIT-R-FINAL-AMBIGUOUS"
+  ],
+  "rules": [
+    {
+      "auditRuleId": "ENTJ-AUDIT-R-GLOBAL-CONFLICT-80",
+      "scope": "global",
+      "checkpoint": "after_every_choice",
+      "when": "conflict >= 80",
+      "inclusive": true,
+      "result": "conflict_break"
+    },
+    {
+      "auditRuleId": "ENTJ-AUDIT-R-GLOBAL-COMFORT-05",
+      "scope": "global",
+      "checkpoint": "after_every_choice",
+      "when": "comfort <= 5",
+      "inclusive": true,
+      "result": "strong_discomfort"
+    },
+    {
+      "auditRuleId": "ENTJ-AUDIT-R-GLOBAL-TRUST-05",
+      "scope": "global",
+      "checkpoint": "after_every_choice",
+      "when": "trust <= 5",
+      "inclusive": true,
+      "result": "trust_broken"
+    },
+    {
+      "auditRuleId": "ENTJ-AUDIT-R-GATE-Q02",
+      "scope": "checkpoint",
+      "checkpoint": "after_Q02",
+      "when": "NOT (attraction >= 25 AND trust >= 20 AND comfort >= 20 AND conflict <= 20)",
+      "inclusive": "mixed",
+      "result": "no_second_meeting"
+    },
+    {
+      "auditRuleId": "ENTJ-AUDIT-R-GATE-Q05",
+      "scope": "checkpoint",
+      "checkpoint": "after_Q05",
+      "when": "NOT (attraction >= 35 AND trust >= 30 AND comfort >= 25 AND conflict <= 45)",
+      "inclusive": "mixed",
+      "result": "fade_out"
+    },
+    {
+      "auditRuleId": "ENTJ-AUDIT-R-GATE-Q08",
+      "scope": "checkpoint",
+      "checkpoint": "after_Q08",
+      "when": "NOT (attraction >= 45 AND trust >= 40 AND comfort >= 35 AND conflict <= 45)",
+      "inclusive": "mixed",
+      "result": "stay_acquaintances"
+    },
+    {
+      "auditRuleId": "ENTJ-AUDIT-R-FINAL-STRANGERS",
+      "scope": "final",
+      "checkpoint": "after_Q10",
+      "when": "trust < 35 OR comfort < 35 OR conflict > 50",
+      "inclusive": false,
+      "result": "strangers_after_all"
+    },
+    {
+      "auditRuleId": "ENTJ-AUDIT-R-FINAL-CONFIRMED",
+      "scope": "final",
+      "checkpoint": "after_Q10",
+      "when": "attraction >= 85 AND trust >= 65 AND comfort >= 60 AND conflict <= 25",
+      "inclusive": true,
+      "result": "confirmed_relationship",
+      "secondaryEvaluation": "romance_stable if trust >= 75 AND comfort >= 70 AND conflict <= 15; otherwise romance_hidden_risk"
+    },
+    {
+      "auditRuleId": "ENTJ-AUDIT-R-FINAL-DANGEROUS",
+      "scope": "final",
+      "checkpoint": "after_Q10",
+      "when": "attraction >= 90 AND (trust < 65 OR comfort < 60)",
+      "inclusive": "mixed",
+      "result": "dangerous_lovers"
+    },
+    {
+      "auditRuleId": "ENTJ-AUDIT-R-FINAL-FRIENDS",
+      "scope": "final",
+      "checkpoint": "after_Q10",
+      "when": "attraction < 65 AND trust >= 50 AND comfort >= 45 AND conflict <= 40",
+      "inclusive": "mixed",
+      "result": "friends"
+    },
+    {
+      "auditRuleId": "ENTJ-AUDIT-R-FINAL-AMBIGUOUS",
+      "scope": "final",
+      "checkpoint": "after_Q10",
+      "when": "no earlier rule matched",
+      "inclusive": "n/a",
+      "result": "unresolved_ambiguity"
+    }
+  ],
+  "secondaryClassifiers": [
+    {
+      "auditRuleId": "ENTJ-AUDIT-R-EVAL-ROMANCE-STABLE",
+      "parentAuditRuleId": "ENTJ-AUDIT-R-FINAL-CONFIRMED",
+      "when": "trust >= 75 AND comfort >= 70 AND conflict <= 15",
+      "outcomeId": "confirmed_relationship:romance_stable"
+    },
+    {
+      "auditRuleId": "ENTJ-AUDIT-R-EVAL-ROMANCE-HIDDEN-RISK",
+      "parentAuditRuleId": "ENTJ-AUDIT-R-FINAL-CONFIRMED",
+      "when": "confirmed_relationship matched and the stable evaluation did not",
+      "outcomeId": "confirmed_relationship:romance_hidden_risk"
+    }
+  ],
+  "checkpointTraceability": [
+    {
+      "checkpoint": "after_every_choice",
+      "applicableAuditRuleIds": [
+        "ENTJ-AUDIT-R-GLOBAL-CONFLICT-80",
+        "ENTJ-AUDIT-R-GLOBAL-COMFORT-05",
+        "ENTJ-AUDIT-R-GLOBAL-TRUST-05"
+      ],
+      "endingIds": [
+        "conflict_break",
+        "strong_discomfort",
+        "trust_broken"
+      ],
+      "feedbackKeySource": "optionTraceability[*].options[*].feedbackIds"
+    },
+    {
+      "checkpoint": "after_Q02",
+      "applicableAuditRuleIds": [
+        "ENTJ-AUDIT-R-GATE-Q02"
+      ],
+      "endingIds": [
+        "no_second_meeting"
+      ],
+      "feedbackKeySource": "optionTraceability[Q02].options[*].feedbackIds"
+    },
+    {
+      "checkpoint": "after_Q05",
+      "applicableAuditRuleIds": [
+        "ENTJ-AUDIT-R-GATE-Q05"
+      ],
+      "endingIds": [
+        "fade_out"
+      ],
+      "feedbackKeySource": "optionTraceability[Q05].options[*].feedbackIds"
+    },
+    {
+      "checkpoint": "after_Q08",
+      "applicableAuditRuleIds": [
+        "ENTJ-AUDIT-R-GATE-Q08"
+      ],
+      "endingIds": [
+        "stay_acquaintances"
+      ],
+      "feedbackKeySource": "optionTraceability[Q08].options[*].feedbackIds"
+    },
+    {
+      "checkpoint": "after_Q10",
+      "applicableAuditRuleIds": [
+        "ENTJ-AUDIT-R-FINAL-STRANGERS",
+        "ENTJ-AUDIT-R-FINAL-CONFIRMED",
+        "ENTJ-AUDIT-R-FINAL-DANGEROUS",
+        "ENTJ-AUDIT-R-FINAL-FRIENDS",
+        "ENTJ-AUDIT-R-FINAL-AMBIGUOUS"
+      ],
+      "endingIds": [
+        "strangers_after_all",
+        "confirmed_relationship",
+        "dangerous_lovers",
+        "friends",
+        "unresolved_ambiguity"
+      ],
+      "outcomeIds": [
+        "strangers_after_all",
+        "confirmed_relationship:romance_stable",
+        "confirmed_relationship:romance_hidden_risk",
+        "dangerous_lovers",
+        "friends",
+        "unresolved_ambiguity"
+      ],
+      "feedbackKeySource": "optionTraceability[Q10].options[*].feedbackIds"
+    }
+  ],
+  "endingRecords": [
+    {
+      "endingId": "conflict_break",
+      "family": "global",
+      "auditRuleIds": [
+        "ENTJ-AUDIT-R-GLOBAL-CONFLICT-80"
+      ],
+      "reachability": "verified_stage_06",
+      "actions": [
+        "restart",
+        "share",
+        "return_to_type_selection"
+      ],
+      "tone": "firm_final",
+      "stateSummaryPolicy": [
+        "conflict_severe",
+        "relationship_ended"
+      ],
+      "contentNotes": "Name coercion, personal attacks, and control firmly without diagnosing either person or treating directness as the cause.",
+      "characterBasis": {
+        "behaviorIds": [
+          "ENTJ-B02",
+          "ENTJ-B07",
+          "ENTJ-B08",
+          "ENTJ-B10",
+          "ENTJ-B12"
+        ],
+        "questionIds": [
+          "Q02",
+          "Q06",
+          "Q07",
+          "Q08",
+          "Q10"
+        ]
+      }
+    },
+    {
+      "endingId": "strong_discomfort",
+      "family": "global",
+      "auditRuleIds": [
+        "ENTJ-AUDIT-R-GLOBAL-COMFORT-05"
+      ],
+      "reachability": "verified_stage_06",
+      "actions": [
+        "restart",
+        "share",
+        "return_to_type_selection"
+      ],
+      "tone": "firm_protective",
+      "stateSummaryPolicy": [
+        "comfort_severe",
+        "relationship_ended"
+      ],
+      "contentNotes": "Protect refusal, pause, and decision rights; distinguish practical intent from sustained pressure.",
+      "characterBasis": {
+        "behaviorIds": [
+          "ENTJ-B01",
+          "ENTJ-B02",
+          "ENTJ-B04",
+          "ENTJ-B08",
+          "ENTJ-B10"
+        ],
+        "questionIds": [
+          "Q01",
+          "Q04",
+          "Q07",
+          "Q08",
+          "Q10"
+        ]
+      }
+    },
+    {
+      "endingId": "trust_broken",
+      "family": "global",
+      "auditRuleIds": [
+        "ENTJ-AUDIT-R-GLOBAL-TRUST-05"
+      ],
+      "reachability": "verified_stage_06",
+      "actions": [
+        "restart",
+        "share",
+        "return_to_type_selection"
+      ],
+      "tone": "quiet_final",
+      "stateSummaryPolicy": [
+        "trust_severe",
+        "relationship_ended"
+      ],
+      "contentNotes": "Focus on reliability, consent, public disclosure, and repair rather than moral character or type loyalty.",
+      "characterBasis": {
+        "behaviorIds": [
+          "ENTJ-B04",
+          "ENTJ-B06",
+          "ENTJ-B10",
+          "ENTJ-B11",
+          "ENTJ-B12"
+        ],
+        "questionIds": [
+          "Q04",
+          "Q07",
+          "Q08",
+          "Q09",
+          "Q10"
+        ]
+      }
+    },
+    {
+      "endingId": "no_second_meeting",
+      "family": "stage_gate",
+      "auditRuleIds": [
+        "ENTJ-AUDIT-R-GATE-Q02"
+      ],
+      "reachability": "verified_stage_06",
+      "actions": [
+        "restart",
+        "share",
+        "return_to_type_selection"
+      ],
+      "tone": "gentle_low_intensity",
+      "stateSummaryPolicy": [
+        "first_meeting_gate_failed",
+        "no_follow_up"
+      ],
+      "contentNotes": "Treat an ordinary mismatch proportionately; neither planning nor rejecting a plan is a personality failure.",
+      "characterBasis": {
+        "behaviorIds": [
+          "ENTJ-B01",
+          "ENTJ-B02",
+          "ENTJ-B06"
+        ],
+        "questionIds": [
+          "Q01",
+          "Q02"
+        ]
+      }
+    },
+    {
+      "endingId": "fade_out",
+      "family": "stage_gate",
+      "auditRuleIds": [
+        "ENTJ-AUDIT-R-GATE-Q05"
+      ],
+      "reachability": "verified_stage_06",
+      "actions": [
+        "restart",
+        "share",
+        "return_to_type_selection"
+      ],
+      "tone": "wistful_proportionate",
+      "stateSummaryPolicy": [
+        "contact_gate_failed",
+        "gradual_fade"
+      ],
+      "contentNotes": "Preserve earlier interest while showing why invitations, help, and support did not become sustainable contact.",
+      "characterBasis": {
+        "behaviorIds": [
+          "ENTJ-B02",
+          "ENTJ-B03",
+          "ENTJ-B04",
+          "ENTJ-B05"
+        ],
+        "questionIds": [
+          "Q03",
+          "Q04",
+          "Q05"
+        ]
+      }
+    },
+    {
+      "endingId": "stay_acquaintances",
+      "family": "stage_gate",
+      "auditRuleIds": [
+        "ENTJ-AUDIT-R-GATE-Q08"
+      ],
+      "reachability": "verified_stage_06",
+      "actions": [
+        "restart",
+        "share",
+        "return_to_type_selection"
+      ],
+      "tone": "warm_bounded",
+      "stateSummaryPolicy": [
+        "familiarity_gate_failed",
+        "acquaintanceship"
+      ],
+      "contentNotes": "Keep acquaintanceship distinct from friendship; solving logistics or returning on time is not complete repair.",
+      "characterBasis": {
+        "behaviorIds": [
+          "ENTJ-B05",
+          "ENTJ-B07",
+          "ENTJ-B08",
+          "ENTJ-B10",
+          "ENTJ-B12"
+        ],
+        "questionIds": [
+          "Q05",
+          "Q06",
+          "Q07",
+          "Q08"
+        ]
+      }
+    },
+    {
+      "endingId": "strangers_after_all",
+      "family": "final",
+      "auditRuleIds": [
+        "ENTJ-AUDIT-R-FINAL-STRANGERS"
+      ],
+      "reachability": "verified_stage_06",
+      "actions": [
+        "restart",
+        "share",
+        "return_to_type_selection"
+      ],
+      "tone": "sad_final",
+      "stateSummaryPolicy": [
+        "final_foundation_failed",
+        "no_continued_contact"
+      ],
+      "contentNotes": "Acknowledge real past investment without implying that sunk cost or future planning creates an obligation to continue.",
+      "characterBasis": {
+        "behaviorIds": [
+          "ENTJ-B09",
+          "ENTJ-B10",
+          "ENTJ-B11",
+          "ENTJ-B12"
+        ],
+        "questionIds": [
+          "Q07",
+          "Q08",
+          "Q09",
+          "Q10"
+        ]
+      }
+    },
+    {
+      "endingId": "confirmed_relationship",
+      "family": "final",
+      "auditRuleIds": [
+        "ENTJ-AUDIT-R-FINAL-CONFIRMED"
+      ],
+      "relationshipEvaluationIds": [
+        "romance_stable",
+        "romance_hidden_risk"
+      ],
+      "reachability": "verified_stage_06",
+      "actions": [
+        "restart",
+        "share",
+        "return_to_type_selection"
+      ],
+      "tone": "hopeful_grounded",
+      "stateSummaryPolicy": [
+        "romance_confirmed",
+        "show_secondary_evaluation"
+      ],
+      "contentNotes": "Make mutual consent, boundaries, reliability, and repair—not planning skill, investment, or type compatibility—the basis of romance.",
+      "characterBasis": {
+        "behaviorIds": [
+          "ENTJ-B04",
+          "ENTJ-B09",
+          "ENTJ-B10",
+          "ENTJ-B11",
+          "ENTJ-B12"
+        ],
+        "questionIds": [
+          "Q07",
+          "Q08",
+          "Q09",
+          "Q10"
+        ]
+      }
+    },
+    {
+      "endingId": "dangerous_lovers",
+      "family": "final",
+      "auditRuleIds": [
+        "ENTJ-AUDIT-R-FINAL-DANGEROUS"
+      ],
+      "reachability": "verified_stage_06",
+      "actions": [
+        "restart",
+        "share",
+        "return_to_type_selection"
+      ],
+      "tone": "intense_cautionary",
+      "stateSummaryPolicy": [
+        "attraction_high",
+        "relationship_unstable"
+      ],
+      "contentNotes": "Do not romanticize instability or let decisive action and future bookings stand in for trust, comfort, and repair.",
+      "characterBasis": {
+        "behaviorIds": [
+          "ENTJ-B04",
+          "ENTJ-B07",
+          "ENTJ-B10",
+          "ENTJ-B11",
+          "ENTJ-B12"
+        ],
+        "questionIds": [
+          "Q06",
+          "Q07",
+          "Q08",
+          "Q09",
+          "Q10"
+        ]
+      }
+    },
+    {
+      "endingId": "friends",
+      "family": "final",
+      "auditRuleIds": [
+        "ENTJ-AUDIT-R-FINAL-FRIENDS"
+      ],
+      "reachability": "verified_stage_06",
+      "actions": [
+        "restart",
+        "share",
+        "return_to_type_selection"
+      ],
+      "tone": "warm_affirming",
+      "stateSummaryPolicy": [
+        "friendship_stable",
+        "romance_not_confirmed"
+      ],
+      "contentNotes": "Treat explicit friendship as a complete valuable outcome; practical help and shared plans do not automatically imply romance.",
+      "characterBasis": {
+        "behaviorIds": [
+          "ENTJ-B01",
+          "ENTJ-B04",
+          "ENTJ-B05",
+          "ENTJ-B06",
+          "ENTJ-B07"
+        ],
+        "questionIds": [
+          "Q01",
+          "Q04",
+          "Q05",
+          "Q06",
+          "Q10"
+        ]
+      }
+    },
+    {
+      "endingId": "unresolved_ambiguity",
+      "family": "final",
+      "auditRuleIds": [
+        "ENTJ-AUDIT-R-FINAL-AMBIGUOUS"
+      ],
+      "reachability": "verified_stage_06",
+      "actions": [
+        "restart",
+        "share",
+        "return_to_type_selection"
+      ],
+      "tone": "open_uncertain",
+      "stateSummaryPolicy": [
+        "relationship_unclassified",
+        "future_not_promised"
+      ],
+      "contentNotes": "Do not imply that ambiguity, investment, or a place in a future plan inevitably becomes romance.",
+      "characterBasis": {
+        "behaviorIds": [
+          "ENTJ-B09",
+          "ENTJ-B10",
+          "ENTJ-B11",
+          "ENTJ-B12"
+        ],
+        "questionIds": [
+          "Q07",
+          "Q08",
+          "Q09",
+          "Q10"
+        ]
+      }
+    }
+  ],
+  "relationshipEvaluationRecords": [
+    {
+      "evaluationId": "romance_stable",
+      "parentEndingId": "confirmed_relationship",
+      "outcomeId": "confirmed_relationship:romance_stable",
+      "tone": "secure_grounded",
+      "contentNotes": "Stability means mutual constraints, reliable return after pauses, and repair capacity—not one person's perfect plan.",
+      "characterBasis": {
+        "behaviorIds": [
+          "ENTJ-B09",
+          "ENTJ-B10",
+          "ENTJ-B11",
+          "ENTJ-B12"
+        ],
+        "questionIds": [
+          "Q07",
+          "Q08",
+          "Q09",
+          "Q10"
+        ]
+      },
+      "reachability": "verified_stage_06"
+    },
+    {
+      "evaluationId": "romance_hidden_risk",
+      "parentEndingId": "confirmed_relationship",
+      "outcomeId": "confirmed_relationship:romance_hidden_risk",
+      "tone": "hopeful_cautious",
+      "contentNotes": "Preserve confirmed romance while naming untested boundaries, hidden needs, or repair patterns.",
+      "characterBasis": {
+        "behaviorIds": [
+          "ENTJ-B09",
+          "ENTJ-B10",
+          "ENTJ-B11",
+          "ENTJ-B12"
+        ],
+        "questionIds": [
+          "Q07",
+          "Q08",
+          "Q09",
+          "Q10"
+        ]
+      },
+      "reachability": "verified_stage_06"
+    }
+  ],
+  "optionTraceability": [
+    {
+      "questionId": "Q01",
+      "checkpointAuditRuleIds": [],
+      "options": [
+        {
+          "optionId": "q01_wait_for_proof",
+          "feedbackIds": [
+            "comfort_down_strong",
+            "trust_down_medium"
+          ]
+        },
+        {
+          "optionId": "q01_own_the_label",
+          "feedbackIds": [
+            "trust_up_medium",
+            "comfort_up_medium"
+          ]
+        },
+        {
+          "optionId": "q01_compare_examples",
+          "feedbackIds": [
+            "attraction_up_medium",
+            "comfort_up_medium"
+          ]
+        },
+        {
+          "optionId": "q01_drop_the_topic",
+          "feedbackIds": [
+            "comfort_up_medium",
+            "attraction_up_slight"
+          ]
+        }
+      ]
+    },
+    {
+      "questionId": "Q02",
+      "checkpointAuditRuleIds": [
+        "ENTJ-AUDIT-R-GATE-Q02"
+      ],
+      "options": [
+        {
+          "optionId": "q02_keep_two_parts",
+          "feedbackIds": [
+            "trust_up_medium",
+            "conflict_down_slight"
+          ]
+        },
+        {
+          "optionId": "q02_follow_for_today",
+          "feedbackIds": [
+            "attraction_up_medium",
+            "comfort_up_medium"
+          ]
+        },
+        {
+          "optionId": "q02_choose_one_place",
+          "feedbackIds": [
+            "comfort_up_medium",
+            "conflict_up_slight"
+          ]
+        },
+        {
+          "optionId": "q02_make_them_responsible",
+          "feedbackIds": [
+            "trust_down_slight",
+            "conflict_up_strong"
+          ]
+        }
+      ]
+    },
+    {
+      "questionId": "Q03",
+      "checkpointAuditRuleIds": [],
+      "options": [
+        {
+          "optionId": "q03_answer_and_reschedule",
+          "feedbackIds": [
+            "attraction_up_medium",
+            "trust_up_slight"
+          ]
+        },
+        {
+          "optionId": "q03_accept_the_invite",
+          "feedbackIds": [
+            "comfort_up_slight",
+            "attraction_up_medium"
+          ]
+        },
+        {
+          "optionId": "q03_set_a_slower_pace",
+          "feedbackIds": [
+            "trust_up_medium",
+            "conflict_down_slight"
+          ]
+        },
+        {
+          "optionId": "q03_delay_as_a_test",
+          "feedbackIds": [
+            "trust_down_strong",
+            "conflict_up_strong"
+          ]
+        }
+      ]
+    },
+    {
+      "questionId": "Q04",
+      "checkpointAuditRuleIds": [],
+      "options": [
+        {
+          "optionId": "q04_take_what_helps",
+          "feedbackIds": [
+            "comfort_up_slight"
+          ]
+        },
+        {
+          "optionId": "q04_name_the_boundary",
+          "feedbackIds": [
+            "comfort_up_slight",
+            "trust_up_medium"
+          ]
+        },
+        {
+          "optionId": "q04_make_a_help_rule",
+          "feedbackIds": [
+            "trust_up_medium",
+            "conflict_down_slight"
+          ]
+        },
+        {
+          "optionId": "q04_expand_the_assignment",
+          "feedbackIds": [
+            "comfort_down_strong",
+            "trust_down_medium"
+          ]
+        }
+      ]
+    },
+    {
+      "questionId": "Q05",
+      "checkpointAuditRuleIds": [
+        "ENTJ-AUDIT-R-GATE-Q05"
+      ],
+      "options": [
+        {
+          "optionId": "q05_ask_for_ten_minutes",
+          "feedbackIds": [
+            "comfort_up_medium",
+            "trust_up_medium"
+          ]
+        },
+        {
+          "optionId": "q05_call_them_heartless",
+          "feedbackIds": [
+            "conflict_up_strong",
+            "comfort_down_strong"
+          ]
+        },
+        {
+          "optionId": "q05_choose_support_together",
+          "feedbackIds": [
+            "trust_up_medium",
+            "conflict_down_medium"
+          ]
+        },
+        {
+          "optionId": "q05_take_the_plan_for_now",
+          "feedbackIds": [
+            "comfort_up_slight"
+          ]
+        }
+      ]
+    },
+    {
+      "questionId": "Q06",
+      "checkpointAuditRuleIds": [],
+      "options": [
+        {
+          "optionId": "q06_merge_the_constraints",
+          "feedbackIds": [
+            "trust_up_medium",
+            "conflict_down_medium"
+          ]
+        },
+        {
+          "optionId": "q06_accept_their_standard",
+          "feedbackIds": [
+            "attraction_up_medium",
+            "comfort_down_slight"
+          ]
+        },
+        {
+          "optionId": "q06_reject_everything",
+          "feedbackIds": [
+            "conflict_up_strong",
+            "trust_down_medium"
+          ]
+        },
+        {
+          "optionId": "q06_name_the_management_feeling",
+          "feedbackIds": [
+            "trust_up_medium",
+            "conflict_up_slight"
+          ]
+        }
+      ]
+    },
+    {
+      "questionId": "Q07",
+      "checkpointAuditRuleIds": [],
+      "options": [
+        {
+          "optionId": "q07_accept_the_pause",
+          "feedbackIds": [
+            "comfort_up_strong",
+            "conflict_down_strong"
+          ]
+        },
+        {
+          "optionId": "q07_state_the_waiting_limit",
+          "feedbackIds": [
+            "trust_up_medium",
+            "comfort_up_medium"
+          ]
+        },
+        {
+          "optionId": "q07_define_the_return",
+          "feedbackIds": [
+            "trust_up_medium",
+            "conflict_down_medium"
+          ]
+        },
+        {
+          "optionId": "q07_force_an_answer_now",
+          "feedbackIds": [
+            "comfort_down_strong",
+            "conflict_up_strong"
+          ]
+        }
+      ]
+    },
+    {
+      "questionId": "Q08",
+      "checkpointAuditRuleIds": [
+        "ENTJ-AUDIT-R-GATE-Q08"
+      ],
+      "options": [
+        {
+          "optionId": "q08_separate_repair_steps",
+          "feedbackIds": [
+            "conflict_down_strong",
+            "trust_up_medium"
+          ]
+        },
+        {
+          "optionId": "q08_not_ready_to_forgive",
+          "feedbackIds": [
+            "trust_up_medium",
+            "conflict_up_slight"
+          ]
+        },
+        {
+          "optionId": "q08_demand_total_control",
+          "feedbackIds": [
+            "conflict_up_strong",
+            "comfort_down_strong"
+          ]
+        },
+        {
+          "optionId": "q08_skip_with_flirting",
+          "feedbackIds": [
+            "attraction_up_strong",
+            "trust_down_strong"
+          ]
+        }
+      ]
+    },
+    {
+      "questionId": "Q09",
+      "checkpointAuditRuleIds": [],
+      "options": [
+        {
+          "optionId": "q09_accept_as_an_activity",
+          "feedbackIds": [
+            "attraction_up_strong",
+            "comfort_up_slight"
+          ]
+        },
+        {
+          "optionId": "q09_confirm_the_terms",
+          "feedbackIds": [
+            "trust_up_strong",
+            "comfort_up_medium"
+          ]
+        },
+        {
+          "optionId": "q09_talk_before_investing",
+          "feedbackIds": [
+            "comfort_up_medium",
+            "trust_up_medium"
+          ]
+        },
+        {
+          "optionId": "q09_announce_a_relationship",
+          "feedbackIds": [
+            "trust_down_strong",
+            "conflict_up_strong"
+          ]
+        }
+      ]
+    },
+    {
+      "questionId": "Q10",
+      "checkpointAuditRuleIds": [
+        "ENTJ-AUDIT-R-FINAL-STRANGERS",
+        "ENTJ-AUDIT-R-FINAL-CONFIRMED",
+        "ENTJ-AUDIT-R-FINAL-DANGEROUS",
+        "ENTJ-AUDIT-R-FINAL-FRIENDS",
+        "ENTJ-AUDIT-R-FINAL-AMBIGUOUS"
+      ],
+      "options": [
+        {
+          "optionId": "q10_give_a_real_answer",
+          "feedbackIds": [
+            "trust_up_strong",
+            "attraction_up_strong"
+          ]
+        },
+        {
+          "optionId": "q10_build_an_agreement",
+          "feedbackIds": [
+            "trust_up_strong",
+            "comfort_up_strong"
+          ]
+        },
+        {
+          "optionId": "q10_follow_everything",
+          "feedbackIds": [
+            "attraction_up_strong",
+            "trust_down_strong"
+          ]
+        },
+        {
+          "optionId": "q10_test_by_disappearing",
+          "feedbackIds": [
+            "trust_down_strong",
+            "conflict_up_strong"
+          ]
+        }
+      ]
+    }
+  ],
+  "feedbackDictionaryPolicy": {
+    "source": "content/endings/entj-ending-content-draft.json",
+    "stableKeyCount": 24,
+    "healthDirections": {
+      "attraction": "up",
+      "trust": "up",
+      "comfort": "up",
+      "conflict": "down"
+    },
+    "strengthByAbsoluteDelta": {
+      "5": "slight",
+      "10": "medium",
+      "15_or_20": "strong"
+    },
+    "zeroChange": "show_no_hint_for_that_dimension",
+    "combinedHint": "show one or two keys that best explain the immediate relational consequence",
+    "copyCompatibility": "All 24 keys, directions, strengths, and texts are identical to the approved shared runtime dictionary and every Stage-04 feedbackText entry."
+  },
+  "stage06Handoff": {
+    "expectedBaseEndingIds": [
+      "conflict_break",
+      "strong_discomfort",
+      "trust_broken",
+      "no_second_meeting",
+      "fade_out",
+      "stay_acquaintances",
+      "strangers_after_all",
+      "confirmed_relationship",
+      "dangerous_lovers",
+      "friends",
+      "unresolved_ambiguity"
+    ],
+    "expectedOutcomeIds": [
+      "conflict_break",
+      "strong_discomfort",
+      "trust_broken",
+      "no_second_meeting",
+      "fade_out",
+      "stay_acquaintances",
+      "strangers_after_all",
+      "confirmed_relationship:romance_stable",
+      "confirmed_relationship:romance_hidden_risk",
+      "dangerous_lovers",
+      "friends",
+      "unresolved_ambiguity"
+    ],
+    "expectedRuleIds": null,
+    "ruleCoverageReason": "The runtime has no stable rule IDs or applicable-rule diagnostic hook. Audit-only labels must not be treated as analyzer rule IDs.",
+    "reachability": "verified_all_declared_endings_and_outcomes",
+    "requiredAdapterBehavior": "Import the ENTJ question draft and call the real applyEffects, resolveEnding, and endingResultKey implementations.",
+    "baselineReport": "content/questions/entj-balance-baseline.json",
+    "beforeDangerTuningReport": "content/questions/entj-balance-before-danger-tuning.json",
+    "beforeDangerIncreaseReport": "content/questions/entj-balance-before-danger-increase.json",
+    "finalReport": "content/questions/entj-balance-report.json"
+  },
+  "globalRulePolicy": "After every option, global danger rules run in conflict, comfort, trust order before any matching checkpoint or final classifier; evaluation stops at the first result.",
+  "reachabilityPolicy": "Stage 06 exhaustively enumerated all 1,048,576 equal-choice paths through the production state application and resolver. All 11 base endings and 12 full outcomes are verified reachable. Runtime rule coverage and shadowing remain unknown because no stable rule IDs or applicable-rule diagnostic hook are exposed."
+}

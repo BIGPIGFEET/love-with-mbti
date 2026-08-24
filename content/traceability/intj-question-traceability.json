@@ -1,0 +1,182 @@
+[
+  {
+    "question_id": "Q01",
+    "order": 1,
+    "stage": "first_meeting",
+    "scene_id": "INTJ-SC01",
+    "candidate_id": "INTJ-C02",
+    "behavior_ids": ["INTJ-B01", "INTJ-B02"],
+    "feature_ids": ["INTJ-F01", "INTJ-F02", "INTJ-F05", "INTJ-F08"],
+    "source_ids": ["INTJ-S03", "INTJ-S04", "INTJ-S05", "INTJ-S14", "INTJ-S30", "INTJ-S43", "INTJ-S44"],
+    "conflict_ids": ["INTJ-K01", "INTJ-K02"],
+    "state_ids": ["attraction", "comfort", "conflict"],
+    "options": [
+      {"option_id": "q01_share_constraints", "strategy": "negotiate", "rationale": "交换真实条件并共同选方案，提高可信度并降低潜在摩擦。"},
+      {"option_id": "q01_keep_it_loose", "strategy": "honest", "rationale": "直接说明希望保留轻松节奏，同时给出下一步而非拒绝互动。"},
+      {"option_id": "q01_follow_the_plan", "strategy": "accommodate", "rationale": "这次自愿跟随带来轻度吸引，但仍留下是否会持续表达偏好的疑问。"},
+      {"option_id": "q01_say_anything", "strategy": "risky", "rationale": "隐藏条件并准备临时反悔，把共同决定变成不可预期成本。"}
+    ]
+  },
+  {
+    "question_id": "Q02",
+    "order": 2,
+    "stage": "first_meeting",
+    "scene_id": "INTJ-SC02",
+    "candidate_id": "INTJ-C03",
+    "behavior_ids": ["INTJ-B01"],
+    "feature_ids": ["INTJ-F02", "INTJ-F05"],
+    "source_ids": ["INTJ-S03", "INTJ-S04", "INTJ-S06", "INTJ-S30", "INTJ-S43"],
+    "conflict_ids": ["INTJ-K01"],
+    "state_ids": ["attraction", "trust", "comfort"],
+    "options": [
+      {"option_id": "q02_ask_if_invited", "strategy": "honest", "rationale": "直接确认邀请和自身时间，避免按语气热度读心。"},
+      {"option_id": "q02_receive_link", "strategy": "accommodate", "rationale": "先回应具体内容，给简短表达留下低压力空间。"},
+      {"option_id": "q02_call_it_cold", "strategy": "risky", "rationale": "先下负面结论再要求对方证明，制造不必要的防御和冲突。"},
+      {"option_id": "q02_confirm_logistics", "strategy": "negotiate", "rationale": "同时确认安排和信号含义，保留双方不被误读的出口。"}
+    ]
+  },
+  {
+    "question_id": "Q03",
+    "order": 3,
+    "stage": "contact",
+    "scene_id": "INTJ-SC03",
+    "candidate_id": "INTJ-C05",
+    "behavior_ids": ["INTJ-B04"],
+    "feature_ids": ["INTJ-F03", "INTJ-F04"],
+    "source_ids": ["INTJ-S07", "INTJ-S08", "INTJ-S26", "INTJ-S27", "INTJ-S31", "INTJ-S32", "INTJ-S38"],
+    "conflict_ids": ["INTJ-K04"],
+    "state_ids": ["attraction", "trust", "comfort"],
+    "options": [
+      {"option_id": "q03_name_the_help", "strategy": "accommodate", "rationale": "具体接住行动关心而不抢先定义关系，增加吸引和舒适。"},
+      {"option_id": "q03_ask_the_meaning", "strategy": "honest", "rationale": "在承认感动的同时轻量确认意图，带来靠近也增加短期压力。"},
+      {"option_id": "q03_set_help_rule", "strategy": "negotiate", "rationale": "约定更大帮助需先询问，保护决定权并显著提高信任。"},
+      {"option_id": "q03_add_more_tasks", "strategy": "risky", "rationale": "把一次帮助扩写成持续责任，主要伤害舒适和边界信任。"}
+    ]
+  },
+  {
+    "question_id": "Q04",
+    "order": 4,
+    "stage": "contact",
+    "scene_id": "INTJ-SC04",
+    "candidate_id": "INTJ-C08",
+    "behavior_ids": ["INTJ-B07"],
+    "feature_ids": ["INTJ-F05"],
+    "source_ids": ["INTJ-S03", "INTJ-S04", "INTJ-S10", "INTJ-S11", "INTJ-S12", "INTJ-S30", "INTJ-S32"],
+    "conflict_ids": ["INTJ-K07"],
+    "state_ids": ["attraction", "comfort", "conflict"],
+    "options": [
+      {"option_id": "q04_attack_the_person", "strategy": "confront", "rationale": "把具体分歧升级为人格攻击，主要推动冲突失控。"},
+      {"option_id": "q04_separate_tone", "strategy": "honest", "rationale": "分别承认证据问题和表达影响，使事实讨论不取消关系责任。"},
+      {"option_id": "q04_check_together", "strategy": "negotiate", "rationale": "共同核验并区分事实与价值，允许不同结论继续存在。"},
+      {"option_id": "q04_post_indirectly", "strategy": "risky", "rationale": "当面隐藏、公开影射，严重损害直接沟通和信任。"}
+    ]
+  },
+  {
+    "question_id": "Q05",
+    "order": 5,
+    "stage": "contact",
+    "scene_id": "INTJ-SC05",
+    "candidate_id": "INTJ-C07",
+    "behavior_ids": ["INTJ-B06"],
+    "feature_ids": ["INTJ-F03", "INTJ-F06"],
+    "source_ids": ["INTJ-S03", "INTJ-S06", "INTJ-S09", "INTJ-S14", "INTJ-S27", "INTJ-S43"],
+    "conflict_ids": ["INTJ-K06"],
+    "state_ids": ["trust", "comfort", "conflict"],
+    "options": [
+      {"option_id": "q05_set_checkin", "strategy": "negotiate", "rationale": "把空间与最低报备同时写进可兑现协议，显著提高信任。"},
+      {"option_id": "q05_give_full_space", "strategy": "accommodate", "rationale": "完整留白降低当下压力，但不额外确认玩家自身需要。"},
+      {"option_id": "q05_name_your_limit", "strategy": "honest", "rationale": "说明真实兼容底线，提升信息可信度但保留短期张力。"},
+      {"option_id": "q05_keep_testing", "strategy": "risky", "rationale": "口头同意后持续测试边界，主要降低舒适并升级冲突。"}
+    ]
+  },
+  {
+    "question_id": "Q06",
+    "order": 6,
+    "stage": "familiarity",
+    "scene_id": "INTJ-SC06",
+    "candidate_id": "INTJ-C11",
+    "behavior_ids": ["INTJ-B04", "INTJ-B05"],
+    "feature_ids": ["INTJ-F03", "INTJ-F04", "INTJ-F05"],
+    "source_ids": ["INTJ-S07", "INTJ-S08", "INTJ-S11", "INTJ-S29", "INTJ-S31", "INTJ-S32", "INTJ-S38"],
+    "conflict_ids": ["INTJ-K04", "INTJ-K05"],
+    "state_ids": ["trust", "comfort", "conflict"],
+    "options": [
+      {"option_id": "q06_hide_the_hurt", "strategy": "accommodate", "rationale": "顺应方案却隐藏未满足的情绪需要，留下舒适和冲突代价。"},
+      {"option_id": "q06_ask_for_ten_minutes", "strategy": "honest", "rationale": "明确请求有限陪伴并承诺稍后处理问题，兼顾需要与责任。"},
+      {"option_id": "q06_accuse_indifference", "strategy": "confront", "rationale": "把支持错位直接定性为毫不在乎，主要升级冲突。"},
+      {"option_id": "q06_split_the_support", "strategy": "negotiate", "rationale": "分开情绪陪伴和行动复盘，并保留玩家自己的决定权。"}
+    ]
+  },
+  {
+    "question_id": "Q07",
+    "order": 7,
+    "stage": "familiarity",
+    "scene_id": "INTJ-SC07",
+    "candidate_id": "INTJ-C13",
+    "behavior_ids": ["INTJ-B07", "INTJ-B08"],
+    "feature_ids": ["INTJ-F03", "INTJ-F05", "INTJ-F07"],
+    "source_ids": ["INTJ-S04", "INTJ-S09", "INTJ-S10", "INTJ-S11", "INTJ-S12", "INTJ-S14", "INTJ-S29", "INTJ-S31", "INTJ-S32"],
+    "conflict_ids": ["INTJ-K06", "INTJ-K07"],
+    "state_ids": ["trust", "comfort", "conflict"],
+    "options": [
+      {"option_id": "q07_accept_pause", "strategy": "accommodate", "rationale": "按明确时限完整停下，显著降低当下压力和冲突。"},
+      {"option_id": "q07_state_deadline", "strategy": "honest", "rationale": "接受暂停同时说明等待边界，提升可预期性。"},
+      {"option_id": "q07_anchor_return", "strategy": "negotiate", "rationale": "约定返回结构和改期责任，使暂停具备可验证的修复入口。"},
+      {"option_id": "q07_force_answer", "strategy": "risky", "rationale": "取消暂停权并强迫当晚结论，严重压低舒适并推高冲突。"}
+    ]
+  },
+  {
+    "question_id": "Q08",
+    "order": 8,
+    "stage": "familiarity",
+    "scene_id": "INTJ-SC08",
+    "candidate_id": "INTJ-C14",
+    "behavior_ids": ["INTJ-B08", "INTJ-B12"],
+    "feature_ids": ["INTJ-F03", "INTJ-F05", "INTJ-F07"],
+    "source_ids": ["INTJ-S09", "INTJ-S10", "INTJ-S11", "INTJ-S12", "INTJ-S14", "INTJ-S29", "INTJ-S31", "INTJ-S32"],
+    "conflict_ids": ["INTJ-K06", "INTJ-K07"],
+    "state_ids": ["trust", "comfort", "conflict"],
+    "options": [
+      {"option_id": "q08_demand_surrender", "strategy": "confront", "rationale": "把道歉扩写为全面服从要求，主要升级冲突并压低舒适。"},
+      {"option_id": "q08_skip_with_closeness", "strategy": "risky", "rationale": "用亲近跳过责任，制造强烈短期吸引，同时显著损害长期可信度。"},
+      {"option_id": "q08_not_ready_to_forgive", "strategy": "honest", "rationale": "承认按时返回但保留不原谅的权利，提高真实信息与信任。"},
+      {"option_id": "q08_three_part_repair", "strategy": "negotiate", "rationale": "按事实、影响和调整分段回谈，主要降低累积冲突。"}
+    ]
+  },
+  {
+    "question_id": "Q09",
+    "order": 9,
+    "stage": "ambiguity",
+    "scene_id": "INTJ-SC09",
+    "candidate_id": "INTJ-C16",
+    "behavior_ids": ["INTJ-B04", "INTJ-B09", "INTJ-B11"],
+    "feature_ids": ["INTJ-F01", "INTJ-F03", "INTJ-F04", "INTJ-F06", "INTJ-F08"],
+    "source_ids": ["INTJ-S03", "INTJ-S07", "INTJ-S09", "INTJ-S14", "INTJ-S27", "INTJ-S31", "INTJ-S32", "INTJ-S38", "INTJ-S44"],
+    "conflict_ids": ["INTJ-K04", "INTJ-K08", "INTJ-K10"],
+    "state_ids": ["attraction", "trust", "comfort", "conflict"],
+    "options": [
+      {"option_id": "q09_accept_as_activity", "strategy": "accommodate", "rationale": "接住未来行动但暂不定义关系，显著增加吸引并带来轻度舒适，但不自动增加信任。"},
+      {"option_id": "q09_define_before_investing", "strategy": "honest", "rationale": "在投入前说明关系理解边界，提高可信度但带来短期压力。"},
+      {"option_id": "q09_confirm_terms", "strategy": "negotiate", "rationale": "逐项确认安排和关系期待，让投入成为共同决定。"},
+      {"option_id": "q09_announce_commitment", "strategy": "risky", "rationale": "把留票擅自解释为关系许可并对外公布，主要重创信任。"}
+    ]
+  },
+  {
+    "question_id": "Q10",
+    "order": 10,
+    "stage": "ambiguity",
+    "scene_id": "INTJ-SC10",
+    "candidate_id": "INTJ-C17",
+    "behavior_ids": ["INTJ-B10", "INTJ-B11"],
+    "feature_ids": ["INTJ-F03", "INTJ-F04", "INTJ-F06"],
+    "source_ids": ["INTJ-S07", "INTJ-S09", "INTJ-S14", "INTJ-S27", "INTJ-S31", "INTJ-S32", "INTJ-S43"],
+    "conflict_ids": ["INTJ-K09", "INTJ-K10"],
+    "state_ids": ["attraction", "trust", "comfort", "conflict"],
+    "options": [
+      {"option_id": "q10_state_your_answer", "strategy": "honest", "rationale": "给出真实关系答案和最低边界，同时保留对方不同意的权利。"},
+      {"option_id": "q10_build_agreement", "strategy": "negotiate", "rationale": "把关系称呼拆成可兑现的排他、公开、联系和空间协议。"},
+      {"option_id": "q10_disappear_test", "strategy": "risky", "rationale": "以不知情消失测试替代回答，严重破坏信任并升级冲突。"},
+      {"option_id": "q10_follow_their_terms", "strategy": "accommodate", "rationale": "服从对方却隐藏自身需要，短期吸引上升而长期可信度下降。"}
+    ]
+  }
+]

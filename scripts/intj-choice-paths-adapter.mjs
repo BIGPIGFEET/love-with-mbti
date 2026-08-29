@@ -1,4 +1,4 @@
-import { questions as intjQuestions } from "../content/questions/intj-ten-question-draft.mjs";
+import { intjQuestions } from "../src/content/intj-questions.ts";
 import {
   applyEffects,
   INITIAL_STATE,

@@ -8,19 +8,8 @@ import { infjEndings, infjFuzzyFeedback, infjRelationshipEvaluations } from "./i
 import { infjQuestions } from "./infj-questions.ts";
 import { validateContent } from "./schema.ts";
 
-describe("INFJ formal data migration", () => {
-  it("projects the approved drafts into the website content pack", () => {
-    const questionDraft = JSON.parse(
-      readFileSync(resolve(process.cwd(), "content/questions/infj-ten-question-draft.json"), "utf8"),
-    );
-    const endingDraft = JSON.parse(
-      readFileSync(resolve(process.cwd(), "content/endings/infj-ending-content-draft.json"), "utf8"),
-    );
-
-    expect(infjQuestions).toEqual(questionDraft);
-    expect(infjEndings).toEqual(endingDraft.endings);
-    expect(infjRelationshipEvaluations).toEqual(endingDraft.relationshipEvaluations);
-    expect(infjFuzzyFeedback).toEqual(endingDraft.fuzzyFeedback);
+describe("INFJ production content", () => {
+  it("registers the inline TypeScript content in the website content pack", () => {
     expect(contentPacks.INFJ).toMatchObject({
       type: "INFJ",
       questions: infjQuestions,

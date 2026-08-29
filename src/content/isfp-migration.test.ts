@@ -66,19 +66,8 @@ function enumerateIsfpData() {
   };
 }
 
-describe("ISFP formal data migration", () => {
-  it("projects the approved drafts and passes the shared validator", () => {
-    const questionDraft = JSON.parse(
-      readFileSync(resolve(process.cwd(), "content/questions/isfp-ten-question-draft.json"), "utf8"),
-    );
-    const endingDraft = JSON.parse(
-      readFileSync(resolve(process.cwd(), "content/endings/isfp-ending-content-draft.json"), "utf8"),
-    );
-
-    expect(isfpQuestions).toEqual(questionDraft);
-    expect(isfpEndings).toEqual(endingDraft.endings);
-    expect(isfpRelationshipEvaluations).toEqual(endingDraft.relationshipEvaluations);
-    expect(isfpFuzzyFeedback).toEqual(endingDraft.fuzzyFeedback);
+describe("ISFP production content", () => {
+  it("validates the inline TypeScript content", () => {
     expect(() =>
       validateContent({
         questions: isfpQuestions,

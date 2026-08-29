@@ -8,19 +8,8 @@ import { intjEndings, intjFuzzyFeedback, intjRelationshipEvaluations } from "./i
 import { intjQuestions } from "./intj-questions.ts";
 import { validateContent } from "./schema.ts";
 
-describe("INTJ formal data migration", () => {
-  it("projects the approved drafts into the website content pack", () => {
-    const questionDraft = JSON.parse(
-      readFileSync(resolve(process.cwd(), "content/questions/intj-ten-question-draft.json"), "utf8"),
-    );
-    const endingDraft = JSON.parse(
-      readFileSync(resolve(process.cwd(), "content/endings/intj-ending-content-draft.json"), "utf8"),
-    );
-
-    expect(intjQuestions).toEqual(questionDraft);
-    expect(intjEndings).toEqual(endingDraft.endings);
-    expect(intjRelationshipEvaluations).toEqual(endingDraft.relationshipEvaluations);
-    expect(intjFuzzyFeedback).toEqual(endingDraft.fuzzyFeedback);
+describe("INTJ production content", () => {
+  it("registers the inline TypeScript content in the website content pack", () => {
     expect(contentPacks.INTJ).toMatchObject({
       type: "INTJ",
       questions: intjQuestions,

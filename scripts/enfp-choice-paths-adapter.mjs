@@ -1,4 +1,4 @@
-import { questions as enfpQuestions } from "../content/questions/enfp-ten-question-draft.mjs";
+import { enfpQuestions } from "../src/content/enfp-questions.ts";
 import {
   applyEffects,
   INITIAL_STATE,

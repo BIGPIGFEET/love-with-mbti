@@ -1,7 +1,4 @@
-import { endings as entpEndings, fuzzyFeedback as entpFuzzyFeedback, relationshipEvaluations as entpRelationshipEvaluations } from "../src/content/endings.ts";
-import { intpEndings, intpFuzzyFeedback, intpRelationshipEvaluations } from "../src/content/intp-endings.ts";
-import { intpQuestions } from "../src/content/intp-questions.ts";
-import { questions as entpQuestions } from "../src/content/questions.ts";
+import { contentPacks } from "../src/content/packs.ts";
 import { ENDING_IDS, RELATIONSHIP_EVALUATION_IDS, validateContent } from "../src/content/schema.ts";
 import { applyEffects, endingResultKey, INITIAL_STATE, resolveEnding } from "../src/game/rules.ts";
 
@@ -41,10 +38,7 @@ const EXPECTED_OUTCOMES = [
   ...ENDING_IDS.filter((id) => id !== "confirmed_relationship"),
   ...RELATIONSHIP_EVALUATION_IDS.map((id) => `confirmed_relationship:${id}`),
 ];
-const PACKS = {
-  ENTP: { questions: entpQuestions, endings: entpEndings, fuzzyFeedback: entpFuzzyFeedback, relationshipEvaluations: entpRelationshipEvaluations },
-  INTP: { questions: intpQuestions, endings: intpEndings, fuzzyFeedback: intpFuzzyFeedback, relationshipEvaluations: intpRelationshipEvaluations },
-};
+const PACKS = contentPacks;
 
 function percent(numerator, denominator) {
   return denominator ? Number(((numerator / denominator) * 100).toFixed(3)) : null;
@@ -245,7 +239,9 @@ function printHuman(report) {
 const args = process.argv.slice(2);
 const json = args.includes("--json");
 const selection = args.find((arg) => arg !== "--json")?.toUpperCase() ?? "ALL";
-if (!["ALL", ...Object.keys(PACKS)].includes(selection)) throw new Error("Usage: node scripts/analyze-question-paths.mjs [ENTP|INTP|all] [--json]");
+if (!["ALL", ...Object.keys(PACKS)].includes(selection)) {
+  throw new Error(`Usage: node scripts/analyze-question-paths.mjs [${Object.keys(PACKS).join("|")}|all] [--json]`);
+}
 const selected = selection === "ALL" ? Object.entries(PACKS) : [[selection, PACKS[selection]]];
 const report = { packs: Object.fromEntries(selected.map(([type, pack]) => [type, analyzePack(type, pack)])) };
 if (json) console.log(JSON.stringify(report, null, 2)); else printHuman(report);

@@ -8,19 +8,8 @@ import { enfpQuestions } from "./enfp-questions.ts";
 import { contentPacks } from "./packs.ts";
 import { validateContent } from "./schema.ts";
 
-describe("ENFP formal data migration", () => {
-  it("projects the approved drafts into the website content pack", () => {
-    const questionDraft = JSON.parse(
-      readFileSync(resolve(process.cwd(), "content/questions/enfp-ten-question-draft.json"), "utf8"),
-    );
-    const endingDraft = JSON.parse(
-      readFileSync(resolve(process.cwd(), "content/endings/enfp-ending-content-draft.json"), "utf8"),
-    );
-
-    expect(enfpQuestions).toEqual(questionDraft);
-    expect(enfpEndings).toEqual(endingDraft.endings);
-    expect(enfpRelationshipEvaluations).toEqual(endingDraft.relationshipEvaluations);
-    expect(enfpFuzzyFeedback).toEqual(endingDraft.fuzzyFeedback);
+describe("ENFP production content", () => {
+  it("registers the inline TypeScript content in the website content pack", () => {
     expect(contentPacks.ENFP).toMatchObject({
       type: "ENFP",
       questions: enfpQuestions,

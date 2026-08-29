@@ -8,19 +8,8 @@ import { entjQuestions } from "./entj-questions.ts";
 import { contentPacks } from "./packs.ts";
 import { validateContent } from "./schema.ts";
 
-describe("ENTJ formal data migration", () => {
-  it("projects the approved drafts into the website content pack", () => {
-    const questionDraft = JSON.parse(
-      readFileSync(resolve(process.cwd(), "content/questions/entj-ten-question-draft.json"), "utf8"),
-    );
-    const endingDraft = JSON.parse(
-      readFileSync(resolve(process.cwd(), "content/endings/entj-ending-content-draft.json"), "utf8"),
-    );
-
-    expect(entjQuestions).toEqual(questionDraft);
-    expect(entjEndings).toEqual(endingDraft.endings);
-    expect(entjRelationshipEvaluations).toEqual(endingDraft.relationshipEvaluations);
-    expect(entjFuzzyFeedback).toEqual(endingDraft.fuzzyFeedback);
+describe("ENTJ production content", () => {
+  it("registers the inline TypeScript content in the website content pack", () => {
     expect(contentPacks.ENTJ).toMatchObject({
       type: "ENTJ",
       questions: entjQuestions,

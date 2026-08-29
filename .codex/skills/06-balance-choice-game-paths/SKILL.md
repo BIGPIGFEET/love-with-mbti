@@ -18,7 +18,7 @@ If the repository provides `.codex/choice-game-process-profile.md`, read it befo
 
 Read [references/adapter-contract.md](references/adapter-contract.md). Create a project adapter that imports the real question and rule data and exports the required pure interface. Do not duplicate production numbers by hand when they can be imported.
 
-For Love with MBTI balance work, also read [references/love-with-mbti-balance-contract.md](references/love-with-mbti-balance-contract.md). It fixes the effect budget, probability denominators, acceptance ranges, and tuning order for ENTP and INTP.
+For Love with MBTI balance work, also read [references/love-with-mbti-balance-contract.md](references/love-with-mbti-balance-contract.md). It fixes the effect budget, probability denominators, acceptance ranges, and tuning order for all eight playable types.
 
 Keep the adapter side-effect free. A run with the same inputs must produce the same output.
 
@@ -33,12 +33,20 @@ node scripts/enumerate-choice-paths.mjs <path-to-adapter.mjs> --json
 
 The report includes truncated terminal-trajectory counts and percentages, complete choice-space weights and percentages, declared coverage gaps, rule coverage when rule IDs are available, ending examples, fixed-position runs, fixed-strategy runs, and local effect dominance.
 
-For the bundled production-equivalent adapters, run both playable types separately:
+For the bundled production-equivalent adapters, run every playable type separately when refreshing the complete project baseline:
 
 ```powershell
 node scripts/enumerate-choice-paths.mjs scripts/love-with-mbti-adapter.mjs --json
+node scripts/enumerate-choice-paths.mjs scripts/love-with-mbti-intj-adapter.mjs --json
+node scripts/enumerate-choice-paths.mjs scripts/love-with-mbti-entj-adapter.mjs --json
+node scripts/enumerate-choice-paths.mjs scripts/love-with-mbti-enfp-adapter.mjs --json
 node scripts/enumerate-choice-paths.mjs scripts/love-with-mbti-intp-adapter.mjs --json
+node scripts/enumerate-choice-paths.mjs scripts/love-with-mbti-infj-adapter.mjs --json
+node scripts/enumerate-choice-paths.mjs scripts/love-with-mbti-infp-adapter.mjs --json
+node scripts/enumerate-choice-paths.mjs scripts/love-with-mbti-isfp-adapter.mjs --json
 ```
+
+The project-level `node scripts/analyze-question-paths.mjs all` command runs the same production rules across all eight registered content packs. Use the target adapter while editing one type and the all-type command after a shared-rule change or before a complete release handoff.
 
 ## Balance workflow
 
@@ -52,7 +60,7 @@ node scripts/enumerate-choice-paths.mjs scripts/love-with-mbti-intp-adapter.mjs 
 8. Inspect local dominance. Treat it as a warning, not proof of global dominance, because later rules and state interactions may change value. Preserve a locally dominated option only with a concrete narrative distinction.
 9. Review effect budgets before tuning: illegal magnitudes and total absolute change above the hard cap are errors; ordinary-budget and excessive high-magnitude-axis findings require explanation.
 10. Change the smallest defensible element in the approved order. Preserve behavioral meaning and document the rationale.
-11. Re-run the complete analyzer after every batch. Never replace full enumeration with sampling. Compare against the baseline and confirm no ending or rule became unintentionally unreachable.
+11. Re-run the complete analyzer for every affected type after each batch. A shared-rule change affects all eight playable types. Never replace full enumeration with sampling. Compare against the baseline and confirm no ending or rule became unintentionally unreachable.
 12. Synchronize approved mechanics, ending documentation, fuzzy feedback semantics, tests, and examples.
 
 ## Interpretation rules
@@ -85,3 +93,4 @@ node scripts/enumerate-choice-paths.mjs scripts/love-with-mbti-intp-adapter.mjs 
 - Effect changes remain consistent with immediate responses and fuzzy hints.
 - A machine-readable report and at least one example path per reachable ending are preserved.
 - The report records any unmet target without changing thresholds or narrative meaning merely to force a percentage.
+- For a complete Love with MBTI release handoff, all eight registered production packs have current reports generated from their inline TypeScript content and the fixed production resolver.

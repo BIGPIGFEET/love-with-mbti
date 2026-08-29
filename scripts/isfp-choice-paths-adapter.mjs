@@ -1,6 +1,4 @@
-import { readFileSync } from "node:fs";
-import { fileURLToPath } from "node:url";
-
+import { isfpQuestions } from "../src/content/isfp-questions.ts";
 import {
   ALLOWED_EFFECT_VALUES,
   ENDING_IDS,
@@ -12,11 +10,6 @@ import {
   resolveEnding,
 } from "../src/game/rules.ts";
 
-const questionPath = fileURLToPath(
-  new URL("../content/questions/isfp-ten-question-draft.json", import.meta.url),
-);
-const questionDocument = JSON.parse(readFileSync(questionPath, "utf8"));
-
 export const initialState = { ...INITIAL_STATE };
 
 export const dimensionDirections = {
@@ -26,7 +19,7 @@ export const dimensionDirections = {
   conflict: "min",
 };
 
-export const questions = questionDocument;
+export const questions = isfpQuestions;
 
 export const expectedEndingIds = [...ENDING_IDS];
 

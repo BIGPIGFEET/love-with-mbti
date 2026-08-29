@@ -1,6 +1,6 @@
 # Love with MBTI balance contract
 
-Use this contract for ENTP and INTP production-equivalent enumeration. Import production questions, state application, stable result IDs, and `resolveEnding`; never copy thresholds into an adapter-side evaluator.
+Use this contract for production-equivalent enumeration of all eight playable types: INTJ, ENTJ, ENTP, ENFP, INTP, INFJ, INFP, and ISFP. Import each target's inline TypeScript questions, state application, stable result IDs, and `resolveEnding`; never copy thresholds into an adapter-side evaluator.
 
 ## Outcome flow
 
@@ -55,16 +55,7 @@ Final classifier:
 
 ## Tuning order
 
-Capture a baseline, then change one bounded batch at a time and fully enumerate ENTP and INTP after every batch.
-
-The production-equivalent baseline before the realistic-funnel migration was:
-
-| type | Q10 reach | confirmed relationship in complete space | confirmed relationship within Q10 |
-|---|---:|---:|---:|
-| ENTP | 51.23% | 11.11% | 21.69% |
-| INTP | 55.37% | 14.49% | 26.16% |
-
-Use these figures only as the supplied before-state for comparison. Recompute the production-equivalent baseline whenever source data or rules differ, and use eligible checkpoint denominators—not the combined all-game stage share—for stage acceptance.
+Capture the target's current report as the baseline, then change one bounded batch at a time and fully enumerate every affected type after each batch. A target-specific content change requires that target's enumeration; a shared-rule change requires all eight types. Recompute from inline production TypeScript whenever source data or rules differ, and use eligible checkpoint denominators—not the combined all-game stage share—for stage acceptance.
 
 1. Keep global danger thresholds at comfort `<= 5`, trust `<= 5`, and conflict `>= 80`.
 2. Keep the locked four-dimension stage and final rules in the production resolver; do not create a commitment score or adapter-only threshold.
@@ -76,4 +67,4 @@ Do not force percentages by breaking the behavioral meaning of a choice. Record 
 
 ## Required handoff
 
-Preserve before/after tables, individual and combined global danger shares, eligible-denominator stage rates, Q10 reach, Q10-conditional complete outcomes, unreachable IDs, measured or unknown shadowing, fixed-position and fixed-strategy runs, local dominance findings with narrative dispositions, and at least one path per reachable complete outcome.
+For each affected type, preserve before/after tables, individual and combined global danger shares, eligible-denominator stage rates, Q10 reach, Q10-conditional complete outcomes, unreachable IDs, measured or unknown shadowing, fixed-position and fixed-strategy runs, local dominance findings with narrative dispositions, and at least one path per reachable complete outcome. A complete release handoff contains current reports for all eight registered production packs.

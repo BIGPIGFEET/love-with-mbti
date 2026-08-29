@@ -1,81 +1,71 @@
-# Ending and feedback schemas
+# Ending and feedback content schemas
 
-## Mechanics mode
+## Fixed canonical contract
 
-Declare exactly one mode before editing rules:
+Read the stable result vocabulary and ending kinds from the canonical runtime schema, and read evaluation order and conditions from the canonical resolver. These are read-only Stage-05 inputs.
 
-| mode | use |
-|---|---|
-| `establish` | No canonical mechanics exist; create them and identify their future source of truth |
-| `reuse` | Canonical mechanics exist; bind content to them without changing thresholds, precedence, directions, or stable IDs |
-| `migrate` | Intentionally change shared mechanics under a separately approved migration with regression analysis |
+Do not copy thresholds into a second executable or normative rule table. A companion document may record an audit-only reference to the canonical result, but it must not redefine conditions, precedence, stable IDs, or feedback semantics.
 
-Default to `reuse` whenever a project rule implementation exists.
+If the runtime has no stable rule IDs, do not invent executable-looking identifiers or export audit labels as analyzer `expectedRuleIds`.
 
-## Rule-to-ending matrix
+## Content coverage matrix
 
-| priority | rule_id | checkpoint | condition | inclusive? | ending_id | secondary_result_id | tie-break notes |
-|---:|---|---|---|---|---|---|---|
+| ending_id | secondary_result_id | fixed family | production content route | character basis | content complete? |
+|---|---|---|---|---|---|
 
-Write conditions in implementation-ready terms. Avoid prose such as "trust is low" unless the corresponding numeric or categorical definition is also recorded.
+Use one row for every canonical base ending and every complete secondary outcome. Preserve base ending IDs and secondary result IDs separately so nested classifications are not lost.
 
-In `reuse` mode, distinguish runtime rule IDs from audit-only documentation IDs. Prefix or explicitly label audit-only IDs, and do not export them as analyzer `expectedRuleIds` unless the production evaluator returns the same IDs.
-
-## Ending record
+## Ending content record
 
 | Field | Meaning |
 |---|---|
-| ending_id | Stable machine-facing ID |
-| secondary_result_ids | Optional stable sub-classifiers or evaluations under the base ending |
-| family | `global` / `stage_gate` / `final` only |
-| title | Player-facing title. For Chinese content, use 4–8 Chinese characters and name the relationship outcome clearly enough to understand without body copy. Literary and MBTI-specific wording must preserve that clarity. |
+| ending_id | Fixed machine-facing base ending ID |
+| secondary_result_ids | Fixed sub-classifiers or evaluations under the base ending, when applicable |
+| family | Fixed `global` / `stage_gate` / `final` kind read from the runtime schema |
+| title | Player-facing title; for Chinese content, use 4–8 Chinese characters and make the relationship outcome recognizable without body copy |
 | core_copy | Main narrative result |
-| specific_reason | Concrete interaction pattern or triggering act |
+| specific_reason | Concrete interaction pattern or triggering act supported by the questions |
 | state_summary_policy | Which dimensions or qualitative states to reveal |
-| actions | Restart, continue, review, share, or exit controls |
+| actions | Restart, continue, review, share, or exit controls supported by the product |
 | tone | Emotional target and severity |
 | content_notes | Safety or sensitivity guidance |
-| character_basis | Approved behavior-model IDs, question interaction references, or established voice notes that justify MBTI-specific wording |
-| rule_ids | Rules that can produce this ending |
-| reachability | unknown / verified / unreachable |
-| example_path | Filled by balance work when available |
+| character_basis | Approved behavior-model IDs, question interaction references, or established voice notes that justify target-specific wording |
+| production_route | Inline TypeScript module and runtime fields that store the content |
+| stage06_status | Reachability or balance status imported from Stage 06, never guessed during Stage 05 |
 
-## Fuzzy feedback dictionary
+When the runtime interface stores fewer fields, keep design-only fields in a companion audit record keyed by the exact stable ending and secondary result IDs.
 
-| hint_key | dimension | raw direction | player meaning | intensity | sample copy |
+## Fuzzy-feedback content dictionary
+
+| hint_key | fixed dimension | fixed raw direction | player meaning | fixed intensity | target-specific copy |
 |---|---|---|---|---|---|
 
-For each dimension, define:
+For every canonical key:
 
-- whether higher or lower is healthier;
-- zero-change behavior;
-- small, medium, and large intensity bands actually used by options;
-- wording that describes felt change without exposing raw numbers;
-- combined-hint policy when several dimensions change together.
+- preserve its dimension, raw direction, and intensity;
+- write felt, nonnumeric player-facing language;
+- preserve the canonical zero-change behavior;
+- preserve the approved combined-hint policy;
+- verify conflict-like inverse semantics explicitly.
 
-For conflict-like dimensions, a negative numeric delta normally means improvement. Test the semantic direction explicitly.
-
-## Traceability matrix
-
-| checkpoint | rule_id | ending_id | secondary_result_id | feedback keys |
-|---|---|---|---|---|
+Stage 05 may change only the player-facing wording permitted by the target content pack. It may not add keys or reinterpret existing keys.
 
 ## Completeness review
 
-- List all runtime return values and confirm each has content.
-- Confirm every Chinese player-facing title contains 4–8 Chinese characters and makes the resulting relationship state recognizable without the body copy.
-- Confirm target-specific titles and copy are grounded in the approved MBTI behavior model and established question interactions rather than the four-letter label or unsupported stereotypes.
-- Compare titles for the same ending across MBTI targets: allow distinct wording and imagery, but confirm that every variant preserves the same stable result semantics.
-- Confirm options contain no direct-ending selector and that every result is produced by global danger evaluation, a stage gate, or the final classifier.
-- List base ending IDs and secondary result/outcome IDs separately so nested classifications are not lost.
-- List all ending records and confirm each has at least one rule.
-- Identify rules shadowed by a higher-priority rule.
-- Identify duplicate conditions with different endings.
-- Record unknown reachability for downstream exhaustive enumeration.
-- In `reuse` mode, diff the canonical rule implementation before and after work and confirm no shared mechanics changed.
+- List all canonical base ending IDs and confirm each has exactly one content record.
+- List all secondary evaluation IDs and confirm each has complete, separate content.
+- Confirm fixed ending kinds match the runtime schema.
+- Confirm every Chinese title contains 4–8 Chinese characters and makes the resulting relationship state recognizable without body copy.
+- Confirm target-specific wording is grounded in the approved behavior model and established question interactions rather than the four-letter label or unsupported stereotypes.
+- Compare titles for the same fixed outcome across MBTI targets: allow distinct wording and imagery, but preserve identical outcome semantics.
+- Confirm reasons name interactions that can occur in the target's questions.
+- Confirm every canonical fuzzy-feedback key has target content with unchanged semantics.
+- Confirm options contain no direct-ending selector and content introduces no additional ending family.
+- Confirm production content is inline TypeScript and no production module imports a JSON or Markdown draft.
+- Defer reachability, rule coverage, and distribution judgments to Stage 06.
 
-For Love with MBTI, evaluate in this order after applying an option: global danger rules; the Q2, Q5, or Q8 gate when the current checkpoint matches; and the Q10 final classifier only after earlier rules do not select an ending. Keep `confirmed_relationship:romance_stable` and `confirmed_relationship:romance_hidden_risk` as separate complete outcomes even though they share one base ending.
+For Love with MBTI, the fixed runtime result order is global danger after each applied option; the Q2, Q5, or Q8 gate at its matching checkpoint; and the Q10 final classifier when no earlier result ends the run. Keep `confirmed_relationship:romance_stable` and `confirmed_relationship:romance_hidden_risk` as separate complete outcomes even though they share one base ending. This paragraph describes the canonical resolver for content coverage and does not authorize Stage-05 rule changes.
 
 ## Runtime projection
 
-The tables above are the audit contract. When the production ending interface has different property names or omits design-only fields, map the semantic fields to the canonical runtime schema and keep the remainder in a companion matrix keyed by stable ending and rule IDs. Do not create a second executable rule system in Markdown.
+The tables above are the audit contract. Map player-facing fields to the canonical inline TypeScript ending interface and keep omitted design-only fields in a companion matrix keyed by stable ending and evaluation IDs. Do not create a second executable rule system in Markdown, JSON, or the content module.

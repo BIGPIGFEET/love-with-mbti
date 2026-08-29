@@ -1,65 +1,64 @@
 ---
 name: 05-design-choice-game-endings
-description: Design an exhaustive catalog of global-danger, stage-gate, and final-classifier endings without option-authored direct results, plus relationship-state feedback, stable IDs, evaluation priority, trigger rules, copy, actions, and traceability. Use as stage 05 after questions and preliminary state rules exist and before exhaustive path balancing.
+description: Create complete target-specific ending, relationship-evaluation, and fuzzy-feedback copy for a choice game's fixed canonical outcomes and rules. Use as stage 05 after questions exist and before exhaustive path balancing; do not use it to create or change mechanics.
 ---
 
-# 05 Design Choice Game Endings
+# 05 Write Choice Game Ending Content
 
 ## Overview
 
-Make every possible exit path intentional and explainable before attempting numerical balance. Separate rule identity from display copy so tuning thresholds does not break content references.
+Create complete, target-specific player-facing content for every result already declared by the canonical runtime schema and fixed ending resolver. Treat rule order, thresholds, state semantics, stable IDs, secondary classifiers, and fuzzy-feedback keys as read-only inputs.
 
-Consume the questions and preliminary mechanics from `$04-write-choice-game-questions` and pass the complete rule/ending contract to `$06-balance-choice-game-paths`.
-
+Consume the questions from `$04-write-choice-game-questions` and pass complete ending and feedback content to `$06-balance-choice-game-paths` for reachability and distribution analysis.
 
 ## Required inputs
 
 Collect or confirm:
 
-- state dimensions and their meanings;
-- whether this run is defining shared mechanics for the first time or binding a new content set to existing mechanics;
-- the canonical rule implementation, result types, and rule evaluation order when they already exist;
-- global thresholds and stage-gate checks;
-- final ending classifiers and tie-break rules;
-- the approved feedback-key semantics created before or during stage 04;
+- the canonical runtime ending implementation and result types;
+- the fixed base ending IDs, ending kinds, secondary evaluation IDs, and evaluation order;
+- the approved fuzzy-feedback key dictionary and direction/intensity semantics;
 - the target MBTI's approved behavior model, established characterization, and evidence boundaries;
-- desired voice, content boundaries, and restart behavior.
+- the completed question interactions that the ending copy may reference;
+- desired voice, content boundaries, state-summary policy, and restart behavior;
+- the canonical production ending module, structural validator, and target content-pack route.
 
-Read [references/ending-schema.md](references/ending-schema.md) before producing the catalog.
+Read [references/ending-schema.md](references/ending-schema.md) before producing content.
 
-If the repository provides `.codex/choice-game-process-profile.md`, read it before choosing the mechanics mode, resolving canonical files, projecting semantic fields, or running validators. The profile may narrow this reusable contract but cannot authorize silent mechanics changes.
+If the repository provides `.codex/choice-game-process-profile.md`, read it before resolving canonical files, target routes, runtime field mappings, or validation commands. The profile may narrow this reusable content contract but cannot authorize mechanics changes.
 
-## Mechanics ownership
+## Fixed-mechanics boundary
 
-Use one of three explicit modes:
+Stage 05 writes content only. Do not create, tune, migrate, or reinterpret:
 
-- **establish mode**: create shared state, threshold, precedence, result, and feedback contracts because the project does not have them yet;
-- **reuse mode**: reuse the existing contracts and add only the ending content or target-specific presentation that the project permits;
-- **migrate mode**: intentionally change shared mechanics under separately approved migration scope and regression checks.
+- initial state, clamping, state directions, or legal effect values;
+- global-danger thresholds, stage-gate thresholds, checkpoints, or inclusivity;
+- rule precedence, final classifiers, or tie-break behavior;
+- stable ending IDs, ending kinds, or secondary evaluation IDs;
+- strategy vocabulary or fuzzy-feedback key semantics.
 
-Default to reuse mode whenever production rules exist. Changing a shared threshold, precedence rule, state direction, or stable result ID requires migrate mode and must not be smuggled into ending-copy work.
+Read these contracts from the canonical implementation. If they are missing or the requested content cannot be represented by them, stop and report the mechanics dependency as a separate task; do not solve it inside Stage 05.
 
 ## Workflow
 
-1. Inventory every ending family in exact runtime order: global thresholds after each choice, stage gates at their declared checkpoints, the final classifier, and any secondary classification. In reuse mode, derive this inventory from the real rule implementation rather than rewriting it from prose.
-2. Assign stable rule IDs and ending IDs. Keep them distinct from titles and prose.
-   If the runtime has no stable rule IDs, label companion IDs as audit-only. Do not claim they are executable runtime IDs or declare them to path analysis until the runtime exposes a matching identifier.
-3. State precedence and tie-break behavior when multiple conditions are true after the same choice.
-4. Create one ending record for every declared rule result, including results whose reachability is still unknown. Include title, core copy, specific reason, state summary policy, actions, tone, content notes, and the approved characterization basis used for MBTI-specific wording.
-5. Draft the player-facing title so it identifies the resulting relationship state without relying on the body copy. For Chinese titles, use 4–8 Chinese characters. Literary phrasing may add tone, but it must not replace or obscure the outcome.
-6. Tailor the title and ending copy to the target MBTI's approved behavior model and established in-game characterization. Preserve the stable ending semantics across types; do not infer copy from the four-letter label alone or from unsupported stereotypes.
-7. Write the reason as a consequence of the interaction history, not a personality diagnosis.
-8. Verify fuzzy feedback coverage for each state dimension, direction, and supported intensity. In reuse mode, preserve the approved keys and semantics; fill missing player-facing copy without silently changing direction or intensity rules.
-9. Connect checkpoints, runtime rules, endings, and feedback keys in a traceability matrix.
-10. Run a completeness review before balance work. Mark endings whose reachability is unknown rather than assuming they can occur.
+1. Read the canonical schema and resolver and inventory every fixed base ending, ending kind, and secondary evaluation result in exact runtime order. Use this inventory only as a content-coverage checklist; do not reproduce an executable rule system in documentation.
+2. Map every fixed base ending and secondary evaluation to the target's production content fields and any companion audit fields required by the repository profile.
+3. Create complete player-facing content for every fixed result. Include the title, core copy, specific reason, state summary, and any product-supported actions, tone, content notes, and characterization basis.
+4. Draft each title so it identifies the resulting relationship state without relying on body copy. For Chinese titles, use 4–8 Chinese characters. Literary phrasing may add tone, but it must not obscure the outcome.
+5. Tailor titles and copy to the target MBTI's approved behavior model and established in-game interactions. Preserve the fixed outcome semantics across types; do not infer copy from the four-letter label alone or from unsupported stereotypes.
+6. Write reasons as consequences of the interaction history, not as personality diagnoses. Refer to concrete patterns or triggering acts that the questions can actually produce.
+7. Fill the player-facing fuzzy-feedback copy for every fixed key. Preserve each key's dimension, raw direction, and intensity; for conflict-like dimensions, verify the inverse player meaning explicitly.
+8. Preserve the base `endingId` and any secondary `evaluationId` separately. Never collapse complete outcomes such as stable and hidden-risk relationship evaluations into one content record.
+9. Write the target's inline TypeScript ending content and any required companion audit matrix. Do not leave Markdown or JSON as the production source.
+10. Run structural validation and hand the unchanged production rules plus completed content to Stage 06. Stage 06, not Stage 05, determines reachability and balance.
 
 ## Copy principles
 
 - Make the player-facing title directly communicate the current outcome, such as separation, fading contact, acquaintanceship, friendship, unresolved ambiguity, unstable romance, or confirmed romance.
-- For Chinese player-facing content, keep the title to 4–8 Chinese characters. Apply a title-only test: a player who has not read the body copy should still be able to identify the relationship state.
+- For Chinese player-facing content, keep the title to 4–8 Chinese characters. A player who has not read the body copy should still recognize the relationship state.
 - Literary imagery and target-specific voice are welcome only when the outcome remains immediately legible. Do not use an atmospheric metaphor as the sole carrier of meaning.
-- Adapt titles, imagery, dialogue, and emotional emphasis to the target MBTI through its approved behavior model and the interactions established by the questions. Avoid generic type slogans, unsupported clichés, and personality diagnosis.
-- Titles for the same stable ending across different MBTI targets may differ, and should avoid mechanical duplication when a clear target-specific phrasing is available. They must still describe the same canonical result.
+- Adapt titles, imagery, dialogue, and emotional emphasis through the approved behavior model and established question interactions. Avoid generic type slogans, unsupported clichés, and personality diagnosis.
+- Titles for the same stable ending may differ across MBTI targets, but every variant must describe the same canonical result.
 - Explain the outcome without revealing implementation formulas.
 - Name concrete patterns in the player's choices.
 - Distinguish benevolent intent from harmful effect.
@@ -67,26 +66,16 @@ Default to reuse mode whenever production rules exist. Changing a shared thresho
 - Keep low-intensity outcomes proportionate; do not make every failure catastrophic.
 - Give final endings a distinct emotional and narrative shape, not only different titles.
 
-## Rule principles
-
-- Let options change state only. Never make one option directly select an ending; route every result through the canonical global rules, stage gates, and final classifier.
-- Evaluate higher-priority ending rules once and stop unless the product explicitly supports layered endings.
-- Define whether thresholds are inclusive or exclusive.
-- Define stage gates by exact checkpoint and state snapshot.
-- Make final tie-break order explicit and deterministic.
-- Never reuse an ending ID for changed semantics.
-- For Love with MBTI, ending kinds are limited to `global`, `stage_gate`, and `final`; do not create a separate kind for option-authored endings.
-
 ## Acceptance checks
 
-- Every rule result maps to exactly one ending ID.
-- Every stable ending is reachable through a canonical rule or explicitly marked for removal/migration; no stable catalog entry exists solely because an option names it.
-- Secondary classifiers such as evaluation IDs are represented in a stable outcome ID and never collapsed accidentally.
-- Every ending ID has complete player-facing content and actions.
+- Every canonical base ending ID has exactly one complete target-specific content record with the fixed ending kind.
+- Every canonical secondary evaluation ID has complete content and remains distinct in the full outcome key.
+- No extra, missing, renamed, or repurposed ending or evaluation IDs exist.
 - Every Chinese player-facing title contains 4–8 Chinese characters and passes the title-only relationship-state test.
-- Every target-specific title and copy records its approved MBTI behavior-model or question-interaction basis, preserves canonical ending semantics, and avoids unsupported stereotypes.
-- Evaluation order matches the runtime contract.
-- Fuzzy hints cover every legal dimension, direction, and intensity.
-- Conflict-like dimensions use correct inverse semantics.
-- Unknown or unreachable endings are visibly flagged for path analysis.
-- In reuse mode, shared mechanics are unchanged and the project validator passes.
+- Every target-specific title and copy records its approved behavior-model or question-interaction basis, preserves canonical outcome semantics, and avoids unsupported stereotypes.
+- Every fixed fuzzy-feedback key has copy whose dimension, direction, and intensity match the canonical dictionary.
+- Conflict-like dimensions use correct inverse player meaning.
+- Options contain no direct-ending selector; all content remains bound to canonical resolver results.
+- Production content is inline TypeScript and the target is registered through the canonical content-pack route.
+- Shared mechanics and fixed ID vocabularies are unchanged.
+- The project structural validator passes, and reachability is explicitly handed to Stage 06 rather than guessed or repaired in Stage 05.

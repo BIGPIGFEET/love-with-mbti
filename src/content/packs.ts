@@ -3,6 +3,8 @@ import { enfpEndings, enfpFuzzyFeedback, enfpRelationshipEvaluations } from "./e
 import { enfpQuestions } from "./enfp-questions.ts";
 import { entjEndings, entjFuzzyFeedback, entjRelationshipEvaluations } from "./entj-endings.ts";
 import { entjQuestions } from "./entj-questions.ts";
+import { estjEndings, estjFuzzyFeedback, estjRelationshipEvaluations } from "./estj-endings.ts";
+import { estjQuestions } from "./estj-questions.ts";
 import { endings, fuzzyFeedback, relationshipEvaluations } from "./endings.ts";
 import { infjEndings, infjFuzzyFeedback, infjRelationshipEvaluations } from "./infj-endings.ts";
 import { infjQuestions } from "./infj-questions.ts";
@@ -10,6 +12,10 @@ import { infpEndings, infpFuzzyFeedback, infpRelationshipEvaluations } from "./i
 import { infpQuestions } from "./infp-questions.ts";
 import { intjEndings, intjFuzzyFeedback, intjRelationshipEvaluations } from "./intj-endings.ts";
 import { intjQuestions } from "./intj-questions.ts";
+import { istjEndings, istjFuzzyFeedback, istjRelationshipEvaluations } from "./istj-endings.ts";
+import { istjQuestions } from "./istj-questions.ts";
+import { isfjEndings, isfjFuzzyFeedback, isfjRelationshipEvaluations } from "./isfj-endings.ts";
+import { isfjQuestions } from "./isfj-questions.ts";
 import { isfpEndings, isfpFuzzyFeedback, isfpRelationshipEvaluations } from "./isfp-endings.ts";
 import { isfpQuestions } from "./isfp-questions.ts";
 import { intpEndings, intpFuzzyFeedback, intpRelationshipEvaluations } from "./intp-endings.ts";
@@ -33,6 +39,14 @@ export const contentPacks = {
     endings: entjEndings,
     relationshipEvaluations: entjRelationshipEvaluations,
     fuzzyFeedback: entjFuzzyFeedback,
+  },
+  ESTJ: {
+    type: "ESTJ",
+    description: "十次计划协商、实际照顾、边界修复与关系确认之间的取舍。",
+    questions: estjQuestions,
+    endings: estjEndings,
+    relationshipEvaluations: estjRelationshipEvaluations,
+    fuzzyFeedback: estjFuzzyFeedback,
   },
   ENTP: {
     type: "ENTP",
@@ -73,6 +87,22 @@ export const contentPacks = {
     endings: infpEndings,
     relationshipEvaluations: infpRelationshipEvaluations,
     fuzzyFeedback: infpFuzzyFeedback,
+  },
+  ISTJ: {
+    type: "ISTJ",
+    description: "十次共同安排、行动关心、承诺边界与关系确认之间的取舍。",
+    questions: istjQuestions,
+    endings: istjEndings,
+    relationshipEvaluations: istjRelationshipEvaluations,
+    fuzzyFeedback: istjFuzzyFeedback,
+  },
+  ISFJ: {
+    type: "ISFJ",
+    description: "十次社交节奏、实际照顾、角色边界与关系确认之间的取舍。",
+    questions: isfjQuestions,
+    endings: isfjEndings,
+    relationshipEvaluations: isfjRelationshipEvaluations,
+    fuzzyFeedback: isfjFuzzyFeedback,
   },
   ISFP: {
     type: "ISFP",

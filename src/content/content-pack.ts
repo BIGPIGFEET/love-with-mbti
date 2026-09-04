@@ -8,11 +8,14 @@ import type {
 export const AVAILABLE_MBTI_TYPES = [
   "INTJ",
   "ENTJ",
+  "ESTJ",
   "ENTP",
   "ENFP",
   "INTP",
   "INFJ",
   "INFP",
+  "ISTJ",
+  "ISFJ",
   "ISFP",
 ] as const;
 

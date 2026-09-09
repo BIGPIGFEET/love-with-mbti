@@ -1,12 +1,12 @@
 # INTP 正式十题内容草案 v0.1
 
 > 状态：题干、四选项、即时反应、模糊提示和研究追踪已锁定；全路径平衡与类型安全正式数据迁移均已完成。  
-> 锁定顺序：[INTP 正式十场景策展交接](../scenes/intp-formal-ten-selection.md)。  
+> 锁定顺序：[INTP 正式十场景策展交接](../scenes/intp-formal-sequence.md)。
 > 数值顺序统一为：`吸引 / 信任 / 舒适 / 冲突`；仅使用 `-20、-15、-10、-5、0、+5、+10、+15、+20`。
 
 ## 1. 使用边界
 
-- 本文件是 INTP 内容设计稿；正式数据位于 `src/content/intp-questions.ts`，不会覆盖 `src/content/questions.ts` 中的 ENTP 数据；
+- 本文件是 INTP 内容设计稿；正式数据位于 `src/content/intp-questions.ts`，不会覆盖 `src/content/entp-questions.ts` 中的 ENTP 数据；
 - 当前效果值已通过 `4^10` 全路径枚举，仍需人工试玩验证真实选择分布；
 - 每题至少有两个心理上可信但代价不同的选择，不按“最礼貌”或“最顺从”自动给最高收益；
 - TA 的意图与行为影响分开处理：需要空间、追求精确或提供方案都不能为失联、越界、失约或拒绝修复免责；

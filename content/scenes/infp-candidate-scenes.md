@@ -36,4 +36,4 @@
 - I09、I10、I11、I13、I16、I17 要求 TA 与玩家共同承担沟通和修复责任，不存在“只要迁就 INFP 就通关”的默认策略。
 - 正式选题时需检查冲突去重：I04/I14/I18 都涉及表达方式，但应分别聚焦信号、关系定义和需求互译；I10/I17 都涉及空间，但应分别聚焦冲突暂停和长期节奏。
 - 18 项均有具体触发、可观察 NPC 行为和有意义的玩家决策压力；I03 的机械依据只能是尊重个体的 B02/F02，不得以 F16 标签本身产生效果。
-- 正式筛选结果见 [INFP 正式十场景策展交接](infp-formal-ten-selection.md)；权威机器可读序列见 [INFP formal sequence JSON](../traceability/infp-formal-sequence.json)。
+- 正式筛选结果见 [INFP 正式十场景策展交接](infp-formal-sequence.md)；权威机器可读序列见 [INFP formal sequence JSON](../traceability/infp-formal-sequence.json)。

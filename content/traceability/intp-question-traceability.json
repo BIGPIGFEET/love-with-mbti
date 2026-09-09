@@ -1,0 +1,182 @@
+[
+  {
+    "question_id": "Q01",
+    "order": 1,
+    "stage": "first_meeting",
+    "scene_id": "INTP-S01",
+    "candidate_id": "EV01",
+    "behavior_ids": ["F01", "F16"],
+    "feature_ids": ["F01", "F16"],
+    "source_ids": ["S03", "S13", "S18", "S39"],
+    "conflict_ids": ["C01", "C02"],
+    "state_ids": ["attraction", "comfort", "conflict"],
+    "options": [
+      {"option_id": "q01_edit_together", "strategy": "risky", "rationale": "用共同剪辑的玩笑接住抽象提问，增加火花但没有直接回应。"},
+      {"option_id": "q01_keep_it_light", "strategy": "honest", "rationale": "说明当下精力并把话题换成具体体验，保护真实和舒适。"},
+      {"option_id": "q01_answer_and_return", "strategy": "accommodate", "rationale": "简短回答并把问题还给对方，维持轻量双向交流。"},
+      {"option_id": "q01_call_it_interview", "strategy": "confront", "rationale": "把好奇直接解释为面试，否定互动动机并增加冲突。"}
+    ]
+  },
+  {
+    "question_id": "Q02",
+    "order": 2,
+    "stage": "first_meeting",
+    "scene_id": "INTP-S02",
+    "candidate_id": "EV02",
+    "behavior_ids": ["F02", "F03"],
+    "feature_ids": ["F02", "F03"],
+    "source_ids": ["S11", "S13", "S15", "S16"],
+    "conflict_ids": ["C14", "C03"],
+    "state_ids": ["attraction", "trust", "comfort"],
+    "options": [
+      {"option_id": "q02_ask_intent", "strategy": "honest", "rationale": "明确询问分享链接和再次见面的意图，减少暧昧解读。"},
+      {"option_id": "q02_call_it_confession", "strategy": "risky", "rationale": "用告白玩笑快速升温，也给对方施加关系定义压力。"},
+      {"option_id": "q02_dive_into_link", "strategy": "accommodate", "rationale": "认真回应内容兴趣，却没有确认分享背后的关系意图。"},
+      {"option_id": "q02_trade_interests", "strategy": "negotiate", "rationale": "用双向交换和下次讨论建立互惠、低压力的继续联系。"}
+    ]
+  },
+  {
+    "question_id": "Q03",
+    "order": 3,
+    "stage": "contact",
+    "scene_id": "INTP-S03",
+    "candidate_id": "EV09",
+    "behavior_ids": ["F08", "F01", "F12"],
+    "feature_ids": ["F08", "F01", "F12"],
+    "source_ids": ["S03", "S12", "S18", "S24"],
+    "conflict_ids": ["C08", "C01"],
+    "state_ids": ["attraction", "trust", "comfort"],
+    "options": [
+      {"option_id": "q03_set_context", "strategy": "negotiate", "rationale": "区分私下与公开场景，为纠错建立双方可执行的语境规则。"},
+      {"option_id": "q03_truth_always", "strategy": "accommodate", "rationale": "无条件接受直接纠正，强调事实却忽略表达场合的影响。"},
+      {"option_id": "q03_name_private", "strategy": "honest", "rationale": "接受事实纠正同时拒绝被持续评分，清楚说明互动边界。"},
+      {"option_id": "q03_accuse_winning", "strategy": "confront", "rationale": "把纠错动机归因于优越感，否定对方并显著损害信任。"}
+    ]
+  },
+  {
+    "question_id": "Q04",
+    "order": 4,
+    "stage": "contact",
+    "scene_id": "INTP-S04",
+    "candidate_id": "EV06",
+    "behavior_ids": ["F07", "F12"],
+    "feature_ids": ["F07", "F12"],
+    "source_ids": ["S10", "S13", "S18", "S35"],
+    "conflict_ids": ["C06", "C12"],
+    "state_ids": ["trust", "comfort", "conflict"],
+    "options": [
+      {"option_id": "q04_wave_off", "strategy": "accommodate", "rationale": "完全淡化失联带来短期舒适，却隐藏可预测性需求。"},
+      {"option_id": "q04_state_incompatibility", "strategy": "honest", "rationale": "说明两天失联的影响与兼容底线，让后续选择建立在真实信息上。"},
+      {"option_id": "q04_disappear_back", "strategy": "risky", "rationale": "用对等失联测试对方，制造惩罚并严重破坏信任。"},
+      {"option_id": "q04_minimum_signal", "strategy": "negotiate", "rationale": "约定最低报备信号和恢复时间，兼顾独处与关系可预测性。"}
+    ]
+  },
+  {
+    "question_id": "Q05",
+    "order": 5,
+    "stage": "contact",
+    "scene_id": "INTP-S05",
+    "candidate_id": "EV08",
+    "behavior_ids": ["F15", "F13"],
+    "feature_ids": ["F15", "F13"],
+    "source_ids": ["S03", "S05", "S07", "S25"],
+    "conflict_ids": ["C11"],
+    "state_ids": ["trust", "comfort", "conflict"],
+    "options": [
+      {"option_id": "q05_narrow_and_deadline", "strategy": "negotiate", "rationale": "缩小选项并设置截止与兜底规则，帮助决策而不接管决定。"},
+      {"option_id": "q05_book_for_them", "strategy": "risky", "rationale": "直接替对方预订虽然结束犹豫，却剥夺选择并提高冲突。"},
+      {"option_id": "q05_cancel_if_undecided", "strategy": "honest", "rationale": "清楚声明等待期限和退出后果，保护自己的时间边界。"},
+      {"option_id": "q05_hold_evening", "strategy": "accommodate", "rationale": "无限保留整晚避免施压，却让自己的时间持续悬置。"}
+    ]
+  },
+  {
+    "question_id": "Q06",
+    "order": 6,
+    "stage": "familiarity",
+    "scene_id": "INTP-S06",
+    "candidate_id": "EV11",
+    "behavior_ids": ["F09", "F05", "F12"],
+    "feature_ids": ["F09", "F05", "F12"],
+    "source_ids": ["S03", "S05", "S13", "S17", "S24"],
+    "conflict_ids": ["C09", "C05"],
+    "state_ids": ["comfort", "trust", "conflict"],
+    "options": [
+      {"option_id": "q06_take_solution", "strategy": "accommodate", "rationale": "接受分析帮助增加协作，却没有表达当下的情绪支持需求。"},
+      {"option_id": "q06_attack_empathy", "strategy": "confront", "rationale": "把解决问题的方式等同于没有感情，进行人格攻击并升级冲突。"},
+      {"option_id": "q06_ask_listen", "strategy": "honest", "rationale": "直接提出五分钟倾听和情绪确认，给出清晰可执行的支持请求。"},
+      {"option_id": "q06_sequence_support", "strategy": "negotiate", "rationale": "先共同缓冲再分析选择，把陪伴和解决问题排成双方可接受的顺序。"}
+    ]
+  },
+  {
+    "question_id": "Q07",
+    "order": 7,
+    "stage": "familiarity",
+    "scene_id": "INTP-S07",
+    "candidate_id": "EV12",
+    "behavior_ids": ["F13", "F08"],
+    "feature_ids": ["F13", "F08"],
+    "source_ids": ["S01", "S02", "S03", "S08", "S18"],
+    "conflict_ids": ["C15", "C08"],
+    "state_ids": ["trust", "comfort", "conflict"],
+    "options": [
+      {"option_id": "q07_expose_in_return", "strategy": "confront", "rationale": "以公开私密信息报复公开纠错，严重破坏信任和关系安全。"},
+      {"option_id": "q07_stop_in_room", "strategy": "honest", "rationale": "承认事实错误并当场叫停延伸讲解，保护公开场合的边界。"},
+      {"option_id": "q07_laugh_off", "strategy": "accommodate", "rationale": "用自嘲掩盖尴尬，暂时降温却让真实不适无法修复。"},
+      {"option_id": "q07_private_repair", "strategy": "negotiate", "rationale": "私下区分事实纠正与表达方式，并约定下次的替代做法。"}
+    ]
+  },
+  {
+    "question_id": "Q08",
+    "order": 8,
+    "stage": "familiarity",
+    "scene_id": "INTP-S08",
+    "candidate_id": "EV15",
+    "behavior_ids": ["F10", "F12", "F13"],
+    "feature_ids": ["F10", "F12", "F13"],
+    "source_ids": ["S04", "S07", "S10", "S36"],
+    "conflict_ids": ["C10", "C12"],
+    "state_ids": ["trust", "comfort", "conflict"],
+    "options": [
+      {"option_id": "q08_pause_with_anchor", "strategy": "negotiate", "rationale": "接受暂停并确认返回时间、改期责任和关系连续性。"},
+      {"option_id": "q08_accept_pause", "strategy": "accommodate", "rationale": "直接接受暂停降低当下冲突，但没有处理延迟或失约风险。"},
+      {"option_id": "q08_adjust_time", "strategy": "honest", "rationale": "说明三小时等待不可接受，并提出更短、可更新的时间边界。"},
+      {"option_id": "q08_force_now", "strategy": "risky", "rationale": "拒绝暂停并持续催促，取消对方调节空间且显著升级冲突。"}
+    ]
+  },
+  {
+    "question_id": "Q09",
+    "order": 9,
+    "stage": "ambiguity",
+    "scene_id": "INTP-S09",
+    "candidate_id": "EV19",
+    "behavior_ids": ["F04", "F12", "F13"],
+    "feature_ids": ["F04", "F12", "F13"],
+    "source_ids": ["S01", "S02", "S07", "S13", "S15"],
+    "conflict_ids": ["C04", "C03", "C13"],
+    "state_ids": ["trust", "comfort", "conflict"],
+    "options": [
+      {"option_id": "q09_need_answer", "strategy": "honest", "rationale": "要求明确关系意愿并说明无法确认时的投入边界。"},
+      {"option_id": "q09_let_ta_define", "strategy": "accommodate", "rationale": "把定义权完全交给对方，保留吸引却删除自身需求。"},
+      {"option_id": "q09_define_terms", "strategy": "negotiate", "rationale": "先确定排他、公开称呼与复盘时间，把抽象关系转为有限协议。"},
+      {"option_id": "q09_announce_unilaterally", "strategy": "risky", "rationale": "未经同意直接公开伴侣身份，侵犯选择并严重损害信任。"}
+    ]
+  },
+  {
+    "question_id": "Q10",
+    "order": 10,
+    "stage": "ambiguity",
+    "scene_id": "INTP-S10",
+    "candidate_id": "EV21",
+    "behavior_ids": ["F06", "F12", "F13"],
+    "feature_ids": ["F06", "F12", "F13"],
+    "source_ids": ["S04", "S05", "S10", "S26", "S35"],
+    "conflict_ids": ["C07", "C06", "C13"],
+    "state_ids": ["trust", "comfort", "attraction", "conflict"],
+    "options": [
+      {"option_id": "q10_state_minimum", "strategy": "honest", "rationale": "明确最低相处频率和不兼容后果，让承诺基于真实需求。"},
+      {"option_id": "q10_accept_independence", "strategy": "accommodate", "rationale": "完全顺应独处需求，带来短期吸引却取消稳定见面的保障。"},
+      {"option_id": "q10_demand_all_weekends", "strategy": "risky", "rationale": "要求所有周末优先关系，压缩自主空间并全面提高冲突。"},
+      {"option_id": "q10_build_rhythm", "strategy": "negotiate", "rationale": "固定约会、独立日和改期责任，形成可预测又保留自主的节奏。"}
+    ]
+  }
+]

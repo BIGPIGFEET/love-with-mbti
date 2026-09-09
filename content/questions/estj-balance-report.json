@@ -1,0 +1,1479 @@
+{
+  "questionCount": 10,
+  "optionCounts": [
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4
+  ],
+  "completeChoiceSpace": 1048576,
+  "terminalTrajectories": 303334,
+  "earlyTerminalTrajectories": 13718,
+  "weightedTotal": 1048576,
+  "endings": {
+    "confirmed_relationship:romance_hidden_risk": {
+      "trajectories": 13322,
+      "weightedPaths": 13322,
+      "examplePath": [
+        "q01_share_the_coordination",
+        "q02_ask_for_listening",
+        "q03_accept_the_plan",
+        "q04_name_the_overreach",
+        "q05_name_your_minimum",
+        "q06_build_a_new_ritual",
+        "q07_pause_before_details",
+        "q08_take_the_simpler_day",
+        "q09_claim_the_loyalty_guarantee",
+        "q10_accept_while_unsure"
+      ],
+      "exampleState": {
+        "attraction": 90,
+        "trust": 100,
+        "comfort": 60,
+        "conflict": 0
+      }
+    },
+    "confirmed_relationship:romance_stable": {
+      "trajectories": 30131,
+      "weightedPaths": 30131,
+      "examplePath": [
+        "q01_share_the_coordination",
+        "q02_ask_for_listening",
+        "q03_accept_the_plan",
+        "q04_name_the_overreach",
+        "q05_name_your_minimum",
+        "q06_build_a_new_ritual",
+        "q07_pause_before_details",
+        "q08_take_the_simpler_day",
+        "q09_claim_the_loyalty_guarantee",
+        "q10_define_current_agreement"
+      ],
+      "exampleState": {
+        "attraction": 90,
+        "trust": 100,
+        "comfort": 85,
+        "conflict": 0
+      }
+    },
+    "conflict_break": {
+      "trajectories": 87,
+      "weightedPaths": 1392,
+      "examplePath": [
+        "q01_share_the_coordination",
+        "q02_ask_for_listening",
+        "q03_accept_the_plan",
+        "q04_name_the_overreach",
+        "q05_demand_total_priority",
+        "q06_erase_their_effort",
+        "q07_reveal_their_secret_back",
+        "q08_force_the_original_shape"
+      ],
+      "exampleState": {
+        "attraction": 40,
+        "trust": 35,
+        "comfort": 10,
+        "conflict": 80
+      }
+    },
+    "dangerous_lovers": {
+      "trajectories": 8146,
+      "weightedPaths": 8146,
+      "examplePath": [
+        "q01_share_the_coordination",
+        "q02_ask_for_listening",
+        "q03_accept_the_plan",
+        "q04_name_the_overreach",
+        "q05_name_your_minimum",
+        "q06_build_a_new_ritual",
+        "q07_pause_before_details",
+        "q08_force_the_original_shape",
+        "q09_claim_the_loyalty_guarantee",
+        "q10_accept_while_unsure"
+      ],
+      "exampleState": {
+        "attraction": 90,
+        "trust": 90,
+        "comfort": 40,
+        "conflict": 20
+      }
+    },
+    "fade_out": {
+      "trajectories": 241,
+      "weightedPaths": 246784,
+      "examplePath": [
+        "q01_share_the_coordination",
+        "q02_ask_for_listening",
+        "q03_mark_fixed_and_flexible",
+        "q04_give_up_all_ownership",
+        "q05_name_your_minimum"
+      ],
+      "exampleState": {
+        "attraction": 30,
+        "trust": 60,
+        "comfort": 50,
+        "conflict": 5
+      }
+    },
+    "friends": {
+      "trajectories": 61780,
+      "weightedPaths": 61780,
+      "examplePath": [
+        "q01_share_the_coordination",
+        "q02_ask_for_listening",
+        "q03_accept_the_plan",
+        "q04_name_the_overreach",
+        "q05_name_your_minimum",
+        "q06_build_a_new_ritual",
+        "q07_pause_before_details",
+        "q08_take_the_simpler_day",
+        "q09_name_the_pressure",
+        "q10_state_unready_parts"
+      ],
+      "exampleState": {
+        "attraction": 60,
+        "trust": 100,
+        "comfort": 100,
+        "conflict": 0
+      }
+    },
+    "no_second_meeting": {
+      "trajectories": 3,
+      "weightedPaths": 196608,
+      "examplePath": [
+        "q01_share_the_coordination",
+        "q02_hand_over_the_problem"
+      ],
+      "exampleState": {
+        "attraction": 35,
+        "trust": 15,
+        "comfort": 30,
+        "conflict": 10
+      }
+    },
+    "stay_acquaintances": {
+      "trajectories": 13239,
+      "weightedPaths": 211824,
+      "examplePath": [
+        "q01_share_the_coordination",
+        "q02_ask_for_listening",
+        "q03_accept_the_plan",
+        "q04_name_the_overreach",
+        "q05_name_your_minimum",
+        "q06_erase_their_effort",
+        "q07_pause_before_details",
+        "q08_take_the_simpler_day"
+      ],
+      "exampleState": {
+        "attraction": 40,
+        "trust": 80,
+        "comfort": 80,
+        "conflict": 5
+      }
+    },
+    "strangers_after_all": {
+      "trajectories": 21810,
+      "weightedPaths": 21810,
+      "examplePath": [
+        "q01_share_the_coordination",
+        "q02_ask_for_listening",
+        "q03_accept_the_plan",
+        "q04_name_the_overreach",
+        "q05_name_your_minimum",
+        "q06_build_a_new_ritual",
+        "q07_reveal_their_secret_back",
+        "q08_force_the_original_shape",
+        "q09_name_the_pressure",
+        "q10_demand_proof_and_access"
+      ],
+      "exampleState": {
+        "attraction": 60,
+        "trust": 75,
+        "comfort": 55,
+        "conflict": 55
+      }
+    },
+    "strong_discomfort": {
+      "trajectories": 1592,
+      "weightedPaths": 21878,
+      "examplePath": [
+        "q01_share_the_coordination",
+        "q02_ask_for_listening",
+        "q03_accept_the_plan",
+        "q04_give_up_all_ownership",
+        "q05_name_your_minimum",
+        "q06_erase_their_effort",
+        "q07_reveal_their_secret_back",
+        "q08_force_the_original_shape"
+      ],
+      "exampleState": {
+        "attraction": 35,
+        "trust": 30,
+        "comfort": 5,
+        "conflict": 60
+      }
+    },
+    "trust_broken": {
+      "trajectories": 2,
+      "weightedPaths": 81920,
+      "examplePath": [
+        "q01_make_them_the_boss",
+        "q02_hand_over_the_problem"
+      ],
+      "exampleState": {
+        "attraction": 35,
+        "trust": 0,
+        "comfort": 10,
+        "conflict": 10
+      }
+    },
+    "unresolved_ambiguity": {
+      "trajectories": 152981,
+      "weightedPaths": 152981,
+      "examplePath": [
+        "q01_share_the_coordination",
+        "q02_ask_for_listening",
+        "q03_accept_the_plan",
+        "q04_name_the_overreach",
+        "q05_name_your_minimum",
+        "q06_build_a_new_ritual",
+        "q07_pause_before_details",
+        "q08_take_the_simpler_day",
+        "q09_name_the_pressure",
+        "q10_define_current_agreement"
+      ],
+      "exampleState": {
+        "attraction": 80,
+        "trust": 100,
+        "comfort": 100,
+        "conflict": 0
+      }
+    }
+  },
+  "baseEndings": {
+    "confirmed_relationship": {
+      "trajectories": 43453,
+      "weightedPaths": 43453,
+      "examplePath": [
+        "q01_share_the_coordination",
+        "q02_ask_for_listening",
+        "q03_accept_the_plan",
+        "q04_name_the_overreach",
+        "q05_name_your_minimum",
+        "q06_build_a_new_ritual",
+        "q07_pause_before_details",
+        "q08_take_the_simpler_day",
+        "q09_claim_the_loyalty_guarantee",
+        "q10_define_current_agreement"
+      ],
+      "exampleState": {
+        "attraction": 90,
+        "trust": 100,
+        "comfort": 85,
+        "conflict": 0
+      }
+    },
+    "conflict_break": {
+      "trajectories": 87,
+      "weightedPaths": 1392,
+      "examplePath": [
+        "q01_share_the_coordination",
+        "q02_ask_for_listening",
+        "q03_accept_the_plan",
+        "q04_name_the_overreach",
+        "q05_demand_total_priority",
+        "q06_erase_their_effort",
+        "q07_reveal_their_secret_back",
+        "q08_force_the_original_shape"
+      ],
+      "exampleState": {
+        "attraction": 40,
+        "trust": 35,
+        "comfort": 10,
+        "conflict": 80
+      }
+    },
+    "dangerous_lovers": {
+      "trajectories": 8146,
+      "weightedPaths": 8146,
+      "examplePath": [
+        "q01_share_the_coordination",
+        "q02_ask_for_listening",
+        "q03_accept_the_plan",
+        "q04_name_the_overreach",
+        "q05_name_your_minimum",
+        "q06_build_a_new_ritual",
+        "q07_pause_before_details",
+        "q08_force_the_original_shape",
+        "q09_claim_the_loyalty_guarantee",
+        "q10_accept_while_unsure"
+      ],
+      "exampleState": {
+        "attraction": 90,
+        "trust": 90,
+        "comfort": 40,
+        "conflict": 20
+      }
+    },
+    "fade_out": {
+      "trajectories": 241,
+      "weightedPaths": 246784,
+      "examplePath": [
+        "q01_share_the_coordination",
+        "q02_ask_for_listening",
+        "q03_mark_fixed_and_flexible",
+        "q04_give_up_all_ownership",
+        "q05_name_your_minimum"
+      ],
+      "exampleState": {
+        "attraction": 30,
+        "trust": 60,
+        "comfort": 50,
+        "conflict": 5
+      }
+    },
+    "friends": {
+      "trajectories": 61780,
+      "weightedPaths": 61780,
+      "examplePath": [
+        "q01_share_the_coordination",
+        "q02_ask_for_listening",
+        "q03_accept_the_plan",
+        "q04_name_the_overreach",
+        "q05_name_your_minimum",
+        "q06_build_a_new_ritual",
+        "q07_pause_before_details",
+        "q08_take_the_simpler_day",
+        "q09_name_the_pressure",
+        "q10_state_unready_parts"
+      ],
+      "exampleState": {
+        "attraction": 60,
+        "trust": 100,
+        "comfort": 100,
+        "conflict": 0
+      }
+    },
+    "no_second_meeting": {
+      "trajectories": 3,
+      "weightedPaths": 196608,
+      "examplePath": [
+        "q01_share_the_coordination",
+        "q02_hand_over_the_problem"
+      ],
+      "exampleState": {
+        "attraction": 35,
+        "trust": 15,
+        "comfort": 30,
+        "conflict": 10
+      }
+    },
+    "stay_acquaintances": {
+      "trajectories": 13239,
+      "weightedPaths": 211824,
+      "examplePath": [
+        "q01_share_the_coordination",
+        "q02_ask_for_listening",
+        "q03_accept_the_plan",
+        "q04_name_the_overreach",
+        "q05_name_your_minimum",
+        "q06_erase_their_effort",
+        "q07_pause_before_details",
+        "q08_take_the_simpler_day"
+      ],
+      "exampleState": {
+        "attraction": 40,
+        "trust": 80,
+        "comfort": 80,
+        "conflict": 5
+      }
+    },
+    "strangers_after_all": {
+      "trajectories": 21810,
+      "weightedPaths": 21810,
+      "examplePath": [
+        "q01_share_the_coordination",
+        "q02_ask_for_listening",
+        "q03_accept_the_plan",
+        "q04_name_the_overreach",
+        "q05_name_your_minimum",
+        "q06_build_a_new_ritual",
+        "q07_reveal_their_secret_back",
+        "q08_force_the_original_shape",
+        "q09_name_the_pressure",
+        "q10_demand_proof_and_access"
+      ],
+      "exampleState": {
+        "attraction": 60,
+        "trust": 75,
+        "comfort": 55,
+        "conflict": 55
+      }
+    },
+    "strong_discomfort": {
+      "trajectories": 1592,
+      "weightedPaths": 21878,
+      "examplePath": [
+        "q01_share_the_coordination",
+        "q02_ask_for_listening",
+        "q03_accept_the_plan",
+        "q04_give_up_all_ownership",
+        "q05_name_your_minimum",
+        "q06_erase_their_effort",
+        "q07_reveal_their_secret_back",
+        "q08_force_the_original_shape"
+      ],
+      "exampleState": {
+        "attraction": 35,
+        "trust": 30,
+        "comfort": 5,
+        "conflict": 60
+      }
+    },
+    "trust_broken": {
+      "trajectories": 2,
+      "weightedPaths": 81920,
+      "examplePath": [
+        "q01_make_them_the_boss",
+        "q02_hand_over_the_problem"
+      ],
+      "exampleState": {
+        "attraction": 35,
+        "trust": 0,
+        "comfort": 10,
+        "conflict": 10
+      }
+    },
+    "unresolved_ambiguity": {
+      "trajectories": 152981,
+      "weightedPaths": 152981,
+      "examplePath": [
+        "q01_share_the_coordination",
+        "q02_ask_for_listening",
+        "q03_accept_the_plan",
+        "q04_name_the_overreach",
+        "q05_name_your_minimum",
+        "q06_build_a_new_ritual",
+        "q07_pause_before_details",
+        "q08_take_the_simpler_day",
+        "q09_name_the_pressure",
+        "q10_define_current_agreement"
+      ],
+      "exampleState": {
+        "attraction": 80,
+        "trust": 100,
+        "comfort": 100,
+        "conflict": 0
+      }
+    }
+  },
+  "outcomes": {
+    "confirmed_relationship:romance_hidden_risk": {
+      "trajectories": 13322,
+      "weightedPaths": 13322,
+      "examplePath": [
+        "q01_share_the_coordination",
+        "q02_ask_for_listening",
+        "q03_accept_the_plan",
+        "q04_name_the_overreach",
+        "q05_name_your_minimum",
+        "q06_build_a_new_ritual",
+        "q07_pause_before_details",
+        "q08_take_the_simpler_day",
+        "q09_claim_the_loyalty_guarantee",
+        "q10_accept_while_unsure"
+      ],
+      "exampleState": {
+        "attraction": 90,
+        "trust": 100,
+        "comfort": 60,
+        "conflict": 0
+      }
+    },
+    "confirmed_relationship:romance_stable": {
+      "trajectories": 30131,
+      "weightedPaths": 30131,
+      "examplePath": [
+        "q01_share_the_coordination",
+        "q02_ask_for_listening",
+        "q03_accept_the_plan",
+        "q04_name_the_overreach",
+        "q05_name_your_minimum",
+        "q06_build_a_new_ritual",
+        "q07_pause_before_details",
+        "q08_take_the_simpler_day",
+        "q09_claim_the_loyalty_guarantee",
+        "q10_define_current_agreement"
+      ],
+      "exampleState": {
+        "attraction": 90,
+        "trust": 100,
+        "comfort": 85,
+        "conflict": 0
+      }
+    },
+    "conflict_break": {
+      "trajectories": 87,
+      "weightedPaths": 1392,
+      "examplePath": [
+        "q01_share_the_coordination",
+        "q02_ask_for_listening",
+        "q03_accept_the_plan",
+        "q04_name_the_overreach",
+        "q05_demand_total_priority",
+        "q06_erase_their_effort",
+        "q07_reveal_their_secret_back",
+        "q08_force_the_original_shape"
+      ],
+      "exampleState": {
+        "attraction": 40,
+        "trust": 35,
+        "comfort": 10,
+        "conflict": 80
+      }
+    },
+    "dangerous_lovers": {
+      "trajectories": 8146,
+      "weightedPaths": 8146,
+      "examplePath": [
+        "q01_share_the_coordination",
+        "q02_ask_for_listening",
+        "q03_accept_the_plan",
+        "q04_name_the_overreach",
+        "q05_name_your_minimum",
+        "q06_build_a_new_ritual",
+        "q07_pause_before_details",
+        "q08_force_the_original_shape",
+        "q09_claim_the_loyalty_guarantee",
+        "q10_accept_while_unsure"
+      ],
+      "exampleState": {
+        "attraction": 90,
+        "trust": 90,
+        "comfort": 40,
+        "conflict": 20
+      }
+    },
+    "fade_out": {
+      "trajectories": 241,
+      "weightedPaths": 246784,
+      "examplePath": [
+        "q01_share_the_coordination",
+        "q02_ask_for_listening",
+        "q03_mark_fixed_and_flexible",
+        "q04_give_up_all_ownership",
+        "q05_name_your_minimum"
+      ],
+      "exampleState": {
+        "attraction": 30,
+        "trust": 60,
+        "comfort": 50,
+        "conflict": 5
+      }
+    },
+    "friends": {
+      "trajectories": 61780,
+      "weightedPaths": 61780,
+      "examplePath": [
+        "q01_share_the_coordination",
+        "q02_ask_for_listening",
+        "q03_accept_the_plan",
+        "q04_name_the_overreach",
+        "q05_name_your_minimum",
+        "q06_build_a_new_ritual",
+        "q07_pause_before_details",
+        "q08_take_the_simpler_day",
+        "q09_name_the_pressure",
+        "q10_state_unready_parts"
+      ],
+      "exampleState": {
+        "attraction": 60,
+        "trust": 100,
+        "comfort": 100,
+        "conflict": 0
+      }
+    },
+    "no_second_meeting": {
+      "trajectories": 3,
+      "weightedPaths": 196608,
+      "examplePath": [
+        "q01_share_the_coordination",
+        "q02_hand_over_the_problem"
+      ],
+      "exampleState": {
+        "attraction": 35,
+        "trust": 15,
+        "comfort": 30,
+        "conflict": 10
+      }
+    },
+    "stay_acquaintances": {
+      "trajectories": 13239,
+      "weightedPaths": 211824,
+      "examplePath": [
+        "q01_share_the_coordination",
+        "q02_ask_for_listening",
+        "q03_accept_the_plan",
+        "q04_name_the_overreach",
+        "q05_name_your_minimum",
+        "q06_erase_their_effort",
+        "q07_pause_before_details",
+        "q08_take_the_simpler_day"
+      ],
+      "exampleState": {
+        "attraction": 40,
+        "trust": 80,
+        "comfort": 80,
+        "conflict": 5
+      }
+    },
+    "strangers_after_all": {
+      "trajectories": 21810,
+      "weightedPaths": 21810,
+      "examplePath": [
+        "q01_share_the_coordination",
+        "q02_ask_for_listening",
+        "q03_accept_the_plan",
+        "q04_name_the_overreach",
+        "q05_name_your_minimum",
+        "q06_build_a_new_ritual",
+        "q07_reveal_their_secret_back",
+        "q08_force_the_original_shape",
+        "q09_name_the_pressure",
+        "q10_demand_proof_and_access"
+      ],
+      "exampleState": {
+        "attraction": 60,
+        "trust": 75,
+        "comfort": 55,
+        "conflict": 55
+      }
+    },
+    "strong_discomfort": {
+      "trajectories": 1592,
+      "weightedPaths": 21878,
+      "examplePath": [
+        "q01_share_the_coordination",
+        "q02_ask_for_listening",
+        "q03_accept_the_plan",
+        "q04_give_up_all_ownership",
+        "q05_name_your_minimum",
+        "q06_erase_their_effort",
+        "q07_reveal_their_secret_back",
+        "q08_force_the_original_shape"
+      ],
+      "exampleState": {
+        "attraction": 35,
+        "trust": 30,
+        "comfort": 5,
+        "conflict": 60
+      }
+    },
+    "trust_broken": {
+      "trajectories": 2,
+      "weightedPaths": 81920,
+      "examplePath": [
+        "q01_make_them_the_boss",
+        "q02_hand_over_the_problem"
+      ],
+      "exampleState": {
+        "attraction": 35,
+        "trust": 0,
+        "comfort": 10,
+        "conflict": 10
+      }
+    },
+    "unresolved_ambiguity": {
+      "trajectories": 152981,
+      "weightedPaths": 152981,
+      "examplePath": [
+        "q01_share_the_coordination",
+        "q02_ask_for_listening",
+        "q03_accept_the_plan",
+        "q04_name_the_overreach",
+        "q05_name_your_minimum",
+        "q06_build_a_new_ritual",
+        "q07_pause_before_details",
+        "q08_take_the_simpler_day",
+        "q09_name_the_pressure",
+        "q10_define_current_agreement"
+      ],
+      "exampleState": {
+        "attraction": 80,
+        "trust": 100,
+        "comfort": 100,
+        "conflict": 0
+      }
+    }
+  },
+  "rules": {},
+  "trajectoryPercentages": {
+    "confirmed_relationship:romance_hidden_risk": 4.392,
+    "confirmed_relationship:romance_stable": 9.933,
+    "conflict_break": 0.029,
+    "dangerous_lovers": 2.685,
+    "fade_out": 0.079,
+    "friends": 20.367,
+    "no_second_meeting": 0.001,
+    "stay_acquaintances": 4.364,
+    "strangers_after_all": 7.19,
+    "strong_discomfort": 0.525,
+    "trust_broken": 0.001,
+    "unresolved_ambiguity": 50.433
+  },
+  "weightedPathPercentages": {
+    "confirmed_relationship:romance_hidden_risk": 1.27,
+    "confirmed_relationship:romance_stable": 2.874,
+    "conflict_break": 0.133,
+    "dangerous_lovers": 0.777,
+    "fade_out": 23.535,
+    "friends": 5.892,
+    "no_second_meeting": 18.75,
+    "stay_acquaintances": 20.201,
+    "strangers_after_all": 2.08,
+    "strong_discomfort": 2.086,
+    "trust_broken": 7.813,
+    "unresolved_ambiguity": 14.589
+  },
+  "baseEndingTrajectoryPercentages": {
+    "confirmed_relationship": 14.325,
+    "conflict_break": 0.029,
+    "dangerous_lovers": 2.685,
+    "fade_out": 0.079,
+    "friends": 20.367,
+    "no_second_meeting": 0.001,
+    "stay_acquaintances": 4.364,
+    "strangers_after_all": 7.19,
+    "strong_discomfort": 0.525,
+    "trust_broken": 0.001,
+    "unresolved_ambiguity": 50.433
+  },
+  "baseEndingWeightedPathPercentages": {
+    "confirmed_relationship": 4.144,
+    "conflict_break": 0.133,
+    "dangerous_lovers": 0.777,
+    "fade_out": 23.535,
+    "friends": 5.892,
+    "no_second_meeting": 18.75,
+    "stay_acquaintances": 20.201,
+    "strangers_after_all": 2.08,
+    "strong_discomfort": 2.086,
+    "trust_broken": 7.813,
+    "unresolved_ambiguity": 14.589
+  },
+  "coverage": {
+    "declared": true,
+    "endings": {
+      "declared": true,
+      "expected": [
+        "confirmed_relationship",
+        "conflict_break",
+        "dangerous_lovers",
+        "fade_out",
+        "friends",
+        "no_second_meeting",
+        "stay_acquaintances",
+        "strangers_after_all",
+        "strong_discomfort",
+        "trust_broken",
+        "unresolved_ambiguity"
+      ],
+      "observed": [
+        "confirmed_relationship",
+        "conflict_break",
+        "dangerous_lovers",
+        "fade_out",
+        "friends",
+        "no_second_meeting",
+        "stay_acquaintances",
+        "strangers_after_all",
+        "strong_discomfort",
+        "trust_broken",
+        "unresolved_ambiguity"
+      ],
+      "missing": [],
+      "unexpected": []
+    },
+    "outcomes": {
+      "declared": true,
+      "expected": [
+        "confirmed_relationship:romance_hidden_risk",
+        "confirmed_relationship:romance_stable",
+        "conflict_break",
+        "dangerous_lovers",
+        "fade_out",
+        "friends",
+        "no_second_meeting",
+        "stay_acquaintances",
+        "strangers_after_all",
+        "strong_discomfort",
+        "trust_broken",
+        "unresolved_ambiguity"
+      ],
+      "observed": [
+        "confirmed_relationship:romance_hidden_risk",
+        "confirmed_relationship:romance_stable",
+        "conflict_break",
+        "dangerous_lovers",
+        "fade_out",
+        "friends",
+        "no_second_meeting",
+        "stay_acquaintances",
+        "strangers_after_all",
+        "strong_discomfort",
+        "trust_broken",
+        "unresolved_ambiguity"
+      ],
+      "missing": [],
+      "unexpected": []
+    },
+    "rules": {
+      "declared": false,
+      "expected": [],
+      "observed": [],
+      "missing": [],
+      "unexpected": []
+    },
+    "ruleDiagnostics": {
+      "shadowingStatus": "unknown",
+      "applicable": [],
+      "selected": [],
+      "shadowed": []
+    }
+  },
+  "fixedPositions": [
+    {
+      "position": 1,
+      "applicable": true,
+      "ending": "unresolved_ambiguity",
+      "baseEnding": "unresolved_ambiguity",
+      "ruleIds": [],
+      "path": [
+        "q01_share_the_coordination",
+        "q02_ask_for_listening",
+        "q03_accept_the_plan",
+        "q04_name_the_overreach",
+        "q05_name_your_minimum",
+        "q06_build_a_new_ritual",
+        "q07_pause_before_details",
+        "q08_take_the_simpler_day",
+        "q09_name_the_pressure",
+        "q10_define_current_agreement"
+      ],
+      "state": {
+        "attraction": 80,
+        "trust": 100,
+        "comfort": 100,
+        "conflict": 0
+      }
+    },
+    {
+      "position": 2,
+      "applicable": true,
+      "ending": "no_second_meeting",
+      "baseEnding": "no_second_meeting",
+      "ruleIds": [],
+      "path": [
+        "q01_keep_a_separate_role",
+        "q02_hand_over_the_problem"
+      ],
+      "state": {
+        "attraction": 30,
+        "trust": 15,
+        "comfort": 35,
+        "conflict": 10
+      }
+    },
+    {
+      "position": 3,
+      "applicable": true,
+      "ending": "stay_acquaintances",
+      "baseEnding": "stay_acquaintances",
+      "ruleIds": [],
+      "path": [
+        "q01_follow_the_draft",
+        "q02_split_now_and_later",
+        "q03_name_a_looser_pace",
+        "q04_give_up_all_ownership",
+        "q05_set_a_review_point",
+        "q06_erase_their_effort",
+        "q07_request_concrete_repair",
+        "q08_cancel_without_pretending"
+      ],
+      "state": {
+        "attraction": 35,
+        "trust": 80,
+        "comfort": 60,
+        "conflict": 5
+      }
+    },
+    {
+      "position": 4,
+      "applicable": true,
+      "ending": "trust_broken",
+      "baseEnding": "trust_broken",
+      "ruleIds": [],
+      "path": [
+        "q01_make_them_the_boss",
+        "q02_try_one_practical_step",
+        "q03_keep_all_options_open"
+      ],
+      "state": {
+        "attraction": 35,
+        "trust": 5,
+        "comfort": 10,
+        "conflict": 10
+      }
+    }
+  ],
+  "fixedStrategies": [
+    {
+      "strategy": "accommodate",
+      "applicable": false,
+      "missingAt": "Q04"
+    },
+    {
+      "strategy": "confront",
+      "applicable": false,
+      "missingAt": "Q01"
+    },
+    {
+      "strategy": "honest",
+      "applicable": true,
+      "ending": "fade_out",
+      "baseEnding": "fade_out",
+      "ruleIds": [],
+      "path": [
+        "q01_keep_a_separate_role",
+        "q02_ask_for_listening",
+        "q03_name_a_looser_pace",
+        "q04_take_back_your_part",
+        "q05_name_your_minimum"
+      ],
+      "state": {
+        "attraction": 25,
+        "trust": 75,
+        "comfort": 90,
+        "conflict": 5
+      }
+    },
+    {
+      "strategy": "negotiate",
+      "applicable": true,
+      "ending": "confirmed_relationship:romance_stable",
+      "baseEnding": "confirmed_relationship",
+      "ruleIds": [],
+      "path": [
+        "q01_share_the_coordination",
+        "q02_split_now_and_later",
+        "q03_mark_fixed_and_flexible",
+        "q04_set_change_permissions",
+        "q05_set_a_review_point",
+        "q06_build_a_new_ritual",
+        "q07_separate_fact_and_privacy",
+        "q08_keep_the_core_rebuild_the_form",
+        "q09_check_the_real_evidence",
+        "q10_define_current_agreement"
+      ],
+      "state": {
+        "attraction": 85,
+        "trust": 100,
+        "comfort": 100,
+        "conflict": 0
+      }
+    },
+    {
+      "strategy": "risky",
+      "applicable": true,
+      "ending": "trust_broken",
+      "baseEnding": "trust_broken",
+      "ruleIds": [],
+      "path": [
+        "q01_make_them_the_boss",
+        "q02_hand_over_the_problem"
+      ],
+      "state": {
+        "attraction": 35,
+        "trust": 0,
+        "comfort": 10,
+        "conflict": 10
+      }
+    }
+  ],
+  "localDominance": [
+    {
+      "questionId": "Q01",
+      "dominantOption": "q01_share_the_coordination",
+      "dominatedOption": "q01_make_them_the_boss"
+    },
+    {
+      "questionId": "Q01",
+      "dominantOption": "q01_follow_the_draft",
+      "dominatedOption": "q01_make_them_the_boss"
+    },
+    {
+      "questionId": "Q02",
+      "dominantOption": "q02_split_now_and_later",
+      "dominatedOption": "q02_ask_for_listening"
+    },
+    {
+      "questionId": "Q02",
+      "dominantOption": "q02_split_now_and_later",
+      "dominatedOption": "q02_hand_over_the_problem"
+    },
+    {
+      "questionId": "Q02",
+      "dominantOption": "q02_split_now_and_later",
+      "dominatedOption": "q02_try_one_practical_step"
+    },
+    {
+      "questionId": "Q02",
+      "dominantOption": "q02_try_one_practical_step",
+      "dominatedOption": "q02_hand_over_the_problem"
+    },
+    {
+      "questionId": "Q03",
+      "dominantOption": "q03_accept_the_plan",
+      "dominatedOption": "q03_keep_all_options_open"
+    },
+    {
+      "questionId": "Q03",
+      "dominantOption": "q03_mark_fixed_and_flexible",
+      "dominatedOption": "q03_keep_all_options_open"
+    },
+    {
+      "questionId": "Q03",
+      "dominantOption": "q03_name_a_looser_pace",
+      "dominatedOption": "q03_keep_all_options_open"
+    },
+    {
+      "questionId": "Q04",
+      "dominantOption": "q04_name_the_overreach",
+      "dominatedOption": "q04_give_up_all_ownership"
+    },
+    {
+      "questionId": "Q04",
+      "dominantOption": "q04_set_change_permissions",
+      "dominatedOption": "q04_name_the_overreach"
+    },
+    {
+      "questionId": "Q04",
+      "dominantOption": "q04_set_change_permissions",
+      "dominatedOption": "q04_give_up_all_ownership"
+    },
+    {
+      "questionId": "Q04",
+      "dominantOption": "q04_take_back_your_part",
+      "dominatedOption": "q04_give_up_all_ownership"
+    },
+    {
+      "questionId": "Q05",
+      "dominantOption": "q05_name_your_minimum",
+      "dominatedOption": "q05_accept_the_quieter_weeks"
+    },
+    {
+      "questionId": "Q05",
+      "dominantOption": "q05_name_your_minimum",
+      "dominatedOption": "q05_demand_total_priority"
+    },
+    {
+      "questionId": "Q05",
+      "dominantOption": "q05_accept_the_quieter_weeks",
+      "dominatedOption": "q05_demand_total_priority"
+    },
+    {
+      "questionId": "Q05",
+      "dominantOption": "q05_set_a_review_point",
+      "dominatedOption": "q05_name_your_minimum"
+    },
+    {
+      "questionId": "Q05",
+      "dominantOption": "q05_set_a_review_point",
+      "dominatedOption": "q05_accept_the_quieter_weeks"
+    },
+    {
+      "questionId": "Q05",
+      "dominantOption": "q05_set_a_review_point",
+      "dominatedOption": "q05_demand_total_priority"
+    },
+    {
+      "questionId": "Q06",
+      "dominantOption": "q06_build_a_new_ritual",
+      "dominatedOption": "q06_admit_the_loneliness"
+    },
+    {
+      "questionId": "Q06",
+      "dominantOption": "q06_build_a_new_ritual",
+      "dominatedOption": "q06_erase_their_effort"
+    },
+    {
+      "questionId": "Q06",
+      "dominantOption": "q06_build_a_new_ritual",
+      "dominatedOption": "q06_try_one_quiet_evening"
+    },
+    {
+      "questionId": "Q06",
+      "dominantOption": "q06_admit_the_loneliness",
+      "dominatedOption": "q06_erase_their_effort"
+    },
+    {
+      "questionId": "Q06",
+      "dominantOption": "q06_admit_the_loneliness",
+      "dominatedOption": "q06_try_one_quiet_evening"
+    },
+    {
+      "questionId": "Q06",
+      "dominantOption": "q06_try_one_quiet_evening",
+      "dominatedOption": "q06_erase_their_effort"
+    },
+    {
+      "questionId": "Q07",
+      "dominantOption": "q07_pause_before_details",
+      "dominatedOption": "q07_reveal_their_secret_back"
+    },
+    {
+      "questionId": "Q07",
+      "dominantOption": "q07_request_concrete_repair",
+      "dominatedOption": "q07_reveal_their_secret_back"
+    },
+    {
+      "questionId": "Q07",
+      "dominantOption": "q07_separate_fact_and_privacy",
+      "dominatedOption": "q07_reveal_their_secret_back"
+    },
+    {
+      "questionId": "Q08",
+      "dominantOption": "q08_take_the_simpler_day",
+      "dominatedOption": "q08_force_the_original_shape"
+    },
+    {
+      "questionId": "Q08",
+      "dominantOption": "q08_keep_the_core_rebuild_the_form",
+      "dominatedOption": "q08_take_the_simpler_day"
+    },
+    {
+      "questionId": "Q08",
+      "dominantOption": "q08_keep_the_core_rebuild_the_form",
+      "dominatedOption": "q08_force_the_original_shape"
+    },
+    {
+      "questionId": "Q08",
+      "dominantOption": "q08_cancel_without_pretending",
+      "dominatedOption": "q08_force_the_original_shape"
+    },
+    {
+      "questionId": "Q09",
+      "dominantOption": "q09_check_the_real_evidence",
+      "dominatedOption": "q09_defer_the_public_joke"
+    },
+    {
+      "questionId": "Q10",
+      "dominantOption": "q10_define_current_agreement",
+      "dominatedOption": "q10_accept_while_unsure"
+    },
+    {
+      "questionId": "Q10",
+      "dominantOption": "q10_define_current_agreement",
+      "dominatedOption": "q10_demand_proof_and_access"
+    },
+    {
+      "questionId": "Q10",
+      "dominantOption": "q10_state_unready_parts",
+      "dominatedOption": "q10_demand_proof_and_access"
+    }
+  ],
+  "globalStrategyDominance": [],
+  "effectBudgetWarnings": [],
+  "balance": {
+    "configured": true,
+    "globalDanger": {
+      "byEnding": {
+        "conflict_break": {
+          "trajectories": 87,
+          "weightedPaths": 1392,
+          "weightedPercentage": 0.133,
+          "reachable": true,
+          "status": "below_recommended"
+        },
+        "strong_discomfort": {
+          "trajectories": 1592,
+          "weightedPaths": 21878,
+          "weightedPercentage": 2.086,
+          "reachable": true,
+          "status": "below_recommended"
+        },
+        "trust_broken": {
+          "trajectories": 2,
+          "weightedPaths": 81920,
+          "weightedPercentage": 7.813,
+          "reachable": true,
+          "status": "above_recommended"
+        }
+      },
+      "combined": {
+        "trajectories": 1681,
+        "weightedPaths": 105190,
+        "weightedPercentage": 10.032,
+        "status": "below_recommended"
+      }
+    },
+    "stageGates": [
+      {
+        "questionId": "Q02",
+        "endingId": "no_second_meeting",
+        "eligibleTrajectoryPrefixes": 15,
+        "failureTrajectoryPrefixes": 3,
+        "trajectoryPrefixFailurePercentage": 20,
+        "eligibleWeightedPaths": 983040,
+        "failureWeightedPaths": 196608,
+        "weightedConditionalFailurePercentage": 20,
+        "status": "within_recommended"
+      },
+      {
+        "questionId": "Q05",
+        "endingId": "fade_out",
+        "eligibleTrajectoryPrefixes": 736,
+        "failureTrajectoryPrefixes": 241,
+        "trajectoryPrefixFailurePercentage": 32.745,
+        "eligibleWeightedPaths": 753664,
+        "failureWeightedPaths": 246784,
+        "weightedConditionalFailurePercentage": 32.745,
+        "status": "within_recommended"
+      },
+      {
+        "questionId": "Q08",
+        "endingId": "stay_acquaintances",
+        "eligibleTrajectoryPrefixes": 31340,
+        "failureTrajectoryPrefixes": 13239,
+        "trajectoryPrefixFailurePercentage": 42.243,
+        "eligibleWeightedPaths": 501440,
+        "failureWeightedPaths": 211824,
+        "weightedConditionalFailurePercentage": 42.243,
+        "status": "within_recommended"
+      }
+    ],
+    "finalClassifier": {
+      "questionId": "Q10",
+      "reachedTrajectories": 288170,
+      "reachedWeightedPaths": 288170,
+      "weightedReachPercentage": 27.482,
+      "reachStatus": "within_recommended",
+      "byOutcome": {
+        "strangers_after_all": {
+          "trajectories": 21810,
+          "weightedPaths": 21810,
+          "weightedConditionalPercentage": 7.568,
+          "trajectoryConditionalPercentage": 7.568,
+          "reachable": true,
+          "examplePath": [
+            "q01_share_the_coordination",
+            "q02_ask_for_listening",
+            "q03_accept_the_plan",
+            "q04_name_the_overreach",
+            "q05_name_your_minimum",
+            "q06_build_a_new_ritual",
+            "q07_reveal_their_secret_back",
+            "q08_force_the_original_shape",
+            "q09_name_the_pressure",
+            "q10_demand_proof_and_access"
+          ],
+          "exampleState": {
+            "attraction": 60,
+            "trust": 75,
+            "comfort": 55,
+            "conflict": 55
+          },
+          "status": "reported_only"
+        },
+        "dangerous_lovers": {
+          "trajectories": 8146,
+          "weightedPaths": 8146,
+          "weightedConditionalPercentage": 2.827,
+          "trajectoryConditionalPercentage": 2.827,
+          "reachable": true,
+          "examplePath": [
+            "q01_share_the_coordination",
+            "q02_ask_for_listening",
+            "q03_accept_the_plan",
+            "q04_name_the_overreach",
+            "q05_name_your_minimum",
+            "q06_build_a_new_ritual",
+            "q07_pause_before_details",
+            "q08_force_the_original_shape",
+            "q09_claim_the_loyalty_guarantee",
+            "q10_accept_while_unsure"
+          ],
+          "exampleState": {
+            "attraction": 90,
+            "trust": 90,
+            "comfort": 40,
+            "conflict": 20
+          },
+          "status": "reported_only"
+        },
+        "friends": {
+          "trajectories": 61780,
+          "weightedPaths": 61780,
+          "weightedConditionalPercentage": 21.439,
+          "trajectoryConditionalPercentage": 21.439,
+          "reachable": true,
+          "examplePath": [
+            "q01_share_the_coordination",
+            "q02_ask_for_listening",
+            "q03_accept_the_plan",
+            "q04_name_the_overreach",
+            "q05_name_your_minimum",
+            "q06_build_a_new_ritual",
+            "q07_pause_before_details",
+            "q08_take_the_simpler_day",
+            "q09_name_the_pressure",
+            "q10_state_unready_parts"
+          ],
+          "exampleState": {
+            "attraction": 60,
+            "trust": 100,
+            "comfort": 100,
+            "conflict": 0
+          },
+          "status": "reported_only"
+        },
+        "unresolved_ambiguity": {
+          "trajectories": 152981,
+          "weightedPaths": 152981,
+          "weightedConditionalPercentage": 53.087,
+          "trajectoryConditionalPercentage": 53.087,
+          "reachable": true,
+          "examplePath": [
+            "q01_share_the_coordination",
+            "q02_ask_for_listening",
+            "q03_accept_the_plan",
+            "q04_name_the_overreach",
+            "q05_name_your_minimum",
+            "q06_build_a_new_ritual",
+            "q07_pause_before_details",
+            "q08_take_the_simpler_day",
+            "q09_name_the_pressure",
+            "q10_define_current_agreement"
+          ],
+          "exampleState": {
+            "attraction": 80,
+            "trust": 100,
+            "comfort": 100,
+            "conflict": 0
+          },
+          "status": "reported_only"
+        },
+        "confirmed_relationship:romance_stable": {
+          "trajectories": 30131,
+          "weightedPaths": 30131,
+          "weightedConditionalPercentage": 10.456,
+          "trajectoryConditionalPercentage": 10.456,
+          "reachable": true,
+          "examplePath": [
+            "q01_share_the_coordination",
+            "q02_ask_for_listening",
+            "q03_accept_the_plan",
+            "q04_name_the_overreach",
+            "q05_name_your_minimum",
+            "q06_build_a_new_ritual",
+            "q07_pause_before_details",
+            "q08_take_the_simpler_day",
+            "q09_claim_the_loyalty_guarantee",
+            "q10_define_current_agreement"
+          ],
+          "exampleState": {
+            "attraction": 90,
+            "trust": 100,
+            "comfort": 85,
+            "conflict": 0
+          },
+          "status": "reported_only"
+        },
+        "confirmed_relationship:romance_hidden_risk": {
+          "trajectories": 13322,
+          "weightedPaths": 13322,
+          "weightedConditionalPercentage": 4.623,
+          "trajectoryConditionalPercentage": 4.623,
+          "reachable": true,
+          "examplePath": [
+            "q01_share_the_coordination",
+            "q02_ask_for_listening",
+            "q03_accept_the_plan",
+            "q04_name_the_overreach",
+            "q05_name_your_minimum",
+            "q06_build_a_new_ritual",
+            "q07_pause_before_details",
+            "q08_take_the_simpler_day",
+            "q09_claim_the_loyalty_guarantee",
+            "q10_accept_while_unsure"
+          ],
+          "exampleState": {
+            "attraction": 90,
+            "trust": 100,
+            "comfort": 60,
+            "conflict": 0
+          },
+          "status": "reported_only"
+        }
+      },
+      "byGroup": {
+        "strangers_after_all": {
+          "outcomeIds": [
+            "strangers_after_all"
+          ],
+          "trajectories": 21810,
+          "weightedPaths": 21810,
+          "weightedConditionalPercentage": 7.568,
+          "trajectoryConditionalPercentage": 7.568,
+          "status": "below_recommended"
+        },
+        "confirmed_relationship": {
+          "outcomeIds": [
+            "confirmed_relationship:romance_stable",
+            "confirmed_relationship:romance_hidden_risk"
+          ],
+          "trajectories": 43453,
+          "weightedPaths": 43453,
+          "weightedConditionalPercentage": 15.079,
+          "trajectoryConditionalPercentage": 15.079,
+          "status": "above_recommended"
+        },
+        "dangerous_lovers": {
+          "outcomeIds": [
+            "dangerous_lovers"
+          ],
+          "trajectories": 8146,
+          "weightedPaths": 8146,
+          "weightedConditionalPercentage": 2.827,
+          "trajectoryConditionalPercentage": 2.827,
+          "status": "below_recommended"
+        },
+        "friends": {
+          "outcomeIds": [
+            "friends"
+          ],
+          "trajectories": 61780,
+          "weightedPaths": 61780,
+          "weightedConditionalPercentage": 21.439,
+          "trajectoryConditionalPercentage": 21.439,
+          "status": "within_recommended"
+        },
+        "unresolved_ambiguity": {
+          "outcomeIds": [
+            "unresolved_ambiguity"
+          ],
+          "trajectories": 152981,
+          "weightedPaths": 152981,
+          "weightedConditionalPercentage": 53.087,
+          "trajectoryConditionalPercentage": 53.087,
+          "status": "above_recommended"
+        }
+      }
+    }
+  }
+}

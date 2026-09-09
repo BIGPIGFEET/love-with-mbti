@@ -9,6 +9,16 @@ Transform bounded research findings into observable, playable narrative-design s
 
 If the repository provides `.codex/choice-game-process-profile.md`, read it before resolving project contracts, artifact paths, runtime constraints, or validators. The profile may narrow this reusable contract but cannot weaken traceability or the stage boundary.
 
+## Output contract
+
+Persist Stage 02 as two human-readable design artifacts; a prose summary in chat or a single mixed document does not replace them when the repository profile defines separate routes.
+
+- Resolve the exact routes from the repository profile. For Love with MBTI, write `content/<type>-behavior-model.md` and `content/scenes/<type>-candidate-scenes.md`, using a lowercase type token in both filenames.
+- The behavior-model file must contain the behavior model, conflict dictionary, state semantics, evidence-versus-inference qualifications, limitations, and the Stage-03 handoff basis.
+- The candidate-scenes file must contain the complete candidate-event mapping keyed by canonical `candidate_id`, including every behavior, feature, eligible source, conflict, and state ID required by [references/model-schemas.md](references/model-schemas.md).
+- Markdown is authoritative for this stage. JSON or TypeScript projections are optional audit aids and must not introduce formal `scene_id` values, final selection, choices, effects, or endings.
+- Do not report Stage 02 complete until both files exist, their cross-references resolve, every candidate has the complete upstream ID set, and the acceptance checks below pass.
+
 ## Required inputs
 
 Collect or confirm:

@@ -1,0 +1,122 @@
+[
+  {
+    "question_id": "Q01",
+    "order": 1,
+    "stage": "first_meeting",
+    "scene_id": "ESFJ-SC01",
+    "candidate_id": "ESFJ-K01",
+    "behavior_ids": ["ESFJ-B01"],
+    "feature_ids": ["ESFJ-F01"],
+    "source_ids": ["ESFJ-S01", "ESFJ-S07"],
+    "conflict_ids": ["ESFJ-C01"],
+    "state_ids": ["attraction", "comfort"]
+  },
+  {
+    "question_id": "Q02",
+    "order": 2,
+    "stage": "first_meeting",
+    "scene_id": "ESFJ-SC02",
+    "candidate_id": "ESFJ-K02",
+    "behavior_ids": ["ESFJ-B05"],
+    "feature_ids": ["ESFJ-F05"],
+    "source_ids": ["ESFJ-S02", "ESFJ-S06"],
+    "conflict_ids": ["ESFJ-C05"],
+    "state_ids": ["attraction", "comfort"]
+  },
+  {
+    "question_id": "Q03",
+    "order": 3,
+    "stage": "contact",
+    "scene_id": "ESFJ-SC03",
+    "candidate_id": "ESFJ-K05",
+    "behavior_ids": ["ESFJ-B06"],
+    "feature_ids": ["ESFJ-F06"],
+    "source_ids": ["ESFJ-S01", "ESFJ-S02", "ESFJ-S06"],
+    "conflict_ids": ["ESFJ-C06"],
+    "state_ids": ["trust", "comfort"]
+  },
+  {
+    "question_id": "Q04",
+    "order": 4,
+    "stage": "contact",
+    "scene_id": "ESFJ-SC04",
+    "candidate_id": "ESFJ-K08",
+    "behavior_ids": ["ESFJ-B07"],
+    "feature_ids": ["ESFJ-F07"],
+    "source_ids": ["ESFJ-S03", "ESFJ-S06", "ESFJ-S11"],
+    "conflict_ids": ["ESFJ-C07"],
+    "state_ids": ["attraction", "comfort"]
+  },
+  {
+    "question_id": "Q05",
+    "order": 5,
+    "stage": "contact",
+    "scene_id": "ESFJ-SC05",
+    "candidate_id": "ESFJ-K06",
+    "behavior_ids": ["ESFJ-B04"],
+    "feature_ids": ["ESFJ-F04"],
+    "source_ids": ["ESFJ-S04", "ESFJ-S05", "ESFJ-S06", "ESFJ-S09"],
+    "conflict_ids": ["ESFJ-C04"],
+    "state_ids": ["trust", "comfort", "conflict"]
+  },
+  {
+    "question_id": "Q06",
+    "order": 6,
+    "stage": "familiarity",
+    "scene_id": "ESFJ-SC06",
+    "candidate_id": "ESFJ-K09",
+    "behavior_ids": ["ESFJ-B08", "ESFJ-B06"],
+    "feature_ids": ["ESFJ-F08", "ESFJ-F06"],
+    "source_ids": ["ESFJ-S01", "ESFJ-S02", "ESFJ-S05", "ESFJ-S06", "ESFJ-S07", "ESFJ-S10"],
+    "conflict_ids": ["ESFJ-C01", "ESFJ-C06"],
+    "state_ids": ["trust", "comfort", "conflict"]
+  },
+  {
+    "question_id": "Q07",
+    "order": 7,
+    "stage": "familiarity",
+    "scene_id": "ESFJ-SC07",
+    "candidate_id": "ESFJ-K12",
+    "behavior_ids": ["ESFJ-B02", "ESFJ-B08"],
+    "feature_ids": ["ESFJ-F02", "ESFJ-F08"],
+    "source_ids": ["ESFJ-S01", "ESFJ-S03", "ESFJ-S05", "ESFJ-S07", "ESFJ-S10"],
+    "conflict_ids": ["ESFJ-C08"],
+    "state_ids": ["trust", "comfort", "conflict"]
+  },
+  {
+    "question_id": "Q08",
+    "order": 8,
+    "stage": "familiarity",
+    "scene_id": "ESFJ-SC08",
+    "candidate_id": "ESFJ-K11",
+    "behavior_ids": ["ESFJ-B03", "ESFJ-B06"],
+    "feature_ids": ["ESFJ-F03", "ESFJ-F06"],
+    "source_ids": ["ESFJ-S01", "ESFJ-S02", "ESFJ-S05", "ESFJ-S06"],
+    "conflict_ids": ["ESFJ-C03", "ESFJ-C06"],
+    "state_ids": ["trust", "comfort", "conflict"]
+  },
+  {
+    "question_id": "Q09",
+    "order": 9,
+    "stage": "ambiguity",
+    "scene_id": "ESFJ-SC09",
+    "candidate_id": "ESFJ-K13",
+    "behavior_ids": ["ESFJ-B05", "ESFJ-B04"],
+    "feature_ids": ["ESFJ-F05", "ESFJ-F04"],
+    "source_ids": ["ESFJ-S02", "ESFJ-S04", "ESFJ-S05", "ESFJ-S06", "ESFJ-S09"],
+    "conflict_ids": ["ESFJ-C05", "ESFJ-C04"],
+    "state_ids": ["attraction", "trust", "comfort"]
+  },
+  {
+    "question_id": "Q10",
+    "order": 10,
+    "stage": "ambiguity",
+    "scene_id": "ESFJ-SC10",
+    "candidate_id": "ESFJ-K16",
+    "behavior_ids": ["ESFJ-B02", "ESFJ-B04", "ESFJ-B08"],
+    "feature_ids": ["ESFJ-F02", "ESFJ-F04", "ESFJ-F08"],
+    "source_ids": ["ESFJ-S01", "ESFJ-S03", "ESFJ-S04", "ESFJ-S05", "ESFJ-S06", "ESFJ-S07", "ESFJ-S09", "ESFJ-S10"],
+    "conflict_ids": ["ESFJ-C02", "ESFJ-C04", "ESFJ-C08"],
+    "state_ids": ["attraction", "trust", "comfort", "conflict"]
+  }
+]

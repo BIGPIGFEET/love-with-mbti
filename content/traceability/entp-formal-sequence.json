@@ -1,0 +1,122 @@
+[
+  {
+    "question_id": "Q01",
+    "order": 1,
+    "stage": "first_meeting",
+    "scene_id": "ENTP-SC01",
+    "candidate_id": "SC01",
+    "behavior_ids": ["F02", "F03", "F11"],
+    "feature_ids": ["F02", "F03", "F11"],
+    "source_ids": ["S01", "S02", "S04", "S06", "S08", "S10", "S11", "S12", "S19", "S21"],
+    "conflict_ids": ["C01"],
+    "state_ids": ["attraction", "comfort", "conflict"]
+  },
+  {
+    "question_id": "Q02",
+    "order": 2,
+    "stage": "first_meeting",
+    "scene_id": "ENTP-SC02",
+    "candidate_id": "SC02",
+    "behavior_ids": ["F02", "F03", "F18", "F30"],
+    "feature_ids": ["F02", "F03", "F18", "F30"],
+    "source_ids": ["S01", "S02", "S04", "S05", "S08", "S10", "S11", "S12", "S18", "S19", "S21", "S26", "S27"],
+    "conflict_ids": ["C01", "C14"],
+    "state_ids": ["attraction", "comfort", "trust"]
+  },
+  {
+    "question_id": "Q03",
+    "order": 3,
+    "stage": "contact",
+    "scene_id": "ENTP-SC03",
+    "candidate_id": "SC03",
+    "behavior_ids": ["F01", "F08", "F16", "F17"],
+    "feature_ids": ["F01", "F08", "F16", "F17"],
+    "source_ids": ["S01", "S02", "S03", "S04", "S07", "S08", "S10", "S11", "S13", "S16", "S17", "S20", "S21"],
+    "conflict_ids": ["C02", "C03"],
+    "state_ids": ["attraction", "comfort", "conflict"]
+  },
+  {
+    "question_id": "Q04",
+    "order": 4,
+    "stage": "contact",
+    "scene_id": "ENTP-SC04",
+    "candidate_id": "SC05",
+    "behavior_ids": ["F05", "F09", "F18", "F21"],
+    "feature_ids": ["F05", "F09", "F18", "F21"],
+    "source_ids": ["S02", "S03", "S04", "S05", "S06", "S09", "S10", "S11", "S18", "S19", "S21", "S23", "S24"],
+    "conflict_ids": ["C03", "C07"],
+    "state_ids": ["trust", "comfort", "conflict"]
+  },
+  {
+    "question_id": "Q05",
+    "order": 5,
+    "stage": "contact",
+    "scene_id": "ENTP-SC05",
+    "candidate_id": "SC10",
+    "behavior_ids": ["F09", "F11", "F18", "F29"],
+    "feature_ids": ["F09", "F11", "F18", "F29"],
+    "source_ids": ["S01", "S04", "S05", "S06", "S09", "S10", "S11", "S18", "S19", "S21", "S24", "S29"],
+    "conflict_ids": ["C07"],
+    "state_ids": ["attraction", "trust", "comfort"]
+  },
+  {
+    "question_id": "Q06",
+    "order": 6,
+    "stage": "familiarity",
+    "scene_id": "ENTP-SC06",
+    "candidate_id": "SC04",
+    "behavior_ids": ["F06", "F07", "F20", "F26"],
+    "feature_ids": ["F06", "F07", "F20", "F26"],
+    "source_ids": ["S02", "S04", "S08", "S10", "S19", "S21", "S27", "S30"],
+    "conflict_ids": ["C05", "C10"],
+    "state_ids": ["comfort", "trust", "conflict"]
+  },
+  {
+    "question_id": "Q07",
+    "order": 7,
+    "stage": "familiarity",
+    "scene_id": "ENTP-SC07",
+    "candidate_id": "SC08",
+    "behavior_ids": ["F04", "F13", "F24"],
+    "feature_ids": ["F04", "F13", "F24"],
+    "source_ids": ["S02", "S03", "S07", "S08", "S10", "S11", "S19", "S21", "S23"],
+    "conflict_ids": ["C08"],
+    "state_ids": ["attraction", "trust", "conflict"]
+  },
+  {
+    "question_id": "Q08",
+    "order": 8,
+    "stage": "familiarity",
+    "scene_id": "ENTP-SC08",
+    "candidate_id": "SC12",
+    "behavior_ids": ["F06", "F10", "F20", "F26", "F31"],
+    "feature_ids": ["F06", "F10", "F20", "F26", "F31"],
+    "source_ids": ["S02", "S04", "S05", "S06", "S09", "S10", "S19", "S20", "S27", "S30"],
+    "conflict_ids": ["C10"],
+    "state_ids": ["attraction", "trust", "comfort"]
+  },
+  {
+    "question_id": "Q09",
+    "order": 9,
+    "stage": "ambiguity",
+    "scene_id": "ENTP-SC09",
+    "candidate_id": "SC14",
+    "behavior_ids": ["F12", "F13", "F19", "F23", "F29"],
+    "feature_ids": ["F12", "F13", "F19", "F23", "F29"],
+    "source_ids": ["S04", "S05", "S07", "S08", "S09", "S10", "S12", "S19", "S21", "S23", "S29"],
+    "conflict_ids": ["C04"],
+    "state_ids": ["attraction", "trust", "comfort", "conflict"]
+  },
+  {
+    "question_id": "Q10",
+    "order": 10,
+    "stage": "ambiguity",
+    "scene_id": "ENTP-SC10",
+    "candidate_id": "SC15",
+    "behavior_ids": ["F03", "F15", "F19", "F24", "F25", "F27"],
+    "feature_ids": ["F03", "F15", "F19", "F24", "F25", "F27"],
+    "source_ids": ["S02", "S04", "S07", "S08", "S10", "S12", "S19", "S21", "S26", "S31"],
+    "conflict_ids": ["C09"],
+    "state_ids": ["trust", "comfort", "conflict"]
+  }
+]

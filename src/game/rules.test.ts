@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest";
 
 import { intpQuestions } from "../content/intp-questions.ts";
-import { questions } from "../content/questions.ts";
+import { entpQuestions } from "../content/entp-questions.ts";
 import type { Question, RelationState } from "../content/schema.ts";
 import { applyEffects, resolveEnding } from "./rules.ts";
 
@@ -20,7 +20,7 @@ function optionById(questionSet: readonly Question[], questionIndex: number, opt
 
 describe("unified ending resolution", () => {
   it.each([
-    [questions, 3, "q04_expose_in_return"],
+    [entpQuestions, 3, "q04_expose_in_return"],
     [intpQuestions, 6, "q07_expose_in_return"],
   ] as const)("does not let a severe option bypass state rules", (questionSet, questionIndex, optionId) => {
     const question = questionSet[questionIndex];

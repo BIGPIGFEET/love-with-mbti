@@ -4,12 +4,14 @@ This repository profile narrows the reusable `01`–`06` choice-game Skills. Rea
 
 ## Playable types
 
-The production application currently ships eight content packs:
+The production application currently ships ten content packs:
 
 - `INTJ`
 - `ENTJ`
+- `ESTJ`
 - `ENTP`
 - `ENFP`
+- `ENFJ`
 - `INTP`
 - `INFJ`
 - `INFP`
@@ -20,13 +22,12 @@ The production application currently ships eight content packs:
 ## Canonical project sources
 
 - `src/content/schema.ts`: runtime content types, stable vocabularies, and structural validation.
-- `src/content/content-pack.ts`: the eight playable MBTI type IDs and content-pack interface.
-- `src/content/packs.ts`: the canonical registry for all eight production content packs.
-- `src/content/questions.ts` and `src/content/endings.ts`: ENTP production content.
-- `src/content/<type>-questions.ts` and `src/content/<type>-endings.ts`: production content for the other seven types.
+- `src/content/content-pack.ts`: the ten playable MBTI type IDs and content-pack interface.
+- `src/content/packs.ts`: the canonical registry for all ten production content packs.
+- `src/content/<type>-questions.ts` and `src/content/<type>-endings.ts`: production content for all ten types.
 - `src/game/rules.ts`: fixed shared state initialization, clamping, stage thresholds, rule precedence, and ending resolution.
-- `scripts/validate-content.mjs`: required structural validation for all eight production packs.
-- `scripts/analyze-question-paths.mjs`: production-equivalent exhaustive path analysis for all eight production packs.
+- `scripts/validate-content.mjs`: required structural validation for all ten production packs.
+- `scripts/analyze-question-paths.mjs`: production-equivalent exhaustive path analysis for all ten production packs.
 
 Inline TypeScript modules under `src/content/` are authoritative for production content. JSON, MJS, and Markdown under `docs/` and `content/` are research, design, audit, migration, or handoff artifacts; the application must not import them as production question or ending data.
 
@@ -34,15 +35,17 @@ Inline TypeScript modules under `src/content/` are authoritative for production 
 
 - Stage 01 research: `docs/research/<type>-stereotype-data.md`.
 - Stage 02 model: `content/<type>-behavior-model.md`; candidate events: `content/scenes/<type>-candidate-scenes.md`.
-- Stage 03 formal selection: a target-specific design file under `content/scenes/` plus `content/traceability/<type>-formal-sequence.json` as the machine-readable selected-scene registry.
-- Stage 04 question drafts and balance handoff material: target-specific files under `content/questions/`.
-- Stage 05 ending-copy drafts and audit material: target-specific files under `content/endings/` and `content/traceability/`.
-- Stage 06 reports: `content/questions/<type>-balance-report.json` and `content/questions/<type>-balance-report.md`; the existing ENTP report retains its legacy basename `balance-report`.
+- Stage 03 formal selection: `content/scenes/<type>-formal-sequence.md` plus `content/traceability/<type>-formal-sequence.json` as the machine-readable selected-scene registry.
+- Stage 04 question handoff: `content/questions/<type>-ten-question-draft.md`; production questions: `src/content/<type>-questions.ts`; companion mapping: `content/traceability/<type>-question-traceability.json`.
+- Stage 05 ending audit: `content/endings/<type>-endings-and-feedback.md`; production endings and fuzzy feedback: `src/content/<type>-endings.ts`; additional traceability belongs under `content/traceability/` only when explicitly required.
+- Stage 06 reports: `content/questions/<type>-balance-report.json` and `content/questions/<type>-balance-report.md`.
 - Production content: inline TypeScript in the target-specific `src/content/*-questions.ts` and `src/content/*-endings.ts` modules registered by `src/content/packs.ts`.
+
+Use a lowercase MBTI type token in every target-specific filename. The six Stage output contracts define the minimum contents and completion conditions for these routes. Chat summaries, analyzer stdout, and optional JSON/MJS migration drafts do not replace required artifacts.
 
 ## Existing-artifact status
 
-All eight playable types have production question and ending content and have completed Stage-06 path analysis. Preserve the existing reports as the approved analysis handoff for their recorded source state. When a production question, effect, option order, shared rule, or ending classifier changes, regenerate the affected report; a shared-rule change requires rerunning all eight types.
+All ten playable types have production question and ending content and have completed Stage-06 path analysis. Preserve existing reports as the approved analysis handoff for their recorded source state. When a production question, effect, option order, shared rule, or ending classifier changes, regenerate the affected report; a shared-rule change requires rerunning all ten types.
 
 Design and migration artifacts may retain older JSON, MJS, or Markdown projections for audit history. They are not production sources and must not be imported by the application.
 
@@ -94,7 +97,7 @@ node .codex/skills/04-write-choice-game-questions/scripts/validate-question-trac
 
 Stage 05 is a content-writing stage. It reads the fixed contracts from `src/content/schema.ts` and `src/game/rules.ts`, then creates complete target-specific ending, relationship-evaluation, and fuzzy-feedback copy for every canonical result.
 
-Stage 05 must not change `INITIAL_STATE`, clamping, `STAGE_THRESHOLDS`, global-danger thresholds, rule precedence, final classifiers, stable ending or evaluation IDs, state directions, legal effects, strategy vocabulary, or fuzzy-feedback key semantics. A request to change shared mechanics is outside Stage 05 and requires a separately scoped change plus regression analysis across all eight playable types.
+Stage 05 must not change `INITIAL_STATE`, clamping, `STAGE_THRESHOLDS`, global-danger thresholds, rule precedence, final classifiers, stable ending or evaluation IDs, state directions, legal effects, strategy vocabulary, or fuzzy-feedback key semantics. A request to change shared mechanics is outside Stage 05 and requires a separately scoped change plus regression analysis across all ten playable types.
 
 `src/game/rules.ts` does not currently expose stable runtime rule IDs. Companion documents may use clearly prefixed audit-only labels, but must not present them as runtime IDs or export them as Skill-06 `expectedRuleIds`. Rule shadowing remains unknown until the runtime exposes stable IDs and an applicable-rule diagnostic hook.
 
@@ -102,14 +105,16 @@ Preserve the runtime's base `endingId` plus optional `evaluationId`; path analys
 
 ## Stage-06 coverage
 
-The production-equivalent Stage-06 adapters cover all eight playable types:
+The production-equivalent Stage-06 adapters cover all ten playable types:
 
 | type | adapter |
 |---|---|
-| ENTP | `.codex/skills/06-balance-choice-game-paths/scripts/love-with-mbti-adapter.mjs` |
+| ENTP | `.codex/skills/06-balance-choice-game-paths/scripts/love-with-mbti-entp-adapter.mjs` |
 | INTJ | `.codex/skills/06-balance-choice-game-paths/scripts/love-with-mbti-intj-adapter.mjs` |
 | ENTJ | `.codex/skills/06-balance-choice-game-paths/scripts/love-with-mbti-entj-adapter.mjs` |
+| ESTJ | `.codex/skills/06-balance-choice-game-paths/scripts/love-with-mbti-estj-adapter.mjs` |
 | ENFP | `.codex/skills/06-balance-choice-game-paths/scripts/love-with-mbti-enfp-adapter.mjs` |
+| ENFJ | `.codex/skills/06-balance-choice-game-paths/scripts/love-with-mbti-enfj-adapter.mjs` |
 | INTP | `.codex/skills/06-balance-choice-game-paths/scripts/love-with-mbti-intp-adapter.mjs` |
 | INFJ | `.codex/skills/06-balance-choice-game-paths/scripts/love-with-mbti-infj-adapter.mjs` |
 | INFP | `.codex/skills/06-balance-choice-game-paths/scripts/love-with-mbti-infp-adapter.mjs` |

@@ -1,11 +1,20 @@
 import type { AvailableMbtiType, ContentPack } from "./content-pack.ts";
 import { enfpEndings, enfpFuzzyFeedback, enfpRelationshipEvaluations } from "./enfp-endings.ts";
 import { enfpQuestions } from "./enfp-questions.ts";
+import { enfjEndings, enfjFuzzyFeedback, enfjRelationshipEvaluations } from "./enfj-endings.ts";
+import { enfjQuestions } from "./enfj-questions.ts";
+import { esfjEndings, esfjFuzzyFeedback, esfjRelationshipEvaluations } from "./esfj-endings.ts";
+import { esfjQuestions } from "./esfj-questions.ts";
 import { entjEndings, entjFuzzyFeedback, entjRelationshipEvaluations } from "./entj-endings.ts";
 import { entjQuestions } from "./entj-questions.ts";
 import { estjEndings, estjFuzzyFeedback, estjRelationshipEvaluations } from "./estj-endings.ts";
 import { estjQuestions } from "./estj-questions.ts";
-import { endings, fuzzyFeedback, relationshipEvaluations } from "./endings.ts";
+import {
+  entpEndings,
+  entpFuzzyFeedback,
+  entpRelationshipEvaluations,
+} from "./entp-endings.ts";
+import { entpQuestions } from "./entp-questions.ts";
 import { infjEndings, infjFuzzyFeedback, infjRelationshipEvaluations } from "./infj-endings.ts";
 import { infjQuestions } from "./infj-questions.ts";
 import { infpEndings, infpFuzzyFeedback, infpRelationshipEvaluations } from "./infp-endings.ts";
@@ -20,7 +29,6 @@ import { isfpEndings, isfpFuzzyFeedback, isfpRelationshipEvaluations } from "./i
 import { isfpQuestions } from "./isfp-questions.ts";
 import { intpEndings, intpFuzzyFeedback, intpRelationshipEvaluations } from "./intp-endings.ts";
 import { intpQuestions } from "./intp-questions.ts";
-import { questions } from "./questions.ts";
 import { validateContent } from "./schema.ts";
 
 export const contentPacks = {
@@ -51,10 +59,10 @@ export const contentPacks = {
   ENTP: {
     type: "ENTP",
     description: "十次新鲜感、边界、信任与长期兑现之间的取舍。",
-    questions,
-    endings,
-    relationshipEvaluations,
-    fuzzyFeedback,
+    questions: entpQuestions,
+    endings: entpEndings,
+    relationshipEvaluations: entpRelationshipEvaluations,
+    fuzzyFeedback: entpFuzzyFeedback,
   },
   ENFP: {
     type: "ENFP",
@@ -63,6 +71,22 @@ export const contentPacks = {
     endings: enfpEndings,
     relationshipEvaluations: enfpRelationshipEvaluations,
     fuzzyFeedback: enfpFuzzyFeedback,
+  },
+  ENFJ: {
+    type: "ENFJ",
+    description: "十次群体参与、建议许可、支持互惠与关系协议之间的取舍。",
+    questions: enfjQuestions,
+    endings: enfjEndings,
+    relationshipEvaluations: enfjRelationshipEvaluations,
+    fuzzyFeedback: enfjFuzzyFeedback,
+  },
+  ESFJ: {
+    type: "ESFJ",
+    description: "从日常照顾、朋友聚会到一起分担事情，在十次选择中慢慢说清你们的关系。",
+    questions: esfjQuestions,
+    endings: esfjEndings,
+    relationshipEvaluations: esfjRelationshipEvaluations,
+    fuzzyFeedback: esfjFuzzyFeedback,
   },
   INTP: {
     type: "INTP",

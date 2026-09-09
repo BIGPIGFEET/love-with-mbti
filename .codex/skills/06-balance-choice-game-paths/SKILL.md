@@ -13,6 +13,17 @@ Consume the production-equivalent question and ending contracts from stages 04-0
 
 If the repository provides `.codex/choice-game-process-profile.md`, read it before locating production data, building the adapter, or choosing validation commands. The profile may specify canonical sources and project projections but cannot weaken exhaustive coverage or production equivalence.
 
+## Output contract
+
+Persist one machine-readable report and one human-readable report for every affected target. Analyzer stdout, a chat summary, or a manually copied percentage table does not complete Stage 06.
+
+- For Love with MBTI, write `content/questions/<type>-balance-report.json` and `content/questions/<type>-balance-report.md`, using a lowercase type token in both filenames. Keep the production-equivalent adapter at `.codex/skills/06-balance-choice-game-paths/scripts/love-with-mbti-<type>-adapter.mjs` current with the production imports.
+- Generate the JSON report deterministically from the bundled analyzer or the production-equivalent project analyzer; do not hand-edit calculated counts, percentages, coverage, example paths, or diagnostics.
+- The Markdown report must identify the analyzed source state and command, distinguish weighted-path probability from terminal-trajectory share, interpret all required metrics, record unreachable or unexpected IDs, document rule-shadowing as measured or unknown, disposition effect-budget and dominance findings, and preserve at least one example path per reachable complete outcome.
+- When tuning occurred, include before/after comparisons and explain every retained unmet target. A report may document a miss; it must not hide one or change narrative meaning merely to force a target range.
+- Regenerate every affected target report after question effects, option order, resolver logic, thresholds, or rule precedence changes. A shared-rule change requires current reports for all registered targets.
+- Do not report Stage 06 complete until both report files exist for every affected target, the complete choice-space product is fully enumerated, the JSON and Markdown agree, and the acceptance checks below pass.
+
 
 ## Prepare the adapter
 
@@ -36,7 +47,7 @@ The report includes truncated terminal-trajectory counts and percentages, comple
 For the bundled production-equivalent adapters, run every playable type separately when refreshing the complete project baseline:
 
 ```powershell
-node scripts/enumerate-choice-paths.mjs scripts/love-with-mbti-adapter.mjs --json
+node scripts/enumerate-choice-paths.mjs scripts/love-with-mbti-entp-adapter.mjs --json
 node scripts/enumerate-choice-paths.mjs scripts/love-with-mbti-intj-adapter.mjs --json
 node scripts/enumerate-choice-paths.mjs scripts/love-with-mbti-entj-adapter.mjs --json
 node scripts/enumerate-choice-paths.mjs scripts/love-with-mbti-enfp-adapter.mjs --json

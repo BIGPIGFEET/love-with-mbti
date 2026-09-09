@@ -1,0 +1,182 @@
+[
+  {
+    "question_id": "Q01",
+    "order": 1,
+    "stage": "first_meeting",
+    "scene_id": "ENFJ-SC01",
+    "candidate_id": "ENFJ-C01",
+    "behavior_ids": ["ENFJ-B01"],
+    "feature_ids": ["ENFJ-F01", "ENFJ-F09"],
+    "source_ids": ["ENFJ-S01", "ENFJ-S03", "ENFJ-S08", "ENFJ-S14", "ENFJ-S17", "ENFJ-S37", "ENFJ-S42"],
+    "conflict_ids": ["ENFJ-K01"],
+    "state_ids": ["attraction", "comfort", "trust"],
+    "options": [
+      { "option_id": "q01_choose_small_entry", "strategy": "negotiate", "rationale": "选择有限参与并把入口还给群体，以可持续节奏提高信任与舒适。" },
+      { "option_id": "q01_join_the_group", "strategy": "accommodate", "rationale": "真实愿意时顺势加入，以互动投入提高吸引，同时不把邀请独占为浪漫信号。" },
+      { "option_id": "q01_keep_listening", "strategy": "honest", "rationale": "直接说明当前社交容量，让安静保持为合法选择，主要提高舒适与信任。" },
+      { "option_id": "q01_turn_it_into_flirting", "strategy": "risky", "rationale": "当众把一般性纳入解读成偏爱，主要压低舒适并轻度损害信任。" }
+    ]
+  },
+  {
+    "question_id": "Q02",
+    "order": 2,
+    "stage": "first_meeting",
+    "scene_id": "ENFJ-SC02",
+    "candidate_id": "ENFJ-C04",
+    "behavior_ids": ["ENFJ-B04"],
+    "feature_ids": ["ENFJ-F02", "ENFJ-F08"],
+    "source_ids": ["ENFJ-S03", "ENFJ-S04", "ENFJ-S05", "ENFJ-S08", "ENFJ-S09", "ENFJ-S13", "ENFJ-S16", "ENFJ-S34"],
+    "conflict_ids": ["ENFJ-K03"],
+    "state_ids": ["trust", "comfort", "attraction"],
+    "options": [
+      { "option_id": "q02_ask_to_be_heard", "strategy": "honest", "rationale": "明确当前只需要倾听，保留决定权并检验建议许可是否真实有效。" },
+      { "option_id": "q02_hand_over_the_decision", "strategy": "risky", "rationale": "把选择与错误责任整体交给 TA，使支持变成不对等负担，损害信任与舒适。" },
+      { "option_id": "q02_try_one_suggestion", "strategy": "accommodate", "rationale": "真心愿意时先听一条建议，并明确最终仍由自己核对和决定。" },
+      { "option_id": "q02_set_advice_scope", "strategy": "negotiate", "rationale": "限定建议主题和禁区，再共同比较方案，使支持与自主同时可执行。" }
+    ]
+  },
+  {
+    "question_id": "Q03",
+    "order": 3,
+    "stage": "contact",
+    "scene_id": "ENFJ-SC03",
+    "candidate_id": "ENFJ-C05",
+    "behavior_ids": ["ENFJ-B07"],
+    "feature_ids": ["ENFJ-F03"],
+    "source_ids": ["ENFJ-S04", "ENFJ-S07", "ENFJ-S13", "ENFJ-S36"],
+    "conflict_ids": ["ENFJ-K06", "ENFJ-K11"],
+    "state_ids": ["attraction", "trust", "comfort"],
+    "options": [
+      { "option_id": "q03_match_the_momentum", "strategy": "accommodate", "rationale": "回应真实好感并继续约会，主要提高吸引，但暂不增加承诺确定性。" },
+      { "option_id": "q03_define_current_scope", "strategy": "negotiate", "rationale": "分别确认约会、回复和排他范围，以透明协议提高信任与舒适。" },
+      { "option_id": "q03_call_it_official", "strategy": "risky", "rationale": "未经同意公开关系，把当前好感冒充共同承诺，主要重创信任。" },
+      { "option_id": "q03_say_need_slow", "strategy": "honest", "rationale": "如实说明好感与当前承诺上限，让慢节奏不再依赖猜测。" }
+    ]
+  },
+  {
+    "question_id": "Q04",
+    "order": 4,
+    "stage": "contact",
+    "scene_id": "ENFJ-SC04",
+    "candidate_id": "ENFJ-C06",
+    "behavior_ids": ["ENFJ-B06"],
+    "feature_ids": ["ENFJ-F02", "ENFJ-F04", "ENFJ-F06"],
+    "source_ids": ["ENFJ-S04", "ENFJ-S06", "ENFJ-S12", "ENFJ-S15", "ENFJ-S16", "ENFJ-S46"],
+    "conflict_ids": ["ENFJ-K04", "ENFJ-K05"],
+    "state_ids": ["comfort", "trust", "attraction"],
+    "options": [
+      { "option_id": "q04_make_them_fix_it", "strategy": "risky", "rationale": "无视 TA 已说明的容量并要求接管全部问题，主要降低舒适与信任。" },
+      { "option_id": "q04_request_listening", "strategy": "honest", "rationale": "给出限时、可执行的倾听请求，让情绪支持不等于修复任务。" },
+      { "option_id": "q04_split_support_steps", "strategy": "negotiate", "rationale": "把情绪陪伴与材料协助拆到不同时间，并以双方容量确定范围。" },
+      { "option_id": "q04_take_space", "strategy": "accommodate", "rationale": "选择独处并给出低压力回访条件，避免把空间解释为拒绝关系。" }
+    ]
+  },
+  {
+    "question_id": "Q05",
+    "order": 5,
+    "stage": "contact",
+    "scene_id": "ENFJ-SC05",
+    "candidate_id": "ENFJ-C08",
+    "behavior_ids": ["ENFJ-B04", "ENFJ-B12"],
+    "feature_ids": ["ENFJ-F02", "ENFJ-F07", "ENFJ-F08"],
+    "source_ids": ["ENFJ-S02", "ENFJ-S03", "ENFJ-S04", "ENFJ-S05", "ENFJ-S08", "ENFJ-S09", "ENFJ-S11", "ENFJ-S13", "ENFJ-S16", "ENFJ-S34"],
+    "conflict_ids": ["ENFJ-K03", "ENFJ-K10"],
+    "state_ids": ["trust", "comfort", "conflict"],
+    "options": [
+      { "option_id": "q05_name_the_specific_pressure", "strategy": "confront", "rationale": "直接指出说停后仍追加建议这一具体越线，使修复回到可调整行为。" },
+      { "option_id": "q05_diagnose_manipulation", "strategy": "risky", "rationale": "用类型与心理诊断替代行为反馈，造成强烈冲突并显著压低舒适。" },
+      { "option_id": "q05_keep_original_choice", "strategy": "honest", "rationale": "保留自己的决定，同时愿意解释影响，使不同意见不等于关系否定。" },
+      { "option_id": "q05_agree_on_advice_signal", "strategy": "negotiate", "rationale": "建立建议前询问和说停即停的明确开关，以可验证调整修复信任。" }
+    ]
+  },
+  {
+    "question_id": "Q06",
+    "order": 6,
+    "stage": "familiarity",
+    "scene_id": "ENFJ-SC06",
+    "candidate_id": "ENFJ-C10",
+    "behavior_ids": ["ENFJ-B06", "ENFJ-B09"],
+    "feature_ids": ["ENFJ-F02", "ENFJ-F04", "ENFJ-F05", "ENFJ-F06", "ENFJ-F09"],
+    "source_ids": ["ENFJ-S01", "ENFJ-S04", "ENFJ-S06", "ENFJ-S08", "ENFJ-S10", "ENFJ-S12", "ENFJ-S14", "ENFJ-S15", "ENFJ-S16", "ENFJ-S17", "ENFJ-S35", "ENFJ-S37", "ENFJ-S42", "ENFJ-S43", "ENFJ-S46"],
+    "conflict_ids": ["ENFJ-K04", "ENFJ-K05"],
+    "state_ids": ["trust", "comfort", "conflict"],
+    "options": [
+      { "option_id": "q06_rebuild_support_rhythm", "strategy": "negotiate", "rationale": "共同设置双向询问、限时和外部支持出口，修复长期互惠与容量。" },
+      { "option_id": "q06_pause_heavy_topics", "strategy": "accommodate", "rationale": "接受当前暂停并把选择交还 TA，先停止继续累积单向负荷。" },
+      { "option_id": "q06_claim_the_listener_role", "strategy": "risky", "rationale": "以 TA 擅长倾听为由取消其当前拒绝，主要重创舒适并激化冲突。" },
+      { "option_id": "q06_admit_low_capacity", "strategy": "honest", "rationale": "承认自己暂时无法对等承载并寻找其他支持，以真实容量替代空承诺。" }
+    ]
+  },
+  {
+    "question_id": "Q07",
+    "order": 7,
+    "stage": "familiarity",
+    "scene_id": "ENFJ-SC07",
+    "candidate_id": "ENFJ-C11",
+    "behavior_ids": ["ENFJ-B08"],
+    "feature_ids": ["ENFJ-F03", "ENFJ-F04"],
+    "source_ids": ["ENFJ-S04", "ENFJ-S06", "ENFJ-S07", "ENFJ-S12", "ENFJ-S13", "ENFJ-S36"],
+    "conflict_ids": ["ENFJ-K07"],
+    "state_ids": ["attraction", "trust", "comfort"],
+    "options": [
+      { "option_id": "q07_accept_both_today", "strategy": "accommodate", "rationale": "玩家真实愿意时分别接受书和拥抱，以双向靠近提高吸引与舒适。" },
+      { "option_id": "q07_accept_book_decline_hug", "strategy": "honest", "rationale": "接受一种表达、拒绝另一种并提出替代方式，证明部分拒绝不否定关系。" },
+      { "option_id": "q07_grab_without_answer", "strategy": "risky", "rationale": "以突然触碰跳过当前确认并宣布未来通行，主要降低舒适与信任。" },
+      { "option_id": "q07_set_future_permissions", "strategy": "negotiate", "rationale": "把礼物、公开和触碰设为未来仍需逐项确认的权限，提高长期可靠性。" }
+    ]
+  },
+  {
+    "question_id": "Q08",
+    "order": 8,
+    "stage": "familiarity",
+    "scene_id": "ENFJ-SC08",
+    "candidate_id": "ENFJ-C13",
+    "behavior_ids": ["ENFJ-B10", "ENFJ-B12"],
+    "feature_ids": ["ENFJ-F07", "ENFJ-F08"],
+    "source_ids": ["ENFJ-S02", "ENFJ-S05", "ENFJ-S08", "ENFJ-S09", "ENFJ-S11", "ENFJ-S17", "ENFJ-S34"],
+    "conflict_ids": ["ENFJ-K08", "ENFJ-K09", "ENFJ-K10"],
+    "state_ids": ["trust", "comfort", "conflict"],
+    "options": [
+      { "option_id": "q08_force_the_night", "strategy": "risky", "rationale": "无视降温需求持续逼问，主要重创舒适并把争论推向高冲突。" },
+      { "option_id": "q08_set_return_details", "strategy": "negotiate", "rationale": "明确时间、方式、紧急范围与报平安条件，使暂停成为可验证协议。" },
+      { "option_id": "q08_accept_the_pause", "strategy": "accommodate", "rationale": "接受已有返回安排并停止继续争论，保留降温空间。" },
+      { "option_id": "q08_name_waiting_limit", "strategy": "honest", "rationale": "如实说明能等待的期限和延期条件，让安全感需要不变成强迫即时解决。" }
+    ]
+  },
+  {
+    "question_id": "Q09",
+    "order": 9,
+    "stage": "ambiguity",
+    "scene_id": "ENFJ-SC09",
+    "candidate_id": "ENFJ-C18",
+    "behavior_ids": ["ENFJ-B12", "ENFJ-B13"],
+    "feature_ids": ["ENFJ-F07", "ENFJ-F08", "ENFJ-F11"],
+    "source_ids": ["ENFJ-S02", "ENFJ-S05", "ENFJ-S08", "ENFJ-S09", "ENFJ-S11", "ENFJ-S17", "ENFJ-S34"],
+    "conflict_ids": ["ENFJ-K10", "ENFJ-K13"],
+    "state_ids": ["attraction", "trust", "comfort", "conflict"],
+    "options": [
+      { "option_id": "q09_reject_the_pairing_script", "strategy": "honest", "rationale": "拒绝命定论并提供真实契合与差异，让关系判断回到具体相处。" },
+      { "option_id": "q09_accept_the_destiny_role", "strategy": "risky", "rationale": "把配对梗转成 TA 的无限照顾与读心义务，显著压低舒适并增加冲突。" },
+      { "option_id": "q09_compare_real_evidence", "strategy": "negotiate", "rationale": "共同核对兴趣、边界、支持和分歧，以实际证据取代类型结论。" },
+      { "option_id": "q09_brush_off_the_chat", "strategy": "accommodate", "rationale": "先离开起哄并继续靠近，但暂不处理外部期待留下的定义疑问。" }
+    ]
+  },
+  {
+    "question_id": "Q10",
+    "order": 10,
+    "stage": "ambiguity",
+    "scene_id": "ENFJ-SC10",
+    "candidate_id": "ENFJ-C15",
+    "behavior_ids": ["ENFJ-B07", "ENFJ-B11"],
+    "feature_ids": ["ENFJ-F03", "ENFJ-F08"],
+    "source_ids": ["ENFJ-S04", "ENFJ-S05", "ENFJ-S07", "ENFJ-S08", "ENFJ-S09", "ENFJ-S13", "ENFJ-S34", "ENFJ-S36"],
+    "conflict_ids": ["ENFJ-K06", "ENFJ-K12"],
+    "state_ids": ["attraction", "trust", "comfort", "conflict"],
+    "options": [
+      { "option_id": "q10_define_current_agreement", "strategy": "negotiate", "rationale": "逐项确认约会、排他、现实投入和复谈期限，使共同愿景落成可兑现协议。" },
+      { "option_id": "q10_decline_unready_plan", "strategy": "honest", "rationale": "坦白愿意继续的部分与尚未准备好的部分，允许真实不兼容被看见。" },
+      { "option_id": "q10_join_every_plan", "strategy": "accommodate", "rationale": "为维持热度隐藏限制并答应全部计划，短期强烈升温但削弱承诺可信度。" },
+      { "option_id": "q10_demand_proof_by_sacrifice", "strategy": "risky", "rationale": "要求对方牺牲资源和生活证明感情，把共同未来变成服从测试。" }
+    ]
+  }
+]

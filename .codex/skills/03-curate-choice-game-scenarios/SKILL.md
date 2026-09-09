@@ -13,6 +13,16 @@ Consume the handoff from `$02-build-stereotype-event-model` and pass the locked 
 
 If the repository provides `.codex/choice-game-process-profile.md`, read it before resolving project contracts, artifact paths, runtime constraints, or validators. The profile may narrow this reusable contract but cannot weaken traceability or the stage boundary.
 
+## Output contract
+
+Persist both the human-readable selection rationale and the machine-readable selected-scene registry. Neither file is optional when the repository profile defines both routes.
+
+- For Love with MBTI, write `content/scenes/<type>-formal-sequence.md` and `content/traceability/<type>-formal-sequence.json`, using a lowercase type token in both filenames.
+- The Markdown file must contain candidate eligibility decisions, the locked formal order, stage and difficulty rationale, coverage matrix, alternates and swap guidance, unresolved risks, and the selection change log defined by [references/selection-schema.md](references/selection-schema.md).
+- The JSON file must be an array with exactly one record per locked scene. Each record must contain `question_id`, `order`, `stage`, `scene_id`, `candidate_id`, `behavior_ids`, `feature_ids`, `source_ids`, `conflict_ids`, and `state_ids`.
+- Treat the JSON registry as the downstream ID universe and the Markdown file as the decision rationale. Their order, stage, selected candidate, and complete upstream ID sets must agree exactly.
+- Do not report Stage 03 complete until both files exist, contain the same selected sequence, use stable IDs, and the acceptance checks below pass. A Markdown-only selection is an incomplete handoff for this project.
+
 ## Required inputs
 
 Collect or confirm:

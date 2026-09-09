@@ -27,6 +27,16 @@ Read [references/ending-schema.md](references/ending-schema.md) before producing
 
 If the repository provides `.codex/choice-game-process-profile.md`, read it before resolving canonical files, target routes, runtime field mappings, or validation commands. The profile may narrow this reusable content contract but cannot authorize mechanics changes.
 
+## Output contract
+
+Persist both the target-specific audit handoff and the canonical runtime ending content. A chat response, Markdown-only draft, or executable rule copy does not complete this stage.
+
+- For Love with MBTI, write or update `content/endings/<type>-endings-and-feedback.md` and `src/content/<type>-endings.ts`, using a lowercase type token in both filenames. Add any companion traceability artifact required by the repository profile rather than inventing a parallel route.
+- The Markdown file must contain the complete ending/evaluation coverage matrix, target-specific characterization basis, fuzzy-feedback coverage, content or sensitivity notes, and a clear Stage-06 reachability handoff. It may reference canonical rules but must not redefine them.
+- The TypeScript module is the authoritative production source for ending copy, relationship-evaluation copy, and fuzzy-feedback copy. It must export the target-specific collections and be registered through `src/content/packs.ts` when the target is playable.
+- JSON or MJS drafts are optional audit or migration projections and must never be imported as production ending content.
+- Do not report Stage 05 complete until every canonical base ending, secondary evaluation, and fuzzy-feedback key has exactly the required target content in the TypeScript module, the Markdown audit agrees with the fixed ID vocabulary, structural validation passes, and the acceptance checks below pass. Reachability remains pending until Stage 06.
+
 ## Fixed-mechanics boundary
 
 Stage 05 writes content only. Do not create, tune, migrate, or reinterpret:

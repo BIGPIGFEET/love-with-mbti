@@ -72,7 +72,7 @@ ENTJ 文案仅使用行为模型与十题已经建立的互动：拆解类型标
 
 ## 5. 模糊反馈合同
 
-本轮不创建 ENTJ 专属反馈语义。24 个稳定键与 `src/content/endings.ts` 及 Stage 04 题稿逐字一致：绝对变化 `5` 对应 `slight`，`10` 对应 `medium`，`15` 或 `20` 对应 `strong`；零变化不展示该维度提示。
+本轮不创建 ENTJ 专属反馈语义。24 个稳定键与 `src/content/entp-endings.ts` 及 Stage 04 题稿逐字一致：绝对变化 `5` 对应 `slight`，`10` 对应 `medium`，`15` 或 `20` 对应 `strong`；零变化不展示该维度提示。
 
 | dimension | 健康方向 | 覆盖 | 组合提示策略 |
 |---|---|---|---|

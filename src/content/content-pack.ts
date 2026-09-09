@@ -11,6 +11,8 @@ export const AVAILABLE_MBTI_TYPES = [
   "ESTJ",
   "ENTP",
   "ENFP",
+  "ENFJ",
+  "ESFJ",
   "INTP",
   "INFJ",
   "INFP",

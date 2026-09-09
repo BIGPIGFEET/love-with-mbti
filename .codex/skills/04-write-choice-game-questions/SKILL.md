@@ -29,6 +29,18 @@ Read [references/question-schema.md](references/question-schema.md) before draft
 
 If the repository provides `.codex/choice-game-process-profile.md`, read it before resolving artifact paths, runtime field mappings, mechanics ownership, or validation commands. The profile may narrow this reusable contract but cannot remove traceability or stage boundaries.
 
+## Output contract
+
+For a production-content task, persist the human-readable handoff, canonical runtime questions, and companion traceability mapping. Markdown alone is not a completed Stage-04 output.
+
+- For Love with MBTI, write or update `content/questions/<type>-ten-question-draft.md`, `src/content/<type>-questions.ts`, and `content/traceability/<type>-question-traceability.json`, using a lowercase type token in every filename.
+- The Markdown file must summarize the playable question set, preliminary mechanics, effect-budget review, unresolved balance risks, and the Stage-05/06 handoff. It is an audit and review artifact, not a runtime source.
+- The TypeScript module is the authoritative production question source and must conform to `src/content/schema.ts`, export the target-specific question collection, and be registered through `src/content/packs.ts` when the target is playable.
+- The companion JSON must be an array with exactly one record per runtime question, keyed by the exact `question_id`; it must retain the Stage-03 scene and upstream ID sets plus option IDs, strategies, and design rationales required by [references/question-schema.md](references/question-schema.md).
+- JSON or MJS question drafts may be retained as migration or audit projections, but the application must not import them as production content.
+- If the user explicitly requests a non-runtime draft only, label the Markdown artifact as non-runtime and do not overwrite production data; that result is a draft handoff, not production-complete Stage 04.
+- Do not report production Stage 04 complete until all three required files exist, the TypeScript content passes the project validator, the companion JSON validates against the TypeScript module and Stage-03 registry, and the acceptance checks below pass.
+
 ## Runtime integration
 
 Treat an existing production schema and rule module as authoritative. Map the semantic fields in the reference schema to the real runtime fields before drafting, and preserve any design-only fields in a companion traceability record keyed by the exact runtime question and option IDs. Do not leave Markdown as the only output when the task requires production content.

@@ -9,6 +9,15 @@ Collect and qualify online discourse evidence without converting it into game be
 
 If the repository provides `.codex/choice-game-process-profile.md`, read it before resolving project context, artifact paths, canonical schemas, or validation requirements. The profile may narrow this reusable contract but cannot weaken evidence eligibility or the stage boundary.
 
+## Output contract
+
+Persist the Stage-01 handoff as an inspectable artifact; a chat summary, bookmark list, or unclassified collection of links does not satisfy this stage.
+
+- Resolve the exact route from the repository profile. For Love with MBTI, write one authoritative Markdown file at `docs/research/<type>-stereotype-data.md`, using a lowercase type token in the filename.
+- Include the research boundary, query ledger, classified source ledger, neutral feature-evidence table, counterevidence, limitations and coverage, and a Stage-02 handoff. Include the representative-statistics table only when that branch is requested; otherwise state explicitly that the artifact makes no population-prevalence claim.
+- Use [references/research-schemas.md](references/research-schemas.md) as the minimum table and field contract. Additional JSON, spreadsheets, or notes may mirror the research, but they do not replace the authoritative Markdown handoff unless the repository profile explicitly changes the canonical format.
+- Do not report Stage 01 complete until the file exists at the resolved route, every feature resolves only to eligible `evidence_source` IDs, and the acceptance checks below pass.
+
 ## Workflow
 
 1. Set the boundary: target label/community, languages and regions, time sensitivity, intended creative output, and whether the user needs representative statistics or recurring online narratives.

@@ -1,0 +1,182 @@
+[
+  {
+    "question_id": "Q01",
+    "order": 1,
+    "stage": "first_meeting",
+    "scene_id": "ESFJ-SC01",
+    "candidate_id": "ESFJ-K01",
+    "behavior_ids": ["ESFJ-B01"],
+    "feature_ids": ["ESFJ-F01"],
+    "source_ids": ["ESFJ-S01", "ESFJ-S07"],
+    "conflict_ids": ["ESFJ-C01"],
+    "state_ids": ["attraction", "comfort"],
+    "options": [
+      { "option_id": "q01_negotiate", "strategy": "negotiate", "rationale": "把同行拆成共享路段与各自返程，在接受照顾的同时限制额外负担。" },
+      { "option_id": "q01_risky", "strategy": "risky", "rationale": "默认TA会一路护送，把主动帮助扩张成未经协商的义务。" },
+      { "option_id": "q01_honest", "strategy": "honest", "rationale": "直接说明自己能安全返程，使拒绝帮助不等于拒绝善意。" },
+      { "option_id": "q01_accommodate", "strategy": "accommodate", "rationale": "真心接受有限帮助并明确感谢，不把照顾过度解释为关系承诺。" }
+    ]
+  },
+  {
+    "question_id": "Q02",
+    "order": 2,
+    "stage": "first_meeting",
+    "scene_id": "ESFJ-SC02",
+    "candidate_id": "ESFJ-K02",
+    "behavior_ids": ["ESFJ-B05"],
+    "feature_ids": ["ESFJ-F05"],
+    "source_ids": ["ESFJ-S02", "ESFJ-S06"],
+    "conflict_ids": ["ESFJ-C05"],
+    "state_ids": ["attraction", "comfort"],
+    "options": [
+      { "option_id": "q02_honest", "strategy": "honest", "rationale": "说明私人交流偏好，并保留稍后向朋友致意的具体入口。" },
+      { "option_id": "q02_accommodate", "strategy": "accommodate", "rationale": "主动加入一轮社交，让TA的群体归属与玩家的参与都被看见。" },
+      { "option_id": "q02_risky", "strategy": "risky", "rationale": "要求TA排斥朋友来证明优先级，把私人需求变成控制性测试。" },
+      { "option_id": "q02_negotiate", "strategy": "negotiate", "rationale": "用限时参与和退出机制协调社交热情与个人容量。" }
+    ]
+  },
+  {
+    "question_id": "Q03",
+    "order": 3,
+    "stage": "contact",
+    "scene_id": "ESFJ-SC03",
+    "candidate_id": "ESFJ-K05",
+    "behavior_ids": ["ESFJ-B06"],
+    "feature_ids": ["ESFJ-F06"],
+    "source_ids": ["ESFJ-S01", "ESFJ-S02", "ESFJ-S06"],
+    "conflict_ids": ["ESFJ-C06"],
+    "state_ids": ["trust", "comfort"],
+    "options": [
+      { "option_id": "q03_risky", "strategy": "risky", "rationale": "让TA先承担购票成本却保留随意退出权，破坏计划可靠性。" },
+      { "option_id": "q03_negotiate", "strategy": "negotiate", "rationale": "共同核对时段与退改条件，把安排转成双方确认的承诺。" },
+      { "option_id": "q03_honest", "strategy": "honest", "rationale": "及时说明不可行时段并给出真实替代方案，减少临时变动。" },
+      { "option_id": "q03_accommodate", "strategy": "accommodate", "rationale": "在确认可履行后接受现成安排，使配合建立在真实容量上。" }
+    ]
+  },
+  {
+    "question_id": "Q04",
+    "order": 4,
+    "stage": "contact",
+    "scene_id": "ESFJ-SC04",
+    "candidate_id": "ESFJ-K08",
+    "behavior_ids": ["ESFJ-B07"],
+    "feature_ids": ["ESFJ-F07"],
+    "source_ids": ["ESFJ-S03", "ESFJ-S06", "ESFJ-S11"],
+    "conflict_ids": ["ESFJ-C07"],
+    "state_ids": ["attraction", "comfort"],
+    "options": [
+      { "option_id": "q04_accommodate", "strategy": "accommodate", "rationale": "先体验TA的一项兴趣，再明确轮到玩家选择，保持分享的双向性。" },
+      { "option_id": "q04_honest", "strategy": "honest", "rationale": "同时说出兴趣与时间限制，让热情落在可兑现范围内。" },
+      { "option_id": "q04_negotiate", "strategy": "negotiate", "rationale": "各自提名并共同排序，在有限时间内保留双方偏好。" },
+      { "option_id": "q04_risky", "strategy": "risky", "rationale": "贬低TA的兴趣并要求单向配合，破坏共享体验的安全感。" }
+    ]
+  },
+  {
+    "question_id": "Q05",
+    "order": 5,
+    "stage": "contact",
+    "scene_id": "ESFJ-SC05",
+    "candidate_id": "ESFJ-K06",
+    "behavior_ids": ["ESFJ-B04"],
+    "feature_ids": ["ESFJ-F04"],
+    "source_ids": ["ESFJ-S04", "ESFJ-S05", "ESFJ-S06", "ESFJ-S09"],
+    "conflict_ids": ["ESFJ-C04"],
+    "state_ids": ["trust", "comfort", "conflict"],
+    "options": [
+      { "option_id": "q05_risky", "strategy": "risky", "rationale": "用故意失联测试在意程度，使联系期待变成追逐和猜测。" },
+      { "option_id": "q05_honest", "strategy": "honest", "rationale": "说明忙碌期限和不能保证回复的现实限制，使沉默可解释。" },
+      { "option_id": "q05_accommodate", "strategy": "accommodate", "rationale": "提供有限的简短回应，但不把照顾期待扩张成完整报备。" },
+      { "option_id": "q05_negotiate", "strategy": "negotiate", "rationale": "约定回复窗口、异常标准和恢复方式，把期待转成可执行规则。" }
+    ]
+  },
+  {
+    "question_id": "Q06",
+    "order": 6,
+    "stage": "familiarity",
+    "scene_id": "ESFJ-SC06",
+    "candidate_id": "ESFJ-K09",
+    "behavior_ids": ["ESFJ-B08", "ESFJ-B06"],
+    "feature_ids": ["ESFJ-F08", "ESFJ-F06"],
+    "source_ids": ["ESFJ-S01", "ESFJ-S02", "ESFJ-S05", "ESFJ-S06", "ESFJ-S07", "ESFJ-S10"],
+    "conflict_ids": ["ESFJ-C01", "ESFJ-C06"],
+    "state_ids": ["trust", "comfort", "conflict"],
+    "options": [
+      { "option_id": "q06_confront", "strategy": "confront", "rationale": "核对事实后正面划分双方选择与责任，保留自主也承认边界摩擦。" },
+      { "option_id": "q06_negotiate", "strategy": "negotiate", "rationale": "设置离开时间和备用路线，在临时兴致与返程安全间建立条件。" },
+      { "option_id": "q06_accommodate", "strategy": "accommodate", "rationale": "依据可验证信息接受附近替代方案，降低现实风险。" },
+      { "option_id": "q06_risky", "strategy": "risky", "rationale": "把交通信息解释为控制并坚持忽略风险，使计划分歧升级为人身冲突。" }
+    ]
+  },
+  {
+    "question_id": "Q07",
+    "order": 7,
+    "stage": "familiarity",
+    "scene_id": "ESFJ-SC07",
+    "candidate_id": "ESFJ-K12",
+    "behavior_ids": ["ESFJ-B02", "ESFJ-B08"],
+    "feature_ids": ["ESFJ-F02", "ESFJ-F08"],
+    "source_ids": ["ESFJ-S01", "ESFJ-S03", "ESFJ-S05", "ESFJ-S07", "ESFJ-S10"],
+    "conflict_ids": ["ESFJ-C08"],
+    "state_ids": ["trust", "comfort", "conflict"],
+    "options": [
+      { "option_id": "q07_honest", "strategy": "honest", "rationale": "承认不同形式的投入并说明真实容量，使不平衡可以具体讨论。" },
+      { "option_id": "q07_risky", "strategy": "risky", "rationale": "以擅长和喜好贬低TA的劳动成本，强化关系记账与角色固化。" },
+      { "option_id": "q07_negotiate", "strategy": "negotiate", "rationale": "显性化已完成和剩余劳动，再按时间精力重分任务。" },
+      { "option_id": "q07_confront", "strategy": "confront", "rationale": "正面拒绝以亏欠维持关系，并暂停计划以重建合作方式。" }
+    ]
+  },
+  {
+    "question_id": "Q08",
+    "order": 8,
+    "stage": "familiarity",
+    "scene_id": "ESFJ-SC08",
+    "candidate_id": "ESFJ-K11",
+    "behavior_ids": ["ESFJ-B03", "ESFJ-B06"],
+    "feature_ids": ["ESFJ-F03", "ESFJ-F06"],
+    "source_ids": ["ESFJ-S01", "ESFJ-S02", "ESFJ-S05", "ESFJ-S06"],
+    "conflict_ids": ["ESFJ-C03", "ESFJ-C06"],
+    "state_ids": ["trust", "comfort", "conflict"],
+    "options": [
+      { "option_id": "q08_accommodate", "strategy": "accommodate", "rationale": "在真实容量内分担一小项，支持TA但不共同过载。" },
+      { "option_id": "q08_risky", "strategy": "risky", "rationale": "未经同意公开承诺并把负担转交TA，重演过度承担。" },
+      { "option_id": "q08_honest", "strategy": "honest", "rationale": "如实说明只能履行原定任务，让拒绝额外工作成为有效选项。" },
+      { "option_id": "q08_negotiate", "strategy": "negotiate", "rationale": "要求删减或转派并制定最低方案，把现场缺口交回共同协调。" }
+    ]
+  },
+  {
+    "question_id": "Q09",
+    "order": 9,
+    "stage": "ambiguity",
+    "scene_id": "ESFJ-SC09",
+    "candidate_id": "ESFJ-K13",
+    "behavior_ids": ["ESFJ-B05", "ESFJ-B04"],
+    "feature_ids": ["ESFJ-F05", "ESFJ-F04"],
+    "source_ids": ["ESFJ-S02", "ESFJ-S04", "ESFJ-S05", "ESFJ-S06", "ESFJ-S09"],
+    "conflict_ids": ["ESFJ-C05", "ESFJ-C04"],
+    "state_ids": ["attraction", "trust", "comfort"],
+    "options": [
+      { "option_id": "q09_honest", "strategy": "honest", "rationale": "直接提出只用姓名介绍，使参与聚会不自动等于接受关系标签。" },
+      { "option_id": "q09_negotiate", "strategy": "negotiate", "rationale": "共同选择贴近现状的称呼，并划定公开信息范围。" },
+      { "option_id": "q09_risky", "strategy": "risky", "rationale": "未经同意公开情侣身份，把群体认可置于双方确认之前。" },
+      { "option_id": "q09_accommodate", "strategy": "accommodate", "rationale": "隐藏尚未确认的意愿来接受恋人称呼，换取短期靠近并留下信任成本。" }
+    ]
+  },
+  {
+    "question_id": "Q10",
+    "order": 10,
+    "stage": "ambiguity",
+    "scene_id": "ESFJ-SC10",
+    "candidate_id": "ESFJ-K16",
+    "behavior_ids": ["ESFJ-B02", "ESFJ-B04", "ESFJ-B08"],
+    "feature_ids": ["ESFJ-F02", "ESFJ-F04", "ESFJ-F08"],
+    "source_ids": ["ESFJ-S01", "ESFJ-S03", "ESFJ-S04", "ESFJ-S05", "ESFJ-S06", "ESFJ-S07", "ESFJ-S09", "ESFJ-S10"],
+    "conflict_ids": ["ESFJ-C02", "ESFJ-C04", "ESFJ-C08"],
+    "state_ids": ["attraction", "trust", "comfort", "conflict"],
+    "options": [
+      { "option_id": "q10_negotiate", "strategy": "negotiate", "rationale": "逐项定义当前关系、排他性、联系与复盘，使承诺具体且可调整。" },
+      { "option_id": "q10_honest", "strategy": "honest", "rationale": "坦白愿意继续和尚未准备排他的差异，让双方能够知情选择。" },
+      { "option_id": "q10_accommodate", "strategy": "accommodate", "rationale": "隐藏犹豫并全部答应，以短期亲近交换长期可信度。" },
+      { "option_id": "q10_risky", "strategy": "risky", "rationale": "把TA过去的照顾变成关系债务并替对方定义关系，推高边界冲突。" }
+    ]
+  }
+]

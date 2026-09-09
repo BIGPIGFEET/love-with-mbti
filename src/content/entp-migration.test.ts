@@ -3,7 +3,7 @@ import { resolve } from "node:path";
 import { describe, expect, it } from "vitest";
 
 import { applyEffects, endingResultKey, INITIAL_STATE, resolveEnding } from "../game/rules.ts";
-import { questions } from "./questions.ts";
+import { entpQuestions } from "./entp-questions.ts";
 
 interface SavedEnding {
   trajectories: number;
@@ -26,7 +26,7 @@ function enumerateFormalEntpData() {
   let earlyTerminalTrajectories = 0;
 
   function visit(questionIndex: number, state: typeof INITIAL_STATE, path: string[]): void {
-    const question = questions[questionIndex];
+    const question = entpQuestions[questionIndex];
     question.options.forEach((option) => {
       const nextState = applyEffects(state, option.effects);
       const nextPath = [...path, option.id];
@@ -40,10 +40,10 @@ function enumerateFormalEntpData() {
           exampleState: nextState,
         };
         current.trajectories += 1;
-        current.weightedPaths += 4 ** (questions.length - questionIndex - 1);
+        current.weightedPaths += 4 ** (entpQuestions.length - questionIndex - 1);
         endings.set(key, current);
         terminalTrajectories += 1;
-        if (questionIndex < questions.length - 1) earlyTerminalTrajectories += 1;
+        if (questionIndex < entpQuestions.length - 1) earlyTerminalTrajectories += 1;
         return;
       }
       visit(questionIndex + 1, nextState, nextPath);
@@ -60,11 +60,11 @@ function enumerateFormalEntpData() {
 
 describe("ENTP formal data migration", () => {
   it("preserves the approved exhaustive path report", () => {
-    const reportPath = resolve(process.cwd(), "content/questions/balance-report.json");
+    const reportPath = resolve(process.cwd(), "content/questions/entp-balance-report.json");
     const saved = JSON.parse(readFileSync(reportPath, "utf8")) as SavedReport;
     const actual = enumerateFormalEntpData();
 
-    expect(4 ** questions.length).toBe(saved.completeChoiceSpace);
+    expect(4 ** entpQuestions.length).toBe(saved.completeChoiceSpace);
     expect(saved.weightedTotal).toBe(saved.completeChoiceSpace);
     expect(actual.terminalTrajectories).toBe(saved.terminalTrajectories);
     expect(actual.earlyTerminalTrajectories).toBe(saved.earlyTerminalTrajectories);

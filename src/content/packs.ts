@@ -5,10 +5,14 @@ import { enfjEndings, enfjFuzzyFeedback, enfjRelationshipEvaluations } from "./e
 import { enfjQuestions } from "./enfj-questions.ts";
 import { esfjEndings, esfjFuzzyFeedback, esfjRelationshipEvaluations } from "./esfj-endings.ts";
 import { esfjQuestions } from "./esfj-questions.ts";
+import { esfpEndings, esfpFuzzyFeedback, esfpRelationshipEvaluations } from "./esfp-endings.ts";
+import { esfpQuestions } from "./esfp-questions.ts";
 import { entjEndings, entjFuzzyFeedback, entjRelationshipEvaluations } from "./entj-endings.ts";
 import { entjQuestions } from "./entj-questions.ts";
 import { estjEndings, estjFuzzyFeedback, estjRelationshipEvaluations } from "./estj-endings.ts";
 import { estjQuestions } from "./estj-questions.ts";
+import { estpEndings, estpFuzzyFeedback, estpRelationshipEvaluations } from "./estp-endings.ts";
+import { estpQuestions } from "./estp-questions.ts";
 import {
   entpEndings,
   entpFuzzyFeedback,
@@ -27,6 +31,8 @@ import { isfjEndings, isfjFuzzyFeedback, isfjRelationshipEvaluations } from "./i
 import { isfjQuestions } from "./isfj-questions.ts";
 import { isfpEndings, isfpFuzzyFeedback, isfpRelationshipEvaluations } from "./isfp-endings.ts";
 import { isfpQuestions } from "./isfp-questions.ts";
+import { istpEndings, istpFuzzyFeedback, istpRelationshipEvaluations } from "./istp-endings.ts";
+import { istpQuestions } from "./istp-questions.ts";
 import { intpEndings, intpFuzzyFeedback, intpRelationshipEvaluations } from "./intp-endings.ts";
 import { intpQuestions } from "./intp-questions.ts";
 import { validateContent } from "./schema.ts";
@@ -55,6 +61,14 @@ export const contentPacks = {
     endings: estjEndings,
     relationshipEvaluations: estjRelationshipEvaluations,
     fuzzyFeedback: estjFuzzyFeedback,
+  },
+  ESTP: {
+    type: "ESTP",
+    description: "十次临场体验、直接表达、风险边界与关系确认之间的取舍。",
+    questions: estpQuestions,
+    endings: estpEndings,
+    relationshipEvaluations: estpRelationshipEvaluations,
+    fuzzyFeedback: estpFuzzyFeedback,
   },
   ENTP: {
     type: "ENTP",
@@ -87,6 +101,14 @@ export const contentPacks = {
     endings: esfjEndings,
     relationshipEvaluations: esfjRelationshipEvaluations,
     fuzzyFeedback: esfjFuzzyFeedback,
+  },
+  ESFP: {
+    type: "ESFP",
+    description: "十次共同体验、临场弹性、边界确认与关系修复之间的取舍。",
+    questions: esfpQuestions,
+    endings: esfpEndings,
+    relationshipEvaluations: esfpRelationshipEvaluations,
+    fuzzyFeedback: esfpFuzzyFeedback,
   },
   INTP: {
     type: "INTP",
@@ -135,6 +157,14 @@ export const contentPacks = {
     endings: isfpEndings,
     relationshipEvaluations: isfpRelationshipEvaluations,
     fuzzyFeedback: isfpFuzzyFeedback,
+  },
+  ISTP: {
+    type: "ISTP",
+    description: "十次沟通节奏、具体协作、个人空间与明确关系之间的取舍。",
+    questions: istpQuestions,
+    endings: istpEndings,
+    relationshipEvaluations: istpRelationshipEvaluations,
+    fuzzyFeedback: istpFuzzyFeedback,
   },
 } as const satisfies Record<AvailableMbtiType, ContentPack>;
 

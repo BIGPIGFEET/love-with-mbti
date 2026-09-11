@@ -1,0 +1,182 @@
+[
+  {
+    "question_id": "Q01",
+    "order": 1,
+    "stage": "first_meeting",
+    "scene_id": "ISTP-SC01",
+    "candidate_id": "ISTP-C02",
+    "behavior_ids": ["ISTP-B02"],
+    "feature_ids": ["ISTP-F02"],
+    "source_ids": ["ISTP-S03", "ISTP-S04", "ISTP-S06", "ISTP-S07", "ISTP-S27"],
+    "conflict_ids": ["ISTP-K01"],
+    "state_ids": ["attraction", "comfort", "conflict"],
+    "options": [
+      {"option_id": "q01_walk_quietly", "strategy": "accommodate", "rationale": "顺应短暂安静并保留自然道别，主要提升舒适，但没有主动确认含义。"},
+      {"option_id": "q01_check_pace", "strategy": "negotiate", "rationale": "把交流节奏变成双方可回答的选择，增加信任与舒适并降低误解。"},
+      {"option_id": "q01_fill_every_pause", "strategy": "risky", "rationale": "以热场覆盖已表达的安静需要，短期维持互动但主要损害舒适并增加冲突。"},
+      {"option_id": "q01_name_uncertainty", "strategy": "honest", "rationale": "承认自己无法读懂短句并允许结束，使安静与拒绝得到明确区分。"}
+    ]
+  },
+  {
+    "question_id": "Q02",
+    "order": 2,
+    "stage": "first_meeting",
+    "scene_id": "ISTP-SC02",
+    "candidate_id": "ISTP-C03",
+    "behavior_ids": ["ISTP-B03"],
+    "feature_ids": ["ISTP-F01", "ISTP-F09"],
+    "source_ids": ["ISTP-S04", "ISTP-S06", "ISTP-S07", "ISTP-S27"],
+    "conflict_ids": ["ISTP-K09"],
+    "state_ids": ["comfort", "attraction", "conflict"],
+    "options": [
+      {"option_id": "q02_own_assumption", "strategy": "honest", "rationale": "承认类型投射并转向真实兴趣，修正影响而不要求 TA 证明例外。"},
+      {"option_id": "q02_praise_reversal", "strategy": "risky", "rationale": "把旧标签翻成反差赞美，保留火花却继续损害被当作个体的信任与舒适。"},
+      {"option_id": "q02_offer_boundary", "strategy": "negotiate", "rationale": "允许跳过类型话题并邀请 TA 界定玩笑边界，降低现有张力。"},
+      {"option_id": "q02_dismiss_concern", "strategy": "confront", "rationale": "用多数人的说法否定具体异议，主要重创信任并提高冲突。"}
+    ]
+  },
+  {
+    "question_id": "Q03",
+    "order": 3,
+    "stage": "contact",
+    "scene_id": "ISTP-SC03",
+    "candidate_id": "ISTP-C05",
+    "behavior_ids": ["ISTP-B01"],
+    "feature_ids": ["ISTP-F01", "ISTP-F03", "ISTP-F08"],
+    "source_ids": ["ISTP-S02", "ISTP-S03", "ISTP-S04", "ISTP-S05", "ISTP-S06", "ISTP-S27"],
+    "conflict_ids": ["ISTP-K01"],
+    "state_ids": ["trust", "comfort", "conflict"],
+    "options": [
+      {"option_id": "q03_define_scope", "strategy": "negotiate", "rationale": "明确诊断、操作和付款权限，兼顾解决效率与玩家控制权。"},
+      {"option_id": "q03_hand_over_phone", "strategy": "accommodate", "rationale": "为效率交出账号与操作，认可 TA 能力却制造不必要的隐私和责任风险。"},
+      {"option_id": "q03_choose_support", "strategy": "honest", "rationale": "承认当下没有排错精力并选择官方支持，让真实负荷进入共同决定。"},
+      {"option_id": "q03_demand_fix", "strategy": "risky", "rationale": "把解决能力变成义务和类型角色，主要降低舒适并显著升高冲突。"}
+    ]
+  },
+  {
+    "question_id": "Q04",
+    "order": 4,
+    "stage": "contact",
+    "scene_id": "ISTP-SC04",
+    "candidate_id": "ISTP-C07",
+    "behavior_ids": ["ISTP-B06"],
+    "feature_ids": ["ISTP-F05"],
+    "source_ids": ["ISTP-S09", "ISTP-S10", "ISTP-S11"],
+    "conflict_ids": ["ISTP-K04", "ISTP-K10"],
+    "state_ids": ["attraction", "trust", "comfort"],
+    "options": [
+      {"option_id": "q04_tease_romance", "strategy": "risky", "rationale": "把有限帮助推成恋爱暗示，增加吸引火花但压缩 TA 定义含义的空间。"},
+      {"option_id": "q04_thank_directly", "strategy": "honest", "rationale": "直接说明帮助带来的感受，不把感谢升级为承诺或交换。"},
+      {"option_id": "q04_clarify_meaning", "strategy": "negotiate", "rationale": "轻量确认关心范围，让行动与语言互相校验而不逼迫关系答案。"},
+      {"option_id": "q04_repay_immediately", "strategy": "accommodate", "rationale": "用即时结算避免欠情，却把可接受的关心转成了人情压力。"}
+    ]
+  },
+  {
+    "question_id": "Q05",
+    "order": 5,
+    "stage": "contact",
+    "scene_id": "ISTP-SC05",
+    "candidate_id": "ISTP-C10",
+    "behavior_ids": ["ISTP-B07", "ISTP-B08"],
+    "feature_ids": ["ISTP-F06", "ISTP-F07"],
+    "source_ids": ["ISTP-S03", "ISTP-S04", "ISTP-S09", "ISTP-S11", "ISTP-S12"],
+    "conflict_ids": ["ISTP-K05", "ISTP-K06"],
+    "state_ids": ["trust", "comfort", "attraction", "conflict"],
+    "options": [
+      {"option_id": "q05_state_need", "strategy": "honest", "rationale": "说明连接需要与失落，但不把独处需求解释成关系缺陷。"},
+      {"option_id": "q05_accuse_avoidance", "strategy": "confront", "rationale": "把个人空间定性为不认真，主要严重压低舒适并升高冲突。"},
+      {"option_id": "q05_cancel_everything", "strategy": "accommodate", "rationale": "通过退出全部共同时间降低压力，却隐藏自己的连接需要并削弱吸引。"},
+      {"option_id": "q05_split_schedule", "strategy": "negotiate", "rationale": "把共同、个人和变更通知拆成可兑现安排，同时支持吸引、信任与舒适。"}
+    ]
+  },
+  {
+    "question_id": "Q06",
+    "order": 6,
+    "stage": "familiarity",
+    "scene_id": "ISTP-SC06",
+    "candidate_id": "ISTP-C13",
+    "behavior_ids": ["ISTP-B02", "ISTP-B10"],
+    "feature_ids": ["ISTP-F01", "ISTP-F02", "ISTP-F08"],
+    "source_ids": ["ISTP-S02", "ISTP-S04", "ISTP-S05", "ISTP-S06", "ISTP-S07", "ISTP-S27"],
+    "conflict_ids": ["ISTP-K08"],
+    "state_ids": ["attraction", "comfort", "trust"],
+    "options": [
+      {"option_id": "q06_agree_depth", "strategy": "negotiate", "rationale": "协商一个可理解的分享入口，兼顾 TA 的投入与玩家的注意力边界。"},
+      {"option_id": "q06_praise_without_listening", "strategy": "accommodate", "rationale": "以能力赞美维持气氛，却绕过 TA 真正想分享的试错和个人意义。"},
+      {"option_id": "q06_dismiss_process", "strategy": "confront", "rationale": "把缺乏兴趣表达为对投入的贬低，主要降低舒适并显著升高冲突。"},
+      {"option_id": "q06_ask_why_keep", "strategy": "honest", "rationale": "坦承不懂参数并询问个人意义，使真实差异仍可产生连接。"}
+    ]
+  },
+  {
+    "question_id": "Q07",
+    "order": 7,
+    "stage": "familiarity",
+    "scene_id": "ISTP-SC07",
+    "candidate_id": "ISTP-C11",
+    "behavior_ids": ["ISTP-B04", "ISTP-B11"],
+    "feature_ids": ["ISTP-F03", "ISTP-F04"],
+    "source_ids": ["ISTP-S02", "ISTP-S03", "ISTP-S04", "ISTP-S07", "ISTP-S09", "ISTP-S13", "ISTP-S27"],
+    "conflict_ids": ["ISTP-K03"],
+    "state_ids": ["trust", "comfort", "conflict"],
+    "options": [
+      {"option_id": "q07_redo_silently", "strategy": "accommodate", "rationale": "压下影响并独自返工获得表面配合，却让信任和舒适留下未处理损耗。"},
+      {"option_id": "q07_name_impact", "strategy": "honest", "rationale": "准确区分原意与实际伤害，使 TA 可以承担影响而不被人格定性。"},
+      {"option_id": "q07_retaliate", "strategy": "confront", "rationale": "以否定 TA 整体能力反击受伤，主要增加冲突并损害继续合作。"},
+      {"option_id": "q07_set_feedback_rule", "strategy": "negotiate", "rationale": "把反馈顺序和共同承担变成可执行规则，降低冲突并恢复舒适。"}
+    ]
+  },
+  {
+    "question_id": "Q08",
+    "order": 8,
+    "stage": "familiarity",
+    "scene_id": "ISTP-SC08",
+    "candidate_id": "ISTP-C12",
+    "behavior_ids": ["ISTP-B05", "ISTP-B09"],
+    "feature_ids": ["ISTP-F03", "ISTP-F04"],
+    "source_ids": ["ISTP-S04", "ISTP-S06", "ISTP-S07", "ISTP-S09", "ISTP-S10", "ISTP-S13", "ISTP-S27"],
+    "conflict_ids": ["ISTP-K02", "ISTP-K07"],
+    "state_ids": ["trust", "comfort", "conflict"],
+    "options": [
+      {"option_id": "q08_set_return_time", "strategy": "negotiate", "rationale": "确认暂停、返回和改期方式，让处理空间与可预期修复同时成立。"},
+      {"option_id": "q08_force_now", "strategy": "confront", "rationale": "因害怕失联而拒绝已说明的暂停，构成严重压力；主伤害为舒适下降和冲突上升。"},
+      {"option_id": "q08_name_minimum", "strategy": "honest", "rationale": "说明等待中的最低信息需要，并将其限制为不延续争论的报平安。"},
+      {"option_id": "q08_wait_without_terms", "strategy": "accommodate", "rationale": "表面完全退让却撤掉明确返回点，使双方责任和不安继续悬置。"}
+    ]
+  },
+  {
+    "question_id": "Q09",
+    "order": 9,
+    "stage": "ambiguity",
+    "scene_id": "ISTP-SC09",
+    "candidate_id": "ISTP-C18",
+    "behavior_ids": ["ISTP-B09", "ISTP-B11"],
+    "feature_ids": ["ISTP-F03", "ISTP-F04"],
+    "source_ids": ["ISTP-S03", "ISTP-S04", "ISTP-S07", "ISTP-S09", "ISTP-S10", "ISTP-S13", "ISTP-S27"],
+    "conflict_ids": ["ISTP-K03", "ISTP-K07"],
+    "state_ids": ["trust", "comfort", "conflict"],
+    "options": [
+      {"option_id": "q09_name_remaining_need", "strategy": "honest", "rationale": "认可按时回来，同时把修复放到下次可验证行为而非立即翻篇。"},
+      {"option_id": "q09_close_topic", "strategy": "accommodate", "rationale": "以停止讨论换取短期靠近，却降低修复的可靠性并留下冲突。"},
+      {"option_id": "q09_build_protocol", "strategy": "negotiate", "rationale": "把暂停、返回、影响确认和原问题讨论拆成双方可执行的修复流程。"},
+      {"option_id": "q09_demand_perfect", "strategy": "confront", "rationale": "要求永不犯错的证明，把修复变成审讯并主要压低舒适、升高冲突。"}
+    ]
+  },
+  {
+    "question_id": "Q10",
+    "order": 10,
+    "stage": "ambiguity",
+    "scene_id": "ISTP-SC10",
+    "candidate_id": "ISTP-C17",
+    "behavior_ids": ["ISTP-B07", "ISTP-B12"],
+    "feature_ids": ["ISTP-F05", "ISTP-F06"],
+    "source_ids": ["ISTP-S03", "ISTP-S09", "ISTP-S10", "ISTP-S11"],
+    "conflict_ids": ["ISTP-K05", "ISTP-K10"],
+    "state_ids": ["attraction", "trust", "comfort", "conflict"],
+    "options": [
+      {"option_id": "q10_agree_unsaid", "strategy": "accommodate", "rationale": "为获得关系名称隐藏自身需要，增加靠近意愿却留下舒适与冲突风险。"},
+      {"option_id": "q10_define_agreement", "strategy": "negotiate", "rationale": "逐项确认共同时间、空间、联系、排他和复盘方式，使承诺可执行也可调整。"},
+      {"option_id": "q10_all_or_nothing", "strategy": "confront", "rationale": "把即时回复和全部周末设为关系条件，构成控制压力并显著升高冲突。"},
+      {"option_id": "q10_state_commitment", "strategy": "honest", "rationale": "给出真实愿意承担的承诺与仍需时间的边界，让关系由双方明确选择。"}
+    ]
+  }
+]

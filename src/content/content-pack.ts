@@ -9,16 +9,19 @@ export const AVAILABLE_MBTI_TYPES = [
   "INTJ",
   "ENTJ",
   "ESTJ",
+  "ESTP",
   "ENTP",
   "ENFP",
   "ENFJ",
   "ESFJ",
+  "ESFP",
   "INTP",
   "INFJ",
   "INFP",
   "ISTJ",
   "ISFJ",
   "ISFP",
+  "ISTP",
 ] as const;
 
 export type AvailableMbtiType = (typeof AVAILABLE_MBTI_TYPES)[number];

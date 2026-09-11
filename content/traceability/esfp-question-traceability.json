@@ -1,0 +1,182 @@
+[
+  {
+    "question_id": "Q01",
+    "order": 1,
+    "stage": "first_meeting",
+    "scene_id": "ESFP-SC01",
+    "candidate_id": "ESFP-C01",
+    "behavior_ids": ["ESFP-B01"],
+    "feature_ids": ["ESFP-F01"],
+    "source_ids": ["ESFP-S01", "ESFP-S03", "ESFP-S14"],
+    "conflict_ids": ["ESFP-K01"],
+    "state_ids": ["attraction", "comfort"],
+    "options": [
+      {"option_id": "q01_try_ten_minutes", "strategy": "negotiate", "rationale": "用时限和退出条件兼顾共同体验与自主选择。"},
+      {"option_id": "q01_decline_with_alternative", "strategy": "honest", "rationale": "诚实拒绝具体活动，同时提出自己愿意参与的低压力替代。"},
+      {"option_id": "q01_follow_without_preference", "strategy": "accommodate", "rationale": "表面配合却不提供真实偏好，把决定责任推给对方。"},
+      {"option_id": "q01_make_it_a_performance", "strategy": "risky", "rationale": "用会玩和节目效果试探对方，短暂制造火花但损害被当作个体的安全感。"}
+    ]
+  },
+  {
+    "question_id": "Q02",
+    "order": 2,
+    "stage": "first_meeting",
+    "scene_id": "ESFP-SC02",
+    "candidate_id": "ESFP-C02",
+    "behavior_ids": ["ESFP-B02"],
+    "feature_ids": ["ESFP-F02"],
+    "source_ids": ["ESFP-S01", "ESFP-S03", "ESFP-S12", "ESFP-S22", "ESFP-S23", "ESFP-S29"],
+    "conflict_ids": ["ESFP-K02"],
+    "state_ids": ["attraction", "comfort", "conflict"],
+    "options": [
+      {"option_id": "q02_notice_without_label", "strategy": "honest", "rationale": "描述实际观察而不固定对方必须活跃或安静。"},
+      {"option_id": "q02_take_over_the_room", "strategy": "accommodate", "rationale": "善意接手气氛责任，短期减压但仍默认冷场必须有人负责。"},
+      {"option_id": "q02_read_silence_as_rejection", "strategy": "risky", "rationale": "把停顿解释成关系拒绝，主要降低舒适并升高冲突。"},
+      {"option_id": "q02_offer_a_quieter_option", "strategy": "negotiate", "rationale": "提供环境替代但保留拒绝，让相处节奏由双方确认。"}
+    ]
+  },
+  {
+    "question_id": "Q03",
+    "order": 3,
+    "stage": "contact",
+    "scene_id": "ESFP-SC03",
+    "candidate_id": "ESFP-C05",
+    "behavior_ids": ["ESFP-B04"],
+    "feature_ids": ["ESFP-F03"],
+    "source_ids": ["ESFP-S01", "ESFP-S08", "ESFP-S09", "ESFP-S27"],
+    "conflict_ids": ["ESFP-K03"],
+    "state_ids": ["attraction", "trust", "comfort", "conflict"],
+    "options": [
+      {"option_id": "q03_drop_plan_silently", "strategy": "accommodate", "rationale": "以全盘配合追随新鲜感，却隐藏既有投入和潜在怨气。"},
+      {"option_id": "q03_call_change_unreliable", "strategy": "confront", "rationale": "把一次提议升级为不可靠的人格定性，显著升高冲突。"},
+      {"option_id": "q03_keep_both_with_limit", "strategy": "negotiate", "rationale": "保留核心约定，并用时限和退出条件容纳新选项。"},
+      {"option_id": "q03_keep_original_kindly", "strategy": "honest", "rationale": "明确自己不想赶行程，拒绝变化但不否定对方兴趣。"}
+    ]
+  },
+  {
+    "question_id": "Q04",
+    "order": 4,
+    "stage": "contact",
+    "scene_id": "ESFP-SC04",
+    "candidate_id": "ESFP-C07",
+    "behavior_ids": ["ESFP-B05"],
+    "feature_ids": ["ESFP-F05"],
+    "source_ids": ["ESFP-S02", "ESFP-S05", "ESFP-S11"],
+    "conflict_ids": ["ESFP-K04", "ESFP-K05"],
+    "state_ids": ["trust", "comfort", "conflict"],
+    "options": [
+      {"option_id": "q04_sequence_support", "strategy": "negotiate", "rationale": "把倾听和实际帮助排出顺序，同时限制任务范围。"},
+      {"option_id": "q04_dump_and_demand_fix", "strategy": "risky", "rationale": "把工作与情绪责任一起压给对方，主要伤害舒适边界。"},
+      {"option_id": "q04_ask_for_concrete_help", "strategy": "honest", "rationale": "明确只需要问题排查，并主动询问对方可投入时间。"},
+      {"option_id": "q04_say_fine_and_hope", "strategy": "accommodate", "rationale": "以模糊的没事维持表面轻松，却让双方继续猜测。"}
+    ]
+  },
+  {
+    "question_id": "Q05",
+    "order": 5,
+    "stage": "contact",
+    "scene_id": "ESFP-SC05",
+    "candidate_id": "ESFP-C09",
+    "behavior_ids": ["ESFP-B09"],
+    "feature_ids": ["ESFP-F09"],
+    "source_ids": ["ESFP-S01", "ESFP-S02", "ESFP-S14"],
+    "conflict_ids": ["ESFP-K08"],
+    "state_ids": ["attraction", "trust", "comfort", "conflict"],
+    "options": [
+      {"option_id": "q05_mock_the_price", "strategy": "confront", "rationale": "把价格分歧变成虚荣和动机羞辱，因此保留超过普通建议预算的冲突后果。"},
+      {"option_id": "q05_name_budget_and_alternative", "strategy": "negotiate", "rationale": "给出明确预算上限和可执行替代，不把拒绝消费写成拒绝关系。"},
+      {"option_id": "q05_pay_then_resent", "strategy": "accommodate", "rationale": "即时满足共同体验，却用隐藏成本损害长期信任。"},
+      {"option_id": "q05_decline_cost_not_person", "strategy": "honest", "rationale": "区分对人的欣赏与对价格的拒绝，保留另一种共同活动。"}
+    ]
+  },
+  {
+    "question_id": "Q06",
+    "order": 6,
+    "stage": "familiarity",
+    "scene_id": "ESFP-SC06",
+    "candidate_id": "ESFP-C12",
+    "behavior_ids": ["ESFP-B03"],
+    "feature_ids": ["ESFP-F04"],
+    "source_ids": ["ESFP-S03", "ESFP-S09", "ESFP-S11", "ESFP-S12", "ESFP-S24", "ESFP-S27"],
+    "conflict_ids": ["ESFP-K04"],
+    "state_ids": ["attraction", "trust", "comfort", "conflict"],
+    "options": [
+      {"option_id": "q06_call_it_shallow", "strategy": "risky", "rationale": "以浅薄贬低现实入口，明确造成强信任和冲突后果。"},
+      {"option_id": "q06_name_abstract_need", "strategy": "honest", "rationale": "承认对方入口并具体提出自己仍想讨论的价值层次。"},
+      {"option_id": "q06_bridge_example_and_value", "strategy": "negotiate", "rationale": "用案例与原则的先后顺序连接两种思考方式。"},
+      {"option_id": "q06_pretend_and_change_topic", "strategy": "accommodate", "rationale": "暂时维持轻松，但隐藏共鸣需求并留下未解决张力。"}
+    ]
+  },
+  {
+    "question_id": "Q07",
+    "order": 7,
+    "stage": "familiarity",
+    "scene_id": "ESFP-SC07",
+    "candidate_id": "ESFP-C13",
+    "behavior_ids": ["ESFP-B02", "ESFP-B10"],
+    "feature_ids": ["ESFP-F01", "ESFP-F02", "ESFP-F05"],
+    "source_ids": ["ESFP-S01", "ESFP-S03", "ESFP-S05", "ESFP-S11", "ESFP-S12", "ESFP-S14", "ESFP-S22", "ESFP-S23", "ESFP-S29"],
+    "conflict_ids": ["ESFP-K01", "ESFP-K02", "ESFP-K05"],
+    "state_ids": ["attraction", "trust", "comfort", "conflict"],
+    "options": [
+      {"option_id": "q07_name_disconnection", "strategy": "honest", "rationale": "说明被忽略感，但不要求对方退出所有群体互动。"},
+      {"option_id": "q07_accuse_attention_seeking", "strategy": "confront", "rationale": "用求关注替对方定义动机，因此保留强冲突后果。"},
+      {"option_id": "q07_hide_need_and_follow", "strategy": "accommodate", "rationale": "压下需要并转为跟随，短期靠近但损害自在与信任。"},
+      {"option_id": "q07_create_check_in_signal", "strategy": "negotiate", "rationale": "建立双方都可使用的连接信号，兼顾群体参与与两人需要。"}
+    ]
+  },
+  {
+    "question_id": "Q08",
+    "order": 8,
+    "stage": "familiarity",
+    "scene_id": "ESFP-SC08",
+    "candidate_id": "ESFP-C11",
+    "behavior_ids": ["ESFP-B06", "ESFP-B11"],
+    "feature_ids": ["ESFP-F03", "ESFP-F06"],
+    "source_ids": ["ESFP-S05", "ESFP-S06", "ESFP-S07", "ESFP-S08", "ESFP-S09", "ESFP-S27"],
+    "conflict_ids": ["ESFP-K03", "ESFP-K06"],
+    "state_ids": ["trust", "comfort", "conflict"],
+    "options": [
+      {"option_id": "q08_allow_unbounded_pause", "strategy": "accommodate", "rationale": "降低即时压力却取消返回节点，使修复可靠性下降。"},
+      {"option_id": "q08_set_return_scope", "strategy": "negotiate", "rationale": "同时约定时间、议题范围和无法按时处理时的说明。"},
+      {"option_id": "q08_block_the_exit", "strategy": "confront", "rationale": "以不许离开取消暂停权，是本组最严重的舒适与冲突伤害，保留硬上限内的高强度效果。"},
+      {"option_id": "q08_state_own_pause", "strategy": "honest", "rationale": "承认双方都需要暂停，并给无法按时回谈设置后续锚点。"}
+    ]
+  },
+  {
+    "question_id": "Q09",
+    "order": 9,
+    "stage": "ambiguity",
+    "scene_id": "ESFP-SC09",
+    "candidate_id": "ESFP-C15",
+    "behavior_ids": ["ESFP-B07", "ESFP-B08"],
+    "feature_ids": ["ESFP-F07", "ESFP-F08"],
+    "source_ids": ["ESFP-S02", "ESFP-S03", "ESFP-S04", "ESFP-S10", "ESFP-S12", "ESFP-S13"],
+    "conflict_ids": ["ESFP-K07", "ESFP-K09"],
+    "state_ids": ["attraction", "trust", "comfort", "conflict"],
+    "options": [
+      {"option_id": "q09_define_each_boundary", "strategy": "negotiate", "rationale": "逐项给出公开、接触、排他和称呼答案，并反向询问对方。"},
+      {"option_id": "q09_not_ready_for_exclusive", "strategy": "honest", "rationale": "明确喜欢与未准备好排他的并存状态，使对方能据实选择。"},
+      {"option_id": "q09_defer_all_to_them", "strategy": "accommodate", "rationale": "表达靠近却不提供自身边界，把同意责任推给对方。"},
+      {"option_id": "q09_assume_full_permission", "strategy": "risky", "rationale": "用既往牵手打包授权公开和排他，主要造成严重信任与舒适损害。"}
+    ]
+  },
+  {
+    "question_id": "Q10",
+    "order": 10,
+    "stage": "ambiguity",
+    "scene_id": "ESFP-SC10",
+    "candidate_id": "ESFP-C18",
+    "behavior_ids": ["ESFP-B11", "ESFP-B12"],
+    "feature_ids": ["ESFP-F03", "ESFP-F06", "ESFP-F08"],
+    "source_ids": ["ESFP-S03", "ESFP-S04", "ESFP-S05", "ESFP-S06", "ESFP-S07", "ESFP-S08", "ESFP-S09", "ESFP-S12", "ESFP-S13", "ESFP-S27"],
+    "conflict_ids": ["ESFP-K03", "ESFP-K06", "ESFP-K09"],
+    "state_ids": ["attraction", "trust", "comfort", "conflict"],
+    "options": [
+      {"option_id": "q10_keep_uncertainty_visible", "strategy": "honest", "rationale": "接受继续但不假装信任已恢复，用未来行动验证修复。"},
+      {"option_id": "q10_erase_the_conflict", "strategy": "accommodate", "rationale": "以不再处理换取表面平静，实质退出共同修复。"},
+      {"option_id": "q10_demand_surveillance", "strategy": "confront", "rationale": "把透明要求扩大为定位和随时回复，主要伤害舒适并重新推高冲突。"},
+      {"option_id": "q10_build_mutual_protocol", "strategy": "negotiate", "rationale": "把计划变动、暂停、拒绝和影响处理写成双方共同责任。"}
+    ]
+  }
+]

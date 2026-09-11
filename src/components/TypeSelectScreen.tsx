@@ -2,15 +2,6 @@ import { AppHeader } from "./AppHeader.tsx";
 import { AVAILABLE_MBTI_TYPES, type AvailableMbtiType } from "../content/content-pack.ts";
 import { contentPacks } from "../content/packs.ts";
 
-const types = [
-  "INTJ", "INTP", "ENTJ", "ENTP",
-  "INFJ", "INFP", "ENFJ", "ENFP",
-  "ISTJ", "ISFJ", "ESTJ", "ESFJ",
-  "ISTP", "ISFP", "ESTP", "ESFP",
-];
-
-const availableTypes = new Set<string>(AVAILABLE_MBTI_TYPES);
-
 export function TypeSelectScreen({ onStart }: { onStart: (type: AvailableMbtiType) => void }) {
   return (
     <main className="page-shell select-page">
@@ -37,23 +28,6 @@ export function TypeSelectScreen({ onStart }: { onStart: (type: AvailableMbtiTyp
             </article>
           );
         })}
-      </section>
-
-      <section className="type-list" aria-labelledby="more-types-title">
-        <div className="section-heading-row">
-          <h2 id="more-types-title">其他类型</h2>
-          <span>内容研究与平衡中</span>
-        </div>
-        <div className="type-grid">
-          {types.map((type) =>
-            availableTypes.has(type) ? null : (
-              <button key={type} type="button" disabled aria-label={`${type}，筹备中`}>
-                <strong>{type}</strong>
-                <span>筹备中</span>
-              </button>
-            ),
-          )}
-        </div>
       </section>
 
       <p className="disclaimer">角色是娱乐化的网络刻板印象集合体，不代表现实中的所有人格类型。</p>

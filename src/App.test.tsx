@@ -90,6 +90,18 @@ describe("Love with MBTI primary flow", () => {
     expect(screen.getByText(/这样才算真的分好/)).toBeInTheDocument();
   });
 
+  it("starts the balanced ESTP game with its own formal content", () => {
+    render(<App />);
+
+    fireEvent.click(screen.getByRole("button", { name: "开始认识 ESTP" }));
+    expect(screen.getByLabelText("当前阶段：初识，第 1 题，共 10 题")).toBeInTheDocument();
+    expect(screen.getByText(/周六下午，你们第一次单独见面/)).toBeInTheDocument();
+    expect(screen.getByText(/不代表现实中的所有 ESTP/)).toBeInTheDocument();
+
+    fireEvent.click(screen.getByRole("button", { name: /先说好预算和最晚回去的时间/ }));
+    expect(screen.getByText(/按你的时间来/)).toBeInTheDocument();
+  });
+
   it("starts the balanced INFJ game with its own formal content", () => {
     render(<App />);
 

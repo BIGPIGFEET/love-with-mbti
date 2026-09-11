@@ -1,0 +1,1526 @@
+{
+  "questionCount": 10,
+  "optionCounts": [
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4
+  ],
+  "completeChoiceSpace": 1048576,
+  "terminalTrajectories": 309493,
+  "earlyTerminalTrajectories": 12469,
+  "weightedTotal": 1048576,
+  "endings": {
+    "confirmed_relationship:romance_hidden_risk": {
+      "trajectories": 6009,
+      "weightedPaths": 6009,
+      "examplePath": [
+        "q01_walk_quietly",
+        "q02_own_assumption",
+        "q03_define_scope",
+        "q04_tease_romance",
+        "q05_state_need",
+        "q06_agree_depth",
+        "q07_redo_silently",
+        "q08_set_return_time",
+        "q09_name_remaining_need",
+        "q10_agree_unsaid"
+      ],
+      "exampleState": {
+        "attraction": 85,
+        "trust": 90,
+        "comfort": 65,
+        "conflict": 5
+      }
+    },
+    "confirmed_relationship:romance_stable": {
+      "trajectories": 20942,
+      "weightedPaths": 20942,
+      "examplePath": [
+        "q01_walk_quietly",
+        "q02_own_assumption",
+        "q03_define_scope",
+        "q04_tease_romance",
+        "q05_state_need",
+        "q06_agree_depth",
+        "q07_redo_silently",
+        "q08_set_return_time",
+        "q09_name_remaining_need",
+        "q10_define_agreement"
+      ],
+      "exampleState": {
+        "attraction": 85,
+        "trust": 100,
+        "comfort": 80,
+        "conflict": 0
+      }
+    },
+    "dangerous_lovers": {
+      "trajectories": 937,
+      "weightedPaths": 937,
+      "examplePath": [
+        "q01_walk_quietly",
+        "q02_own_assumption",
+        "q03_define_scope",
+        "q04_tease_romance",
+        "q05_split_schedule",
+        "q06_ask_why_keep",
+        "q07_redo_silently",
+        "q08_wait_without_terms",
+        "q09_build_protocol",
+        "q10_agree_unsaid"
+      ],
+      "exampleState": {
+        "attraction": 90,
+        "trust": 70,
+        "comfort": 55,
+        "conflict": 10
+      }
+    },
+    "fade_out": {
+      "trajectories": 149,
+      "weightedPaths": 152576,
+      "examplePath": [
+        "q01_walk_quietly",
+        "q02_own_assumption",
+        "q03_hand_over_phone",
+        "q04_tease_romance",
+        "q05_accuse_avoidance"
+      ],
+      "exampleState": {
+        "attraction": 45,
+        "trust": 20,
+        "comfort": 15,
+        "conflict": 35
+      }
+    },
+    "friends": {
+      "trajectories": 34336,
+      "weightedPaths": 34336,
+      "examplePath": [
+        "q01_walk_quietly",
+        "q02_own_assumption",
+        "q03_define_scope",
+        "q04_tease_romance",
+        "q05_state_need",
+        "q06_agree_depth",
+        "q07_name_impact",
+        "q08_force_now",
+        "q09_demand_perfect",
+        "q10_define_agreement"
+      ],
+      "exampleState": {
+        "attraction": 60,
+        "trust": 80,
+        "comfort": 45,
+        "conflict": 25
+      }
+    },
+    "no_second_meeting": {
+      "trajectories": 3,
+      "weightedPaths": 196608,
+      "examplePath": [
+        "q01_walk_quietly",
+        "q02_praise_reversal"
+      ],
+      "exampleState": {
+        "attraction": 35,
+        "trust": 15,
+        "comfort": 25,
+        "conflict": 20
+      }
+    },
+    "stay_acquaintances": {
+      "trajectories": 11462,
+      "weightedPaths": 183392,
+      "examplePath": [
+        "q01_walk_quietly",
+        "q02_own_assumption",
+        "q03_define_scope",
+        "q04_tease_romance",
+        "q05_state_need",
+        "q06_praise_without_listening",
+        "q07_redo_silently",
+        "q08_force_now"
+      ],
+      "exampleState": {
+        "attraction": 50,
+        "trust": 35,
+        "comfort": 30,
+        "conflict": 35
+      }
+    },
+    "strangers_after_all": {
+      "trajectories": 35218,
+      "weightedPaths": 35218,
+      "examplePath": [
+        "q01_walk_quietly",
+        "q02_own_assumption",
+        "q03_define_scope",
+        "q04_tease_romance",
+        "q05_state_need",
+        "q06_agree_depth",
+        "q07_redo_silently",
+        "q08_force_now",
+        "q09_name_remaining_need",
+        "q10_all_or_nothing"
+      ],
+      "exampleState": {
+        "attraction": 60,
+        "trust": 55,
+        "comfort": 30,
+        "conflict": 35
+      }
+    },
+    "strong_discomfort": {
+      "trajectories": 2730,
+      "weightedPaths": 220611,
+      "examplePath": [
+        "q01_walk_quietly",
+        "q02_own_assumption",
+        "q03_define_scope",
+        "q04_tease_romance",
+        "q05_state_need",
+        "q06_agree_depth",
+        "q07_retaliate",
+        "q08_force_now",
+        "q09_demand_perfect",
+        "q10_all_or_nothing"
+      ],
+      "exampleState": {
+        "attraction": 45,
+        "trust": 30,
+        "comfort": 5,
+        "conflict": 65
+      }
+    },
+    "trust_broken": {
+      "trajectories": 16,
+      "weightedPaths": 256,
+      "examplePath": [
+        "q01_walk_quietly",
+        "q02_own_assumption",
+        "q03_hand_over_phone",
+        "q04_tease_romance",
+        "q05_cancel_everything",
+        "q06_praise_without_listening",
+        "q07_retaliate",
+        "q08_force_now"
+      ],
+      "exampleState": {
+        "attraction": 35,
+        "trust": 5,
+        "comfort": 15,
+        "conflict": 50
+      }
+    },
+    "unresolved_ambiguity": {
+      "trajectories": 197691,
+      "weightedPaths": 197691,
+      "examplePath": [
+        "q01_walk_quietly",
+        "q02_own_assumption",
+        "q03_define_scope",
+        "q04_tease_romance",
+        "q05_state_need",
+        "q06_agree_depth",
+        "q07_redo_silently",
+        "q08_set_return_time",
+        "q09_name_remaining_need",
+        "q10_all_or_nothing"
+      ],
+      "exampleState": {
+        "attraction": 75,
+        "trust": 80,
+        "comfort": 55,
+        "conflict": 15
+      }
+    }
+  },
+  "baseEndings": {
+    "confirmed_relationship": {
+      "trajectories": 26951,
+      "weightedPaths": 26951,
+      "examplePath": [
+        "q01_walk_quietly",
+        "q02_own_assumption",
+        "q03_define_scope",
+        "q04_tease_romance",
+        "q05_state_need",
+        "q06_agree_depth",
+        "q07_redo_silently",
+        "q08_set_return_time",
+        "q09_name_remaining_need",
+        "q10_agree_unsaid"
+      ],
+      "exampleState": {
+        "attraction": 85,
+        "trust": 90,
+        "comfort": 65,
+        "conflict": 5
+      }
+    },
+    "dangerous_lovers": {
+      "trajectories": 937,
+      "weightedPaths": 937,
+      "examplePath": [
+        "q01_walk_quietly",
+        "q02_own_assumption",
+        "q03_define_scope",
+        "q04_tease_romance",
+        "q05_split_schedule",
+        "q06_ask_why_keep",
+        "q07_redo_silently",
+        "q08_wait_without_terms",
+        "q09_build_protocol",
+        "q10_agree_unsaid"
+      ],
+      "exampleState": {
+        "attraction": 90,
+        "trust": 70,
+        "comfort": 55,
+        "conflict": 10
+      }
+    },
+    "fade_out": {
+      "trajectories": 149,
+      "weightedPaths": 152576,
+      "examplePath": [
+        "q01_walk_quietly",
+        "q02_own_assumption",
+        "q03_hand_over_phone",
+        "q04_tease_romance",
+        "q05_accuse_avoidance"
+      ],
+      "exampleState": {
+        "attraction": 45,
+        "trust": 20,
+        "comfort": 15,
+        "conflict": 35
+      }
+    },
+    "friends": {
+      "trajectories": 34336,
+      "weightedPaths": 34336,
+      "examplePath": [
+        "q01_walk_quietly",
+        "q02_own_assumption",
+        "q03_define_scope",
+        "q04_tease_romance",
+        "q05_state_need",
+        "q06_agree_depth",
+        "q07_name_impact",
+        "q08_force_now",
+        "q09_demand_perfect",
+        "q10_define_agreement"
+      ],
+      "exampleState": {
+        "attraction": 60,
+        "trust": 80,
+        "comfort": 45,
+        "conflict": 25
+      }
+    },
+    "no_second_meeting": {
+      "trajectories": 3,
+      "weightedPaths": 196608,
+      "examplePath": [
+        "q01_walk_quietly",
+        "q02_praise_reversal"
+      ],
+      "exampleState": {
+        "attraction": 35,
+        "trust": 15,
+        "comfort": 25,
+        "conflict": 20
+      }
+    },
+    "stay_acquaintances": {
+      "trajectories": 11462,
+      "weightedPaths": 183392,
+      "examplePath": [
+        "q01_walk_quietly",
+        "q02_own_assumption",
+        "q03_define_scope",
+        "q04_tease_romance",
+        "q05_state_need",
+        "q06_praise_without_listening",
+        "q07_redo_silently",
+        "q08_force_now"
+      ],
+      "exampleState": {
+        "attraction": 50,
+        "trust": 35,
+        "comfort": 30,
+        "conflict": 35
+      }
+    },
+    "strangers_after_all": {
+      "trajectories": 35218,
+      "weightedPaths": 35218,
+      "examplePath": [
+        "q01_walk_quietly",
+        "q02_own_assumption",
+        "q03_define_scope",
+        "q04_tease_romance",
+        "q05_state_need",
+        "q06_agree_depth",
+        "q07_redo_silently",
+        "q08_force_now",
+        "q09_name_remaining_need",
+        "q10_all_or_nothing"
+      ],
+      "exampleState": {
+        "attraction": 60,
+        "trust": 55,
+        "comfort": 30,
+        "conflict": 35
+      }
+    },
+    "strong_discomfort": {
+      "trajectories": 2730,
+      "weightedPaths": 220611,
+      "examplePath": [
+        "q01_walk_quietly",
+        "q02_own_assumption",
+        "q03_define_scope",
+        "q04_tease_romance",
+        "q05_state_need",
+        "q06_agree_depth",
+        "q07_retaliate",
+        "q08_force_now",
+        "q09_demand_perfect",
+        "q10_all_or_nothing"
+      ],
+      "exampleState": {
+        "attraction": 45,
+        "trust": 30,
+        "comfort": 5,
+        "conflict": 65
+      }
+    },
+    "trust_broken": {
+      "trajectories": 16,
+      "weightedPaths": 256,
+      "examplePath": [
+        "q01_walk_quietly",
+        "q02_own_assumption",
+        "q03_hand_over_phone",
+        "q04_tease_romance",
+        "q05_cancel_everything",
+        "q06_praise_without_listening",
+        "q07_retaliate",
+        "q08_force_now"
+      ],
+      "exampleState": {
+        "attraction": 35,
+        "trust": 5,
+        "comfort": 15,
+        "conflict": 50
+      }
+    },
+    "unresolved_ambiguity": {
+      "trajectories": 197691,
+      "weightedPaths": 197691,
+      "examplePath": [
+        "q01_walk_quietly",
+        "q02_own_assumption",
+        "q03_define_scope",
+        "q04_tease_romance",
+        "q05_state_need",
+        "q06_agree_depth",
+        "q07_redo_silently",
+        "q08_set_return_time",
+        "q09_name_remaining_need",
+        "q10_all_or_nothing"
+      ],
+      "exampleState": {
+        "attraction": 75,
+        "trust": 80,
+        "comfort": 55,
+        "conflict": 15
+      }
+    }
+  },
+  "outcomes": {
+    "confirmed_relationship:romance_hidden_risk": {
+      "trajectories": 6009,
+      "weightedPaths": 6009,
+      "examplePath": [
+        "q01_walk_quietly",
+        "q02_own_assumption",
+        "q03_define_scope",
+        "q04_tease_romance",
+        "q05_state_need",
+        "q06_agree_depth",
+        "q07_redo_silently",
+        "q08_set_return_time",
+        "q09_name_remaining_need",
+        "q10_agree_unsaid"
+      ],
+      "exampleState": {
+        "attraction": 85,
+        "trust": 90,
+        "comfort": 65,
+        "conflict": 5
+      }
+    },
+    "confirmed_relationship:romance_stable": {
+      "trajectories": 20942,
+      "weightedPaths": 20942,
+      "examplePath": [
+        "q01_walk_quietly",
+        "q02_own_assumption",
+        "q03_define_scope",
+        "q04_tease_romance",
+        "q05_state_need",
+        "q06_agree_depth",
+        "q07_redo_silently",
+        "q08_set_return_time",
+        "q09_name_remaining_need",
+        "q10_define_agreement"
+      ],
+      "exampleState": {
+        "attraction": 85,
+        "trust": 100,
+        "comfort": 80,
+        "conflict": 0
+      }
+    },
+    "dangerous_lovers": {
+      "trajectories": 937,
+      "weightedPaths": 937,
+      "examplePath": [
+        "q01_walk_quietly",
+        "q02_own_assumption",
+        "q03_define_scope",
+        "q04_tease_romance",
+        "q05_split_schedule",
+        "q06_ask_why_keep",
+        "q07_redo_silently",
+        "q08_wait_without_terms",
+        "q09_build_protocol",
+        "q10_agree_unsaid"
+      ],
+      "exampleState": {
+        "attraction": 90,
+        "trust": 70,
+        "comfort": 55,
+        "conflict": 10
+      }
+    },
+    "fade_out": {
+      "trajectories": 149,
+      "weightedPaths": 152576,
+      "examplePath": [
+        "q01_walk_quietly",
+        "q02_own_assumption",
+        "q03_hand_over_phone",
+        "q04_tease_romance",
+        "q05_accuse_avoidance"
+      ],
+      "exampleState": {
+        "attraction": 45,
+        "trust": 20,
+        "comfort": 15,
+        "conflict": 35
+      }
+    },
+    "friends": {
+      "trajectories": 34336,
+      "weightedPaths": 34336,
+      "examplePath": [
+        "q01_walk_quietly",
+        "q02_own_assumption",
+        "q03_define_scope",
+        "q04_tease_romance",
+        "q05_state_need",
+        "q06_agree_depth",
+        "q07_name_impact",
+        "q08_force_now",
+        "q09_demand_perfect",
+        "q10_define_agreement"
+      ],
+      "exampleState": {
+        "attraction": 60,
+        "trust": 80,
+        "comfort": 45,
+        "conflict": 25
+      }
+    },
+    "no_second_meeting": {
+      "trajectories": 3,
+      "weightedPaths": 196608,
+      "examplePath": [
+        "q01_walk_quietly",
+        "q02_praise_reversal"
+      ],
+      "exampleState": {
+        "attraction": 35,
+        "trust": 15,
+        "comfort": 25,
+        "conflict": 20
+      }
+    },
+    "stay_acquaintances": {
+      "trajectories": 11462,
+      "weightedPaths": 183392,
+      "examplePath": [
+        "q01_walk_quietly",
+        "q02_own_assumption",
+        "q03_define_scope",
+        "q04_tease_romance",
+        "q05_state_need",
+        "q06_praise_without_listening",
+        "q07_redo_silently",
+        "q08_force_now"
+      ],
+      "exampleState": {
+        "attraction": 50,
+        "trust": 35,
+        "comfort": 30,
+        "conflict": 35
+      }
+    },
+    "strangers_after_all": {
+      "trajectories": 35218,
+      "weightedPaths": 35218,
+      "examplePath": [
+        "q01_walk_quietly",
+        "q02_own_assumption",
+        "q03_define_scope",
+        "q04_tease_romance",
+        "q05_state_need",
+        "q06_agree_depth",
+        "q07_redo_silently",
+        "q08_force_now",
+        "q09_name_remaining_need",
+        "q10_all_or_nothing"
+      ],
+      "exampleState": {
+        "attraction": 60,
+        "trust": 55,
+        "comfort": 30,
+        "conflict": 35
+      }
+    },
+    "strong_discomfort": {
+      "trajectories": 2730,
+      "weightedPaths": 220611,
+      "examplePath": [
+        "q01_walk_quietly",
+        "q02_own_assumption",
+        "q03_define_scope",
+        "q04_tease_romance",
+        "q05_state_need",
+        "q06_agree_depth",
+        "q07_retaliate",
+        "q08_force_now",
+        "q09_demand_perfect",
+        "q10_all_or_nothing"
+      ],
+      "exampleState": {
+        "attraction": 45,
+        "trust": 30,
+        "comfort": 5,
+        "conflict": 65
+      }
+    },
+    "trust_broken": {
+      "trajectories": 16,
+      "weightedPaths": 256,
+      "examplePath": [
+        "q01_walk_quietly",
+        "q02_own_assumption",
+        "q03_hand_over_phone",
+        "q04_tease_romance",
+        "q05_cancel_everything",
+        "q06_praise_without_listening",
+        "q07_retaliate",
+        "q08_force_now"
+      ],
+      "exampleState": {
+        "attraction": 35,
+        "trust": 5,
+        "comfort": 15,
+        "conflict": 50
+      }
+    },
+    "unresolved_ambiguity": {
+      "trajectories": 197691,
+      "weightedPaths": 197691,
+      "examplePath": [
+        "q01_walk_quietly",
+        "q02_own_assumption",
+        "q03_define_scope",
+        "q04_tease_romance",
+        "q05_state_need",
+        "q06_agree_depth",
+        "q07_redo_silently",
+        "q08_set_return_time",
+        "q09_name_remaining_need",
+        "q10_all_or_nothing"
+      ],
+      "exampleState": {
+        "attraction": 75,
+        "trust": 80,
+        "comfort": 55,
+        "conflict": 15
+      }
+    }
+  },
+  "rules": {},
+  "trajectoryPercentages": {
+    "confirmed_relationship:romance_hidden_risk": 1.942,
+    "confirmed_relationship:romance_stable": 6.767,
+    "dangerous_lovers": 0.303,
+    "fade_out": 0.048,
+    "friends": 11.094,
+    "no_second_meeting": 0.001,
+    "stay_acquaintances": 3.703,
+    "strangers_after_all": 11.379,
+    "strong_discomfort": 0.882,
+    "trust_broken": 0.005,
+    "unresolved_ambiguity": 63.876
+  },
+  "weightedPathPercentages": {
+    "confirmed_relationship:romance_hidden_risk": 0.573,
+    "confirmed_relationship:romance_stable": 1.997,
+    "dangerous_lovers": 0.089,
+    "fade_out": 14.551,
+    "friends": 3.275,
+    "no_second_meeting": 18.75,
+    "stay_acquaintances": 17.49,
+    "strangers_after_all": 3.359,
+    "strong_discomfort": 21.039,
+    "trust_broken": 0.024,
+    "unresolved_ambiguity": 18.853
+  },
+  "baseEndingTrajectoryPercentages": {
+    "confirmed_relationship": 8.708,
+    "dangerous_lovers": 0.303,
+    "fade_out": 0.048,
+    "friends": 11.094,
+    "no_second_meeting": 0.001,
+    "stay_acquaintances": 3.703,
+    "strangers_after_all": 11.379,
+    "strong_discomfort": 0.882,
+    "trust_broken": 0.005,
+    "unresolved_ambiguity": 63.876
+  },
+  "baseEndingWeightedPathPercentages": {
+    "confirmed_relationship": 2.57,
+    "dangerous_lovers": 0.089,
+    "fade_out": 14.551,
+    "friends": 3.275,
+    "no_second_meeting": 18.75,
+    "stay_acquaintances": 17.49,
+    "strangers_after_all": 3.359,
+    "strong_discomfort": 21.039,
+    "trust_broken": 0.024,
+    "unresolved_ambiguity": 18.853
+  },
+  "coverage": {
+    "declared": true,
+    "endings": {
+      "declared": true,
+      "expected": [
+        "confirmed_relationship",
+        "conflict_break",
+        "dangerous_lovers",
+        "fade_out",
+        "friends",
+        "no_second_meeting",
+        "stay_acquaintances",
+        "strangers_after_all",
+        "strong_discomfort",
+        "trust_broken",
+        "unresolved_ambiguity"
+      ],
+      "observed": [
+        "confirmed_relationship",
+        "dangerous_lovers",
+        "fade_out",
+        "friends",
+        "no_second_meeting",
+        "stay_acquaintances",
+        "strangers_after_all",
+        "strong_discomfort",
+        "trust_broken",
+        "unresolved_ambiguity"
+      ],
+      "missing": [
+        "conflict_break"
+      ],
+      "unexpected": []
+    },
+    "outcomes": {
+      "declared": true,
+      "expected": [
+        "confirmed_relationship:romance_hidden_risk",
+        "confirmed_relationship:romance_stable",
+        "conflict_break",
+        "dangerous_lovers",
+        "fade_out",
+        "friends",
+        "no_second_meeting",
+        "stay_acquaintances",
+        "strangers_after_all",
+        "strong_discomfort",
+        "trust_broken",
+        "unresolved_ambiguity"
+      ],
+      "observed": [
+        "confirmed_relationship:romance_hidden_risk",
+        "confirmed_relationship:romance_stable",
+        "dangerous_lovers",
+        "fade_out",
+        "friends",
+        "no_second_meeting",
+        "stay_acquaintances",
+        "strangers_after_all",
+        "strong_discomfort",
+        "trust_broken",
+        "unresolved_ambiguity"
+      ],
+      "missing": [
+        "conflict_break"
+      ],
+      "unexpected": []
+    },
+    "rules": {
+      "declared": false,
+      "expected": [],
+      "observed": [],
+      "missing": [],
+      "unexpected": []
+    },
+    "ruleDiagnostics": {
+      "shadowingStatus": "unknown",
+      "applicable": [],
+      "selected": [],
+      "shadowed": []
+    }
+  },
+  "fixedPositions": [
+    {
+      "position": 1,
+      "applicable": true,
+      "ending": "confirmed_relationship:romance_hidden_risk",
+      "baseEnding": "confirmed_relationship",
+      "ruleIds": [],
+      "path": [
+        "q01_walk_quietly",
+        "q02_own_assumption",
+        "q03_define_scope",
+        "q04_tease_romance",
+        "q05_state_need",
+        "q06_agree_depth",
+        "q07_redo_silently",
+        "q08_set_return_time",
+        "q09_name_remaining_need",
+        "q10_agree_unsaid"
+      ],
+      "state": {
+        "attraction": 85,
+        "trust": 90,
+        "comfort": 65,
+        "conflict": 5
+      }
+    },
+    {
+      "position": 2,
+      "applicable": true,
+      "ending": "fade_out",
+      "baseEnding": "fade_out",
+      "ruleIds": [],
+      "path": [
+        "q01_check_pace",
+        "q02_praise_reversal",
+        "q03_hand_over_phone",
+        "q04_thank_directly",
+        "q05_accuse_avoidance"
+      ],
+      "state": {
+        "attraction": 45,
+        "trust": 20,
+        "comfort": 15,
+        "conflict": 35
+      }
+    },
+    {
+      "position": 3,
+      "applicable": true,
+      "ending": "stay_acquaintances",
+      "baseEnding": "stay_acquaintances",
+      "ruleIds": [],
+      "path": [
+        "q01_fill_every_pause",
+        "q02_offer_boundary",
+        "q03_choose_support",
+        "q04_clarify_meaning",
+        "q05_cancel_everything",
+        "q06_dismiss_process",
+        "q07_retaliate",
+        "q08_name_minimum"
+      ],
+      "state": {
+        "attraction": 25,
+        "trust": 50,
+        "comfort": 25,
+        "conflict": 30
+      }
+    },
+    {
+      "position": 4,
+      "applicable": true,
+      "ending": "no_second_meeting",
+      "baseEnding": "no_second_meeting",
+      "ruleIds": [],
+      "path": [
+        "q01_name_uncertainty",
+        "q02_dismiss_concern"
+      ],
+      "state": {
+        "attraction": 20,
+        "trust": 20,
+        "comfort": 20,
+        "conflict": 20
+      }
+    }
+  ],
+  "fixedStrategies": [
+    {
+      "strategy": "accommodate",
+      "applicable": false,
+      "missingAt": "Q02"
+    },
+    {
+      "strategy": "confront",
+      "applicable": false,
+      "missingAt": "Q01"
+    },
+    {
+      "strategy": "honest",
+      "applicable": true,
+      "ending": "unresolved_ambiguity",
+      "baseEnding": "unresolved_ambiguity",
+      "ruleIds": [],
+      "path": [
+        "q01_name_uncertainty",
+        "q02_own_assumption",
+        "q03_choose_support",
+        "q04_thank_directly",
+        "q05_state_need",
+        "q06_ask_why_keep",
+        "q07_name_impact",
+        "q08_name_minimum",
+        "q09_name_remaining_need",
+        "q10_state_commitment"
+      ],
+      "state": {
+        "attraction": 75,
+        "trust": 100,
+        "comfort": 90,
+        "conflict": 0
+      }
+    },
+    {
+      "strategy": "negotiate",
+      "applicable": true,
+      "ending": "confirmed_relationship:romance_stable",
+      "baseEnding": "confirmed_relationship",
+      "ruleIds": [],
+      "path": [
+        "q01_check_pace",
+        "q02_offer_boundary",
+        "q03_define_scope",
+        "q04_clarify_meaning",
+        "q05_split_schedule",
+        "q06_agree_depth",
+        "q07_set_feedback_rule",
+        "q08_set_return_time",
+        "q09_build_protocol",
+        "q10_define_agreement"
+      ],
+      "state": {
+        "attraction": 95,
+        "trust": 100,
+        "comfort": 100,
+        "conflict": 0
+      }
+    },
+    {
+      "strategy": "risky",
+      "applicable": true,
+      "ending": "strong_discomfort",
+      "baseEnding": "strong_discomfort",
+      "ruleIds": [],
+      "path": [
+        "q01_fill_every_pause",
+        "q02_praise_reversal"
+      ],
+      "state": {
+        "attraction": 35,
+        "trust": 10,
+        "comfort": 5,
+        "conflict": 30
+      }
+    }
+  ],
+  "localDominance": [
+    {
+      "questionId": "Q01",
+      "dominantOption": "q01_walk_quietly",
+      "dominatedOption": "q01_fill_every_pause"
+    },
+    {
+      "questionId": "Q01",
+      "dominantOption": "q01_check_pace",
+      "dominatedOption": "q01_walk_quietly"
+    },
+    {
+      "questionId": "Q01",
+      "dominantOption": "q01_check_pace",
+      "dominatedOption": "q01_fill_every_pause"
+    },
+    {
+      "questionId": "Q01",
+      "dominantOption": "q01_check_pace",
+      "dominatedOption": "q01_name_uncertainty"
+    },
+    {
+      "questionId": "Q02",
+      "dominantOption": "q02_own_assumption",
+      "dominatedOption": "q02_praise_reversal"
+    },
+    {
+      "questionId": "Q02",
+      "dominantOption": "q02_own_assumption",
+      "dominatedOption": "q02_offer_boundary"
+    },
+    {
+      "questionId": "Q02",
+      "dominantOption": "q02_own_assumption",
+      "dominatedOption": "q02_dismiss_concern"
+    },
+    {
+      "questionId": "Q02",
+      "dominantOption": "q02_praise_reversal",
+      "dominatedOption": "q02_dismiss_concern"
+    },
+    {
+      "questionId": "Q02",
+      "dominantOption": "q02_offer_boundary",
+      "dominatedOption": "q02_praise_reversal"
+    },
+    {
+      "questionId": "Q02",
+      "dominantOption": "q02_offer_boundary",
+      "dominatedOption": "q02_dismiss_concern"
+    },
+    {
+      "questionId": "Q03",
+      "dominantOption": "q03_define_scope",
+      "dominatedOption": "q03_hand_over_phone"
+    },
+    {
+      "questionId": "Q03",
+      "dominantOption": "q03_define_scope",
+      "dominatedOption": "q03_choose_support"
+    },
+    {
+      "questionId": "Q03",
+      "dominantOption": "q03_define_scope",
+      "dominatedOption": "q03_demand_fix"
+    },
+    {
+      "questionId": "Q03",
+      "dominantOption": "q03_hand_over_phone",
+      "dominatedOption": "q03_demand_fix"
+    },
+    {
+      "questionId": "Q03",
+      "dominantOption": "q03_choose_support",
+      "dominatedOption": "q03_demand_fix"
+    },
+    {
+      "questionId": "Q04",
+      "dominantOption": "q04_thank_directly",
+      "dominatedOption": "q04_tease_romance"
+    },
+    {
+      "questionId": "Q04",
+      "dominantOption": "q04_thank_directly",
+      "dominatedOption": "q04_repay_immediately"
+    },
+    {
+      "questionId": "Q04",
+      "dominantOption": "q04_clarify_meaning",
+      "dominatedOption": "q04_repay_immediately"
+    },
+    {
+      "questionId": "Q05",
+      "dominantOption": "q05_state_need",
+      "dominatedOption": "q05_accuse_avoidance"
+    },
+    {
+      "questionId": "Q05",
+      "dominantOption": "q05_cancel_everything",
+      "dominatedOption": "q05_accuse_avoidance"
+    },
+    {
+      "questionId": "Q05",
+      "dominantOption": "q05_split_schedule",
+      "dominatedOption": "q05_state_need"
+    },
+    {
+      "questionId": "Q05",
+      "dominantOption": "q05_split_schedule",
+      "dominatedOption": "q05_accuse_avoidance"
+    },
+    {
+      "questionId": "Q05",
+      "dominantOption": "q05_split_schedule",
+      "dominatedOption": "q05_cancel_everything"
+    },
+    {
+      "questionId": "Q06",
+      "dominantOption": "q06_agree_depth",
+      "dominatedOption": "q06_praise_without_listening"
+    },
+    {
+      "questionId": "Q06",
+      "dominantOption": "q06_agree_depth",
+      "dominatedOption": "q06_dismiss_process"
+    },
+    {
+      "questionId": "Q06",
+      "dominantOption": "q06_agree_depth",
+      "dominatedOption": "q06_ask_why_keep"
+    },
+    {
+      "questionId": "Q06",
+      "dominantOption": "q06_praise_without_listening",
+      "dominatedOption": "q06_dismiss_process"
+    },
+    {
+      "questionId": "Q06",
+      "dominantOption": "q06_ask_why_keep",
+      "dominatedOption": "q06_praise_without_listening"
+    },
+    {
+      "questionId": "Q06",
+      "dominantOption": "q06_ask_why_keep",
+      "dominatedOption": "q06_dismiss_process"
+    },
+    {
+      "questionId": "Q07",
+      "dominantOption": "q07_redo_silently",
+      "dominatedOption": "q07_retaliate"
+    },
+    {
+      "questionId": "Q07",
+      "dominantOption": "q07_name_impact",
+      "dominatedOption": "q07_redo_silently"
+    },
+    {
+      "questionId": "Q07",
+      "dominantOption": "q07_name_impact",
+      "dominatedOption": "q07_retaliate"
+    },
+    {
+      "questionId": "Q07",
+      "dominantOption": "q07_set_feedback_rule",
+      "dominatedOption": "q07_redo_silently"
+    },
+    {
+      "questionId": "Q07",
+      "dominantOption": "q07_set_feedback_rule",
+      "dominatedOption": "q07_retaliate"
+    },
+    {
+      "questionId": "Q08",
+      "dominantOption": "q08_set_return_time",
+      "dominatedOption": "q08_force_now"
+    },
+    {
+      "questionId": "Q08",
+      "dominantOption": "q08_set_return_time",
+      "dominatedOption": "q08_name_minimum"
+    },
+    {
+      "questionId": "Q08",
+      "dominantOption": "q08_set_return_time",
+      "dominatedOption": "q08_wait_without_terms"
+    },
+    {
+      "questionId": "Q08",
+      "dominantOption": "q08_name_minimum",
+      "dominatedOption": "q08_force_now"
+    },
+    {
+      "questionId": "Q08",
+      "dominantOption": "q08_name_minimum",
+      "dominatedOption": "q08_wait_without_terms"
+    },
+    {
+      "questionId": "Q08",
+      "dominantOption": "q08_wait_without_terms",
+      "dominatedOption": "q08_force_now"
+    },
+    {
+      "questionId": "Q09",
+      "dominantOption": "q09_name_remaining_need",
+      "dominatedOption": "q09_close_topic"
+    },
+    {
+      "questionId": "Q09",
+      "dominantOption": "q09_name_remaining_need",
+      "dominatedOption": "q09_demand_perfect"
+    },
+    {
+      "questionId": "Q09",
+      "dominantOption": "q09_close_topic",
+      "dominatedOption": "q09_demand_perfect"
+    },
+    {
+      "questionId": "Q09",
+      "dominantOption": "q09_build_protocol",
+      "dominatedOption": "q09_close_topic"
+    },
+    {
+      "questionId": "Q09",
+      "dominantOption": "q09_build_protocol",
+      "dominatedOption": "q09_demand_perfect"
+    },
+    {
+      "questionId": "Q10",
+      "dominantOption": "q10_agree_unsaid",
+      "dominatedOption": "q10_all_or_nothing"
+    },
+    {
+      "questionId": "Q10",
+      "dominantOption": "q10_define_agreement",
+      "dominatedOption": "q10_agree_unsaid"
+    },
+    {
+      "questionId": "Q10",
+      "dominantOption": "q10_define_agreement",
+      "dominatedOption": "q10_all_or_nothing"
+    },
+    {
+      "questionId": "Q10",
+      "dominantOption": "q10_state_commitment",
+      "dominatedOption": "q10_agree_unsaid"
+    },
+    {
+      "questionId": "Q10",
+      "dominantOption": "q10_state_commitment",
+      "dominatedOption": "q10_all_or_nothing"
+    }
+  ],
+  "globalStrategyDominance": [],
+  "effectBudgetWarnings": [
+    {
+      "type": "total_absolute_change",
+      "questionId": "Q08",
+      "optionId": "q08_force_now",
+      "actual": 50,
+      "recommendedMaximum": 40
+    }
+  ],
+  "balance": {
+    "configured": true,
+    "globalDanger": {
+      "byEnding": {
+        "conflict_break": {
+          "trajectories": 0,
+          "weightedPaths": 0,
+          "weightedPercentage": 0,
+          "reachable": false,
+          "status": "unreachable"
+        },
+        "strong_discomfort": {
+          "trajectories": 2730,
+          "weightedPaths": 220611,
+          "weightedPercentage": 21.039,
+          "reachable": true,
+          "status": "above_hard_maximum"
+        },
+        "trust_broken": {
+          "trajectories": 16,
+          "weightedPaths": 256,
+          "weightedPercentage": 0.024,
+          "reachable": true,
+          "status": "below_recommended"
+        }
+      },
+      "combined": {
+        "trajectories": 2746,
+        "weightedPaths": 220867,
+        "weightedPercentage": 21.064,
+        "status": "above_hard_maximum"
+      }
+    },
+    "stageGates": [
+      {
+        "questionId": "Q02",
+        "endingId": "no_second_meeting",
+        "eligibleTrajectoryPrefixes": 14,
+        "failureTrajectoryPrefixes": 3,
+        "trajectoryPrefixFailurePercentage": 21.429,
+        "eligibleWeightedPaths": 917504,
+        "failureWeightedPaths": 196608,
+        "weightedConditionalFailurePercentage": 21.429,
+        "status": "within_recommended"
+      },
+      {
+        "questionId": "Q05",
+        "endingId": "fade_out",
+        "eligibleTrajectoryPrefixes": 633,
+        "failureTrajectoryPrefixes": 149,
+        "trajectoryPrefixFailurePercentage": 23.539,
+        "eligibleWeightedPaths": 648192,
+        "failureWeightedPaths": 152576,
+        "weightedConditionalFailurePercentage": 23.539,
+        "status": "below_recommended"
+      },
+      {
+        "questionId": "Q08",
+        "endingId": "stay_acquaintances",
+        "eligibleTrajectoryPrefixes": 30026,
+        "failureTrajectoryPrefixes": 11462,
+        "trajectoryPrefixFailurePercentage": 38.174,
+        "eligibleWeightedPaths": 480416,
+        "failureWeightedPaths": 183392,
+        "weightedConditionalFailurePercentage": 38.174,
+        "status": "within_recommended"
+      }
+    ],
+    "finalClassifier": {
+      "questionId": "Q10",
+      "reachedTrajectories": 295133,
+      "reachedWeightedPaths": 295133,
+      "weightedReachPercentage": 28.146,
+      "reachStatus": "within_recommended",
+      "byOutcome": {
+        "strangers_after_all": {
+          "trajectories": 35218,
+          "weightedPaths": 35218,
+          "weightedConditionalPercentage": 11.933,
+          "trajectoryConditionalPercentage": 11.933,
+          "reachable": true,
+          "examplePath": [
+            "q01_walk_quietly",
+            "q02_own_assumption",
+            "q03_define_scope",
+            "q04_tease_romance",
+            "q05_state_need",
+            "q06_agree_depth",
+            "q07_redo_silently",
+            "q08_force_now",
+            "q09_name_remaining_need",
+            "q10_all_or_nothing"
+          ],
+          "exampleState": {
+            "attraction": 60,
+            "trust": 55,
+            "comfort": 30,
+            "conflict": 35
+          },
+          "status": "reported_only"
+        },
+        "dangerous_lovers": {
+          "trajectories": 937,
+          "weightedPaths": 937,
+          "weightedConditionalPercentage": 0.317,
+          "trajectoryConditionalPercentage": 0.317,
+          "reachable": true,
+          "examplePath": [
+            "q01_walk_quietly",
+            "q02_own_assumption",
+            "q03_define_scope",
+            "q04_tease_romance",
+            "q05_split_schedule",
+            "q06_ask_why_keep",
+            "q07_redo_silently",
+            "q08_wait_without_terms",
+            "q09_build_protocol",
+            "q10_agree_unsaid"
+          ],
+          "exampleState": {
+            "attraction": 90,
+            "trust": 70,
+            "comfort": 55,
+            "conflict": 10
+          },
+          "status": "reported_only"
+        },
+        "friends": {
+          "trajectories": 34336,
+          "weightedPaths": 34336,
+          "weightedConditionalPercentage": 11.634,
+          "trajectoryConditionalPercentage": 11.634,
+          "reachable": true,
+          "examplePath": [
+            "q01_walk_quietly",
+            "q02_own_assumption",
+            "q03_define_scope",
+            "q04_tease_romance",
+            "q05_state_need",
+            "q06_agree_depth",
+            "q07_name_impact",
+            "q08_force_now",
+            "q09_demand_perfect",
+            "q10_define_agreement"
+          ],
+          "exampleState": {
+            "attraction": 60,
+            "trust": 80,
+            "comfort": 45,
+            "conflict": 25
+          },
+          "status": "reported_only"
+        },
+        "unresolved_ambiguity": {
+          "trajectories": 197691,
+          "weightedPaths": 197691,
+          "weightedConditionalPercentage": 66.984,
+          "trajectoryConditionalPercentage": 66.984,
+          "reachable": true,
+          "examplePath": [
+            "q01_walk_quietly",
+            "q02_own_assumption",
+            "q03_define_scope",
+            "q04_tease_romance",
+            "q05_state_need",
+            "q06_agree_depth",
+            "q07_redo_silently",
+            "q08_set_return_time",
+            "q09_name_remaining_need",
+            "q10_all_or_nothing"
+          ],
+          "exampleState": {
+            "attraction": 75,
+            "trust": 80,
+            "comfort": 55,
+            "conflict": 15
+          },
+          "status": "reported_only"
+        },
+        "confirmed_relationship:romance_stable": {
+          "trajectories": 20942,
+          "weightedPaths": 20942,
+          "weightedConditionalPercentage": 7.096,
+          "trajectoryConditionalPercentage": 7.096,
+          "reachable": true,
+          "examplePath": [
+            "q01_walk_quietly",
+            "q02_own_assumption",
+            "q03_define_scope",
+            "q04_tease_romance",
+            "q05_state_need",
+            "q06_agree_depth",
+            "q07_redo_silently",
+            "q08_set_return_time",
+            "q09_name_remaining_need",
+            "q10_define_agreement"
+          ],
+          "exampleState": {
+            "attraction": 85,
+            "trust": 100,
+            "comfort": 80,
+            "conflict": 0
+          },
+          "status": "reported_only"
+        },
+        "confirmed_relationship:romance_hidden_risk": {
+          "trajectories": 6009,
+          "weightedPaths": 6009,
+          "weightedConditionalPercentage": 2.036,
+          "trajectoryConditionalPercentage": 2.036,
+          "reachable": true,
+          "examplePath": [
+            "q01_walk_quietly",
+            "q02_own_assumption",
+            "q03_define_scope",
+            "q04_tease_romance",
+            "q05_state_need",
+            "q06_agree_depth",
+            "q07_redo_silently",
+            "q08_set_return_time",
+            "q09_name_remaining_need",
+            "q10_agree_unsaid"
+          ],
+          "exampleState": {
+            "attraction": 85,
+            "trust": 90,
+            "comfort": 65,
+            "conflict": 5
+          },
+          "status": "reported_only"
+        }
+      },
+      "byGroup": {
+        "strangers_after_all": {
+          "outcomeIds": [
+            "strangers_after_all"
+          ],
+          "trajectories": 35218,
+          "weightedPaths": 35218,
+          "weightedConditionalPercentage": 11.933,
+          "trajectoryConditionalPercentage": 11.933,
+          "status": "below_recommended"
+        },
+        "confirmed_relationship": {
+          "outcomeIds": [
+            "confirmed_relationship:romance_stable",
+            "confirmed_relationship:romance_hidden_risk"
+          ],
+          "trajectories": 26951,
+          "weightedPaths": 26951,
+          "weightedConditionalPercentage": 9.132,
+          "trajectoryConditionalPercentage": 9.132,
+          "status": "below_recommended"
+        },
+        "dangerous_lovers": {
+          "outcomeIds": [
+            "dangerous_lovers"
+          ],
+          "trajectories": 937,
+          "weightedPaths": 937,
+          "weightedConditionalPercentage": 0.317,
+          "trajectoryConditionalPercentage": 0.317,
+          "status": "below_recommended"
+        },
+        "friends": {
+          "outcomeIds": [
+            "friends"
+          ],
+          "trajectories": 34336,
+          "weightedPaths": 34336,
+          "weightedConditionalPercentage": 11.634,
+          "trajectoryConditionalPercentage": 11.634,
+          "status": "below_recommended"
+        },
+        "unresolved_ambiguity": {
+          "outcomeIds": [
+            "unresolved_ambiguity"
+          ],
+          "trajectories": 197691,
+          "weightedPaths": 197691,
+          "weightedConditionalPercentage": 66.984,
+          "trajectoryConditionalPercentage": 66.984,
+          "status": "above_recommended"
+        }
+      }
+    }
+  }
+}

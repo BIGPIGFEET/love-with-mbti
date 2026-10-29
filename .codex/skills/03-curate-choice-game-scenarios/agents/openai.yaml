@@ -1,4 +1,0 @@
-interface:
-  display_name: "03 互动游戏场景筛选编排"
-  short_description: "筛选并锁定可追踪正式场景，保留全链路 ID 和受控变更记录。"
-  default_prompt: "Use $03-curate-choice-game-scenarios to select and sequence formal scenarios from a mapped candidate library, preserving full traceability and a controlled-baseline change log."

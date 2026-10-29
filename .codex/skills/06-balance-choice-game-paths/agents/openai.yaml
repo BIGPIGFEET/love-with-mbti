@@ -1,4 +1,0 @@
-interface:
-  display_name: "06 互动选择游戏路径平衡"
-  short_description: "完整枚举路径，核对加权概率、阶段条件率、Q10 结果、效应预算与规则覆盖。"
-  default_prompt: "Use $06-balance-choice-game-paths to run production-equivalent exhaustive enumeration, report weighted and trajectory shares separately, calculate eligible stage-gate and Q10-conditional metrics, and audit effects, coverage, policies, dominance, and rule precedence."

@@ -20,6 +20,17 @@ test-results/
 # Local agent runtime copied from installed tooling
 .agents/
 
+# Local research, authoring tools and internal design documents
+/.codex/
+/.impeccable/
+/content/
+/docs/
+/scripts/
+/DESIGN.md
+
+# Migration acceptance tests depend on the local research and tools above
+/src/content/*-migration.test.ts
+
 # TypeScript and logs
 *.tsbuildinfo
 *.log

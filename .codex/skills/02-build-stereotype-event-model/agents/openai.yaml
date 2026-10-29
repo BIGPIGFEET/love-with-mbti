@@ -1,4 +1,0 @@
-interface:
-  display_name: "02 刻板印象行为事件建模"
-  short_description: "将证据表转换为行为、冲突、状态和可追踪候选事件，并复用项目既有规则。"
-  default_prompt: "Use $02-build-stereotype-event-model to convert an evidence ledger into behavior, conflict, state, and traceable candidate-event models while reusing the project mechanism contract."

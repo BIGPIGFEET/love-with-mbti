@@ -1,4 +1,0 @@
-interface:
-  display_name: "01 刻板印象证据调研"
-  short_description: "多轮调查网络刻板印象，区分证据、传播表象和待核查线索。"
-  default_prompt: "Use $01-research-stereotype-evidence to research online stereotype discourse, audit existing artifacts, and produce a bounded evidence/surface/lead ledger."

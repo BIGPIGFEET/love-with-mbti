@@ -34,7 +34,7 @@ body {
   min-height: 100vh;
   margin: 0;
   background-color: #d8d2c3;
-  background-image: url("./assets/paper-texture.png");
+  background-image: url("./assets/paper-texture.webp");
   background-blend-mode: multiply;
   color: var(--ink);
 }
@@ -60,7 +60,7 @@ button:disabled {
   margin: 0 auto;
   padding: 24px clamp(22px, 6vw, 54px) 56px;
   background-color: rgba(243, 239, 228, 0.96);
-  background-image: url("./assets/paper-texture.png");
+  background-image: url("./assets/paper-texture.webp");
   box-shadow: var(--shadow);
 }
 
@@ -309,7 +309,7 @@ button:disabled {
   padding: clamp(30px, 6vw, 48px) clamp(28px, 7vw, 58px);
   clip-path: polygon(0.4% 1.5%, 99.5% 0, 98.8% 98.8%, 1.2% 100%);
   background-color: var(--paper-deep);
-  background-image: url("./assets/paper-texture.png");
+  background-image: url("./assets/paper-texture.webp");
   box-shadow: 0 12px 22px rgba(28, 43, 42, 0.18);
   color: var(--ink);
   font-size: clamp(1.65rem, 5vw, 2.65rem);
@@ -624,7 +624,7 @@ button:disabled {
   padding: clamp(26px, 6vw, 44px);
   border: 1px solid rgba(28, 43, 42, 0.24);
   clip-path: polygon(0.4% 1.5%, 99.6% 0, 99% 99%, 1% 100%);
-  background: var(--paper-deep) url("./assets/paper-texture.png");
+  background: var(--paper-deep) url("./assets/paper-texture.webp");
   box-shadow: 0 12px 22px rgba(28, 43, 42, 0.16);
   font-size: clamp(1.25rem, 3.6vw, 1.9rem);
   font-weight: 780;

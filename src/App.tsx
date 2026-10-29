@@ -3,8 +3,8 @@ import { FeedbackScreen } from "./components/FeedbackScreen.tsx";
 import { EndingScreen } from "./components/EndingScreen.tsx";
 import { QuestionScreen } from "./components/QuestionScreen.tsx";
 import { TypeSelectScreen } from "./components/TypeSelectScreen.tsx";
-import { getContentPack } from "./content/packs.ts";
-import type { AvailableMbtiType } from "./content/content-pack.ts";
+import { loadContentPack } from "./content/load-pack.ts";
+import type { AvailableMbtiType, ContentPack } from "./content/content-pack.ts";
 import type { EndingContent, QuestionOption, RelationshipEvaluationContent, RelationState } from "./content/schema.ts";
 import { applyEffects, INITIAL_STATE, resolveEnding } from "./game/rules.ts";
 import type { EndingResult } from "./game/rules.ts";
@@ -27,14 +27,13 @@ function findEvaluation(
 
 export default function App() {
   const [screen, setScreen] = useState<Screen>("select");
-  const [selectedType, setSelectedType] = useState<AvailableMbtiType>("ENTP");
+  const [content, setContent] = useState<ContentPack | null>(null);
+  const [loadingType, setLoadingType] = useState<AvailableMbtiType | null>(null);
+  const [loadError, setLoadError] = useState("");
   const [questionIndex, setQuestionIndex] = useState(0);
   const [relationState, setRelationState] = useState<RelationState>(() => ({ ...INITIAL_STATE }));
   const [selectedOption, setSelectedOption] = useState<QuestionOption | null>(null);
   const [pendingEnding, setPendingEnding] = useState<EndingResult | null>(null);
-
-  const content = getContentPack(selectedType);
-  const question = content.questions[questionIndex];
 
   useEffect(() => {
     const prefersReducedMotion = window.matchMedia?.("(prefers-reduced-motion: reduce)").matches ?? false;
@@ -49,10 +48,24 @@ export default function App() {
     setScreen(nextScreen);
   };
 
-  const startGame = (type: AvailableMbtiType) => {
-    setSelectedType(type);
-    resetGame("question");
+  const startGame = async (type: AvailableMbtiType) => {
+    setLoadingType(type);
+    setLoadError("");
+    try {
+      setContent(await loadContentPack(type));
+      resetGame("question");
+    } catch {
+      setLoadError("故事加载失败，请检查网络后重新选择类型。");
+    } finally {
+      setLoadingType(null);
+    }
   };
+
+  if (screen === "select" || !content) {
+    return <TypeSelectScreen onStart={startGame} loadingType={loadingType} loadError={loadError} />;
+  }
+
+  const question = content.questions[questionIndex];
 
   const handleChoose = (option: QuestionOption) => {
     const nextState = applyEffects(relationState, option.effects);
@@ -74,15 +87,11 @@ export default function App() {
     setScreen("question");
   };
 
-  if (screen === "select") {
-    return <TypeSelectScreen onStart={startGame} />;
-  }
-
   if (screen === "question") {
     return (
       <QuestionScreen
         question={question}
-        mbtiType={selectedType}
+        mbtiType={content.type}
         state={relationState}
         onChoose={handleChoose}
         onBack={() => resetGame("select")}
@@ -107,7 +116,7 @@ export default function App() {
     return (
       <EndingScreen
         ending={findEnding(content.endings, pendingEnding.endingId)}
-        mbtiType={selectedType}
+        mbtiType={content.type}
         evaluation={findEvaluation(content.relationshipEvaluations, pendingEnding.evaluationId)}
         state={relationState}
         completedQuestion={question.order}

@@ -1,3 +1,5 @@
+// Offline validators need every pack; the browser uses load-pack.ts on demand.
+import { TYPE_DESCRIPTIONS } from "./content-pack.ts";
 import type { AvailableMbtiType, ContentPack } from "./content-pack.ts";
 import { enfpEndings, enfpFuzzyFeedback, enfpRelationshipEvaluations } from "./enfp-endings.ts";
 import { enfpQuestions } from "./enfp-questions.ts";
@@ -40,7 +42,7 @@ import { validateContent } from "./schema.ts";
 export const contentPacks = {
   INTJ: {
     type: "INTJ",
-    description: "十次结构协商、直接表达、独处边界与关系确认之间的取舍。",
+    description: TYPE_DESCRIPTIONS.INTJ,
     questions: intjQuestions,
     endings: intjEndings,
     relationshipEvaluations: intjRelationshipEvaluations,
@@ -48,7 +50,7 @@ export const contentPacks = {
   },
   ENTJ: {
     type: "ENTJ",
-    description: "十次目标协作、直接表达、权力边界与共同确认之间的取舍。",
+    description: TYPE_DESCRIPTIONS.ENTJ,
     questions: entjQuestions,
     endings: entjEndings,
     relationshipEvaluations: entjRelationshipEvaluations,
@@ -56,7 +58,7 @@ export const contentPacks = {
   },
   ESTJ: {
     type: "ESTJ",
-    description: "十次计划协商、实际照顾、边界修复与关系确认之间的取舍。",
+    description: TYPE_DESCRIPTIONS.ESTJ,
     questions: estjQuestions,
     endings: estjEndings,
     relationshipEvaluations: estjRelationshipEvaluations,
@@ -64,7 +66,7 @@ export const contentPacks = {
   },
   ESTP: {
     type: "ESTP",
-    description: "十次临场体验、直接表达、风险边界与关系确认之间的取舍。",
+    description: TYPE_DESCRIPTIONS.ESTP,
     questions: estpQuestions,
     endings: estpEndings,
     relationshipEvaluations: estpRelationshipEvaluations,
@@ -72,7 +74,7 @@ export const contentPacks = {
   },
   ENTP: {
     type: "ENTP",
-    description: "十次新鲜感、边界、信任与长期兑现之间的取舍。",
+    description: TYPE_DESCRIPTIONS.ENTP,
     questions: entpQuestions,
     endings: entpEndings,
     relationshipEvaluations: entpRelationshipEvaluations,
@@ -80,7 +82,7 @@ export const contentPacks = {
   },
   ENFP: {
     type: "ENFP",
-    description: "十次热情表达、探索变化、私人边界与关系确认之间的取舍。",
+    description: TYPE_DESCRIPTIONS.ENFP,
     questions: enfpQuestions,
     endings: enfpEndings,
     relationshipEvaluations: enfpRelationshipEvaluations,
@@ -88,7 +90,7 @@ export const contentPacks = {
   },
   ENFJ: {
     type: "ENFJ",
-    description: "十次群体参与、建议许可、支持互惠与关系协议之间的取舍。",
+    description: TYPE_DESCRIPTIONS.ENFJ,
     questions: enfjQuestions,
     endings: enfjEndings,
     relationshipEvaluations: enfjRelationshipEvaluations,
@@ -96,7 +98,7 @@ export const contentPacks = {
   },
   ESFJ: {
     type: "ESFJ",
-    description: "从日常照顾、朋友聚会到一起分担事情，在十次选择中慢慢说清你们的关系。",
+    description: TYPE_DESCRIPTIONS.ESFJ,
     questions: esfjQuestions,
     endings: esfjEndings,
     relationshipEvaluations: esfjRelationshipEvaluations,
@@ -104,7 +106,7 @@ export const contentPacks = {
   },
   ESFP: {
     type: "ESFP",
-    description: "十次共同体验、临场弹性、边界确认与关系修复之间的取舍。",
+    description: TYPE_DESCRIPTIONS.ESFP,
     questions: esfpQuestions,
     endings: esfpEndings,
     relationshipEvaluations: esfpRelationshipEvaluations,
@@ -112,7 +114,7 @@ export const contentPacks = {
   },
   INTP: {
     type: "INTP",
-    description: "十次思想火花、表达节奏、共同边界与独立空间之间的取舍。",
+    description: TYPE_DESCRIPTIONS.INTP,
     questions: intpQuestions,
     endings: intpEndings,
     relationshipEvaluations: intpRelationshipEvaluations,
@@ -120,7 +122,7 @@ export const contentPacks = {
   },
   INFJ: {
     type: "INFJ",
-    description: "十次深度交流、隐私边界、支持互惠与明确关系之间的取舍。",
+    description: TYPE_DESCRIPTIONS.INFJ,
     questions: infjQuestions,
     endings: infjEndings,
     relationshipEvaluations: infjRelationshipEvaluations,
@@ -128,7 +130,7 @@ export const contentPacks = {
   },
   INFP: {
     type: "INFP",
-    description: "十次真实表达、理想落地、边界确认与关系维护之间的取舍。",
+    description: TYPE_DESCRIPTIONS.INFP,
     questions: infpQuestions,
     endings: infpEndings,
     relationshipEvaluations: infpRelationshipEvaluations,
@@ -136,7 +138,7 @@ export const contentPacks = {
   },
   ISTJ: {
     type: "ISTJ",
-    description: "十次共同安排、行动关心、承诺边界与关系确认之间的取舍。",
+    description: TYPE_DESCRIPTIONS.ISTJ,
     questions: istjQuestions,
     endings: istjEndings,
     relationshipEvaluations: istjRelationshipEvaluations,
@@ -144,7 +146,7 @@ export const contentPacks = {
   },
   ISFJ: {
     type: "ISFJ",
-    description: "十次社交节奏、实际照顾、角色边界与关系确认之间的取舍。",
+    description: TYPE_DESCRIPTIONS.ISFJ,
     questions: isfjQuestions,
     endings: isfjEndings,
     relationshipEvaluations: isfjRelationshipEvaluations,
@@ -152,7 +154,7 @@ export const contentPacks = {
   },
   ISFP: {
     type: "ISFP",
-    description: "十次具体体验、安静边界、隐私责任与共同修复之间的取舍。",
+    description: TYPE_DESCRIPTIONS.ISFP,
     questions: isfpQuestions,
     endings: isfpEndings,
     relationshipEvaluations: isfpRelationshipEvaluations,
@@ -160,7 +162,7 @@ export const contentPacks = {
   },
   ISTP: {
     type: "ISTP",
-    description: "十次沟通节奏、具体协作、个人空间与明确关系之间的取舍。",
+    description: TYPE_DESCRIPTIONS.ISTP,
     questions: istpQuestions,
     endings: istpEndings,
     relationshipEvaluations: istpRelationshipEvaluations,
